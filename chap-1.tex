@@ -7,13 +7,13 @@
 
 \section{The mobile device landscape}
 
-\npar In the last couple of years, smartphone sales have gone up quickly. Smartphones are becoming ubiquitous and in some regions, like the United States, smartphone penetration has already reached more than 50\% \cite{nielsen}. According to quarterly studies by Gartner, smartphone penetration remained stable before the iPhone 3G and Android came along (see \fref{fig:Gartner_smartphone}).
+\npar In the last couple of years, smartphone sales have gone up quickly. Smartphones are becoming ubiquitous and in some regions, like the United States, smartphone penetration has already reached more than 50\% \cite{Nielsen:2012}. According to quarterly studies by Gartner, smartphone penetration remained stable before the iPhone 3G and Android came along (see \fref{fig:smartphone_sales}).
 
 \begin{figure}
     \begin{center}
         \includegraphics[width=\textwidth]{figs/smartphone_sales.pdf}
         	\caption{
-        	    	Growth of worldwide smartphone sales and smartphone penetration. Source: Gartner \citep{Gartner:07Q1,Gartner:07Q2,Gartner:07Q3,Gartner:07Q4,Gartner:08Q1,Gartner:08Q2,Gartner:08Q3,Gartner:08Q4,Gartner:09Q1,Gartner:09Q2,Gartner:09Q3,Gartner:09Q4,Gartner:10Q1,Gartner:10Q2,Gartner:10Q3,Gartner:10Q4,Gartner:11Q1,Gartner:11Q2,Gartner:11Q3,Gartner:11Q4,Gartner:12Q1,Gartner:12Q2}
+        	    	Growth of worldwide smartphone sales and smartphone penetration. Source: Gartner \citep{Gartner:08Q2,Gartner:08Q3,Gartner:08Q4,Gartner:10Q1,Gartner:10Q2,Gartner:10Q3,Gartner:10Q4,Gartner:11Q1,Gartner:11Q2,Gartner:11Q3,Gartner:11Q4,Gartner:12Q1,Gartner:12Q2}
         	}
         	\label{fig:smartphone_sales}
     \end{center}
@@ -23,15 +23,15 @@
     \begin{center}
         \includegraphics[width=\textwidth]{figs/smartphone_os.pdf}
         \caption{
-            Growth of worldwide smartphone operating system market share. Source: Gartner \citep{Gartner:07Q1,Gartner:07Q2,Gartner:07Q3,Gartner:07Q4,Gartner:08Q1,Gartner:08Q2,Gartner:08Q3,Gartner:08Q4,Gartner:09Q1,Gartner:09Q2,Gartner:09Q3,Gartner:09Q4,Gartner:10Q1,Gartner:10Q2,Gartner:10Q3,Gartner:10Q4,Gartner:11Q1,Gartner:11Q2,Gartner:11Q3,Gartner:11Q4,Gartner:12Q1,Gartner:12Q2}
+            Growth of worldwide smartphone operating system market share. Source: Gartner \citep{Gartner:08Q2,Gartner:08Q3,Gartner:08Q4,Gartner:10Q1,Gartner:10Q2,Gartner:10Q3,Gartner:10Q4,Gartner:11Q1,Gartner:11Q2,Gartner:11Q3,Gartner:11Q4,Gartner:12Q1,Gartner:12Q2}
         	}
         \label{fig:smartphone_os}
     \end{center}
 \end{figure}
 
-\npar But more importantly, one can conclude that there is not one major platform. Projections by the IDC show that in 2016, there will be at least three major platforms covering 90\% of the worldwide smartphone market \cite{idc}. 
+\npar But more importantly, one can conclude that there is not one major platform. Projections by the IDC show that in 2016, there will be at least three major platforms covering 90\% of the worldwide smartphone market \citep{IDC:phone}. 
 
-\npar A similar scenario is playing in the tablet industry. According to other studies by both Gartner \citep{Gartner:11tab,Gartner:12tab} and IDC \citep{IDC:12tab}, tablets will continue to gain popularity and sales will be mainly driven by iPads and Android tablets (see \fref{fig:tablet}).
+\npar A similar scenario is playing in the tablet industry. According to other studies by both Gartner \citep{Gartner:11tab,Gartner:12tab} and IDC \citep{IDC:tablet}, tablets will continue to gain popularity and sales will be mainly driven by iPads and Android tablets (see \fref{fig:tablet}).
 
 \begin{figure}
     \begin{center}
@@ -51,7 +51,7 @@
 
 \npar The competition among mobile device manufacturers has led to fragmentation on many levels. For consumers, fragmentation is usually a good thing. The more different devices there are, the easier it is for a consumer to pick one that fits his needs. For developers on the other hand, fragmentation is usually considered bad. Developers have to develop and test their applications on multiple devices to be able to guarantee the desired experience. This is expensive and time consuming.
 
-\npar From \fref{fig:smartphone_os} and \fref{fig:tablet} it is already clear that the market is divided by operating system or platform but even within these platforms, fragmentation is multi-dimensional \citep{kindel}.
+\npar From \fref{fig:smartphone_os} and \fref{fig:tablet} it is already clear that the market is divided by operating system or platform but even within these platforms, fragmentation is multi-dimensional \citep{Kindel}.
 
 \npar In general, there are fewer fragmentation problems with Apple's iOS because it is a closed platform. Android, however, is an open source platform and vendors are allowed to tailor it for their devices. As a result, there are hundreds of Android based devices but also hundreds of Android flavours.
 
@@ -62,7 +62,7 @@
         \label{fig:runtime_fragmentation}
         \includegraphics[width=0.8\textwidth]{figs/os_distribution.pdf}
         \caption{
-            Runtime fragmentation for Android \citep{android_distribution} and iOS (based on the results of developer Brian Smith) \citep{ios_distribution}.
+            Runtime fragmentation for Android \citep{android_distribution} and iOS (based on the statistics of developer David Smith) \citep{ios_distribution}.
         }
     \end{center}
 \end{figure}
@@ -79,25 +79,27 @@
 
 \npar The default for all applications is a native app. In this paradigm, the application is built for a specific platform and version. Performance of these apps is best and the application will have the look and feel of the platform (providing that no interface elements have been overridden). 
 
-
-
 \begin{figure}
     \begin{center}
-        \label{fig:native}
         %\includegraphics[]{figs/native.pdf}
-        \caption{}
+        \caption{
+            Application architecture of a native app, based on \citep{Friese}
+        }
+        \label{fig:native}
     \end{center}
 \end{figure}
 
 \subsection{Web App}
 
-\npar Web apps are web sites that are optimized for mobile browsers. Since every platform comes with a browser, this is the easiest way to get an application running on all platforms. The downside is that mobile web sites lack the capability to access the device (see \ref{fig:web}).
+\npar Web apps are web sites that are optimized for mobile browsers. Since every platform comes with a browser, this is the easiest way to get an application running on all platforms. The downside is that mobile web sites lack the capability to access the device (see \fref{fig:web}).
 
 \begin{figure}
     \begin{center}
-        \label{fig:web}
         %\includegraphics[]{figs/web.pdf}
-        \caption{}
+        \caption{
+            Application architecture of a web app, based on \citep{Friese}
+        }
+        \label{fig:web}
     \end{center}
 \end{figure}
 
@@ -109,9 +111,11 @@
 
 \begin{figure}
     \begin{center}
-        \label{fig:hybrid}
         %\includegraphics[]{figs/hybrid.pdf}
-        \caption{}
+        \caption{
+            Application architecture of a hybrid app, based on \citep{Friese}
+        }
+        \label{fig:hybrid}
     \end{center}
 \end{figure}
 
@@ -123,9 +127,11 @@
 
 \begin{figure}
     \begin{center}
-        \label{fig:interpreted}
         %\includegraphics[]{figs/interpreted.pdf}
-        \caption{}
+        \caption{
+            Application architecture of an interpreted app, based on \citep{Friese}
+        }
+        \label{fig:interpreted}
     \end{center}
 \end{figure}
 
@@ -135,9 +141,11 @@
 
 \begin{figure}
     \begin{center}
-        \label{fig:crosscompiled}
         %\includegraphics[]{figs/crosscompiled.pdf}
-        \caption{}
+        \caption{
+            Architecture used to create cross compiled apps, based on \citep{Friese}
+        }
+        \label{fig:crosscompiled}
     \end{center}
 \end{figure}
 
