@@ -103,7 +103,7 @@
 
 \begin{figure}
     \begin{center}
-        %\includegraphics[width=\textwidth]{figs/web.pdf}
+        \includegraphics[width=\textwidth]{figs/web.pdf}
         \caption{
             Overall architecture of a web app.
         }
@@ -111,19 +111,23 @@
     \end{center}
 \end{figure}
 
-\npar Web apps are not nearly as powerful as native apps. First of all, websites are built with web technologies like HTML. Second, 
+\npar Web apps are not nearly as powerful as native apps. First of all, the application is not stored on the device. Web apps require an active internet connection which cannot always be guaranteed. Second, they are built with web technologies like HTML, CSS and JavaScript, which have to be interpreted by the browser at runtime. Third, web apps cannot access the system which means they cannot make use of the many unique features of a mobile device. 
 
-\npar With HTML5, web apps can even make use of more powerful features like databases, geolocation, etc. The only barrier for now is the incomplete HTML5 support on mobile browsers.
+\npar With HTML5, web apps can get more powerful. They will be able to access device features, like the camera and other sensors \citep{MobileHTML5}. They will not even require an active internet connection because they can be cached on the device. However, HTML5 is still a draft and a lot of mobile browsers lack proper HTML5 support.
+
+\npar From a user interface perspective, web apps can be a problem as well. % TODO: complete paragraph
+
+\npar Web apps are distributed easily: the only requirement is a valid URL. Web apps cannot be installed on the device though, but there are workarounds using Web Clips on iOS \citep{Safari:webclips} and bookmarks on Android. 
 
 \subsection{Hybrid App}
 
-\npar Hybrid applications are the logical next step, combining native apps and web apps. The actual application is a web site, wrapped in a web view, part of a native shell. Except for the name and some specific extensions, this shell can be reused. Platform access is provided through a bridge (see \fref{fig:hybrid}). 
+\npar Hybrid applications are the logical next step, combining native apps and web apps. The actual application is a web site, embedded in a web view, part of a native wrapped. An overview of the overall architecture is shown in\fref{fig:hybrid}. 
 
 \begin{figure}
     \begin{center}
-        %\includegraphics[]{figs/hybrid.pdf}
+        %\includegraphics[width=\textwidth]{figs/hybrid.pdf}
         \caption{
-            Application architecture of a hybrid app, based on \citep{Friese}
+            Overall architecture of a hybrid app, based on \citep{Friese}
         }
         \label{fig:hybrid}
     \end{center}
