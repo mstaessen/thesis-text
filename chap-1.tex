@@ -71,37 +71,47 @@
 
 \npar 
 
-\section{Application Architectures}
+\section{Strategies for cross platform development}
 
-\npar There are already a number of paradigms for cross platform mobile application development \citep{Friese}. This section presents an overview of the available architectures by comparing different aspects: performance, look and feel, platform access, programming languages, development cost and monetization.
+\npar There are already a number of paradigms for cross platform mobile application development \citep{Friese}. This section presents an overview of the available strategies by comparing different aspects: performance, look and feel, platform access, programming languages, development cost and distribution.
 
 \subsection{Native App}
 
-\npar The default for all applications is a native app. In this paradigm, the application is built for a specific platform and version. Performance of these apps is best and the application will have the look and feel of the platform (providing that no interface elements have been overridden). 
+\npar A native app is an application that is specifically designed to run on a particular platform. It is the default approach to develop applications for mobile devices. \fref{fig:native} shows an illustration of the overall architecture of such an app. 
 
 \begin{figure}
     \begin{center}
-        %\includegraphics[]{figs/native.pdf}
+        \includegraphics[width=\textwidth]{figs/native.pdf}
         \caption{
-            Application architecture of a native app, based on \citep{Friese}
+            Overall architecture of a native app. 
         }
         \label{fig:native}
     \end{center}
 \end{figure}
 
+\npar Native apps are developed with the supplied SDK. Developers will need to get acquainted with the programming language used by said SDK but in return they will get full access to the platform and its features. As a result, the best performance can be obtained with this kind of app.
+
+\npar For the user interface, developers can use lots of interface elements such that they can present a familiar look and feel to the end user. 
+
+\npar Native apps can be easily distributed through an online marketplace like for instance the App Store or Google Play. 
+
+\npar Because native apps are designed to run on one platform only, this development strategy is not very well suited for cross platform development. If an application should run on multiple platforms, it has to be developed for each platform separately. 
+
 \subsection{Web App}
 
-\npar Web apps are web sites that are optimized for mobile browsers. Since every platform comes with a browser, this is the easiest way to get an application running on all platforms. The downside is that mobile web sites lack the capability to access the device (see \fref{fig:web}).
+\npar Web apps are websites that are optimized for mobile browsers. Since every platform comes with a browser, this is the easiest way to get an application running on all platforms. An overview of the overall architecture for this kind of app is given in \fref{fig:web}.
 
 \begin{figure}
     \begin{center}
-        %\includegraphics[]{figs/web.pdf}
+        %\includegraphics[width=\textwidth]{figs/web.pdf}
         \caption{
-            Application architecture of a web app, based on \citep{Friese}
+            Overall architecture of a web app.
         }
         \label{fig:web}
     \end{center}
 \end{figure}
+
+\npar Web apps are not nearly as powerful as native apps. First of all, websites are built with web technologies like HTML. Second, 
 
 \npar With HTML5, web apps can even make use of more powerful features like databases, geolocation, etc. The only barrier for now is the incomplete HTML5 support on mobile browsers.
 
@@ -158,6 +168,7 @@
             Performance  &            &         &            &                 &                \\
             Look \& Feel &            &         &            &                 &                \\
             Distribution &            &         &            &                 &                \\
+            
         \end{tabular}
 		\caption{
 			Summary of cross platform mobile application development strategies
