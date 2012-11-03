@@ -53,7 +53,7 @@
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{497.63959508861581, 149.91878857546675}, {55, 24}}</string>
+			<string>{{497.7199842033906, 149.04713639119802}, {55, 24}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -81,12 +81,12 @@
 				<key>Offset</key>
 				<real>9.8283452987670898</real>
 				<key>Position</key>
-				<real>0.30988198518753052</real>
+				<real>0.33664396405220032</real>
 				<key>RotationType</key>
 				<integer>2</integer>
 			</dict>
 			<key>Rotation</key>
-			<real>350.15316772460938</real>
+			<real>349.35888671875</real>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -338,7 +338,7 @@
 			<key>Points</key>
 			<array>
 				<string>{467.05499267578125, 181.97593688964844}</string>
-				<string>{659.92001342773438, 148.5}</string>
+				<string>{645.22500610351562, 148.5}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -364,7 +364,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{604.14251708984375, 102.5}, {111.55499267578125, 46}}</string>
+			<string>{{589.447509765625, 102.5}, {111.55499267578125, 46}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1068,7 +1068,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-11-03 22:05:43 +0000</string>
+	<string>2012-11-03 22:45:34 +0000</string>
 	<key>Modifier</key>
 	<string>Michiel Staessen</string>
 	<key>NotesVisible</key>
