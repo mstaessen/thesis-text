@@ -53,7 +53,7 @@
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{498.03095202625173, 148.98870939210576}, {55, 24}}</string>
+			<string>{{498.03097328041031, 148.98870927927658}, {55, 24}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -338,7 +338,7 @@
 			<key>Points</key>
 			<array>
 				<string>{467.05499267578125, 181.97593688964844}</string>
-				<string>{645.22500610351562, 148.5}</string>
+				<string>{645.22506713867188, 148.5}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -364,7 +364,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{589.447509765625, 102.5}, {111.55499267578125, 46}}</string>
+			<string>{{589.44757080078125, 102.5}, {111.55499267578125, 46}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1064,7 +1064,7 @@ application logic)}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-11-03 22:46:29 +0000</string>
+	<string>2012-11-03 22:51:20 +0000</string>
 	<key>Modifier</key>
 	<string>Michiel Staessen</string>
 	<key>NotesVisible</key>
