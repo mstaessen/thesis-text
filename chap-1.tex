@@ -9,7 +9,7 @@
 
 \npar In the last couple of years, smartphone sales have gone up quickly. Smartphones are becoming ubiquitous and in some regions, like the United States, smartphone penetration has already reached more than 50\% \cite{Nielsen:2012}. According to quarterly studies by Gartner, smartphone penetration remained stable before the iPhone 3G and Android came along (see \fref{fig:smartphone_sales}).
 
-\begin{figure}
+\begin{figure}[h!]
     \begin{center}
         \includegraphics[width=\textwidth]{figs/smartphone_sales.pdf}
         	\caption{
@@ -19,7 +19,7 @@
     \end{center}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
     \begin{center}
         \includegraphics[width=\textwidth]{figs/smartphone_os.pdf}
         \caption{
@@ -33,7 +33,7 @@
 
 \npar A similar scenario is playing in the tablet industry. According to other studies by both Gartner \citep{Gartner:11tab,Gartner:12tab} and IDC \citep{IDC:tablet}, tablets will continue to gain popularity and sales will be mainly driven by iPads and Android tablets (see \fref{fig:tablet}).
 
-\begin{figure}
+\begin{figure}[h!]
     \begin{center}
         \includegraphics[width=\textwidth]{figs/tablet.pdf}
         \caption{
@@ -57,7 +57,7 @@
 
 \npar Maintenance of such Android flavours is expensive and for this reason, manufacturers do not often provide updates for their devices. This has led to noticeable runtime fragmentation among Android based devices (see \fref{fig:runtime_fragmentation}). Compared to iOS, this is a serious issue.
 
-\begin{figure}
+\begin{figure}[h!]
     \begin{center}
         \label{fig:runtime_fragmentation}
         \includegraphics[width=0.8\textwidth]{figs/os_distribution.pdf}
@@ -79,7 +79,7 @@
 
 \npar A native app is an application that is specifically designed to run on a particular platform. It is the default approach to develop applications for mobile devices. \fref{fig:native} shows an illustration of the overall architecture of such an app. 
 
-\begin{figure}
+\begin{figure}[h!]
     \begin{center}
         \includegraphics[width=\textwidth]{figs/native.pdf}
         \caption{
@@ -97,11 +97,13 @@
 
 \npar Because native apps are designed to run on one platform only, this development strategy is not very well suited for cross platform development. If an application should run on multiple platforms, it has to be developed for each platform separately. 
 
+% TODO: talk about mobile hub
+
 \subsection{Web App}
 
 \npar Web apps are websites that are optimized for mobile browsers. Since every platform comes with a browser, this is the easiest way to get an application running on all platforms. An overview of the overall architecture for this kind of app is given in \fref{fig:web}.
 
-\begin{figure}
+\begin{figure}[h!]
     \begin{center}
         \includegraphics[width=\textwidth]{figs/web.pdf}
         \caption{
@@ -121,25 +123,25 @@
 
 \subsection{Hybrid App}
 
-\npar Hybrid applications are the logical next step, combining native apps and web apps. The actual application is a web site, embedded in a web view, part of a native wrapped. An overview of the overall architecture is shown in\fref{fig:hybrid}. 
+\npar Hybrid applications are the logical next step, combining native apps and web apps. The actual application is a web site, embedded in a web view, part of a native wrapper. An overview of the overall architecture is shown in \fref{fig:hybrid}. 
 
-\begin{figure}
+\begin{figure}[h!]
     \begin{center}
         %\includegraphics[width=\textwidth]{figs/hybrid.pdf}
         \caption{
-            Overall architecture of a hybrid app, based on \citep{Friese}
+            Overall architecture of a hybrid app.
         }
         \label{fig:hybrid}
     \end{center}
 \end{figure}
 
-\npar
+\npar 
 
 \subsection{Interpreted App}
 
 \npar In an interpreted application, instructions are translated to native instructions at runtime.
 
-\begin{figure}
+\begin{figure}[h!]
     \begin{center}
         %\includegraphics[]{figs/interpreted.pdf}
         \caption{
@@ -153,7 +155,7 @@
 
 \npar Instead of translating instructions at runtime, one can translate instructions at compile time. The process is called cross compiling and the result is a truly native app. Performance is similar to native apps but 
 
-\begin{figure}
+\begin{figure}[h!]
     \begin{center}
         %\includegraphics[]{figs/crosscompiled.pdf}
         \caption{
@@ -165,7 +167,7 @@
 
 \subsection{Summary}
 
-\begin{table}
+\begin{table}[h!]
     \begin{center}
         \begin{tabular}{l|c|c|c|c|c}
                          & Native App & Web App & Hybrid App & Interpreted App & Cross Compiling\\\hline
