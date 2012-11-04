@@ -75,6 +75,8 @@
 
 \npar There are already a number of paradigms for cross platform mobile application development \citep{Friese}. This section presents an overview of the available strategies by comparing different aspects: performance, look and feel, platform access, programming languages, development cost and distribution.
 
+% TODO: discuss development cost
+
 \subsection{Native App}
 
 \npar A native app is an application that is specifically designed to run on a particular platform. It is the default approach to develop applications for mobile devices. \fref{fig:native} shows an illustration of the overall architecture of such an app. 
@@ -95,7 +97,7 @@
 
 \npar Native apps can be easily distributed through an online marketplace like for instance the App Store or Google Play. 
 
-\npar Because native apps are designed to run on one platform only, this development strategy is not very well suited for cross platform development. If an application should run on multiple platforms, it has to be developed for each platform separately. 
+\npar Because native apps are designed to run on one platform only, this development strategy is not very well suited for cross platform development. If an application should run on multiple platforms, it has to be developed for each platform separately. This is costly.
 
 % TODO: talk about mobile hub
 
@@ -179,17 +181,21 @@
 
 \subsection{Summary}
 
+\tref{tab:architectures} summarizes the results of the discussed strategies. It is important to note that there is no universal strategy that fits all use cases. A strategy must be chosen carefully, taking into account the client's wishes.
+
 \begin{table}[h!]
     \begin{center}
         \begin{tabular}{l|c|c|c|c|c}
-                         & Native App & Web App & Hybrid App & Interpreted App & Cross Compiling\\\hline
-            Performance  &            &         &            &                 &                \\
-            Look \& Feel &            &         &            &                 &                \\
-            Distribution &            &         &            &                 &                \\
-            
+                             & Native      & Web                   & Hybrid      & Interpreted & Cross Compiled\\
+            \hline
+            Performance      & high        & low                   & rather low  & average     & high          \\
+            Platform Access  & \checkmark  & $\times$ / \checkmark & \checkmark  & \checkmark  & \checkmark    \\
+            Look \& Feel     & native      & non-native            & non-native  & native      & native        \\
+            Distribution     & marketplace & URL                   & marketplace & marketplace & marketplace   \\
+            Development cost & high        & rather low            & average     & average     & average       \\
         \end{tabular}
 		\caption{
-			Summary of cross platform mobile application development strategies
+			Summary of cross platform mobile application development strategies.
 		}
 		\label{tab:architectures}
     \end{center}
