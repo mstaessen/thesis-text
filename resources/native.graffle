@@ -53,7 +53,7 @@
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{498.03097328041031, 148.98870927927658}, {55, 24}}</string>
+			<string>{{497.55908775714545, 132.38673366684799}, {55, 24}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -81,12 +81,12 @@
 				<key>Offset</key>
 				<real>9.8283452987670898</real>
 				<key>Position</key>
-				<real>0.33838930726051331</real>
+				<real>0.50756317377090454</real>
 				<key>RotationType</key>
 				<integer>2</integer>
 			</dict>
 			<key>Rotation</key>
-			<real>349.35888671875</real>
+			<real>335.2298583984375</real>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -330,15 +330,13 @@
 			<dict>
 				<key>ID</key>
 				<integer>25</integer>
-				<key>Info</key>
-				<integer>1</integer>
 			</dict>
 			<key>ID</key>
 			<integer>26</integer>
 			<key>Points</key>
 			<array>
 				<string>{467.05499267578125, 181.97593688964844}</string>
-				<string>{645.22506713867188, 148.5}</string>
+				<string>{589.44757080078148, 125.5}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1064,7 +1062,7 @@ application logic)}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-11-03 22:51:20 +0000</string>
+	<string>2012-11-04 13:26:58 +0000</string>
 	<key>Modifier</key>
 	<string>Michiel Staessen</string>
 	<key>NotesVisible</key>

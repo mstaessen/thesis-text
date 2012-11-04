@@ -46,14 +46,14 @@
 	<key>Creator</key>
 	<string>Michiel Staessen</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{497.72000535102188, 149.04713627836884}, {55, 24}}</string>
+			<string>{{497.54891100037696, 132.39142955512654}, {55, 24}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -81,12 +81,12 @@
 				<key>Offset</key>
 				<real>9.8283452987670898</real>
 				<key>Position</key>
-				<real>0.33664396405220032</real>
+				<real>0.50748002529144287</real>
 				<key>RotationType</key>
 				<integer>2</integer>
 			</dict>
 			<key>Rotation</key>
-			<real>349.35888671875</real>
+			<real>335.2298583984375</real>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -330,15 +330,13 @@
 			<dict>
 				<key>ID</key>
 				<integer>25</integer>
-				<key>Info</key>
-				<integer>1</integer>
 			</dict>
 			<key>ID</key>
 			<integer>26</integer>
 			<key>Points</key>
 			<array>
 				<string>{467.05499267578125, 181.97593688964844}</string>
-				<string>{645.22506713867188, 148.5}</string>
+				<string>{589.44757080078148, 125.5}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -612,8 +610,7 @@
 \f0\b\fs24 \cf0 Web App\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\b0 \cf0 (web technologies)\cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+\b0 \cf0 (web technologies)\
 (Application logic)}</string>
 			</dict>
 		</dict>
@@ -965,8 +962,9 @@
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
 \f0\b\fs24 \cf0 Browser\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\b0 (used as renderer)}</string>
+\b0 \cf0 (used as renderer)}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1068,7 +1066,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-11-03 22:51:26 +0000</string>
+	<string>2012-11-04 13:30:06 +0000</string>
 	<key>Modifier</key>
 	<string>Michiel Staessen</string>
 	<key>NotesVisible</key>
