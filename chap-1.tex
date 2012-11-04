@@ -123,7 +123,7 @@
 
 \subsection{Hybrid App}
 
-\npar Hybrid applications are the logical next step, combining native apps and web apps. The actual application is a web site, embedded in a web view, part of a native wrapper. An overview of the overall architecture is shown in \fref{fig:hybrid}. 
+\npar Hybrid applications are the logical next step, combining native apps and web apps. The actual application is a web site, embedded in a web view, part of a native wrapper. The embedded website can access (parts of) the system through a bridge. An overview of the overall architecture is shown in \fref{fig:hybrid}. 
 
 \begin{figure}[h!]
     \begin{center}
@@ -135,41 +135,47 @@
     \end{center}
 \end{figure}
 
-\npar Hybrid apps are part native app, part web app. As a result, the performance 
+\npar Hybrid apps are part native app, part web app. Performance will be similar to web apps but some parts can be optimized by using native code. The websites inside the hybrid app are also much more powerful because they can access many device features that aren't available in HTML(5) through the bridge.
 
-Hybrid apps can also contain some native optimizations
+\npar When it comes to the user interface, hybrid apps suffer from the same problem as web apps. 
 
-\npar 
-
-\npar Because hybrid apps are web apps wrapped in a native container, they can be distributed just like native applications, through online marketplaces. 
+\npar Because hybrid apps are wrapped in a native container, they can be distributed just like native applications, through online marketplaces. 
 
 \subsection{Interpreted App}
 
-\npar In an interpreted application, instructions are translated to native instructions at runtime.
+\npar In an interpreted app, instructions in some language are translated to native instructions at runtime. \fref{fig:interpreted} shows the overall architecture of an interpreted app.
 
 \begin{figure}[h!]
     \begin{center}
-        %\includegraphics[]{figs/interpreted.pdf}
+        \includegraphics[width=\textwidth]{figs/interpreted.pdf}
         \caption{
-            Application architecture of an interpreted app, based on \citep{Friese}
+            Overall architecture of an interpreted app.
         }
         \label{fig:interpreted}
     \end{center}
 \end{figure}
 
+\npar Performance of interpreted apps depends on the interpreter and interpreted language but is better than web apps on average, though not as good as native apps. 
+
+\npar In an interpreted app, the user interface description is interpreted and rendered on the device using native interface elements. An interpreted app will have a familiar look and feel.
+
+\npar From the outside, interpreted apps -- just like hybrid apps -- look like native apps and can be distributed through online marketplaces.
+
 \subsection{Cross Compiling}
 
-\npar Instead of translating instructions at runtime, one can translate instructions at compile time. The process is called cross compiling and the result is a truly native app. Performance is similar to native apps but 
+\npar Instead of translating instructions at runtime, one could translate instructions at compile time. The process is called cross compiling and the result is a truly native app. The overall architecture is sketched in \fref{fig:crosscompiled}. 
 
 \begin{figure}[h!]
     \begin{center}
-        %\includegraphics[]{figs/crosscompiled.pdf}
+        \includegraphics[width=\textwidth]{figs/crosscompiled.pdf}
         \caption{
-            Architecture used to create cross compiled apps, based on \citep{Friese}
+            Overall architecture for cross compiled apps. 
         }
         \label{fig:crosscompiled}
     \end{center}
 \end{figure}
+
+\npar 
 
 \subsection{Summary}
 
@@ -190,7 +196,5 @@ Hybrid apps can also contain some native optimizations
 \end{table}
 
 \npar
-
-\section{Reflection}
 
 \section{Conclusion}
