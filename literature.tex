@@ -1,0 +1,209 @@
+\chapter{Literature Study}
+\label{chap:literature}
+
+% TODO: write introductory text
+
+\section{Multi-Criteria Decision Making (MCDM)}
+\label{sec:mcdm}
+
+Finding the right software package is often a daunting task. In order to suit the end-user's needs, the software should meet a large number of -- sometimes conflicting -- requirements and will result in making important trade-offs. Because of the these characteristics, software selection can be modeled as a Multiple-Criteria Decision Making (MCDM) problem \cite{Jadhav:2009, Jadhav:2011}.
+
+There are two categories of MCDM problems: Multiple-Attribute Decision Making (MADM) problems and Multi-Objective Decision Making (MODM) problems. The first category involves sorting and ranking of a limited number of available alternatives, based on a number of decision criteria. In the latter category, there are no alternatives specified beforehand and the number of alternatives is effectively infinite \cite{Kahraman:2008}. 
+
+The software selection process belongs to the category of MADM problems. Their goal is to find the best alternative in a set of alternatives and at the same to time create a ranking of all these available alternatives. % TODO: Reference!
+
+There are a plethora of solution methods for the MADM problem. The following subsections will describe the most frequently used methods in literature, together with their advantages and disadvantages. 
+
+\subsection{Arbitrary scoring models} % RFC: Is this a good naming?
+
+There are a number of arbitrary scoring models but they all have one thing in common: for each criterion, the values are translated to a numerical score. In some cases, this score can be derived from the value of the criterion itself (e.g. speed, age, cost, \ldots). In other cases, a mapping is provided (e.g. in order to obtain a score $s$, at least features $f_1$, $f_2$ and $f_3$ should be supported).
+
+Different methods are available to select potential candidates using these scores \cite{Kahraman:2008}:
+
+\begin{itemize}
+    \item When the ``dominance'' method is used, one alternative should clearly outperforms the other alternatives for at least one criterion. 
+    \item When the ``maximin'' method is used, the final score of each alternative is equal to the lowest score of all criteria for this alternative.
+    \item When the ``maximax'' method is used, the final score of each alternative is equal to the highest score of all criteria for this alternative.
+    \item When the ``conjunctive'' method is used, an alternative should exceed certain thresholds for \emph{all} criteria.
+    \item When the ``disjunctive'' method is used, an alternative should exceed certain thresholds for \emph{at least one} criterion. 
+\end{itemize}
+
+Additionally, the importance of the criteria can be accounted for by assigning weights. The final score can be calculated as the weighted sum, weighted product or weighted average.
+
+The strength of these methods is that they are the most easy to use. However,  scores and weights are assigned arbitrarily and might get tough when there are a lot of criteria. Also, not all criteria are suitable for conversion into a numerical scale \cite{Jadhav:2009}.
+
+\subsection{Analytic Hierarchy Process (AHP)}
+\label{sec:ahp}
+
+The Analytic Hierarchy Process (AHP) was originally developed by Thomas L. Saaty and offers a mathematical solution for MADM problems. The method can even compensate for inconsistency and deal with non-numerical scales by using pairwise comparisons.
+
+In the first stage, the MADM problem is decomposed into a tree of criteria. A criterion can consist of a number of sub-criteria or it can contain the values of all alternatives for this criterion. This results in a criterion tree, similar to figure \ref{fig:ahp-stage1}.
+
+\begin{figure}
+    % TODO: create graphic
+    \caption{}
+    \label{fig:ahp-stage1}
+\end{figure}
+
+In the next stage, the weights of each subtree (including the values of a criterion) will be calculated using a pair-wise comparison. For every combination of criteria $(c_i, c_j)$, define the importance of $c_i$ in terms of $c_j$ and aggregate the preference scores in a matrix $W$. For example, if $c_i$ is twice as important as $c_j$, then $c_i = 2 \times c_j$, and write $w_{i,j} = 2$ in the resulting matrix $W$. Conversely, $c_j = \dfrac{1}{2} \times c_i$ and $w_{j,i} = \dfrac{1}{2}$. The values on the diagonal of $W$ are all equal to $1$. The weights of $c_i$ can now be calculated as the eigenvalues of $W$. This stage results in a weight distribution for the criteria tree. 
+
+In the last stage, every alternative can be scored and ranked using this the weights obtained from the previous stage. 
+
+The strengths of the are that it (1) enables decision makers to structure a problem into a hierarchy, (2) that is provides a powerful tool for handling both quantitative and qualitative multi-criteria decision making problems and (3) that this system can deal with inconsistency (on certain levels) \cite{Jadhav:2009}, \cite{}. %inconsistency dealing source
+
+The weakness of AHP is that it is a time consuming method due to the large number of pair-wise comparisons. Also, the ordering may change entirely when other alternatives are taken into account.
+
+\subsection{Fuzzy MCDM}
+\label{sec:fuzzy}
+
+
+
+\section{Software evaluation methodology}
+\label{sec:selection_method}
+
+Based on their literature review \cite{Jadhav:2009}, the authors have proposed a generic, six-stage methodology for the selection of software packages \cite{Jadhav:2011}.
+
+\begin{enumerate}
+    \item \textbf{Define the selection criteria.} In the first stage, the evaluator defines the essential requirements for the software. If a certain software package does not meet a selection criterion, it is not a considered to be a suitable candidate and it should not be considered for the evaluation. 
+    \item \textbf{Look for potential candidates.} During the next step, the evaluator searches for potential candidates. This step will result in a list of potential candidates.
+    \item \textbf{List the suitable alternatives.} In this step, the evaluator will use the requirements from stage 1 to filter the list obtained from the previous stage. 
+    \item \textbf{Define the evaluation criteria.} In this stage, the evaluator has to define the evaluation criteria, arrange them in a hierarchy and define the value scales for each criterion. 
+    \item \textbf{Evaluate the alternatives.} During this phase, the evaluator will make a detailed comparison of the alternatives using the criteria obtained from the previous stage. A methodology like AHP can be used in this stage.
+    \item \textbf{Select the best alternative.} In this final step, all alternatives are ranked using the comparison results from the previous stage. Now, the best alternative can be chosen from the list of candidates. In general, a number of software packages will be taken into consideration and a selection will be made after additional steps (like for instance a cost-benefit analysis and/or contract negotiations with the vendor). 
+\end{enumerate}
+
+In the original paper \cite{Jadhav:2009}, the authors also suggest to include an additional evaluation stage after the selected packages has been implemented and integrated. During that stage, one should verify that the selected package does indeed meet the requirements.
+
+\section{Strategies for cross platform development}
+
+There are already a number of paradigms for cross platform mobile application development \citep{Friese}. This section presents an overview of the available strategies by comparing different aspects: performance, look and feel, platform access, programming languages, development cost and distribution.
+
+% TODO: discuss development cost
+
+\subsection{Native App}
+
+A native app is an application that is specifically designed to run on a particular platform. It is the default approach to develop applications for mobile devices. \fref{fig:native} shows an illustration of the overall architecture of such an app. 
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=\textwidth]{figs/native.pdf}
+        \caption{
+            Overall architecture of a native app. 
+        }
+        \label{fig:native}
+    \end{center}
+\end{figure}
+
+\npar Native apps are developed with the supplied SDK. Developers will need to get acquainted with the programming language used by said SDK but in return they will get full access to the platform and its features. As a result, the best performance can be obtained with this kind of app.
+
+\npar For the user interface, developers can use lots of interface elements such that they can present a familiar look and feel to the end user. 
+
+\npar Native apps can be easily distributed through an online marketplace like for instance the App Store or Google Play. 
+
+\npar Because native apps are designed to run on one platform only, this development strategy is not very well suited for cross platform development. If an application should run on multiple platforms, it has to be developed for each platform separately. This is costly.
+
+% TODO: talk about mobile hub
+
+\subsection{Web App}
+
+\npar Web apps are websites that are optimized for mobile browsers. Since every platform comes with a browser, this is the easiest way to get an application running on all platforms. An overview of the overall architecture for this kind of app is given in \fref{fig:web}.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=\textwidth]{figs/web.pdf}
+        \caption{
+            Overall architecture of a web app.
+        }
+        \label{fig:web}
+    \end{center}
+\end{figure}
+
+\npar Web apps are not nearly as powerful as native apps. First of all, the application is not stored on the device. Web apps require an active internet connection which cannot always be guaranteed. Second, they are built with web technologies like HTML, CSS and JavaScript, which have to be interpreted by the browser at runtime. Third, web apps cannot access the system which means they cannot make use of the many unique features of a mobile device. 
+
+\npar With HTML5, web apps can get more powerful. They will be able to access device features, like the camera and other sensors \citep{MobileHTML5}. They will not even require an active internet connection because they can be cached on the device. However, HTML5 is still a draft and a lot of mobile browsers lack proper HTML5 support.
+
+\npar From a user interface perspective, web apps can be a problem as well. % TODO: complete paragraph
+
+\npar Web apps are distributed easily: the only requirement is a valid URL. Web apps cannot be installed on the device though, but there are workarounds using Web Clips on iOS \citep{Safari:webclips} and bookmarks on Android. 
+
+\subsection{Hybrid App}
+
+\npar Hybrid applications are the logical next step, combining native apps and web apps. The actual application is a web site, embedded in a web view, part of a native wrapper. The embedded website can access (parts of) the system through a bridge. An overview of the overall architecture is shown in \fref{fig:hybrid}. 
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=\textwidth]{figs/hybrid.pdf}
+        \caption{
+            Overall architecture of a hybrid app.
+        }
+        \label{fig:hybrid}
+    \end{center}
+\end{figure}
+
+\npar Hybrid apps are part native app, part web app. Performance will be similar to web apps but some parts can be optimized by using native code. The websites inside the hybrid app are also much more powerful because they can access many device features that aren't available in HTML(5) through the bridge.
+
+\npar When it comes to the user interface, hybrid apps suffer from the same problem as web apps. 
+
+\npar Because hybrid apps are wrapped in a native container, they can be distributed just like native applications, through online marketplaces. 
+
+\subsection{Interpreted App}
+
+\npar In an interpreted app, instructions in some language are translated to native instructions at runtime. \fref{fig:interpreted} shows the overall architecture of an interpreted app.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=\textwidth]{figs/interpreted.pdf}
+        \caption{
+            Overall architecture of an interpreted app.
+        }
+        \label{fig:interpreted}
+    \end{center}
+\end{figure}
+
+\npar Performance of interpreted apps depends on the interpreter and interpreted language but is better than web apps on average, though not as good as native apps. 
+
+\npar In an interpreted app, the user interface description is interpreted and rendered on the device using native interface elements. An interpreted app will have a familiar look and feel.
+
+\npar From the outside, interpreted apps -- just like hybrid apps -- look like native apps and can be distributed through online marketplaces.
+
+\subsection{Cross Compiling}
+
+\npar Instead of translating instructions at runtime, one could translate instructions at compile time. The process is called cross compiling and the result is a truly native app. The overall architecture is sketched in \fref{fig:crosscompiled}. 
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=\textwidth]{figs/crosscompiled.pdf}
+        \caption{
+            Overall architecture for cross compiled apps. 
+        }
+        \label{fig:crosscompiled}
+    \end{center}
+\end{figure}
+
+\npar 
+
+\subsection*{Summary}
+
+\tref{tab:architectures} summarizes the results of the discussed strategies. It is important to note that there is no universal strategy that fits all use cases. A strategy must be chosen carefully, taking into account the client's wishes.
+
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{l|c|c|c|c|c}
+                             & Native      & Web                   & Hybrid      & Interpreted & Cross Compiled\\
+            \hline
+            Performance      & high        & low                   & rather low  & average     & high          \\
+            Platform Access  & \checkmark  & $\times$ / \checkmark & \checkmark  & \checkmark  & \checkmark    \\
+            Look \& Feel     & native      & non-native            & non-native  & native      & native        \\
+            Distribution     & marketplace & URL                   & marketplace & marketplace & marketplace   \\
+            Development cost & high        & rather low            & average     & average     & average       \\
+        \end{tabular}
+		\caption{
+			Summary of cross platform mobile application development strategies.
+		}
+		\label{tab:architectures}
+    \end{center}
+\end{table}
+
+\npar
+
+\section*{Summary}

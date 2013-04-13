@@ -1,7 +1,7 @@
 \documentclass[master=cws,masteroption=se,english,oneside]{kulemt}
 \setup{
-	title={Comparative study of tools for cross-platform mobile application development},
-  	author={Michiel Staessen},
+	title={A comparative study of tools for cross-platform mobile application development},
+  	author={Michiel~Staessen},
   	assessor={},
   	promotor={prof.\,dr.\,ir.\ Erik~Duval},
   	assistant={ir.\ Gonzalo~Parra}
@@ -10,11 +10,11 @@
 % The following \setup may be removed entirely if no filing card is wanted
 \setup{
 	filingcard,
-	translatedtitle="",
+	translatedtitle="Een vergelijkende studie van cross-platform tools voor het ontwikkelen van mobiele applicaties",
 	udc=,
 	shortabstract={
-		Here comes a very short abstract, containing no more than 500
-    		words. \LaTeX\ commands can be used here.     	}
+		Developing mobile applications (apps) for multiple platforms is an expensive and time consuming process. Therefore, many companies are seeking refuge in Cross-Platform Tools (CPTs) for the development of their apps. In cooperation with CapGemini, this thesis presents a comparison of two such cross-platform tools: Apache Cordova and Motorola Rhodes. Both tools are compared with each other and with native development. The comparison is based on a proof-of-concept application which should work on both smartphones and tablets with respect to both iOS and Android.
+	}
 }
 
 % Uncomment the next line for generating the cover page
@@ -45,11 +45,13 @@
 \usepackage[square,numbers]{natbib}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+%\usepackage{pstricks}
+%\usepackage{pst-node}
 
 % Paragraph definition
 \setlength{\parindent}{0pt}
-\setlength{\headheight}{1.8em}
-\newcommand{\npar}{\par \vspace{2.3ex plus 0.3ex minus 0.3ex}}
+\setlength{\parskip}{2.3ex plus 0.3ex minus 0.3ex}
+\newcommand{\npar}{}
 
 %\includeonly{chap-n}
 \begin{document}
@@ -79,8 +81,8 @@
 %\begin{flushleft}
 %  \renewcommand{\arraystretch}{1.1}
 %  \begin{tabularx}{\textwidth}{@{}p{12mm}X@{}}
-%    LoG   & Laplacian-of-Gaussian \\
-%    MSE   & Mean Square error \\
+%    PoC   & Proof of Concept \\
+%    CPT   & Cross-Platform Tool \\
 %    PSNR  & Peak Signal-to-Noise ratio \\
 %  \end{tabularx}
 %\end{flushleft}
@@ -101,7 +103,11 @@
 \mainmatter
 
 \include{intro}
-\include{chap-1}
+\include{literature}
+\include{methodology}
+\include{tools}
+\include{results}
+\include{conclusion}
 %\include{chap-2}
 % ... and so on until
 %\include{chap-n}
