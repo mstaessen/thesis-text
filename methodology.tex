@@ -1,32 +1,104 @@
 \chapter{Methodology}
 \label{chap:methodology}
 
-\TODO{This chapter shall only setup the research methodology. Section 5 (evaluation) is described in a separate chapter. (Section 6 (selection) is described in the conclusion?)}
+This chapter describes the methodology used to compare and rank the studied cross-platform tools. The methodology is based on the 6-step approach which is presented in \cite{Jadhav:2011} and studied in the literature study (see chapter \ref{chap:literature}). To recap quickly, these are the six steps:
 
-%TODO: write Chapter
-\TODO{Recap software selection process described in Jadhav:2011}
+\begin{enumerate}
+    \item Define selection criteria
+    \item Identify potential candidates
+    \item List selected alternatives
+    \item Define evaluation criteria
+    \item Evaluate selected alternatives
+    \item Select the most suitable alternative
+\end{enumerate}
+
+Every step will be further expanded in the following sections.
 
 \section{Define selection criteria}
+\label{sec:selection-criteria}
 
-\TODO{Describe selection criteria, discussed in initial meeting: Enterprise application, should run on iOS and Android, other platforms are a pro}
+In this first step, the selection criteria for the tool are recorded. These requirements will be used later (in step 3) to filter a list of potential candidates. 
 
-\section{Look for alternatives}
+As the research presented in this thesis is conducted on behalf of CapGemini, the selection criteria are determined by their consultants and were recorded during the kick-off meeting on October 15, 2012. 
 
-\TODO{Combine VisionMobile report and internet search to find tools}
+In order to qualify as a viable cross-platform tools, it has to meet the following requirements:
 
-\section{List the alternatives}
+\begin{itemize}
+    \item \textbf{It \emph{must} produce ``native'' Android \emph{and} iOS applications.} CapGemini focusses mainly on Android and iOS because their clients mainly focus on these platforms. Support for other platforms is desirable but not not a necessity.
+    \item \textbf{It \emph{must} be able to produce \emph{both} tablet and smartphone applications, preferably from the same codebase.} Some clients want tablet applications, some clients want smartphone apps, some clients want both.
+\end{itemize}
 
-\TODO{Filter the list with selection criteria. Also mention there are two theses working on this topic and that the work is divided? Also mention native baseline.}
+This list of essential requirements is extended with additional requirements. These are not essential as they can be circumvented in some way though they will generally result in higher productivity.
+    
+\begin{itemize}    
+    \item \textbf{It \emph{should} be usable to create enterprise applications with.} CapGemini specializes in the development of data-driven enterprise applications. Such applications usually contain a lot of forms and don't require high performance graphics (like for instance in 3D games). Even though it is possible to develop an enterprise application on top of a 3D engine, it will probably not result in good productivity.
+    \item \textbf{It \emph{should} have a certain degree of maturity} Ideally, the tool should be maintained for as long applications are created with it (and maintained). 
+    \item \textbf{It \emph{should} have good support, provided by either the vendor or by the community.} In case of a problem, there should be a way to get support.
+\end{itemize}
+
+\section{Identify potential candidates}
+
+In this stage, the evaluator tries to identify as much potential candidates as possible. These candidates do not necessarily have to meet the requirements from the previous stage as this is merely a discovery phase. The result of this stage will be a list of potential candidates.
+
+Discovery of cross-platform tools has already been done extensively by VisionMobile. The latest cross-platform tools report \cite{} contains a list of 100 cross-platform tools they tracked as part of their research. Because additional internet searches did not reveal new tools, this list is used as output of this stage.
+
+\section{List selected alternatives}
+
+It is now time to make a first selection. In this phase, the candidates obtained from the previous stage are filtered with the selection criteria from the first stage. The result of this stage is a list of alternatives worth investigating.
+
+The list of tools from the previous stage contains a plethora of tools. Using the requirements from stage 1, a large number of tools can be left out:
+
+\begin{itemize}
+    \item tools that do not produce native applications for Android and iOS;
+    \item tools that do not produce tablet and smartphone applications;
+    \item special-purpose tools that are not well suited for the intended use, e.g. specialized 3D engines;
+    \item tools with an uncertain future, e.g. Flash-based systems or cutting-edge tools;
+    \item tools that do not offer good support. 
+\end{itemize}
+
+From the 100 tools listed, only 7 tools remain. They are listed in \tref{table:tools}.
+
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{l|c|c}
+            \textbf{Name} & \textbf{Architecture} & \textbf{Type} \\
+            \hline 
+            Apache Cordova & Hybrid & Open Source \\
+            Appcelerator Titanium & Interpreted & Open Source \\
+            Motorola Rhodes & Interpreted & Open Source \\
+            Trigger.io & Hybrid & Commercial \\
+            MoSync & Cross-Compiled + Hybrid & Open Source \\
+            Kony & Hybrid & Commercial \\
+            Xamarin & Cross-compiled & Commercial \\
+        \end{tabular}
+        \label{table:tools}
+        \caption{The remaining tools after application of the selection criteria.}
+    \end{center}
+\end{table}
+
+In this thesis, two tools will be compared with each other and with the native development kits for Android and iOS. The selected tools are Apache Cordova (formerly known as PhoneGap) and Motorola Rhodes. 
+
+Cordova was chosen because of its popularity among developers and  Motorola Rhodes was chosen because it focusses on enterprise applications. 
+
+Appcelerator Titanium and Xamarin are studied by another student with the same research topic. Trigger.io, however kind to provide an extended free trial, was not chosen because it is very similar to Apache Cordova. Kony, however targeting enterprise applications, did not provide a free trial.
+
+\TODO{Pick 2 and motivate. Also mention Bert. How? Also mention native baseline}
 
 \section{Define evaluation criteria}
 
-\TODO{Define evaluation criteria from (1) VisionMobile Report and (2) Interviews with CapGemini}
+\subsection{CapGemini Interviews}
 
-\section{Evaluate the alternatives}
+\subsection{Literature}
+
+\subsection{Proof of Concept application}
+
+\TODO{Define evaluation criteria from (1) VisionMobile Report and (2) Interviews with CapGemini + PoC}
+
+\section{Evaluate selected alternatives}
 
 \TODO{Using AHP, compare alternatives. Ask Jan to make 1 score table, derive 1 score table from VisionMobile report. Do the comparison twice or give both scoring tables adequate weights}
 
-\section{Select the software package}
+\section{Select the most suitable alternative}
 
 \TODO{Describe the advantages and disadvantages of the three candidates. Make a decision if only these three candidates are available }
 
