@@ -5,6 +5,7 @@
     note   = {Accessed on 2/11/2012},
     year   = 2012
 }
+
 @misc{IDC:tablet,
     author = {IDC},
     title  = {{IDC Raises Its Worldwide Tablet Forecast on Continued Strong Demand and Forthcoming New Product Launches}},
@@ -12,6 +13,7 @@
     note   = {Accessed on 2/11/2012},
     year   = 2012
 }
+
 @misc{Nielsen:2012,
     author = {Nielsen},
     title  = {{Smartphones Account for Half of all Mobile Phones, Dominate New Phone Purchases in the US}},
@@ -19,6 +21,7 @@
     note   = {Accessed on 02/11/2012},
     year   = 2012
 }
+
 @misc{Gartner:08Q2,
     author = {Gartner},
     title  = {{Gartner Says Worldwide Smartphone Sales Grew 16 Per Cent in Second Quarter of 2008}},
@@ -26,6 +29,7 @@
     year   = 2008,
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Gartner:08Q3,
     author = {Gartner},
     title  = {{}},
@@ -33,6 +37,7 @@
     year   = 2008,
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Gartner:08Q4,
     author = {Gartner},
     title  = {{Gartner Says Worldwide Smartphone Sales Reached Its Lowest Growth Rate With 3.7 Per Cent Increase in Fourth Quarter of 2008}},
@@ -40,6 +45,7 @@
     year   = 2009,
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Gartner:10Q1,
     author = {Gartner},
     title  = {{Gartner Says Worldwide Mobile Phone Sales Grew 17 Per Cent in First Quarter 2010}},
@@ -47,6 +53,7 @@
     year   = 2010,
     note   = {Accessed on 02/11/2012},
 }
+
 @misc{Gartner:10Q2,
     author = {Gartner},
     title  = {{Gartner Says Worldwide Mobile Device Sales Grew 13.8 Percent in Second Quarter of 2010, But Competition Drove Prices Down}},
@@ -54,6 +61,7 @@
     year   = 2010,
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Gartner:10Q3,
     author = {Gartner},
     title  = {{Gartner Says Worldwide Mobile Phone Sales Grew 35 Percent in Third Quarter 2010; Smartphone Sales Increased 96 Percent}},
@@ -61,6 +69,7 @@
     year   = 2010,
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Gartner:10Q4,
     author = {Gartner},
     title  = {{Gartner Says Worldwide Mobile Device Sales to End Users Reached 1.6 Billion Units in 2010; Smartphone Sales Grew 72 Percent in 2010}},
@@ -68,6 +77,7 @@
     year   = 2011,
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Gartner:11Q1,
     author = {Gartner},
     title  = {{Gartner Says 428 Million Mobile Communication Devices Sold Worldwide in First Quarter 2011, a 19 Percent Increase Year-on-Year}},
@@ -75,6 +85,7 @@
     year   = {2012},
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Gartner:11Q2,
     author = {Gartner},
     title  = {{Gartner Says Sales of Mobile Devices in Second Quarter of 2011 Grew 16.5 Percent Year-on-Year; Smartphone Sales Grew 74 Percent}},
@@ -82,6 +93,7 @@
     year   = {2012},
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Gartner:11Q3,
     author = {Gartner},
     title  = {{Gartner Says Sales of Mobile Devices Grew 5.6 Percent in Third Quarter of 2011; Smartphone Sales Increased 42 Percent}},
@@ -89,6 +101,7 @@
     year   = 2011,
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Gartner:11Q4,
     author = {Gartner},
     title  = {{Gartner Says Worldwide Smartphone Sales Soared in Fourth Quarter of 2011 With 47 Percent Growth}},
@@ -96,6 +109,7 @@
     year   = 2012,
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Gartner:12Q1,
     author = {Gartner},
     title  = {{Gartner Says Worldwide Sales of Mobile Phones Declined 2 Percent in First Quarter of 2012; Previous Year-over-Year Decline Occurred in Second Quarter of 2009}},
@@ -103,6 +117,7 @@
     note   = {Accessed on 02/11/2012},
     year   = {2012}
 }
+
 @misc{Gartner:12Q2,
     author = {Gartner},
     title  = {{Gartner Says Worldwide Sales of Mobile Phones Declined 2.3 Percent in Second Quarter of 2012}},
@@ -110,6 +125,7 @@
     note   = {Accessed on 02/11/2012},
     year   = 2012
 }
+
 @misc{Gartner:11tab,
     author = {Gartner},
     title  = {{Gartner Says Apple iOS to Dominate the Media Tablet Market Through 2015, Owning More Than Half of It for the Next Three Years}},
@@ -117,6 +133,7 @@
     note   = {Accessed on 02/11/2012},
     year   = 2011
 }
+
 @misc{Gartner:12tab,
     author = {Gartner},
     title  = {{Gartner Says Worldwide Media Tablets Sales to Reach 119 Million Units in 2012}},
@@ -124,6 +141,7 @@
     note   = {Accessed on 02/11/2012},
     year   = 2012
 }
+
 @misc{Friese,
     author = {Peter Friese},
     title  = {{Cross platform mobile development}},
@@ -131,18 +149,21 @@
     url    = {http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246},
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{android_distribution,
     author = {Android},
     title  = {{Platform Versions, Screen Sizes and Densities and Open GL Version}},
     url    = {http://developer.android.com/about/dashboards/index.html},
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{ios_distribution,
     author = {David Smith},
     title  = {{iOS Version Stats}},
     url    = {http://david-smith.org/iosversionstats/},
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Kindel,
     author = {Charlie Kindel},
     title  = {{Fragmentation Is Not The End of Android}},
@@ -150,6 +171,7 @@
     url    = {http://ceklog.kindel.com/2012/01/14/fragmentation-is-not-the-end-of-android/},
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{MobileHTML5,
     author = {Maximiliano Firtman},
     title  = {{Mobile HTML5}},
@@ -157,6 +179,7 @@
     url    = {http://mobilehtml5.org/},
     note   = {Accessed on 02/11/2012}
 }
+
 @misc{Safari:webclips,
     author = {Apple},
     title  = {{Configuring Web Applications}},
@@ -164,4 +187,6 @@
     url    = {http://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4},
     note   = {Accessed on 02/11/2012}
 }
+
+
 

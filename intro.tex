@@ -1,8 +1,6 @@
 \chapter{Introduction}
 \label{cha:intro}
 
-% TODO: The first chapter contains a general introduction to the work. The goals are defined and the modus operandi is explained.
-
 The mobile industry is without a doubt one of the most vibrant industries at the moment. It is characterized by rapid growth and intense competition which has led to fragmentation. 
 
 This chapter presents an overview of the evolution in the mobile device landscape, explains the problem of fragmentation and how cross-platform tools (CPTs) can solve this problem.
@@ -82,19 +80,25 @@ Overall, Apple can manage fragmentation quite well and fragmentation is rather l
 
 Android is an open source platform, developed by Google. Manufacturers are allowed to tailor it for their devices and many of them have grabbed this opportunity to differentiate their products. On april 24 2013, the Google Play store officially supported 2827 device configurations, distributed across 59 manufacturers. The ability to alter the operating system has largely contributed to the success of Android.
 
-There is however virtually no incentive for device manufacturers to maintain their Android flavours and as a result they do not often provide updates for their devices. This has led to the notorious runtime fragmentation among Android devices (see \fref{fig:runtime_fragmentation}).
+There is however virtually no incentive for device manufacturers to maintain their Android flavours and as a result they do not often provide updates for their devices. This has led to the notorious runtime fragmentation among Android devices (see \fref{fig:android_runtimes}).
 
 \begin{figure}[h!]
     \begin{center}
-        % TODO: runtime fragmentation evolution
-        \TODO{It would be nice to have an overview of Android version adaption, maybe use the internet archive and http://developer.android.com/about/dashboards/index.html. Also mark introduction dates of version.}
-        \label{fig:runtime_fragmentation}
-        \includegraphics[width=0.8\textwidth]{figs/os_distribution.pdf}
-        \caption{
-            Runtime fragmentation for Android (data collected by Google during a 14-day period ending on November 1, 2012) \citep{android_distribution} and iOS (based on the statistics of developer David Smith) \citep{ios_distribution}.
-        }
+        \includegraphics[width=\textwidth]{figs/android_runtimes.pdf}
+        \caption{Historical runtime fragmentation on Android. The data from this graph was aggregated from \cite{Android:Versions} using the Internet Archive (\url{http://archive.org}).}
+        \label{fig:android_runtimes}
     \end{center}
 \end{figure}
+
+%\begin{figure}[h!]
+%    \begin{center}
+%        \includegraphics[width=0.8\textwidth]{figs/os_distribution.pdf}
+%        \caption{
+%            Runtime fragmentation for Android (data collected by Google during a 14-day period ending on November 1, 2012) \citep{android_distribution} and iOS (based on the statistics of developer David Smith) \citep{ios_distribution}.
+%        }
+%        \label{fig:android_runtimes}
+%    \end{center}
+%\end{figure}
 
 These flavours also contribute to user interface fragmentation because manufacturers ship their devices with a custom user interface to differentiate their product.
 
@@ -102,7 +106,7 @@ Because of the sheer number of Android devices, there is also a large  number of
 
 Long story short, the Android platform is characterized by fragmentation in all dimensions.
 
-\section{Cross-Platform Tools to the rescue}
+\section{Cross-platform tools to the rescue}
 
 In the current economy, information is a company's most valuable asset and the rate at which information exchange takes place increases every day. Mobile Internet-enabled devices are a valuable resource for this purpose and, as a consequence, many companies want mobile applications for their businesses.
 

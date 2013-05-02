@@ -46,10 +46,12 @@ The Analytic Hierarchy Process (AHP) was originally developed by Thomas L. Saaty
 In the first stage, the MADM problem is decomposed into a tree of criteria. A criterion can consist of a number of sub-criteria or it can contain the values of all alternatives for this criterion. This results in a criterion tree, similar to figure \ref{fig:ahp-stage1}.
 
 \begin{figure}
-    % TODO: create graphic
-    \TODO{Create graphic}
-    \caption{}
-    \label{fig:ahp-stage1}
+    \begin{center}
+        % TODO: create graphic
+        \TODO{Create graphic}
+        \caption{}
+        \label{fig:ahp-stage1}
+    \end{center}
 \end{figure}
 
 In the next stage, the weights of each subtree (including the values of a criterion) will be calculated using a pair-wise comparison. For every combination of criteria $(c_i, c_j)$, define the importance of $c_i$ in terms of $c_j$ and aggregate the preference scores in a matrix $W$. For example, if $c_i$ is twice as important as $c_j$, then $c_i = 2 \times c_j$, and write $w_{i,j} = 2$ in the resulting matrix $W$. Conversely, $c_j = \dfrac{1}{2} \times c_i$ and $w_{j,i} = \dfrac{1}{2}$. The values on the diagonal of $W$ are all equal to $1$. The weights of $c_i$ can now be calculated as the eigenvalues of $W$. This stage results in a weight distribution for the criteria tree. 
@@ -60,6 +62,8 @@ The strengths of the are that it (1) enables decision makers to structure a prob
 \TODO{Fetch an AHP book from the library to cite here}
 %TODO: inconsistency dealing source
 
+\TODO{Add example}
+
 The weakness of AHP is that it is a time consuming method due to the large number of pair-wise comparisons. Also, the ordering may change entirely when other alternatives are taken into account.
 
 \subsection{Fuzzy MCDM}
@@ -68,10 +72,36 @@ The weakness of AHP is that it is a time consuming method due to the large numbe
 % TODO: Write section
 \TODO{Write section}
 
+Fuzzy logic was introduced in the mid `60s by Zadeh and was later applied to MCDM problems in the late `70s. Fuzzy logic allows to reason with imprecisely specified criteria like very high performance, low performance, etc. In classical approaches like those described above imprecision is dealt with first. When using the fuzzy approach, these imprecisions are only dealt with in the end, and only if necessary.
+
+Fuzzy MCDM is based on three concepts \cite{FuzzySetApproach}:
+
+\begin{enumerate}
+    \item The set of alternatives is a \emph{fuzzy set}, i.e. the alternatives aren't precisely defined. The decision will thus be taken in a \emph{fuzzy environment}. 
+    \item The decision is based on an aggregation of fuzzy preferences among alternatives.
+    \item The decision is based on an evaluation of alternatives using a linguistic description.
+\end{enumerate}
+
+More concrete, let $A = \{a_1, \ldots, a_n\}$ be a finite set of given alternatives and let there be $m$ imprecisely defined criteria. Every alternative fulfills a criterion in a certain degree or does not fulfill it at all. In other words, for each criterion $G_j, j = 1, \ldots, m$ there is a set $G_j \subset A$ containing the alternatives fulfilling the criterion and the degree in which an alternative $a_i$ fulfills $G_j$ is expressed by the membership degree $G_j(a_i)$.
+
+In order to decide the MCDM problem, constraints must be defined for each criterion. These constraints are specified as fuzzy sets as well meaning that a constraint $C_j$ is associated with a set $C_j \subset A$ containing the alternatives fulfilling $C_j$ in a certain degree. Again, a membership degree $C_j(a_i)$ is given.
+
+Consequently, there are two fuzzy sets for every $j, j = 1, \ldots, m$, namely $G_j$ and $C_j$. The decision can now be obtained by composition and is given by the fuzzy set 
+\begin{equation}
+    D = (G_1 \alpha C_1) \beta \ldots \beta (G_m \alpha C_m)
+\end{equation}
+where $\alpha$ and $\beta$ are suitable fuzzy set operations. The alternative $a_k$ with the highest membership degree $D(a_k)$ is the best alternative.
+
+\TODO{paraphrazed same source in previous three paragraphs, need a reference on each?}
+
+\TODO{Add an example: For example, when buying a house these criteria could be \emph{nice neighbourhood}, \emph{great parking facilities}, \emph{reasonable price}, etc.}
+
+
+
 \section{Software evaluation methodology}
 \label{sec:selection_method}
 
-Based on their literature review \cite{Jadhav2009}, the authors have proposed a generic, six-stage methodology for the selection of software packages \cite{Jadhav2011}.
+Based on their literature review \cite{Jadhav:2009}, the authors have proposed a generic, six-stage methodology for the selection of software packages \cite{Jadhav:2011}.
 
 \begin{enumerate}
     \item \textbf{Define selection criteria.} In the first stage, the evaluator defines the essential requirements for the software. If a certain software package does not meet a selection criterion, it is not a considered to be a suitable candidate and it should not be considered for further evaluation. 
@@ -89,8 +119,8 @@ In the original paper \cite{Jadhav:2009}, the authors also suggest to include an
 % TODO: talk about mobile hub
 \TODO{Explain Mobile Hub/Mobile Orchestrator}
 
-% TODO: describe development costs for all
-\TODO{Explain Mobile Hub/Mobile Orchestrator}
+% TODO: discuss cost for each architecture
+\TODO{discuss cost for each architecture}
 
 There are already a number of paradigms for cross platform mobile application development \citep{Friese}. This section presents an overview of the available strategies by comparing different aspects: performance, look and feel, platform access, programming languages, development cost and distribution.
 

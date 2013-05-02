@@ -1,2 +1,4 @@
 .texpadtmp/*
 .project
+*.bib
+!Thesis.bib
