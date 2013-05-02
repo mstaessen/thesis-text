@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<style>
+
+</style>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script>
+
+var levels = {
+    3:  {
+        name: "Cupcake (1.5)",
+        date: "2009-04-30"
+    },
+    4:  {
+        name: "Donut (1.6)",
+        date: "2009-09-15"
+    },
+    5:  {
+        name: "Eclair (2.0)",
+        date: "2009-10-26"
+    },
+    6:  {
+        name: "Eclair (2.0.1)",
+        date: "2009-12-03"
+    },
+    7:  {
+        name: "Eclair (2.1)",
+        date: "2010-01-12"
+    },
+    8:  {
+        name: "Froyo (2.2)",
+        date: "2010-05-20"
+    },
+    9:  {
+        name: "Gingerbread (2.3 - 2.3.2)",
+        date: "2010-12-06"
+    },
+    10: {
+        name: "Gingerbread (2.3.3 - 2.3.7)",
+        date: "2011-02-09"
+    },
+    11: {
+        name: "Honeycomb (3.0)",
+        date: "2011-02-22"
+    },
+    12: {
+        name: "Honeycomb (3.1)",
+        date: "2011-05-10"
+    },
+    13: {
+        name: "Honeycomb (3.2)",
+        date: "2011-07-15"
+    },
+    14: {
+        name: "Ice Cream Sandwich (4.0 - 4.0.3)",
+        date: "2011-10-19"
+    },
+    15: {
+        name: "Ice Cream Sandwich (4.0.3 - 4.0.4)",
+        date: "2011-12-16"
+    },
+    16: {
+        name: "Jellybean (4.1)",
+        date: "2012-07-09"
+    },
+    17: {
+        name: "Jellybean (4.2)",
+        date: "2012-11-13"
+    }
+};
+
+var margin = {top: 20, right: 20, bottom: 30 + 5 * 20, left: 50},
+	totalWidth = 960,
+	totalHeight = 450,
+    width = totalWidth - margin.left - margin.right,
+    height = totalHeight - margin.top - margin.bottom;
+
+var parseDate = d3.time.format("%Y-%m-%d").parse,
+    formatPercent = d3.format(".0%");
+
+var x = d3.time.scale().range([0, width]),
+	y = d3.scale.linear().range([height, 0]),
+	color = d3.scale.category20c();
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickFormat(formatPercent);
+    
+var releaseAxis = d3.svg.axis()
+    .scale(x)
+    .orient("top")
+    .tickSize(-height, 0, 0)
+    .tickPadding(-height / 2)
+    .tickValues(function() {
+        var res = [];
+        for (var level in levels) {
+            if (parseDate(levels[level].date) > d3.min(x.domain())) {
+                res.push(parseDate(levels[level].date));
+            }
+        }
+        return res;
+    })
+    .tickFormat(function (input) {
+        for (var level in levels) {
+            if (d3.time.format("%Y-%m-%d")(input) === levels[level].date) {
+                return levels[level].name;
+            }
+        }
+        return input;
+    });
+
+var area = d3.svg.area()
+    .x(function(d) { return x(d.date); })
+    .y0(function(d) { return y(d.y0); })
+    .y1(function(d) { return y(d.y0 + d.y); });
+
+var stack = d3.layout.stack()
+    .values(function(d) { return d.values; });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
+
+d3.tsv("android_runtimes.tsv", function(error, data) {
+    var labels = d3.keys(data[0]).filter(function(key) { return key !== "date"; });
+    color.domain(labels);
+    
+    data.forEach(function(d) {
+        d.date = parseDate(d.date);
+    });
+    
+    var runtimes = stack(color.domain().map(function(name) {
+        return {
+            name: name,
+            values: data.map(function(d) {
+                return {date: d.date, y: d[name] / 100};
+            })
+        };
+    }));
+  
+    x.domain(d3.extent(data, function(d) { return d.date; }));
+  
+    var runtime = svg
+        .selectAll(".runtime")
+        .data(runtimes)
+        .enter().append("g")
+        .attr("class", "runtime");
+  
+    runtime.append("path")
+        .attr("class", "area")
+        .attr("d", function(d) { return area(d.values); })
+        .style("fill", function(d) { return color(d.name); });
+        
+    svg.append("g")
+        .attr("class", "axis x")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+        
+    svg.append("g")
+        .attr("class", "axis release")
+        .call(releaseAxis);
+        
+    svg.selectAll(".release text").attr("transform", "rotate(-90 0," + height / 2 + ")").attr("dy", "1em"); 
+                    
+    svg.append("g")
+        .attr("class", "axis y")
+        .call(yAxis);
+		
+	svg.style("font", "14px sans-serif");
+		
+	svg.selectAll(".axis line, .axis path")
+		.style("fill", "none")
+		.style("stroke", "#000")
+		.style("shape-rendering", "crispEdges");	
+		
+	svg.selectAll(".release line")
+		.style("fill", "none")
+		.style("stroke", "#888")
+    	.style("stroke-dasharray", "5 2");
+		
+	svg.selectAll(".release text")
+		.style("fill", "#888");
+		
+	svg.selectAll(".release path")
+		 .style("fill", "none")
+		 .style("stroke", "none");
+		         
+    var labelsPerRow = 3;
+      
+    var legend = svg.selectAll(".legend")
+        .data(labels.slice())
+        .enter().append("g")
+        .attr("class", "legend")
+        .attr("transform", function(d, i) {
+			var x = (i % labelsPerRow) * (width / labelsPerRow);
+			var y = Math.floor(i / labelsPerRow) * 20;
+			return "translate(" + x + ", " + y + ")"; 
+		});
+
+    legend.append("rect")
+        .attr("x", 1)
+        .attr("y", margin.top + height + 6)
+        .attr("width", width / labelsPerRow - 2)
+        .attr("height", 18)
+        .style("fill", color);
+
+    legend.append("text")
+        .attr("x", width / labelsPerRow / 2)
+        .attr("y", margin.top + height + 6 + 9)
+        .attr("dy", ".4em")
+        .style("text-anchor", "middle")
+        .text(function(d) { return levels[d].name; });
+		
+	
+});
+
+</script>
