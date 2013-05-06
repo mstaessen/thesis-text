@@ -2,7 +2,7 @@
 \label{chap:literature}
 
 % TODO: write introductory text
-\TODO{Introductory text}
+\TODO{write introductory text}
 
 \section{Multi-Criteria Decision Making (MCDM)}
 \label{sec:mcdm}
@@ -41,26 +41,47 @@ The strength of these methods is that they are the most easy to use. However,  s
 \subsection{Analytic Hierarchy Process (AHP)}
 \label{sec:ahp}
 
-The Analytic Hierarchy Process (AHP) was originally developed by Thomas L. Saaty and offers a mathematical solution for MADM problems. The method can even compensate for inconsistency and deal with non-numerical scales by using pairwise comparisons.
+The Analytic Hierarchy Process (AHP) is ``a multi-criteria decision making approach in which factors are arranged in a hierarchic structure'' \cite{Saaty:1990}. It is developed by Thomas L. Saaty and is based on pairwise comparisons of both criteria and alternatives. 
 
-In the first stage, the MADM problem is decomposed into a tree of criteria. A criterion can consist of a number of sub-criteria or it can contain the values of all alternatives for this criterion. This results in a criterion tree, similar to figure \ref{fig:ahp-stage1}.
+The strengths of the AHP are that it (1) enables decision makers to structure a problem into a hierarchy, (2) that is provides a powerful tool for handling both quantitative and qualitative multi-criteria decision making problems and (3) that this system can deal with inconsistency \cite{Jadhav:2009}. 
 
-\begin{figure}
-    \begin{center}
-        % TODO: create graphic
-        \TODO{Create graphic}
-        \caption{}
-        \label{fig:ahp-stage1}
-    \end{center}
-\end{figure}
+The analytic hierarchy process consists of three stages. In the first stage, the factors that are important for the decision are organized into ``a hierarchic structure descending from an overall goal to criteria, subcriteria and alternatives in successive levels''. Organizing the factors in such structure helps the decision maker in getting an overview of the potentially complex relationships and also helps to assess the relative importance of the issues in each level. 
 
-In the next stage, the weights of each subtree (including the values of a criterion) will be calculated using a pair-wise comparison. For every combination of criteria $(c_i, c_j)$, define the importance of $c_i$ in terms of $c_j$ and aggregate the preference scores in a matrix $W$. For example, if $c_i$ is twice as important as $c_j$, then $c_i = 2 \times c_j$, and write $w_{i,j} = 2$ in the resulting matrix $W$. Conversely, $c_j = \dfrac{1}{2} \times c_i$ and $w_{j,i} = \dfrac{1}{2}$. The values on the diagonal of $W$ are all equal to $1$. The weights of $c_i$ can now be calculated as the eigenvalues of $W$. This stage results in a weight distribution for the criteria tree. 
+Structuring information in a tree is also backed by experiments of psychologist George Miller. He found that people can only deal with a few facts simultaneously; more precisely, seven plus or minus two \cite{Miller:1956}. 
 
-In the last stage, every alternative can be scored and ranked using this the weights obtained from the previous stage. 
+In the second stage, the analytic hierarchy process establishes a ranking of the alternatives based on paired comparisons. 
 
-The strengths of the are that it (1) enables decision makers to structure a problem into a hierarchy, (2) that is provides a powerful tool for handling both quantitative and qualitative multi-criteria decision making problems and (3) that this system can deal with inconsistency (on certain levels) \cite{Jadhav:2009}, \cite{}. 
-\TODO{Fetch an AHP book from the library to cite here}
-%TODO: inconsistency dealing source
+\TODO{connect paragraphs}
+
+Consider the case in which the relative comparison is derived from a given scale. For instance, where you have $n$ stones $A_1, \ldots, A_n$ with weights $w_1, \ldots, w_n$ respectively. 
+
+\begin{gather}
+    \begin{bmatrix}
+        w_1/w_1 & w_1/w_2 & \ldots & w_1/w_n \\
+        w_2/w_1 & w_2/w_2 & \ldots & w_2/w_n \\
+        \vdots  & \vdots  &        & \vdots  \\
+        w_n/w_1 & w_n/w_2 & \ldots & w_n/w_n    
+    \end{bmatrix} % 
+    \begin{bmatrix}
+        w_1    \\
+        w_2    \\
+        \vdots \\
+        w_n
+    \end{bmatrix} = %
+    n %
+    \begin{bmatrix}
+        w_1    \\
+        w_2    \\
+        \vdots \\
+        w_n
+    \end{bmatrix} \Longleftrightarrow %
+    Aw = nw
+    \label{eq:ahp}
+\end{gather}
+
+If $n$ is an eigenvalue of $A$, then $w$ is the corresponding eigenvector. The trace of a matrix, the sum of the elements on the main diagonal, is equal to the sum of its eigenvalues. Matrix $A$ has rank one because all rows of $A$ are linearly dependent on the first row and consequently, all eigenvalues except one are zero. Hence, $tr(A) = n$ and $n$ is the largest or pricipal eigenvalue of $A$.
+
+\TODO{Prove validity of eigenvector method in AHP using \cite{Sekitani:1999, Saaty:2003}?}
 
 \TODO{Add example}
 
