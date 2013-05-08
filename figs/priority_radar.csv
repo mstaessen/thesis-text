@@ -1,0 +1,23 @@
+key,value,criterion
+Architect,0.0096,Platform support
+Architect,0.0654,Toolset reuse
+Architect,0.0297,Code reuse
+Architect,0.0732,Hardware access
+Architect,0.2198,Platform-specific services
+Architect,0.1174,UI capabilities
+Architect,0.0235,Native L&F
+Architect,0.2031,Performance
+Architect,0.0522,Skill reuse
+Architect,0.1810,Tooling
+Architect,0.0251,Testing
+Developer/Analyst,0.007,Platform support
+Developer/Analyst,0.0315,Toolset reuse
+Developer/Analyst,0.0315,Code reuse
+Developer/Analyst,0.0764,Hardware access
+Developer/Analyst,0.0146,Platform-specific services
+Developer/Analyst,0.0764,UI capabilities
+Developer/Analyst,0.0146,Native L&F
+Developer/Analyst,0.4680,Performance
+Developer/Analyst,0.1176,Skill reuse
+Developer/Analyst,0.1176,Tooling
+Developer/Analyst,0.0392,Testing
