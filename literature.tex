@@ -11,7 +11,7 @@ Finding the right software package is often a daunting task. In order to suit th
 
 There are two categories of MCDM problems: Multiple-Attribute Decision Making (MADM) problems and Multi-Objective Decision Making (MODM) problems. The first category involves sorting and ranking of a limited number of available alternatives, based on a number of decision criteria. In the latter category, there are no alternatives specified beforehand and the number of alternatives is effectively infinite \cite{Kahraman:2008}. 
 
-The software selection process belongs to the category of MADM problems. Their goal is to find the best alternative in a set of alternatives and at the same to time create a ranking of all these available alternatives. % TODO: Reference!
+The software selection process belongs to the category of MADM problems. Their goal is to find the best alternative in a set of alternatives and at the same to time create a ranking of all these available alternatives \TODO{\cite{}}. % TODO: Reference!
 
 There are a plethora of solution methods for the MADM problem. The following subsections will describe the most frequently used methods in literature, together with their advantages and disadvantages. 
 
@@ -43,54 +43,107 @@ The strength of these methods is that they are the most easy to use. However,  s
 
 The Analytic Hierarchy Process (AHP) is ``a multi-criteria decision making approach in which factors are arranged in a hierarchic structure'' \cite{Saaty:1990}. It is developed by Thomas L. Saaty and is based on pairwise comparisons of both criteria and alternatives. 
 
-The strengths of the AHP are that it (1) enables decision makers to structure a problem into a hierarchy, (2) that is provides a powerful tool for handling both quantitative and qualitative multi-criteria decision making problems and (3) that this system can deal with inconsistency \cite{Jadhav:2009}. 
+The strengths of the AHP are (1) that it enables decision makers to structure a problem into a hierarchy, (2) that it provides a powerful tool for handling both quantitative and qualitative multi-criteria decision making problems and (3) that this system can deal with inconsistency \cite{Jadhav:2009}. 
 
-The analytic hierarchy process consists of three stages. In the first stage, the factors that are important for the decision are organized into ``a hierarchic structure descending from an overall goal to criteria, subcriteria and alternatives in successive levels''. Organizing the factors in such structure helps the decision maker in getting an overview of the potentially complex relationships and also helps to assess the relative importance of the issues in each level. 
+The weaknesses of AHP are (1) that it is a time consuming method due to the large number of pair-wise comparisons and (2) that it is susceptible to rank-reversal, i.e. the ranking may change  when new alternatives are added.
+
+The analytic hierarchy process consists of three stages. In the first stage, the factors that are important for the decision are organized into ``a hierarchic structure descending from an overall goal to criteria, subcriteria and alternatives in successive levels'' \cite{Saaty:1990}. Organizing the factors in such structure helps the decision maker in getting an overview of the potentially complex relationships and also helps to assess the relative importance of the issues in each level. 
 
 Structuring information in a tree is also backed by experiments of psychologist George Miller. He found that people can only deal with a few facts simultaneously; more precisely, seven plus or minus two \cite{Miller:1956}. 
 
-In the second stage, the analytic hierarchy process establishes a ranking of the alternatives based on paired comparisons. 
+In the second stage, the analytic hierarchy process establishes a ranking of the alternatives. This ranking is based on (imprecise) judgements, resulting from pairwise comparison. 
 
-\TODO{connect paragraphs}
+Consider $n$ alternatives $A_1, A_2, \ldots, A_n$ and a property $X$ that can be accurately measured for every alternative. The value of property $X$ is given by $w_i$ for alternative $A_i$. For instance, consider $n$ stones with weights $w_i$, measured in grams.
 
-Consider the case in which the relative comparison is derived from a given scale. For instance, where you have $n$ stones $A_1, \ldots, A_n$ with weights $w_1, \ldots, w_n$ respectively. 
-
+The relative difference between all alternatives with respect to property $X$ can now be summarized in a matrix
 \begin{gather}
+    A = %
     \begin{bmatrix}
         w_1/w_1 & w_1/w_2 & \ldots & w_1/w_n \\
         w_2/w_1 & w_2/w_2 & \ldots & w_2/w_n \\
         \vdots  & \vdots  &        & \vdots  \\
         w_n/w_1 & w_n/w_2 & \ldots & w_n/w_n    
-    \end{bmatrix} % 
-    \begin{bmatrix}
-        w_1    \\
-        w_2    \\
-        \vdots \\
-        w_n
-    \end{bmatrix} = %
-    n %
-    \begin{bmatrix}
-        w_1    \\
-        w_2    \\
-        \vdots \\
-        w_n
-    \end{bmatrix} \Longleftrightarrow %
-    Aw = nw
-    \label{eq:ahp}
+    \end{bmatrix}.
 \end{gather}
 
-If $n$ is an eigenvalue of $A$, then $w$ is the corresponding eigenvector. The trace of a matrix, the sum of the elements on the main diagonal, is equal to the sum of its eigenvalues. Matrix $A$ has rank one because all rows of $A$ are linearly dependent on the first row and consequently, all eigenvalues except one are zero. Hence, $tr(A) = n$ and $n$ is the largest or pricipal eigenvalue of $A$.
+Note that:
+\begin{itemize}
+    \item $A$ is reciprocal, i.e. $a_{ij} = 1 / a_{ji}$
+    \item elements on the diagonal are equal to one. This is easy to understand because there cannot be any difference between two identical objects.
+\end{itemize}
 
-\TODO{Prove validity of eigenvector method in AHP using \cite{Sekitani:1999, Saaty:2003}?}
+If any row of $A$ were to be multiplied by a vector containing all values $(w_1, w_2, \ldots, w_n)^T$, the result would be a row of identical entries $(w_i, w_i, \ldots, w_i)$. 
 
-\TODO{Add example}
+In reality though, the values $w_i$ are unknown and the ratios $a_{ij} = w_i/w_j$ cannot be calculated. However, an expert could estimate these ratios. The authors have developed a fundamental scale (see \tref{tab:ahp-scale}), which can be used to rate the difference between alternatives \cite{Saaty:1990}.
 
-The weakness of AHP is that it is a time consuming method due to the large number of pair-wise comparisons. Also, the ordering may change entirely when other alternatives are taken into account.
+\begin{table}
+    \begin{center}
+        \begin{tabular}{p{2.5cm}p{4cm}p{6cm}}
+            \hline
+            Intensity of importance on an absolute scale & Definition & Explanation \\
+            \hline
+            1 & Equal importance & Two activities contribute equally to the objective \\
+            3 & Weak importance of one over another & Experience and judgement slightly favour one activity over another \\
+            5 & Essential or strong importance & Experience and judgement strongly favour one activity over another \\
+            7 & Very strong or demonstrated importannce & An activity is favoured very strongly over another; its dominance is  demonstrated in practice \\
+            9 & Absolute importance & The evidence favouring one activity over another is of the highest possible order of affirmation \\
+            2, 4, 6, 8 & Intermediate values between adjacent scale values & When compromise is needed \\
+            Reciprocals of above nonzero & \multicolumn{2}{p{10cm}}{If activity $i$ has one of the above nonzero numbers assigned with activity $j$, then $j$ has the reciprocal value when compared with $i$. This is a reasonable assumption.} \\
+            Rationals & Ratios arising from the scale & If consistency were to be forced by obtaining $n$ numerical values to span the matrix \\
+            \hline
+        \end{tabular}
+        \caption{The fundamental scale for pairwise comparison\cite{Saaty:1990}}
+        \label{tab:ahp-scale}
+    \end{center}
+\end{table}
+
+No human is perfect though and nor will be the estimates. The matrix $A' = \left[a'_{ij}\right]$ with estimated ratios will therefore be a small perturbation of $A$. 
+
+As a result, the aforementioned multiplication would not yield a  row of identical values but instead it would yield a row of differing values, scattered around $w_i$ (because of the errors in judgement). Consequently, it seems reasonable to represent $w_i$ by the average of these values.
+\begin{gather}
+    w_i = \frac{1}{n} \sum_{j=1}^{n} a'_{ij}w_j \quad i = 1, 2, \ldots, n
+\end{gather}
+
+This system of equations can be solved for $w = (w_1, w_2, \ldots, w_n)^T$ if $n$ is allowed to change. The problem now reads
+\begin{gather}
+    w_i = \frac{1}{\lambda_{max}} \sum_{j=1}^{n} a'_{ij}w_j \quad i = 1, 2, \ldots, n
+\end{gather}
+which is equivalent to the eigenvalue problem $Aw = \lambda_{max} v$ and its solution is unique to within a multiplicative constant. Small perturbations of $a_{ij}$ could generally lead to large perturbations of $\lambda_{max}$ and $w$ but it can be shown that this is not the case for reciprocal matrices \cite[p.~192~--~197]{Saaty:1980}. 
+
+The eigenvector $w$ is normalized by dividing its entries by their sum to obtain the \emph{priority vector}, containing appropriate weights or scores for all alternatives. 
+
+Since this method is based on human judgement, which inherently contains errors, there needs to be a way to measure the amount of error in the result. 
+
+Reconsider $A$. This is a positive, reciprocal matrix and is also consistent, i.e. all entries satisfy the condition
+\begin{gather}
+    a_{jk} = \frac{a_{ik}}{a_{ij}} = \frac{w_i}{w_k} \times \frac{w_j}{w_i} \quad i, j, k = 1, \ldots, n.
+\end{gather}
+That is, all $n$ alternatives form a chain.
+
+The trace of a matrix, the sum of the elements on the main diagonal, is equal to the sum of its eigenvalues. Because all rows of $A$ are linearly dependent, $A$ has rank one. Consequently, all eigenvalues except one are zero. Hence, $tr(A) = n$, the order of $A$, is the largest or pricipal eigenvalue of $A$.
+
+The amount of inconsistency, resulting from human judgement, can therefore be represented by $\lambda_{max} - n$, which measures the deviation of the judgements from the consistent approximation \cite{Saaty:1990}. 
+
+The authors define a \emph{consistency index}, $C.I. = (\lambda_{max} - n) / (n - 1)$. This consistency index is compared to the average consistency index of a large number of random reciprocal matrices of the same order, called the \emph{random index (R.I.)}, listed in \tref{tab:ri}. When the \emph{consistency ratio (C.R.)}, the ratio $C.I. / R.I.$, is 10\% or less, the estimate $w$ is considered acceptable. Otherwise, new judgements should be collected in order to improve consistency.
+
+\begin{table}[h!]
+\begin{center}
+    \begin{tabular}{l*{9}{|c}}
+        n & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
+        \hline
+        RI & 0 & 0 & 0.58 & 0.90 & 1.12 & 1.24 & 1.32 & 1.41 & 1.45
+    \end{tabular}
+    \caption{Random indices (R.I.) for reciprocal matrices of order 1 to 9}
+    \label{tab:ri}
+\end{center}
+\end{table}
+
+\paragraph{Example}
+\TODO{Add example?}
 
 \subsection{Fuzzy MCDM}
 \label{sec:fuzzy}
 
-% TODO: Write section
 \TODO{Write section}
 
 Fuzzy logic was introduced in the mid `60s by Zadeh and was later applied to MCDM problems in the late `70s. Fuzzy logic allows to reason with imprecisely specified criteria like very high performance, low performance, etc. In classical approaches like those described above imprecision is dealt with first. When using the fuzzy approach, these imprecisions are only dealt with in the end, and only if necessary.
@@ -103,7 +156,7 @@ Fuzzy MCDM is based on three concepts \cite{FuzzySetApproach}:
     \item The decision is based on an evaluation of alternatives using a linguistic description.
 \end{enumerate}
 
-More concrete, let $A = \{a_1, \ldots, a_n\}$ be a finite set of given alternatives and let there be $m$ imprecisely defined criteria. Every alternative fulfills a criterion in a certain degree or does not fulfill it at all. In other words, for each criterion $G_j, j = 1, \ldots, m$ there is a set $G_j \subset A$ containing the alternatives fulfilling the criterion and the degree in which an alternative $a_i$ fulfills $G_j$ is expressed by the membership degree $G_j(a_i)$.
+More concrete, let $A = \{a_1, \ldots, a_n\}$ be a finite set of given alternatives and let there be $m$ imprecisely defined criteria. Every alternative satisfies a criterion to a certain degree or does not satisfy it at all. In other words, for each criterion $G_j, j = 1, \ldots, m$ there is a set $G_j \subset A$ containing the alternatives satisfying the criterion and the degree in which an alternative $a_i$ fulfills $G_j$ is expressed by the membership degree $G_j(a_i)$.
 
 In order to decide the MCDM problem, constraints must be defined for each criterion. These constraints are specified as fuzzy sets as well meaning that a constraint $C_j$ is associated with a set $C_j \subset A$ containing the alternatives fulfilling $C_j$ in a certain degree. Again, a membership degree $C_j(a_i)$ is given.
 
@@ -113,14 +166,11 @@ Consequently, there are two fuzzy sets for every $j, j = 1, \ldots, m$, namely $
 \end{equation}
 where $\alpha$ and $\beta$ are suitable fuzzy set operations. The alternative $a_k$ with the highest membership degree $D(a_k)$ is the best alternative.
 
-\TODO{paraphrazed same source in previous three paragraphs, need a reference on each?}
 
 \TODO{Add an example: For example, when buying a house these criteria could be \emph{nice neighbourhood}, \emph{great parking facilities}, \emph{reasonable price}, etc.}
 
-
-
 \section{Software evaluation methodology}
-\label{sec:selection_method}
+\label{sec:sw-selection}
 
 Based on their literature review \cite{Jadhav:2009}, the authors have proposed a generic, six-stage methodology for the selection of software packages \cite{Jadhav:2011}.
 
@@ -186,6 +236,7 @@ Web apps are not nearly as powerful as native apps. First of all, the applicatio
 With HTML5, web apps can get more powerful. They will be able to access device features, like the camera and other sensors \cite{MobileHTML5}. They will not even require an active internet connection because they can be cached on the device. However, HTML5 is still a draft and a lot of mobile browsers lack proper HTML5 support.
 
 From a user interface perspective, web apps can be a problem as well. 
+
 % TODO: complete paragraph
 \TODO{complete paragraph}
 

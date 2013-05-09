@@ -1,7 +1,7 @@
 \chapter{Methodology}
 \label{chap:methodology}
 
-This chapter describes the methodology used to compare and rank the studied cross-platform tools. The methodology is based on the 6-step approach which is presented in \cite{Jadhav:2011} and studied in the literature study (see chapter \ref{chap:literature}). To recap quickly, these are the six steps:
+This chapter describes the methodology used to compare and rank the studied cross-platform tools. The methodology follows the suggested 6-step approach presented in \cite{Jadhav:2011} (see chapter \ref{sec:sw-selection}). The six steps are:
 
 \begin{enumerate}
     \item Define selection criteria
@@ -40,7 +40,7 @@ This list of essential requirements is extended with additional requirements. Th
 
 In this stage, the evaluator tries to identify as much potential candidates as possible. These candidates do not necessarily have to meet the requirements from the previous stage as this is merely a discovery phase. The result of this stage will be a list of potential candidates.
 
-Discovery of cross-platform tools has already been done extensively by VisionMobile. The latest cross-platform tools report \cite{} contains a list of 100 cross-platform tools they tracked as part of their research. Because additional internet searches did not reveal new tools, this list is used as output of this stage.
+Discovery of cross-platform tools has already been done extensively by VisionMobile. The latest cross-platform tools report \cite{VMCPT:2012} contains a list of 100 cross-platform tools they tracked as part of their research. Because additional internet searches did not reveal new tools, this list is used as output of this stage.
 
 \section{List selected alternatives}
 
@@ -56,12 +56,13 @@ The list of tools from the previous stage contains a plethora of tools. Using th
     \item tools that do not offer good support. 
 \end{itemize}
 
-From the 100 tools listed, only 7 tools remain. They are listed in \tref{table:tools}.
+From the 100 tools listed, 7 tools were selected. They are listed in \tref{table:tools}.
 
 \begin{table}[h!]
     \begin{center}
-        \begin{tabular}{l|c|c}
-            \textbf{Name} & \textbf{Architecture} & \textbf{Type} \\
+        \begin{tabular}{lcc}
+            \hline
+            Name & Architecture & Type \\
             \hline 
             Apache Cordova & Hybrid & Open Source \\
             Appcelerator Titanium & Interpreted & Open Source \\
@@ -70,23 +71,28 @@ From the 100 tools listed, only 7 tools remain. They are listed in \tref{table:t
             MoSync & Cross-Compiled + Hybrid & Open Source \\
             Kony & Hybrid & Commercial \\
             Xamarin & Cross-compiled & Commercial \\
+            \hline
         \end{tabular}
         \caption{The remaining tools after application of the selection criteria.}
         \label{table:tools}
     \end{center}
 \end{table}
 
-In this thesis, two tools will be compared with each other and with the native development kits for Android and iOS. The selected tools are Apache Cordova (formerly known as PhoneGap) and Motorola Rhodes. 
+This thesis will compare two of these tools with each other and  with the native development kits for both Android and iOS. The selected tools are Apache Cordova (formerly known as PhoneGap) and Motorola Rhodes. 
 
-Cordova was chosen because of its popularity among developers and  Motorola Rhodes was chosen because it focusses on enterprise applications. 
+Apache Cordova was chosen because of its popularity among developers and Motorola Rhodes was chosen because it focusses on enterprise applications. 
 
-Appcelerator Titanium and Xamarin are studied by another student with the same research topic. Trigger.io, however kind to provide an extended free trial, was not chosen because it is very similar to Apache Cordova. Kony, however targeting enterprise applications, did not provide a free trial.
+Appcelerator Titanium and Xamarin were not selected because they are evaluated by another student with the same research topic. 
 
-\TODO{Pick 2 and motivate. Also mention Bert. How? Also mention native baseline}
+Trigger.io was not selected because it was too similar to Apache Cordova at first sight: same architecture, same languages, \ldots
+
+\TODO{From what I read now, I should have selected MoSync, why didn't I? Don't really have a reason for it except maybe that I didn't research it quite well. Was also not prioritized by CapGemini but might have been my influence...}
+
+Kony --- even though apparently using the the same architecture as Apache Cordova --- targets enterprise applications, which made it a very good rival for Motorola Rhodes. However, there was no free trial available for Kony, which resulted in the selection of Motorola Rhodes.
 
 \section{Define evaluation criteria}
 
-
+This is probably the most important stage of all. Setting up good grounds for comparison is paramount. 
 
 \subsection{CapGemini Interviews}
 
