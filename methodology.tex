@@ -44,7 +44,7 @@ Discovery of cross-platform tools has already been done extensively by VisionMob
 
 \section{List selected alternatives}
 
-It is now time to make a first selection. In this phase, the candidates obtained from the previous stage are filtered with the selection criteria from the first stage. The result of this stage is a list of alternatives worth investigating.
+In this phase, the candidates obtained from the previous stage are filtered with the selection criteria from the first stage. The result of this stage is a list of alternatives worth investigating.
 
 The list of tools from the previous stage contains a plethora of tools. Using the requirements from stage 1, a large number of tools can be left out:
 
@@ -90,23 +90,138 @@ Trigger.io was not selected because it was too similar to Apache Cordova at firs
 
 Kony --- even though apparently using the the same architecture as Apache Cordova --- targets enterprise applications, which made it a very good rival for Motorola Rhodes. However, there was no free trial available for Kony, which resulted in the selection of Motorola Rhodes.
 
+Apache Cordova and Motorola Rhodes are discussed in more detail in chapter \ref{chap:tools}.
+
 \section{Define evaluation criteria}
 
-This is probably the most important stage of all. Setting up good grounds for comparison is paramount. 
+This is probably the most important stage of all. Setting up good grounds for comparison is paramount. The criteria are therefore carefully recorded from interviews with CapGemini and literature.
 
 \subsection{CapGemini Interviews}
 
+A finished application is the result of a cooperation of different people with various roles. Every person experiences mobile application development in another way. In order to gain a better understanding of these experiences, three interviews with CapGemini employees were planned: one interview with a developer, one interview with a mobile architect and one interview with a sales representative. 
+
+The essence of these interviews is to reveal important criteria that should be considered during the evaluation of the cross-platform tools.
+
+The following sections summarize the findings of these interviews
+
+\subsubsection{Developer}
+
+\TODO{}
+
+\subsubsection{Mobile Architect}
+
+\TODO{}
+
+\subsubsection{Sales representative}
+
+\TODO{}
+
 \subsection{Literature}
 
-\subsection{Proof of Concept application}
+Another source from where criteria could be identified is literature.
+
+Similar research has already been performed by VisionMobile\footnote{VisionMobile is an ecosystems analyst firm, \url{http://www.visionmobile.com/}.}. Their report on cross-platform tools \cite{VMCPT:2012} contains the results from a survey among 2406 developers across 91 countries.
+
+Two of the questions that were asked are ``What are the key reasons for tool selection?'' and ``What are the key reasons to drop a tool?''. 
+
+\begin{itemize}
+    \item It supports the platforms I am targeting, 61\%
+    \item Allows me to use my existing skills, 43\%
+    \item Low cost or free, 40\%
+    \item Rapid development process, 33\%
+    \item Easy learning curve, 23\%
+    \item Rich UI capabilities, 19\%
+    \item Access to device or hardware APIs, 10\%
+    \item High Performance / low runtime overhead, 9\%
+    \item Well suited for games development, 8\%
+    \item Good vendor support and services, 8\%
+\end{itemize}
 
 \TODO{Define evaluation criteria from (1) VisionMobile Report and (2) Interviews with CapGemini + PoC}
+
+\subsection{Summary of evaluation criteria}
 
 \section{Evaluate selected alternatives}
 
 \TODO{Using AHP, compare alternatives. Ask Jan to make 1 score table, derive 1 score table from VisionMobile report. Do the comparison twice or give both scoring tables adequate weights}
 
+In this stage, the actual evaluation of the selected tools takes place. The alternatives are compared in pairs, with respect to the criteria recorded in the previous stage. In order to gain the necessary experience that is needed to formulate an accurate judgement, every tool is used to create a proof of concept application, or parts thereof.
+
+The proof of concept application is discussed in section \ref{sec:poc}, the evaluation method is discussed in section \ref{sec:evaluation-method}. The actual evaluation of the tools is described in chapter \ref{chap:evaluation}.
+
+\subsection{Proof-of-Concept application}
+\label{sec:poc}
+
+The proof-of-concept application is a rather small but typical enterprise application. It is not typical in the sense that it ``looks'' like the average application. Instead, it is rather typical in the sense that is contains the most requested features. This helps to ensure that the selected tools are thoroughly tested with regard to these essential features. This section describes these features in detail. The requirements documentation is available in Appendix \ref{app:poc}.
+
+\subsubsection{Context \& scenario}
+
+Employees of certain companies occasionally have to make costs for which they would like to be reimbursed. The process for this reimbursement typically involves keeping books, filling out forms and a lot of waiting while a superior deals with the request. Needless to say, there is a great potential for a mobile application here.
+
+The application is designed to do just that. Employees can group a number of invoices into one request, provide evidence for the costs in the form of pictures, sign the document on a phone or tablet and send it to the backend. From there, the request is forwarded to a qualified person that will review the request and deal with it. 
+
+\subsubsection{Typical functional elements}
+
+The proof-of-concept application contains a number of features that are typically required in any application.
+
+\begin{itemize}
+    \item \textbf{UI elements} Most applications are useless without a user interface. This application incorporates a number of frequently used UI elements.
+    \begin{itemize}
+        \item \textbf{Form elements} Virtually all input is captured with ``forms''. The form elements should support read-write and read-only mode. This application uses different types of form elements to represent different kinds of data. 
+        \begin{itemize}
+            \item \textbf{Text} For inputting arbitrary text.
+            \item \textbf{Number} For inputting numbers.
+            \item \textbf{Email} For inputting email addresses.
+            \item \textbf{Password} For inputting passwords, the content of the input field not shown as characters but as symbols. 
+            \item \textbf{Drop-down} For selecting an item from a list.
+            \item \textbf{Radio button} Also for selecting an item from a list.
+            \item \textbf{Toggle switch} To toggle a state on a property, e.g. an on/off switch.
+        \end{itemize}
+        \item \textbf{Button} 
+        \item \textbf{Tab bar}  
+        \item \textbf{Spinner} A spinning wheel that is displayed when the user is supposed to wait while the applications handles some request.
+    \end{itemize}
+    \item \textbf{UI modes} The application must support multiple screen modes
+    \begin{itemize}
+        \item \textbf{Tablet UI} The display mode used on tablets. The layout typically consists of a narrow column on the left and a wide column on the right (also known as the master--detail interface).
+        \item \textbf{Phone UI} The display mode used on smartphones. Nearly the same layout but shows less detail master and detail views are decoupled in separate views.
+    \end{itemize}
+    \item \textbf{serialization} In order to communicate with the backend,  data must be serialized using various formats. This application makes use of XML, JSON and plaintext.
+    \item \textbf{Input validation}
+    \begin{itemize}
+        \item \textbf{Data type validation} 
+        \item \textbf{Custom validation} When some  
+    \end{itemize}
+    \item \textbf{Sorting}
+    \item \textbf{Offline mode}
+    \item \textbf{Local Storage}
+    \item \textbf{Session management}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\subsection{Evaluation methodology}
+\label{sec:evaluation-method}
+
+
 \section{Select the most suitable alternative}
 
 \TODO{Describe the advantages and disadvantages of the three candidates. Make a decision if only these three candidates are available }
+
+
+
+
+
+
+
+
+
+
+
 

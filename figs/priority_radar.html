@@ -9,7 +9,7 @@
     var innerRadius = 80;
 
     var angle = d3.scale.ordinal().rangeBands([0, 2 * Math.PI]);
-    var radius = d3.scale.linear().range([innerRadius, outerRadius]).domain([0, 0.5]);
+    var radius = d3.scale.linear().range([innerRadius, outerRadius]);
     var z = d3.scale.category10();
 
     var axis = d3.svg.axis()
@@ -47,6 +47,8 @@
             d.value = +d.value;
         });
 
+        radius.domain(d3.extent(data, function (d) { return d.value; })).nice();
+
         var layers = nest.entries(data);
 
         // Extend the domain slightly to match the range of [0, 2π].
@@ -79,7 +81,9 @@
                 .style("stroke", function (d) {
                     return z(d.key);
                 })
-                .style("fill", "none");
+                .style("fill", function (d) {
+                    return z(d.key);
+                });
 
         var legend = svg.selectAll(".legend")
                 .data(layers.slice())
@@ -113,5 +117,8 @@
         svg.selectAll(".axis line, .axis path")
                 .style("fill", "none")
                 .style("stroke", "#000");
+        svg.selectAll("path.layer")
+                .style("stroke-width", "1.5pt")
+                .style("fill-opacity", "15%");
     });
 </script>

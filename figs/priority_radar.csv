@@ -1,23 +1,34 @@
 key,value,criterion
-Architect,0.0096,Platform support
-Architect,0.0654,Toolset reuse
-Architect,0.0297,Code reuse
-Architect,0.0732,Hardware access
-Architect,0.2198,Platform-specific services
-Architect,0.1174,UI capabilities
-Architect,0.0235,Native L&F
-Architect,0.2031,Performance
-Architect,0.0522,Skill reuse
-Architect,0.1810,Tooling
-Architect,0.0251,Testing
-Developer/Analyst,0.007,Platform support
-Developer/Analyst,0.0315,Toolset reuse
-Developer/Analyst,0.0315,Code reuse
-Developer/Analyst,0.0764,Hardware access
-Developer/Analyst,0.0146,Platform-specific services
-Developer/Analyst,0.0764,UI capabilities
-Developer/Analyst,0.0146,Native L&F
-Developer/Analyst,0.4680,Performance
-Developer/Analyst,0.1176,Skill reuse
-Developer/Analyst,0.1176,Tooling
-Developer/Analyst,0.0392,Testing
+Android/iOS,0.0000, Platform support
+Cordova,    0.6800, Platform support
+Rhodes,     0.3200, Platform support
+Android/iOS,0.1429, Toolset reuse
+Cordova,    0.4286, Toolset reuse
+Rhodes,     0.4286, Toolset reuse
+Android/iOS,0.0000, Code reuse
+Cordova,    0.5000, Code reuse
+Rhodes,     0.5000, Code reuse
+Android/iOS,0.4404, Access to hardware
+Cordova,    0.2752, Access to hardware
+Rhodes,     0.2844, Access to hardware
+Android/iOS,0.6667, Platform-specific services
+Cordova,    0.3333, Platform-specific services
+Rhodes,     0.0000, Platform-specific services
+Android/iOS,1.0000, Native Look & Feel
+Cordova,    0.0000, Native Look & Feel
+Rhodes,     0.0000, Native Look & Feel
+Android/iOS,0.3704, UI capabilities
+Cordova,    0.2963, UI capabilities
+Rhodes,     0.3333, UI capabilities
+Android/iOS,0.7352, Performance
+Cordova,    0.2067, Performance
+Rhodes,     0.0581, Performance
+Android/iOS,0.1429, Skill reuse
+Cordova,    0.7143, Skill reuse
+Rhodes,     0.1429, Skill reuse
+Android/iOS,0.6716, Tooling
+Cordova,    0.2654, Tooling
+Rhodes,     0.0629, Tooling
+Android/iOS,0.2000, Testing
+Cordova,    0.6000, Testing
+Rhodes,     0.2000, Testing
