@@ -8,7 +8,7 @@
 
     var margin = {top: 20, right: 20, bottom: 30, left: 40};
     var width = 500 - margin.left - margin.right;
-    var height = 500 - margin.top - margin.bottom;
+    var height = 400 - margin.top - margin.bottom;
 
     var x = d3.scale.linear().domain([0, 1]).range([0, width]);
     var y = d3.scale.linear().range([height, 0]);
@@ -82,7 +82,7 @@
                     return d.platform;
                 });
 
-        svg.style("font", "12pt sans-serif");
+        svg.style("font", "16pt sans-serif");
         svg.selectAll(".axis path, .axis line")
                 .style("fill", "none")
                 .style("stroke", "#000")

@@ -19,9 +19,7 @@ Every step will be further expanded in the following sections.
 
 In this first step, the selection criteria for the tool are recorded. These requirements will be used later (in step 3) to filter a list of potential candidates. 
 
-As the research presented in this thesis is conducted on behalf of CapGemini, the selection criteria are determined by their consultants and were recorded during the kick-off meeting on October 15, 2012. 
-
-In order to qualify as a viable cross-platform tools, it has to meet the following requirements:
+As the research presented in this thesis is conducted on behalf of CapGemini, the selection criteria are determined by their consultants and were recorded during the kick-off meeting on October 15, 2012. In order to qualify as a viable cross-platform tools, it has to meet the following requirements:
 
 \begin{itemize}
     \item \textbf{It \emph{must} produce ``native'' Android \emph{and} iOS applications.} CapGemini focusses mainly on Android and iOS because their clients mainly focus on these platforms. Support for other platforms is desirable but not not a necessity.
@@ -56,7 +54,7 @@ The list of tools from the previous stage contains a plethora of tools. Using th
     \item tools that do not offer good support. 
 \end{itemize}
 
-From the 100 tools listed, 7 tools were selected. They are listed in \tref{table:tools}.
+From 100 potential candidates, 7 tools listed in \tref{table:tools} were selected.
 
 \begin{table}[h!]
     \begin{center}
@@ -106,11 +104,49 @@ The following sections summarize the findings of these interviews
 
 \subsubsection{Developer}
 
-\TODO{}
+\paragraph{Development environment}
 
-\subsubsection{Mobile Architect}
+One of the relevant topics for application developers is the development environment since they will spend most of their time in it. Typically, the development environment is built on top of a Windows operating system and the Eclipse\footnote{\url{http://eclipse.org}} IDE. This IDE is preferred because it is fast, efficient and highly customizable, which are desirable qualities for a good IDE. Also, most of the documentation is explicitly written for Eclipse. 
 
-\TODO{}
+\paragraph{Development cycle}
+
+Development happens locally and changes are deployed in an \emph{unstable}  environment. When features are ready to be tested, they are promoted and pushed to a \emph{staging} environment, where they will be tested by for instance a number of end users. When the features are tested and ready to ship, a new production release is planned. In case mobile devices are involved, the application is tested on the device as much as possible.
+
+The code is also checked overnight on a continuous integration server, which runs all unit tests together with a number of other useful tools like FindBugs\footnote{FindBugs uses static analysis to find common bugs, \url{http://findbugs.sourceforge.net}.}. Every morning, a detailed report of the state of the code is generated.
+
+\paragraph{Requirements for cross-platform tools}
+
+The requirements for cross-platform tools are that it (1) should work properly, (2) should not be too complex, (3) has at least decent performance (preferred over ease of use) and (4) that it is customizable graphically. Most clients have specific styling requirements.
+
+\paragraph{Attitude towards new languages and tools} 
+
+Learning new tools and languages is not considered problematic as long as it is worth investing in and/or requested by clients. Typically, one or more developers familiarize themselves with the tool/language and teach the other developers during a training session.
+
+\subsubsection{Mobile architect}
+
+\paragraph{Focal points in mobile architectures} 
+
+Mobile architectures consist mainly of two major components: a front-end component and a back-end component. On the side of the front-end (the mobile application), the most important factor is the degree of integration with the device.
+
+On the side of the back-end, the most important factors are the services the application needs to integrate with. An additional server, called the \emph{mobile orchestrator} or \emph{mobile hub}, will handle this integration and expose it in a single interface to the mobile application. This protects the back-end from the increased number of requests and allows for caching and other integrations like targeted advertisement campaigns.
+
+\paragraph{Requirements for cross-platform tools}
+
+There are a number of requirements for cross-platform tools:
+\begin{itemize}
+    \item \textbf{Adoption} How many developers are using this tool? The number of users is mostly a good measure for the quality of the tool. A large user base is also beneficial when facing problems because it is more likely to get answers.
+    \item \textbf{Future proof} Will the tool survive? Is there enough financial backing or community effort? It is not very wise to start a project that relies on a tool that has an unclear future. 
+    \item \textbf{Documentation} Good documentation is priceless as it can save numerous hours of digging through code. 
+    \item \textbf{Support} In case of a problem, is there an official channel to open a ticket? This could be either paid support or good community support. Either way, it should solve the problem. Delay due to unsolvable problems is unacceptable.
+    \item \textbf{Customizability} Clients have specific requirements with regard to user interfaces and the tool should make this possible. Also, can the tool be expanded with plugins? A plugin architecture can contribute substantially to the customizability of the tool.
+    \item \textbf{Supported devices} Which devices and runtimes does the tool support? In a B2B\footnote{Business-to-business, or commerce between businesses} context, devices are mostly controlled by an organization and the tool does not need to support many devices. In a B2C\footnote{Business-to-consumer, or commerce between a business and consumers} context on the other hand, the organization cannot control the devices and consequently, the tool should support a lot more devices. Does the tool cover most or all of the used devices in this case?
+    \item \textbf{Performance} The benefits of cross-platform development must justify the costs in terms of performance. If it took virtually no time to develop the application but it is slow, the application is useless. 
+    \item \textbf{Tools} Does this cross-platform tool allow to reuse the development tools that are already in use? Most people are more productive with the tools they are familiar with.
+\end{itemize}
+
+\paragraph{Usability} 
+
+Usability is a big concern when developing cross-platform. Users are accustomed to the native look \& feel and wish to see new applications with similar styling. Even HTML5 applications are designed to mimic the native look \& feel of the device. It is therefore hard to write applications with a single code base, even though this is desirable. Only when the application has a custom user interface that is in no way related to the native look \& feel of the devices, the user interface can be reused across devices.
 
 \subsubsection{Sales representative}
 

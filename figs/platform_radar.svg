@@ -1,328 +1,337 @@
-<?xml version="1.0"?>
-<svg width="500" height="500">
-    <g transform="translate(250,250)" style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-family: sans-serif;">
-        <g class="axis" transform="rotate(0)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> Platform support</text>
-        </g>
-        <g class="axis" transform="rotate(32.72727272727273)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> Toolset reuse</text>
-        </g>
-        <g class="axis" transform="rotate(65.45454545454545)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> Code reuse</text>
-        </g>
-        <g class="axis" transform="rotate(98.18181818181817)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> Access to hardware</text>
-        </g>
-        <g class="axis" transform="rotate(130.9090909090909)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> Platform-specific services</text>
-        </g>
-        <g class="axis" transform="rotate(163.63636363636365)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> Native Look &amp; Feel</text>
-        </g>
-        <g class="axis" transform="rotate(196.36363636363635)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> UI capabilities</text>
-        </g>
-        <g class="axis" transform="rotate(229.0909090909091)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> Performance</text>
-        </g>
-        <g class="axis" transform="rotate(261.8181818181818)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> Skill reuse</text>
-        </g>
-        <g class="axis" transform="rotate(294.54545454545456)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> Tooling</text>
-        </g>
-        <g class="axis" transform="rotate(327.2727272727273)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-80)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-112)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-144)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-176)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-208)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,-240)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100%</text>
-            </g>
-            <path class="domain" d="M-6,-240H0V-80H-6" style="fill: none; stroke: #000000;"/>
-            <text y="-240" dy="-0.5em" text-anchor="begin" transform="rotate(90 0,-240)"> Testing</text>
-        </g>
-        <path class="layer" d="M4.898425415289509e-15,-80L55.6124770467526,-86.53470340114661L72.77055962836147,-33.23320104015091L148.93249343117267,21.413259825951563L141.0772845438581,122.24416292703425L67.6158136419431,230.27831366747938L-39.23520279596483,133.6228294774494L-149.36029987878075,129.42143657107462L-101.81699279764027,14.639073524143207L-170.51597532117663,-77.87203667728156L-60.55177155502692,-94.2203956770923Z" style="stroke: #1f77b4; fill: #1f77b4; stroke-width: 1.5pt; fill-opacity: 15%;"/>
-        <path class="layer" d="M1.1560283980083242e-14,-188.8L80.32625009428287,-124.99008489392556L145.54111925672294,-66.46640208030182L122.76953307937585,17.651594020712093L100.76257924950455,87.31127193545697L22.53860454731437,76.75943788915978L-35.894981602052844,122.2470807822759L-85.45411587138469,74.0464129086613L-192.31042830016267,27.65006529844003L-111.39717267909576,-50.87338415226298L-95.15278387218515,-148.0606217782879Z" style="stroke: #ff7f0e; fill: #ff7f0e; stroke-width: 1.5pt; fill-opacity: 15%;"/>
-        <path class="layer" d="M8.033417681074794e-15,-131.2L80.32625009428287,-124.99008489392556L145.54111925672294,-66.46640208030182L124.22655024182458,17.861081462650368L60.45996594834066,52.38885871562281L22.53860454731437,76.75943788915978L-37.56283833855411,127.92727918607372L-67.48541399153783,58.47644409837818L-101.81699279764027,14.639073524143207L-81.92509602960935,-37.413937731001866L-60.55177155502692,-94.2203956770923Z" style="stroke: #2ca02c; fill: #2ca02c; stroke-width: 1.5pt; fill-opacity: 15%;"/>
-        <g class="legend" transform="translate(-250,-250)">
-            <rect x="185" y="220" width="130" height="18" style="fill: #1f77b4;"/>
-            <text x="250" y="229" dy=".4em" style="text-anchor: middle;">Android/iOS</text>
-        </g>
-        <g class="legend" transform="translate(-250,-230)">
-            <rect x="185" y="220" width="130" height="18" style="fill: #ff7f0e;"/>
-            <text x="250" y="229" dy=".4em" style="text-anchor: middle;">Cordova</text>
-        </g>
-        <g class="legend" transform="translate(-250,-210)">
-            <rect x="185" y="220" width="130" height="18" style="fill: #2ca02c;"/>
-            <text x="250" y="229" dy=".4em" style="text-anchor: middle;">Rhodes</text>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+<g transform="translate(250,250)">
+	<g transform="rotate(0)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-3.805" y1="-1.297" x2="-9.805" y2="-1.297"/>
+			<text transform="matrix(1 0 0 1 -33.0403 3.1833)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-3.805" y1="-1.297" x2="-9.805" y2="-1.297"/>
+			<text transform="matrix(1 0 0 1 -40.8264 3.1833)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-3.805" y1="-1.297" x2="-9.805" y2="-1.297"/>
+			<text transform="matrix(1 0 0 1 -40.8264 3.1833)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-3.805" y1="-1.297" x2="-9.805" y2="-1.297"/>
+			<text transform="matrix(1 0 0 1 -40.8264 3.1833)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-3.805" y1="-1.297" x2="-9.805" y2="-1.297"/>
+			<text transform="matrix(1 0 0 1 -40.8264 3.1833)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-3.805" y1="-1.297" x2="-9.805" y2="-1.297"/>
+			<text transform="matrix(1 0 0 1 -48.6125 3.1833)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-9.805-241.297h6v160h-6"/>
+		<text transform="matrix(6.123234e-17 1 -1 6.123234e-17 3.1956 -241.2971)" font-family="'Helvetica'" font-size="14">Platform support</text>
+	</g>
+	<g transform="rotate(32.72727272727273)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-3.903" y1="0.967" x2="-9.903" y2="0.967"/>
+			<text transform="matrix(1 0 0 1 -33.1368 5.4471)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-3.902" y1="0.967" x2="-9.903" y2="0.967"/>
+			<text transform="matrix(1 0 0 1 -40.9234 5.4471)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-3.903" y1="0.967" x2="-9.902" y2="0.967"/>
+			<text transform="matrix(1 0 0 1 -40.923 5.4471)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-3.903" y1="0.967" x2="-9.902" y2="0.967"/>
+			<text transform="matrix(1 0 0 1 -40.9227 5.4471)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-3.903" y1="0.967" x2="-9.903" y2="0.966"/>
+			<text transform="matrix(1 0 0 1 -40.9229 5.4463)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-3.902" y1="0.967" x2="-9.903" y2="0.967"/>
+			<text transform="matrix(1 0 0 1 -48.7089 5.4471)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-9.903-239.033h6l0,160l-6,0"/>
+		<text transform="matrix(-1.192093e-07 1 -1 -1.192093e-07 3.0983 -239.0341)" font-family="'Helvetica'" font-size="14">Toolset reuse</text>
+	</g>
+	<g transform="rotate(65.45454545454545)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-2.761" y1="2.923" x2="-8.761" y2="2.924"/>
+			<text transform="matrix(1 0 0 1 -31.9949 7.4041)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-2.761" y1="2.923" x2="-8.761" y2="2.923"/>
+			<text transform="matrix(1 0 0 1 -39.7807 7.4029)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-2.761" y1="2.923" x2="-8.761" y2="2.923"/>
+			<text transform="matrix(1 0 0 1 -39.7807 7.4037)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-2.76" y1="2.923" x2="-8.76" y2="2.923"/>
+			<text transform="matrix(1 0 0 1 -39.7809 7.4024)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-2.761" y1="2.923" x2="-8.761" y2="2.923"/>
+			<text transform="matrix(1 0 0 1 -39.7809 7.4033)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-2.76" y1="2.923" x2="-8.761" y2="2.923"/>
+			<text transform="matrix(1 0 0 1 -47.5675 7.4039)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-8.761-237.077l6,0l0,160l-6,0.001"/>
+		<text transform="matrix(5.960464e-08 1 -1 5.960464e-08 4.2395 -237.0764)" font-family="'Helvetica'" font-size="14">Code reuse</text>
+	</g>
+	<g transform="rotate(98.18181818181817)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-0.742" y1="3.951" x2="-6.742" y2="3.952"/>
+			<text transform="matrix(1 0 0 1 -29.9761 8.4308)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-0.742" y1="3.952" x2="-6.742" y2="3.951"/>
+			<text transform="matrix(1 0 0 1 -37.7621 8.4319)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-0.743" y1="3.951" x2="-6.742" y2="3.952"/>
+			<text transform="matrix(1 0 0 1 -37.7627 8.4305)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-0.742" y1="3.952" x2="-6.742" y2="3.952"/>
+			<text transform="matrix(1 0 0 1 -37.7622 8.4328)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-0.742" y1="3.951" x2="-6.742" y2="3.952"/>
+			<text transform="matrix(1 0 0 1 -37.7623 8.4313)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-0.742" y1="3.952" x2="-6.742" y2="3.952"/>
+			<text transform="matrix(1 0 0 1 -45.5483 8.4324)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-6.742-236.048l6,0l0,160l-6,0"/>
+		<text transform="matrix(2.533197e-07 1 -1 2.533197e-07 6.2583 -236.0486)" font-family="'Helvetica'" font-size="14">Access to hardware</text>
+	</g>
+	<g transform="rotate(130.9090909090909)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="1.512" y1="3.725" x2="-4.488" y2="3.726"/>
+			<text transform="matrix(1 0 0 1 -27.7233 8.2045)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="1.512" y1="3.726" x2="-4.488" y2="3.725"/>
+			<text transform="matrix(1 0 0 1 -35.5076 8.205)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="1.512" y1="3.725" x2="-4.488" y2="3.725"/>
+			<text transform="matrix(1 0 0 1 -35.5076 8.2056)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="1.512" y1="3.725" x2="-4.487" y2="3.725"/>
+			<text transform="matrix(1 0 0 1 -35.5077 8.2062)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="1.513" y1="3.725" x2="-4.488" y2="3.725"/>
+			<text transform="matrix(1 0 0 1 -35.5078 8.2068)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="1.513" y1="3.726" x2="-4.487" y2="3.725"/>
+			<text transform="matrix(1 0 0 1 -43.2947 8.2043)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-4.487-236.275l6,0.001l0,159.999l-6,0.001"/>
+		<text transform="matrix(-2.980232e-08 1 -1 -2.980232e-08 8.5104 -236.2734)" font-family="'Helvetica'" font-size="14">Platform-specific services</text>
+	</g>
+	<g transform="rotate(163.63636363636365)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="3.286" y1="2.316" x2="-2.714" y2="2.317"/>
+			<text transform="matrix(1 0 0 1 -25.9482 6.7968)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="3.286" y1="2.316" x2="-2.714" y2="2.316"/>
+			<text transform="matrix(1 0 0 1 -33.7365 6.7966)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="3.286" y1="2.316" x2="-2.714" y2="2.316"/>
+			<text transform="matrix(1 0 0 1 -33.7363 6.7953)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="3.286" y1="2.316" x2="-2.714" y2="2.316"/>
+			<text transform="matrix(1 0 0 1 -33.7329 6.7969)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="3.286" y1="2.316" x2="-2.714" y2="2.316"/>
+			<text transform="matrix(1 0 0 1 -33.7333 6.7975)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="3.287" y1="2.316" x2="-2.713" y2="2.316"/>
+			<text transform="matrix(1 0 0 1 -41.521 6.7954)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-2.713-237.684l6,0l0,160.001l-6,0"/>
+		<text transform="matrix(4.768372e-07 1 -1 4.768372e-07 10.2852 -237.6821)" font-family="'Helvetica'" font-size="14">Native Look &amp; Feel</text>
+	</g>
+	<g transform="rotate(196.36363636363635)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="4.017" y1="0.172" x2="-1.983" y2="0.172"/>
+			<text transform="matrix(1 0 0 1 -25.2169 4.6541)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="4.017" y1="0.172" x2="-1.984" y2="0.172"/>
+			<text transform="matrix(1 0 0 1 -33.003 4.653)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="4.016" y1="0.171" x2="-1.983" y2="0.172"/>
+			<text transform="matrix(1 0 0 1 -33.0027 4.6536)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="4.017" y1="0.172" x2="-1.983" y2="0.172"/>
+			<text transform="matrix(1 0 0 1 -33.0032 4.6544)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="4.017" y1="0.172" x2="-1.983" y2="0.172"/>
+			<text transform="matrix(1 0 0 1 -33.0028 4.655)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="4.017" y1="0.171" x2="-1.983" y2="0.172"/>
+			<text transform="matrix(1 0 0 1 -40.7891 4.6539)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-1.983-239.828l6-0.001l0,160.001l-6,0"/>
+		<text transform="matrix(-4.768372e-07 1 -1 -4.768372e-07 11.0174 -239.8283)" font-family="'Helvetica'" font-size="14">UI capabilities</text>
+	</g>
+	<g transform="rotate(229.0909090909091)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="3.472" y1="-2.027" x2="-2.528" y2="-2.027"/>
+			<text transform="matrix(1 0 0 1 -25.7617 2.4532)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="3.472" y1="-2.027" x2="-2.528" y2="-2.027"/>
+			<text transform="matrix(1 0 0 1 -33.5476 2.4531)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="3.472" y1="-2.027" x2="-2.528" y2="-2.027"/>
+			<text transform="matrix(1 0 0 1 -33.546 2.455)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="3.472" y1="-2.027" x2="-2.528" y2="-2.027"/>
+			<text transform="matrix(1 0 0 1 -33.5471 2.4539)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="3.472" y1="-2.027" x2="-2.528" y2="-2.027"/>
+			<text transform="matrix(1 0 0 1 -33.5482 2.4529)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="3.472" y1="-2.027" x2="-2.528" y2="-2.027"/>
+			<text transform="matrix(1 0 0 1 -41.3344 2.4531)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-2.528-242.027l5.999,0l0,160l-5.999,0"/>
+		<text transform="matrix(2.980232e-08 1 -1 2.980232e-08 10.4724 -242.0276)" font-family="'Helvetica'" font-size="14">Performance</text>
+	</g>
+	<g transform="rotate(261.8181818181818)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="1.825" y1="-3.582" x2="-4.175" y2="-3.582"/>
+			<text transform="matrix(1 0 0 1 -27.4081 0.8975)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="1.825" y1="-3.583" x2="-4.175" y2="-3.583"/>
+			<text transform="matrix(1 0 0 1 -35.1949 0.8971)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="1.826" y1="-3.582" x2="-4.175" y2="-3.583"/>
+			<text transform="matrix(1 0 0 1 -35.1956 0.897)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="1.825" y1="-3.583" x2="-4.175" y2="-3.582"/>
+			<text transform="matrix(1 0 0 1 -35.1923 0.8979)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="1.825" y1="-3.582" x2="-4.175" y2="-3.583"/>
+			<text transform="matrix(1 0 0 1 -35.1929 0.8978)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="1.825" y1="-3.583" x2="-4.175" y2="-3.582"/>
+			<text transform="matrix(1 0 0 1 -42.9798 0.8974)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-4.175-243.582l6-0.001l0,160.001l-5.999,0"/>
+		<text transform="matrix(-1.192093e-07 1 -1 -1.192093e-07 8.8248 -243.5827)" font-family="'Helvetica'" font-size="14">Skill reuse</text>
+	</g>
+	<g transform="rotate(294.54545454545456)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-0.401" y1="-4" x2="-6.401" y2="-4.001"/>
+			<text transform="matrix(1 0 0 1 -29.6357 0.4797)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-0.401" y1="-4" x2="-6.401" y2="-4"/>
+			<text transform="matrix(1 0 0 1 -37.4218 0.4796)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-0.402" y1="-4" x2="-6.402" y2="-4"/>
+			<text transform="matrix(1 0 0 1 -37.4221 0.4796)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-0.402" y1="-4" x2="-6.401" y2="-4.001"/>
+			<text transform="matrix(1 0 0 1 -37.4225 0.4795)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-0.401" y1="-4.001" x2="-6.401" y2="-4.001"/>
+			<text transform="matrix(1 0 0 1 -37.4228 0.4795)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-0.401" y1="-4" x2="-6.402" y2="-4.001"/>
+			<text transform="matrix(1 0 0 1 -45.2088 0.4794)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-6.402-244.001l6,0.001l0,160l-6-0.001"/>
+		<text transform="matrix(2.086163e-07 1 -1 2.086163e-07 6.5981 -244.0006)" font-family="'Helvetica'" font-size="14">Tooling</text>
+	</g>
+	<g transform="rotate(327.2727272727273)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-2.501" y1="-3.148" x2="-8.5" y2="-3.149"/>
+			<text transform="matrix(1 0 0 1 -31.7349 1.332)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-2.5" y1="-3.148" x2="-8.5" y2="-3.149"/>
+			<text transform="matrix(1 0 0 1 -39.5211 1.3321)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-2.5" y1="-3.149" x2="-8.501" y2="-3.149"/>
+			<text transform="matrix(1 0 0 1 -39.5212 1.3318)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-2.501" y1="-3.149" x2="-8.5" y2="-3.148"/>
+			<text transform="matrix(1 0 0 1 -39.5213 1.3314)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-2.5" y1="-3.148" x2="-8.501" y2="-3.148"/>
+			<text transform="matrix(1 0 0 1 -39.5216 1.3314)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-2.5" y1="-3.148" x2="-8.5" y2="-3.149"/>
+			<text transform="matrix(1 0 0 1 -47.3078 1.3316)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-8.5-243.149l6,0.001l0,160l-5.999,0"/>
+		<text transform="matrix(-2.980232e-08 1 -1 -2.980232e-08 4.4988 -243.1481)" font-family="'Helvetica'" font-size="14">Testing</text>
+	</g>
+	<path fill="#1F77B4" fill-opacity="0.15" stroke="#1F77B4" stroke-width="1.5" d="M-3.805-81.297l55.612-6.534L68.965-34.53
+		l76.162,54.646l-7.855,100.832L63.81,228.982l-106.851-96.656l-110.125-4.201l47.543-114.782l-68.699-92.512l109.965-16.348
+		L-3.805-81.297z"/>
+	<path fill="#FF7F0E" fill-opacity="0.15" stroke="#FF7F0E" stroke-width="1.5" d="M-3.805-190.097l80.326,63.81l65.215,58.524
+		l-22.771,84.117l-22.007,69.66L18.733,75.463l-58.434,45.488L-89.26,72.75l-106.856-46.396l80.913-78.523l16.244-97.188
+		L-3.805-190.097z"/>
+	<path fill="#2CA02C" fill-opacity="0.15" stroke="#2CA02C" stroke-width="1.5" d="M-3.805-132.497l80.326,6.21l65.215,58.524
+		l-21.314,84.327L56.654,51.093l-37.922,24.37l-60.102,51.168L-71.291,57.18l-34.332-43.837l19.892-52.054l21.374-56.806
+		L-3.805-132.497z"/>
+	<g transform="translate(-250,-250)">
+		<rect x="181.195" y="218.703" fill="#1F77B4" width="130" height="18"/>
+		<text transform="matrix(1 0 0 1 208.4528 233.3036)" font-family="'Helvetica'" font-size="14">Android/iOS</text>
+	</g>
+	<g transform="translate(-250,-230)">
+		<rect x="181.195" y="218.703" fill="#FF7F0E" width="130" height="18"/>
+		<text transform="matrix(1 0 0 1 219.7355 233.3036)" font-family="'Helvetica'" font-size="14">Cordova</text>
+	</g>
+	<g transform="translate(-250,-210)">
+		<rect x="181.195" y="218.703" fill="#2CA02C" width="130" height="18"/>
+		<text transform="matrix(1 0 0 1 222.0666 233.3036)" font-family="'Helvetica'" font-size="14">Rhodes</text>
+	</g>
+</g>
 </svg>
