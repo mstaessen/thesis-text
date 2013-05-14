@@ -92,17 +92,17 @@ Apache Cordova and Motorola Rhodes are discussed in more detail in chapter \ref{
 
 \section{Define evaluation criteria}
 
-This is probably the most important stage of all. Setting up good grounds for comparison is paramount. The criteria are therefore carefully recorded from interviews with CapGemini and literature.
+This is probably the most important of all stages. Setting up good grounds for comparison is paramount. The criteria are therefore carefully extracted from interviews with CapGemini employees and literature.
 
 \subsection{CapGemini Interviews}
 
 A finished application is the result of a cooperation of different people with various roles. Every person experiences mobile application development in another way. In order to gain a better understanding of these experiences, three interviews with CapGemini employees were planned: one interview with a developer, one interview with a mobile architect and one interview with a sales representative. 
 
-The essence of these interviews is to reveal important criteria that should be considered during the evaluation of the cross-platform tools.
-
-The following sections summarize the findings of these interviews
+The goal of these interviews is to reveal important criteria that should be considered during the evaluation of the cross-platform tools. The following sections present a summary of these interviews.
 
 \subsubsection{Developer}
+
+Developers are responsible for the development of the application. They can provide valuable insights into the typical technical issues that are encountered when developing a mobile application.
 
 \paragraph{Development environment}
 
@@ -123,6 +123,8 @@ The requirements for cross-platform tools are that it (1) should work properly, 
 Learning new tools and languages is not considered problematic as long as it is worth investing in and/or requested by clients. Typically, one or more developers familiarize themselves with the tool/language and teach the other developers during a training session.
 
 \subsubsection{Mobile architect}
+
+The architect is responsible for the overall design of the application and makes the important decisions regarding used technology. Therefore, this person is best suited to describe the typical application structure and the trade-offs that have to be made constantly.
 
 \paragraph{Focal points in mobile architectures} 
 
@@ -150,28 +152,79 @@ Usability is a big concern when developing cross-platform. Users are accustomed 
 
 \subsubsection{Sales representative}
 
+The sales representative records the client's requirements and sells the application. The salesman is therefore capable to describe the typical client requirements.
+
+\paragraph{Application types}
+
+Roughly speaking, there are two types of applications: consumer applications and business critical applications. The first type of application often involves a lot of marketing and branding, which is not Capgemini's core business. For this kind of applications, businesses usually consult a marketing agency that makes this kind of (rather short-lived) mobile applications.
+
+Capgemini focusses on the second type of application. These applications mostly handle data and do not rely on device specific hardware like for instance GPS or NFC\footnote{Near Field Communication, a wireless technology based on RFID}. However, clients are becoming aware of these device features and are starting to request this kind of device integration. 
+
+\paragraph{Customer requirements} 
+
+When clients come to Capgemini with a problem that they would like to solve with a mobile application, they typically do not have special technical requirements. These requirements are most often formulated in other terms. One example is the choice for native versus cross-platform. It could happen that the client has not yet decided on which devices to use or that the client does not want to create a lock-in situation by choosing for a single vendor. In that case, the application clearly has to work cross-platform. Clients could also wish to use NFC technology, which rules out iOS as a platform. When there is no compelling reason to choose for either of both, Capgemini can help the client to make an appropriate decision. Performance is almost never a primary requirement. Perhaps this is implicitly assumed?
+
+\subsubsection*{Summary of interviews}
+
 \TODO{}
 
 \subsection{Literature}
 
-Another source from where criteria could be identified is literature.
+The criteria extracted from the interviews are complemented with criteria from literature; more precisely from reports by VisionMobile and Gartner. 
 
-Similar research has already been performed by VisionMobile\footnote{VisionMobile is an ecosystems analyst firm, \url{http://www.visionmobile.com/}.}. Their report on cross-platform tools \cite{VMCPT:2012} contains the results from a survey among 2406 developers across 91 countries.
+VisionMobile\footnote{VisionMobile is an ecosystems analyst firm, \url{http://www.visionmobile.com/}.} has conducted a worldwide survey about cross-platform tools. They received answers from over 2400 developers across 91 countries. The survey includes a question about the key reasons to select a particular tool and also includes a question about the key reasons to drop a cross-platform tool. The top 10 for both questions is summarized in \tref{tab:select} and \tref{tab:drop}.
 
-Two of the questions that were asked are ``What are the key reasons for tool selection?'' and ``What are the key reasons to drop a tool?''. 
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{clr}
+            \hline
+            Rank & Key reason to select tool & Share \\
+            \hline
+            1  & It supports the platforms I am targeting & 61\% \\
+            2  & Allows me to use my existing skills & 43\% \\
+            3  & Low cost or free & 40\% \\
+            4  & Rapid development process & 33\% \\
+            5  & Easy learning curve & 23\% \\
+            6  & Rich UI capabilities & 19\% \\
+            7  & Access to device or hardware APIs & 10\% \\
+            8  & High Performance / low runtime overhead & 9\% \\
+            9  & Well suited for games development & 8\% \\
+            10 & Good vendor support and services & 8\% \\
+            \hline
+        \end{tabular}
+        \caption{Top 10 reasons to select a particular cross-platform tool. Respondents could enter their top 3 and only the response for the tools that are selected by 50+ developers are counted, which is 1512 responses \cite{VMCPT:2012}.}
+        \label{tab:select}
+    \end{center}
+\end{table}
 
-\begin{itemize}
-    \item It supports the platforms I am targeting, 61\%
-    \item Allows me to use my existing skills, 43\%
-    \item Low cost or free, 40\%
-    \item Rapid development process, 33\%
-    \item Easy learning curve, 23\%
-    \item Rich UI capabilities, 19\%
-    \item Access to device or hardware APIs, 10\%
-    \item High Performance / low runtime overhead, 9\%
-    \item Well suited for games development, 8\%
-    \item Good vendor support and services, 8\%
-\end{itemize}
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{clr}
+            \hline
+            Rank & Key reason to drop tool & Share \\
+            \hline
+            1  & Low performance / high runtime overhead & 29\% \\
+            2  & Does not support the platforms I am targeting & 25\% \\
+            3  & Steep learning curve & 24\% \\
+            4  & Restricted UI capabilities & 22\% \\
+            5  & Does not let me use my existing development skills & 22\% \\
+            6  & High costs & 22\% \\
+            7  & Slow development process & 21\% \\
+            8  & Challenges with debugging & 18\% \\
+            9  & Access to device or hardware APIs & 17\% \\
+            10 & Uncertainty of vendor future or platform roadmap & 14\% \\
+            \hline
+        \end{tabular}
+        \caption{Top 10 reasons to drop a particular cross-platform tool. Respondents could enter their top 3 and only the responses for the tools that were dropped by 50+ developers are counted, which is 1109 responses \cite{VMCPT:2012}.}
+        \label{tab:drop}
+    \end{center}
+\end{table}
+
+It is clear from \tref{tab:select} and \tref{tab:drop} that the same reasons are quoted for both selecting and dropping a certain tool. 
+
+
+
+
 
 \TODO{Define evaluation criteria from (1) VisionMobile Report and (2) Interviews with CapGemini + PoC}
 
@@ -234,17 +287,8 @@ The proof-of-concept application contains a number of features that are typicall
     \item \textbf{Session management}
 \end{itemize}
 
-
-
-
-
-
-
-
-
 \subsection{Evaluation methodology}
 \label{sec:evaluation-method}
-
 
 \section{Select the most suitable alternative}
 
