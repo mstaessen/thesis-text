@@ -65,7 +65,7 @@
                 .data(data)
                 .enter().append("g")
                 .attr("class", "dot")
-                .attr("transform", function(d) {
+                .attr("transform", function (d) {
                     return "translate(" + x(d.benefit) + "," + y(d.cost) + ")";
                 });
 

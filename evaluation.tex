@@ -1,13 +1,15 @@
 \chapter{Evaluation}
 \label{chap:evaluation}
 
+This chapter presents a detailed description of the evaluation of the alternatives, which are the combination of native Android and native iOS, Apache Cordova and Motorola Rhodes. The chapter is structured as outlined in section \ref{sec:evaluation-method}: first, the weights of the criteria are calculated; second, the weights of the alternatives are calculate and last, a cost-benefit analysis is performed.
+
 \section{Weighting the evaluation criteria}
 
-Because developers and architects do not necessarily share the same opinions about the evaluation criteria, the ranking of the alternatives could be different as well. Therefore, this evaluations covers these two perspectives separately and the results for both perspectives are compared in the end. Both the developer and the architect were asked to fill in a questionnaire containing all necessary pairwise comparisons (see Appendix \ref{app:questionnaire}). 
+Because developers and architects do not necessarily share the same opinions about the evaluation criteria, the ranking of the alternatives could be different as well. Therefore, this evaluation covers these two perspectives separately and the results for both perspectives are compared in the end. Both the developer and the architect were asked to fill in a questionnaire containing all necessary pairwise comparisons (see Appendix \ref{app:questionnaire}). 
 
-The questioned people are the same people from the interviews earlier and the results of the questionnaire are illustrated in \tref{tab:l1}, \tref{tab:portability}, \tref{tab:ae}, \tref{tab:productivity}, \tref{tab:ni}, \tref{tab:ui}.
+The questioned people are the same people from the interviews earlier (see section \ref{sec:interviews}) and the results of the questionnaire are illustrated in \tref{tab:l1}, \tref{tab:portability}, \tref{tab:ae}, \tref{tab:productivity}, \tref{tab:ni}, \tref{tab:ui}.
 
-\begin{table}[h]
+\begin{table}[h!]
     \begin{center}
         \begin{tabular}{lcccl}
             \hline
@@ -37,13 +39,17 @@ The questioned people are the same people from the interviews earlier and the re
     \end{center}
 \end{table}
 
-\begin{table}[h]
+The weights for the top level criteria are virtually the same for both the architect and the developer perspective. \tref{tab:portability} also reveals a high inconsistency in the architect's judgement ($CR > 0.1$). Analysis of the judgements shows that there is no loop, i.e. there is no chain $A, B, C$ such that $A$ is more important than $B$, $B$ is more important than $C$ and $C$ is more important than $A$. However, the judgement of portability vs. application experience does not reflect the judgement of application experience vs. productivity and the judgement of productivity vs. portability since $1/3 \not = 1/5 \times 1/5$. The inconsistency ratio for the judgement of the developer is acceptable as it is below 10\%.
+
+\TODO{Ask for a better judgement?}
+
+\begin{table}[h!]
     \begin{center}
         \begin{tabular}{lcccl}
             \hline
-            \textbf{Architect}     & Platform supp. & Toolset reuse & Code reuse & Priority vector \\ 
+            \textbf{Architect}     & Platform support & Toolset reuse & Code reuse & Priority vector \\ 
             \hline
-            Platform supp.         & $1$            & $1/3$         & $1/7$      & $0.0918$        \\
+            Platform support         & $1$            & $1/3$         & $1/7$      & $0.0918$        \\
             Toolset reuse          & $3$            & $1$           & $5$        & $0.6248$        \\
             Code reuse             & $7$            & $1/5$         & $1$        & $0.2834$        \\
             \hline
@@ -53,9 +59,9 @@ The questioned people are the same people from the interviews earlier and the re
         \\\vspace{1em}
         \begin{tabular}{lcccl}
             \hline
-            \textbf{Developer}     & Platform supp. & Toolset reuse & Code reuse & Priority vector \\ 
+            \textbf{Developer}     & Platform support & Toolset reuse & Code reuse & Priority vector \\ 
             \hline
-            Platform supp.         & $1$            & $1/5$         & $1/5$      & $0.0909\ldots$  \\
+            Platform support         & $1$            & $1/5$         & $1/5$      & $0.0909\ldots$  \\
             Toolset reuse          & $5$            & $1$           & $1$        & $0.4545\ldots$  \\
             Code reuse             & $5$            & $1$           & $1$        & $0.4545\ldots$  \\
             \hline
@@ -67,7 +73,11 @@ The questioned people are the same people from the interviews earlier and the re
     \end{center}
 \end{table}
 
-\begin{table}[h]
+In the portability category (see \tref{tab:portability}), the differences between developer and architect are more pronounced. Just like before, the judgement of the architect shows a notable amount of inconsistency. Again, there is no loop but the comparison data violates the consistency property.
+
+\TODO{Ask for better judgement?}
+
+\begin{table}[h!]
     \begin{center}
         \begin{tabular}{lcccl}
             \hline
@@ -97,7 +107,7 @@ The questioned people are the same people from the interviews earlier and the re
     \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[h!]
     \begin{center}
         \begin{tabular}{lccl}
             \hline
@@ -125,7 +135,7 @@ The questioned people are the same people from the interviews earlier and the re
     \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[h!]
     \begin{center}
         \begin{tabular}{lccl}
             \hline
@@ -153,7 +163,7 @@ The questioned people are the same people from the interviews earlier and the re
     \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[h!]
     \begin{center}
         \begin{tabular}{lcccl}
             \hline
@@ -183,75 +193,286 @@ The questioned people are the same people from the interviews earlier and the re
     \end{center}
 \end{table}
 
+
+
+
 \section{Evaluate the alternatives}
 
-\TODO{Repeat the Methodology sections, this time doing the actual comparison.}
+In the following subsections, all alternatives get evaluated with respect to one criterion at a time. Every subsection provides a description of what is measured and how, what is taken into account for the evaluation and what scale is used and why. For every alternative, the rationale for the judgement or score will be provided as well.
 
-\subsection{Portability}
+In case judgements are used, these judgements are based on the experience of developing the proof-of-concept application. Some criteria discuss features that are not part of the proof-of-concept application. In that case, the information is taken from the documentation. 
 
-\TODO{High-level portability score}
+\subsection{Platform support}
 
-\subsubsection{Platform support}
+Remember from section \ref{sec:selection-criteria} that support for Android and iOS is a selection criterion. This criterion only covers additional platforms, apart from Android and iOS. To reflect the value of each platform, every alternative is awarded the additional market share it can serve. In the end, these scores are normalized such that the sum of scores is equal to 1. The market share numbers are taken from \fref{fig:smartphone-share}.
 
-\paragraph{Android \& iOS} \TODO{no additional platforms}
+\paragraph{Android \& iOS} Native code for Android and iOS is useless on other platforms. Hence, the combination of Android and iOS cannot contribute to reaching additional market share.
 
-\paragraph{Apache Cordova} \TODO{For now: Windows Phone, BlackBerry. For later: Tizen, Qt, Firefox Mobile OS, Ubuntu Mobile, Windows (Desktop)}
+\paragraph{Apache Cordova} From Cordova's platform support (see section \ref{sec:ac:support}), it is safe to say that it supports the remainder of the mobile market. Cordova is therefore awarded the remaining 17\% of market share: 6\% for BlackBerry, 6\% for Symbian, 2\% for Windows Phone, 2\% for Bada and 1\% for the remainder of mobile platforms.
 
-\paragraph{Motorola Rhodes} \TODO{Windows Phone, BlackBerry}
+\paragraph{Motorola Rhodes} Rhodes only supports BlackBerry and Windows Phone for which it is awarded 8\% of market share: 6\% for BlackBerry and 2\% for Windows Phone. 
 
-\paragraph{Verdict} \TODO{pairwise scores in table}
+\paragraph{Verdict} The normalized scores are listed in \tref{tab:ps}. 
 
-\subsubsection{Toolset reuse}
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Platform support} & Market share & Normalized weight \\
+            \hline
+            Android/iOS               & $0\%$        & $0$         \\
+            Cordova                   & $17\%$       & $0.68$      \\
+            Rhodes                    & $8\%$        & $0.32$      \\
+            \hline
+        \end{tabular}
+        \caption{Evaluation of the alternatives with respect to ``platform support''.}
+        \label{tab:ps}
+    \end{center}
+\end{table}
 
-\paragraph{Android \& iOS} \TODO{Needed: Mac computer, Xcode, Eclipse}
+\subsection{Toolset reuse}
 
-\paragraph{Apache Cordova} \TODO{Any operating system with a text editor or web IDE, cloud builder available}
+This criterion describes the ability to reuse the development environment or parts thereof when migrating to another cross-platform alternative. The evaluation is based on the recommended development environment setup for each alternative. Since there is no absolute scale available to measure this property, Saaty's fundamental scale (see \tref{tab:ahp-scale}) is used here.
 
-\paragraph{Motorola Rhodes} \TODO{Any operating system with a Ruby IDE, cloud builder available}
+\paragraph{Android \& iOS} All iOS development is done with the Xcode IDE, which is available on Apple computers only. Every iOS developer must therefore have a rather expensive Mac. For Android development, any platform can be used in combination with the Android SDK and an Eclipse plugin (ADT) is available. On I/O 2013, Google also announced a new, freely available Android IDE, based on JetBrains' IntelliJ.
 
-\paragraph{Verdict} \TODO{pairwise scores in table}
+\paragraph{Apache Cordova} For HTML5 application development, any operating system with a web IDE or even a simple text editor will do. However, packaging the Cordova application in its native shell requires the native SDK's or the online build service, called PhoneGap Build, provided by Adobe. Unfortunately, this service cannot build additional plugins that are not part of the standard distribution. If a project makes use of custom plugins, the native SDK's are required. 
 
-\subsubsection{Code reuse}
+\paragraph{Motorola Rhodes} Development of Rhodes applications requires a Ruby installation and a Ruby IDE. A specially tailored Eclipse-based Ruby IDE, called RhoStudio, is distributed as part of RhoMobile. As with Cordova, packaging the app requires the native SDK or the online build service, called RhoHub, provided by Motorola.
 
-\paragraph{Android \& iOS} \TODO{Absolutely nothing!}
+\paragraph{Verdict} Motorola Rhodes and Apache Cordova have similar requirements and therefore they are treated equally in the comparison. 
+Native development for Android and iOS is treated as a whole. Because of the strict requirements imposed by Apple, native development scores a little less compared to Cordova and Rhodes. However, not being able to build the application locally is not very practical either, which explains the scores listed in \tref{tab:tr}.
 
-\paragraph{Apache Cordova} \TODO{100\%, Except for native plugins: 0\%}
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Toolset reuse} & Android/iOS & Cordova & Rhodes & Priority vector \\
+            \hline
+            Android/iOS            & $1$         & $1/3$   & $1/3$  & $0.1428$        \\
+            Cordova                & $3$         & $1$     & $1$    & $0.4286$        \\
+            Rhodes                 & $3$         & $1$     & $1$    & $0.4286$        \\
+            \hline
+            \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0$, $RI = 0.58$, $CR = 0$}  \\
+            \hline
+        \end{tabular}
+        \caption{Evaluation of the alternatives with respect to ``toolset reuse''.}
+        \label{tab:tr}
+    \end{center}
+\end{table}
 
-\paragraph{Motorola Rhodes} \TODO{Any operating system with a Ruby IDE, cloud builder available}
+\subsection{Code reuse}
 
-\paragraph{Verdict} \TODO{pairwise scores in table}
+This criterion measures the amount of code that can be reused when migrating to another platform. For this criterion, the amount of portable code is expressed as an estimated percentage of the total amount of application code. Native extensions are not taken into account as they are not part of the application logic. They are considered to be reusable dependency which has to be coded once. 
 
-\subsubsection{Portability Summary?}
+\paragraph{Android \& iOS} As mentioned before, native code for Android and iOS is useless on other platforms but native Android code is also useless on iOS and vice versa. Hence, code reuse on Android and iOS is 0\%.
 
-\TODO{summary with all portability values?}
+\paragraph{Apache Cordova} Code reuse is 100\% for Cordova applications because all code is shared across all platforms. Since code of native plugins are not taken into account, this does not affect the score.
 
-\subsection{Application Experience}
+Note that a large amount of code can potentially be reused in other (non-mobile) platforms. Be that as it may, it is out of the scope of this evaluation and it is not taken into account either.
 
-\TODO{High-level Application Experience score}
+\paragraph{Motorola Rhodes} Code reuse on Rhodes applications is also 100\%. It is not taken into account that Rhodes has no support for custom plugins and that its code is not as widely deployable.
 
-\subsubsection{Native Integration}
+\paragraph{Verdict} The scores for each alternative are normalized and listed in \tref{tab:cr}. 
 
-\paragraph{Android \& iOS} \TODO{list native device APIs}
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Toolset reuse} & Code reuse & Priority vector \\
+            \hline
+            Android/iOS            & $0\%$       & $0$            \\
+            Cordova                & $100\%$     & $0.5000$       \\
+            Rhodes                 & $100\%$     & $0.5000$       \\
+            \hline
+        \end{tabular}
+        \caption{Evaluation of the alternatives with respect to ``code reuse''.}
+        \label{tab:cr}
+    \end{center}
+\end{table}
 
-\paragraph{Apache Cordova} \TODO{list native device APIs}
+\subsection{Access to hardware}
 
-\paragraph{Motorola Rhodes} \TODO{list native device APIs}
+This criterion measures the ability to integrate the device's hardware. For this criterion, the availability of device API's (sensor API's, output API's and communication API's) is studied and every alternative is awarded the fraction of device API's it supports. Alternatives can either provide full support (there is a way to access a particular piece of hardware or software on both platforms), partial support (access to this type of hardware is available on one platform only) or no support. Note that most of these API's are not used in the proof-of-concept application. Therefore, this comparison is mostly based on the documentation of the alternatives.
 
-\paragraph{Verdict} \TODO{pairwise scores in table}
+\paragraph{Android \& iOS} Android provides support for all types of sensors but that does not imply that all these sensors are available in a particular device. Apple iDevices have less sensors and as such there is no support for every sensor in iOS.
 
-\subsubsection{UI Capabilities}
+\paragraph{Apache Cordova} Cordova tries to promote the web as a first-class platform for mobile applications. ``The ultimate purpose of \emph{Cordova} is to cease to exist'' \cite{LeRoux:2012}. When HTML5 will be fully supported on all mobile browsers, Cordova will no longer be needed. Therefore, all Cordova API's (try to) follow the HTML5 specification and do not provide support for all the sensors and communication because they are simply not in the specification.
 
-\paragraph{Android \& iOS} \TODO{list UI elements \& styling options}
+Note that with Cordova's plugin system, it can deliver the same level of integration as native Android and iOS. However, the plugin system is not taken into account here. 
 
-\paragraph{Apache Cordova} \TODO{list default UI (form) elements in HTML5}
+\paragraph{Motorola Rhodes} Rhodes provides a reasonable amount device API's. All of them are available through ruby method calls. As of version 3.3.3, Motorola has removed a lot of API's and included them in their commercial product called RhoMobile Suite, for which additional API's are available.
 
-\paragraph{Motorola Rhodes} \TODO{same as Cordova minus HTML5 polyfills!}
+\paragraph{Verdict} The studied device API's and the alternative's support for it are listed in \tref{tab:apis}.
 
-\paragraph{Verdict} \TODO{pairwise scores in table}
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{lcccc}
+            \hline
+            API                 & Android        & iOS        & Cordova    & Rhodes     \\
+            \hline
+            Accelerometer       & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            Geolocation         & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            Gyroscope           & \checkmark     & \checkmark & --         & \checkmark \\
+            Light               & \checkmark     & \checkmark & --         & \checkmark \\
+            Magnetic Field      & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            Pressure            & \checkmark     & --         & --         & partial    \\
+            Proximity           & \checkmark     & \checkmark & --         & \checkmark \\
+            Relative Humidity   & \checkmark     & --         & --         & partial    \\
+            Temperature         & \checkmark     & --         & --         & partial    \\
+            Microphone          & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            Camera              & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            Hardware buttons    & \checkmark     & --         & partial    & partial    \\
+            Vibration Motor     & \checkmark     & \checkmark & \checkmark & partial    \\
+            Speaker             & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            System information  & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            File System         & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            Contacts            & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            Bluetooth           & \checkmark     & \checkmark & --         & \checkmark \\
+            NFC                 & \checkmark     & --         & --         & --         \\
+            Wi-Fi Direct        & \checkmark     & --         & --         & --         \\
+            USB / Accessory     & \checkmark     & \checkmark & --         & --         \\
+            \hline
+            Support             & \multicolumn{2}{c}{$18/21$} & $10.5/21$  & $15.5/21$  \\
+            \hline
+        \end{tabular}
+        \caption{}
+        \label{tab:apis}
+    \end{center}
+\end{table}
 
-\subsubsection{Performance}
+\subsection{Integration with platform-specific services}
+\TODO{Drop this comparison? Not really identifiable from the interviews or literature... and kind of based on nothing :/}
 
-\TODO{subjective testing allowed? AHP can make up for it?}
+This criterion measures the ability to integrate the application with platform-specific services that might not be available on all platforms. Again, because there is no absolute scale to express this ability, Saaty's fundamental scale is used.
+
+\paragraph{Android \& iOS} The native SDK's are best suited for this kind of integration. 
+
+\paragraph{Apache Cordova} There are no API's for this kind of integration in the default Cordova distribution. Nevertheless, one can integrate rather easily with these services through a custom plugin.
+
+\paragraph{Motorola Rhodes} There are no API's for this integration in Rhodes either. Moreover, Rhodes does not have a plugin system which could make this integration possible. Therefore, it is excluded from this category and not awarded any points.
+
+\paragraph{Verdict} The scores are listed in \tref{tab:pss}. Integrating with platform specific services is clearly more easy with the native development kits.
+
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Performance} & Android/iOS & Cordova & Rhodes & Priority vector \\
+            \hline
+            Android/iOS          & $1$         & $5$     & excl. & $0.8333\ldots$        \\
+            Cordova              & $1/5$       & $1$     & excl. & $0.1667\ldots$        \\
+            Rhodes               & excl.       & excl.   & excl. & $0$        \\
+            \hline
+            \multicolumn{5}{r}{$\lambda_{max} = 2$, $CI = 0$, $RI = 0$, $CR = 0$}\\
+            \hline
+        \end{tabular}
+        \caption{Evaluation of the alternatives with respect to ``platform-specific services''}
+        \label{tab:pss}
+    \end{center}
+\end{table}
+
+\subsection{Native Look \& Feel}
+
+This criterion indicates whether or not an alternative is able to use native user interface elements. An application can either support the use of native user interface elements fully, partially or not at all.
+
+\paragraph{Android \& iOS} It needs no explaining that Android and iOS can use the native user interface elements.
+
+\paragraph{Apache Cordova} The user interface of Cordova applications is built with HTML5, CSS and JavaScript and there is no possibility to use native user interface elements for it. 
+
+However, numerous attempts are made to recreate the native look \& feel on top of HTML (like KendoUI, Moobile, etc.). Unfortunately, these projects need a lot of additional code to mimic the behaviour of native interface elements which influences the overall performance of the application in a adverse way.
+
+\paragraph{Motorola Rhodes} The user interface of Rhodes applications is also built with HTML and consequently cannot deliver the native look \& feel to the end user.
+
+\paragraph{Verdict} Despite the efforts of many projects to mock the native look \& feel in web applications, it remains a privilege of Android and iOS. Hence, Android and iOS clearly do better compared to Cordova and Rhodes, as is illustrated in \tref{tab:nlf}.
+
+%\begin{table}[h!]
+%    \begin{center}
+%        \begin{tabular}{lcl}
+%            \hline
+%            \textbf{Native Look \& Feel} & Able to use native UI elements & Priority vector \\
+%            \hline
+%            Android/iOS          & Yes          & $1$        \\
+%            Cordova              & No       & $1$     & $1$   & $0.0909\ldots$        \\
+%            Rhodes               & No       & $1$     & $1$   & $0.0909\ldots$        \\
+%            \hline
+%        \end{tabular}
+%        \caption{Pairwise comparison matrix for the criterion ``Native Look \& Feel''.}
+%        \label{tab:nlf}
+%    \end{center}
+%\end{table}
+
+\subsection{UI element capabilities}
+
+This criterion measures an alternative's potential to present a rich user interface. Both Cordova and Rhodes rely on HTML for their user interface. Therefore, the evaluation is based on a comparison of the native UI elements with their HTML5 counterparts. Plain HTML only provides basic interface elements, which is why an additional UI framework, called Bootstrap\footnote{\url{http://getbootstrap.com}}, was used to develop the proof-of-concept application. 
+
+\paragraph{Android \& iOS} Android and iOS both have an elaborate portfolio of rich user interface elements. iOS lacks some basic form elements like radio buttons and checkboxes but these can be easily replaced with pickers and switches respectively.
+
+\paragraph{Apache Cordova} Cordova applications are mobile web applications that are wrapped in a single webview. Hence, only HTML5 can be used to create the user interface. An application could be comprised of multiple pages or it could be comprised of a single page, in which case it is called  a single-page application. The former approach requires page reloads, which feels unnatural in a mobile app (compared to native apps) whereas the latter approach can make the hybrid app behave more like a native app. 
+
+The Cordova proof-of-concept application is implemented as a single-page application with AngularJS\footnote{\url{http://angularjs.org}}. This framework drastically improves productivity by reducing the required lines of code through declarative programming and bidirectional bindings between view and model. 
+
+\paragraph{Motorola Rhodes} Rhodes also relies on HTML for its user interface. In contrast to Cordova, Rhodes is actually a complete web server with an MVC framework on top. Every request is handled locally by a controller action and the result is served in a webview. Developers can still choose to create single-page applications but device integration has to be realized through AJAX\footnote{Asynchronous JavaScript and XML} calls, which requires extra work. The proof-of-concept application is implemented as a multi-page application because this is the default way to develop applications with Rhodes.
+
+\paragraph{Verdict} The scores are listed in \tref{tab:uiec}.
+
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{llll}
+            \hline
+            Android         & iOS              & HTML5                          & Bootstrap 3             \\
+            \hline
+            ActionBar       & UINavigationBar  & --                             & \html{navbar} class     \\
+            Split ActionBar & UIToolbar        & --                             & \html{navbar} class     \\
+            Tabs            & UITabBar         & --                             & \html{nav-tabs} class   \\
+            ListView        & UITableView      & --                             & \html{list-group} class \\
+            GridList        & UICollectionView & --                             & Grid system             \\            
+            ScrollView      & UIScrollView     & by default                     & --                      \\
+            Spinner         & --               & \html{<select></select>}       & \html{dropdown} class   \\
+            Picker          & UIPickerView     & \html{<select></select>}       & \html{modal} class      \\
+            DatePicker      & UIDatePicker     & \html{<input type="date">}     & --                      \\
+            Button          & UIButton         & \html{<button></button>}       & \html{btn} class        \\
+            Text field      & UITextField      & \html{<input type="...">}      & --                      \\
+            Slider          & UISlider         & \html{<input type="range">}    & --                      \\
+            Progress bar    & UIProgressBar    & \html{<progress>}              & \html{progress} class   \\
+            Options Menu    & UIActionSheet    & --                             & --                      \\
+            Checkbox        & --               & \html{<input type="checkbox">} & --                      \\
+            Radio           & --               & \html{<input type="radio">}    & --                      \\
+            On/off switch   & UISwitch         & --                             & \html{btn-group} class  \\
+            Dialog          & UIDialog         & --                             & \html{modal} class      \\
+            Alert           & UIAlertView      & \html{alert(string)}           & --                      \\
+            Popup           & --               & --                             & \html{modal} class      \\
+            Toast           & --               & --                             & \html{alert} class      \\
+            TextView        & UILabel          & any text element               & --                      \\
+            MapView         & MKMapView        & --                             & --                      \\
+            --              & Popover (iPad)   & --                             & \html{popover} script   \\
+            Master-Detail   & SplitView (iPad) & --                             & Grid System             \\
+            WebView         & UIWebView        & \html{<iframe>}                & --                      \\
+            \hline
+            \multicolumn{2}{c}{Android \& iOS combined: $26/26$} & \multicolumn{2}{c}{HTML5 \& Bootstrap combined: $24/26$}                 \\
+            \hline
+        \end{tabular}
+        \caption{}
+        \label{tab:uiec}
+    \end{center}
+\end{table}
+
+
+\subsection{Performance}
+
+The performance criterion measures the responsiveness of the user interface and the application in general. Responsiveness in this case does not mean the ability to reflow UI elements to fit other screen sizes, responsiveness in this case represents the time it takes an application to respond to a trigger, like pushing a button.
+
+Comparing the performance of these alternatives is very hard because their architectures are so different. For instance, measuring page load times is impossible because the Rhodes application is the only application that uses page loads. There is no notion of a page load in native applications and the Cordova application is implemented as a single-page application. 
+
+Fortunately, the analytic hierarchy process can make up for this because it inherently assumes error in human judgement. As long as the consistency ratio is low, the judgements are acceptable.
+
+Every implementation of the proof-of-concept application is tested on four devices:
+\begin{itemize}
+    \item \textbf{HTC Wildfire S} An entry-level smartphone, released in May 2011 and running Android 2.3.5 on a single core 600\,MHz ARMv6 processor. It has 512\,MB of RAM and a 3.2-inch display with a 320 by 480 pixel resolution (180\,ppi).
+    \item \textbf{HTC Flyer} An entry-level tablet, also released in May 2011 and running Android 3.2.2 on a single core 1.5\,GHz ARMv7 processor. It has 1024\,MB of RAM and a 7.0-inch display with a 600 by 1024 pixel resolution (170\,ppi).
+    \item \textbf{LG/Google Nexus 4} A high-end smartphone, released in November 2012 and running Android 4.2.2 on a quad core 1.5\,GHz ARMv7 processor. It has 2048\,MB of RAM and a 4.7-inch display with a 768 by 1280 pixel resolution (318\,ppi).
+    \item \textbf{iPhone 3GS} A smartphone, released in June 2009 and running iOS 6.1.3 on a single core 600\,MHz ARMv6 processor. It has 256\,MB of RAM and a 3.5-inch display with a 320 by 480 pixel resolution (165\,ppi).
+\end{itemize}
 
 \paragraph{Android \& iOS} \TODO{Best}
 
@@ -259,46 +480,142 @@ The questioned people are the same people from the interviews earlier and the re
 
 \paragraph{Motorola Rhodes} \TODO{Worst}
 
-\paragraph{Verdict} \TODO{pairwise scores in table}
+\paragraph{Verdict} The final scores are listed in \tref{tab:performance}.
 
-\subsubsection{Application Experience Summary?}
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Performance} & Android/iOS & Cordova & Rhodes & Priority vector \\
+            \hline
+            Android/iOS          & $1$         & $5$     & $9$    & $0.7352$        \\
+            Cordova              & $1/5$       & $1$     & $5$    & $0.2067$        \\
+            Rhodes               & $1/9$       & $1/5$   & $1$    & $0.0581$        \\
+            \hline
+            \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0.0585$, $RI = 0.58$, $CR = 0.10$}\\
+            \hline
+        \end{tabular}
+        \caption{Pairwise comparison matrix for the criterion ``Performance''.}
+        \label{tab:performance}
+    \end{center}
+\end{table}
 
-\subsection{Productivity}
+\subsection{Skill reuse}
 
-\TODO{High-level productivity score}
+This criterion expresses the ability to reuse skills from another field of expertise to develop mobile applications. This allows for better resource management. For this criterion, it is assumed that the organization has got a substantial expertise with Java EE (because Capgemini does). 
 
-\subsubsection{Skill reuse}
+\paragraph{Android \& iOS} For organizations that already have got  expertise with Java EE applications, the entry barrier for adding Android to the portfolio is rather low, since Android is based on Java. Adding iOS from that perspective is less straightforward, because Objective-C is a new programming language.
 
-\paragraph{Android \& iOS} \TODO{Android is Java, iOS is Objective C. Java is known from EE, objective C is not. about 50\%}
+\paragraph{Apache Cordova} In order to develop Cordova applications, one needs to know the web. Since the web already belongs to the organization's expertise, this skill can be reused quite easily but developers will probably have to invest in their JavaScript skills. When custom plugins are needed, the scenario of native Android and iOS holds.
 
-\paragraph{Apache Cordova} \TODO{Cordova is HTML + JS + CSS, completely known: 100\%}
+\paragraph{Motorola Rhodes} For Rhodes applications, organizations can reuse their skills for creating the user interface. However, the application logic entirely written in Ruby, which is a new programming language for the organization.
 
-\paragraph{Motorola Rhodes} \TODO{Ruby + HTML + JS + CSS, not completely known: 40--50\%}
+\paragraph{Verdict} The native SDK's and Rhodes are similar because one needs to learn a new language for either of both. For the development of Cordova application, no notable new skills are required, explaining the scores listed in \tref{tab:sr}.
 
-\paragraph{Verdict} \TODO{pairwise scores in table}
+\TODO{On the other hand, learning Objective-C appeared to be easier than learning Ruby (in combination with Rhodes) when developing the proof-of-concept application. The free online video lectures about iOS development by Paul Hegarty are very valuable.}
 
-\subsubsection{Tooling}
 
-\paragraph{Android \& iOS} \TODO{Great IDE for iOS, Good Eclipse plugin for Android}
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Skill reuse} & Android/iOS & Cordova & Rhodes & Priority vector \\
+            \hline
+            Android/iOS          & $1$         & $1/5$   & $1/5$  & $0.1428$        \\
+            Cordova              & $5$         & $1$     & $5$    & $0.7144$        \\
+            Rhodes               & $1$         & $1/5$   & $1$    & $0.1428$        \\
+            \hline
+            \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0$, $RI = 0.58$, $CR = 0$}\\
+            \hline
+        \end{tabular}
+        \caption{Pairwise comparison matrix for the criterion ``Skill reuse''.}
+        \label{tab:sr}
+    \end{center}
+\end{table}
 
-\paragraph{Apache Cordova} \TODO{Few or no tools (Ripple emulator maybe?), Cloud builder?}
+\subsection{Tooling}
 
-\paragraph{Motorola Rhodes} \TODO{Awful (out of the box), cloud builder?}
+This criterion describes the overall quality of the supplied tools. This includes command-line interfaces, IDE's, emulators and others. Since there is no absolute scale available to measure the quality accurately, the alternatives are compared in pairs. Saaty's scale is used to express the scores that are based on the experience of developing the proof-of-concept application.
 
-\paragraph{Verdict} \TODO{pairwise scores in table}
+\paragraph{Android \& iOS} The restrictions on Apple development may seem obstructive at first but it also allows Apple to deliver a well integrated development environment. Everything a developer could possibly need is available in Xcode, right out of the box. For Android development, an Eclipse plugin is available which integrates all the functionality of the SDK with the IDE. 
 
-\subsubsection{Testing}
+\paragraph{Apache Cordova} Cordova does not ship with an elaborate IDE or special development tools. However, there are some tools that can ease the development of mobile web applications (WEINRE, Ripple emulator, etc.). Unfortunately, there is no integrated development environment. 
 
-\paragraph{Android \& iOS} \TODO{}
+\paragraph{Motorola Rhodes} Rhodes comes with a bunch of command-line scripts. Sadly, the Android Debug Bridge (ADB) is poorly integrated \TODO{(see section \ref{sec:mr:tools})} and there is no option to transfer iOS applications to an iDevice from the command-line interface. Instead, either Xcode, iTunes or Fruitstrap is needed for the transfer. 
 
-\paragraph{Apache Cordova} \TODO{}
+\TODO{What about RhoStudio?}
 
-\paragraph{Motorola Rhodes} \TODO{}
+\paragraph{Verdict} The scores about the quality of the tools are based on the experience from developing the proof-of-concept application and are listed in \tref{tab:tooling}. 
 
-\paragraph{Verdict} \TODO{pairwise scores in table}
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Tooling} & Android/iOS & Cordova & Rhodes & Priority vector \\
+            \hline
+            Android/iOS      & $1$         & $3$     & $9$    & $0.6716$        \\
+            Cordova          & $1/3$       & $1$     & $5$    & $0.2654$        \\
+            Rhodes           & $1/9$       & $1/5$   & $1$    & $0.0629$        \\
+            \hline
+            \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0.0145$, $RI = 0.58$, $CR = 0.025$}\\
+            \hline
+        \end{tabular}
+        \caption{Pairwise comparison matrix for the criterion ``Tooling''.}
+        \label{tab:tooling}
+    \end{center}
+\end{table}
 
-\subsubsection{Productivity Summary?}
+\subsection{Testing}
 
-\subsection{Global verdict}
+The testing criterion measures the ability to automate testing and the ability to be used in a continuous integration environment. Again, Saaty's scale is used as there is no absolute scale available to measure this property. This criterion focusses mainly on unit testing and integration testing as these tests are ran the most in a continuous integration environment. Mobile interface testing is rather hard and is not taken into consideration for this criterion.
+
+\paragraph{Android \& iOS} The programming language for native Android applications is Java and consequently, the well-known JUnit framework can be used for testing. A similar framework is readily available in Xcode for Objective-C.
+
+\paragraph{Apache Cordova} \TODO{Test Runner Karma (formerly Testacular) + Test Framework Jasmine.}
+
+Need some more research on this topic
+
+\paragraph{Motorola Rhodes} \TODO{SpecRunner}
+
+Need some more research on this topic
+
+\paragraph{Verdict} The scores are listed in \tref{tab:testing}.
+
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{lcccl}
+            \hline
+            \textbf{Testing} & Android/iOS & Cordova & Rhodes & Priority vector \\
+            \hline
+            Android/iOS      & $1$         & $1$     & $1$    & $0.3333\ldots$        \\
+            Cordova          & $1$         & $1$     & $1$    & $0.3333\ldots$        \\
+            Rhodes           & $1$         & $1$     & $1$    & $0.3333\ldots$        \\
+            \hline
+            \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0$, $RI = 0.58$, $CR = 0$}\\
+            \hline
+        \end{tabular}
+        \caption{Pairwise comparison matrix for the criterion ``Testing''.}
+        \label{tab:testing}
+    \end{center}
+\end{table}
+
+\subsection*{Global verdict}
+
+
+
 
 \section{Costs versus benefits}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
