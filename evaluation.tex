@@ -600,8 +600,72 @@ For automated testing in a continuous integration environment (2), there are a n
 
 \subsection*{Global verdict}
 
+With the information from the evaluation above, the total weight $a_j$ of every alternative $A_j$ is calculated as
+\begin{gather}
+    a_j = \sum_{i = 0}^{m} c_i w_i \quad j = 1, \ldots, n
+\end{gather}
+where $c_i$ is the weight of the criterion $C_i$ and $w_i$ is the weight of alternative $A_j$ with respect to criterion $C_i$. The total weights are calculated for both the architect and developer and are listed in \tref{tab:total:architect} and \tref{tab:total:developer} respectively. 
 
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{lcccc}
+            \hline
+            \textbf{Architect}         & $c_i$    & $c_i w_{Android/iOS}$ & $c_i w_{Cordova}$  & $c_i w_{Rhodes}$ \\
+            \hline
+            Platform support           & $0.0096$ & $0.0000$              & $0.0065$           & $0.0031$     \\
+            Toolset reuse              & $0.0654$ & $0.0093$              & $0.0280$           & $0.0280$     \\
+            Code reuse                 & $0.0297$ & $0.0000$              & $0.0148$           & $0.0148$     \\
+            Access to hardware         & $0.0733$ & $0.0300$              & $0.0175$           & $0.0258$     \\
+            Platform-specific services & $0.2198$ & $0.1831$              & $0.0366$           & $0.0000$     \\
+            Native Look \& Feel        & $0.1174$ & $0.1174$              & $0.0000$           & $0.0000$     \\
+            UI element capabilities    & $0.0235$ & $0.0110$              & $0.0062$           & $0.0062$     \\
+            Performance                & $0.2031$ & $0.1493$              & $0.0420$           & $0.0118$     \\
+            Skill reuse                & $0.0522$ & $0.0135$              & $0.0333$           & $0.0055$     \\
+            Tooling                    & $0.1810$ & $0.1216$              & $0.0480$           & $0.0114$     \\
+            Testing                    & $0.0251$ & $0.0108$              & $0.0108$           & $0.0036$     \\
+            \hline
+            $a_j$                      &          & $0.6460$              & $0.2438$           & $0.1328$     \\
+            \hline
+        \end{tabular}
+        \caption{Summary of the total weight and weighted scores of the alternatives with respect to the architect's weights.}
+        \label{tab:total:architect}
+    \end{center}
+\end{table}
 
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{lcccc}
+            \hline
+            \textbf{Architect}         & $c_i$        & $c_i w_{Android/iOS}$ & $c_i w_{Cordova}$  & $c_i w_{Rhodes}$ \\
+            \hline
+            Platform support           & $0.0065$     & $0.0000$          & $0.0044$       & $0.0021$     \\
+            Toolset reuse              & $0.0327$     & $0.0047$          & $0.0140$       & $0.0140$     \\
+            Code reuse                 & $0.0327$     & $0.0000$          & $0.0163$       & $0.0163$     \\
+            Access to hardware         & $0.0772$     & $0.0316$          & $0.0184$       & $0.0272$     \\
+            Platform-specific services & $0.0155$     & $0.0129$          & $0.0026$       & $0.0000$     \\
+            Native Look \& Feel        & $0.0155$     & $0.0155$          & $0.0000$       & $0.0000$     \\
+            UI element capabilities    & $0.0772$     & $0.0363$          & $0.0205$       & $0.0205$     \\
+            Performance                & $0.4636$     & $0.3408$          & $0.0958$       & $0.0269$     \\
+            Skill reuse                & $0.1196$     & $0.0309$          & $0.0762$       & $0.0125$     \\
+            Tooling                    & $0.1196$     & $0.0803$          & $0.0317$       & $0.0075$     \\
+            Testing                    & $0.0398$     & $0.0171$          & $0.0171$       & $0.0057$     \\
+            \hline
+            $a_j$                      &              & $0.5700$          & $0.2971$       & $0.1328$     \\
+            \hline
+        \end{tabular}
+        \caption{Summary of the total weight and weighted scores of the alternatives with respect to the developer's weights.}
+        \label{tab:total:developer}
+    \end{center}
+\end{table}
+
+The ranking of the alternatives is the same for both. Conversely, the average total weight can be calculated without changing the order. Android and iOS clearly offer the most benefits with an average total weight of 60.80\%. Cordova comes second with an average total weight of 27.04\%. Rhodes finishes last with an average total weight of 12.15\%. 
+
+When comparing the alternatives in pairs and using Saaty's scale (see \tref{tab:ahp-scale}), one can conclude that:
+\begin{itemize}
+    \item Android and iOS are a little better than Cordova ($60.8/27.04 = 2.25$),
+    \item Android and iOS are a little better than Cordova ($60.8 / 12.15 = 5$) and
+    \item Cordova is a little better than Rhodes ($27.04 / 12.15 = 2.22$).
+\end{itemize}
 
 \section{Costs versus benefits}
 
