@@ -264,6 +264,7 @@ Native development for Android and iOS is treated as a whole. Because of the str
 \end{table}
 
 \subsection{Code reuse}
+\label{sec:cr}
 
 This criterion measures the amount of code that can be reused when migrating to another platform. For this criterion, the amount of portable code is expressed as an estimated percentage of the total amount of application code. Native extensions are not taken into account as they are not part of the application logic. They are considered to be reusable dependency which has to be coded once. 
 
@@ -669,16 +670,20 @@ When comparing the alternatives in pairs and using Saaty's scale (see \tref{tab:
 
 \section{Costs versus benefits}
 
+Having the most benefits does not imply that a tool is the most cost-effective. No company should waste their resources on a cross-platform tool that is not profitable. Benefits and costs are deliberately separated from the beginning to allow the decision maker to make a cost-benefit analysis. In this section, the benefits of each alternative will be compared to their costs.
 
+There are two types of costs. The first category, called fixed costs, are independent of the amount of produced code and includes license and subscription fees, developer tools, etc. Because these costs can be shared across projects, their impact on the total cost of a project is rather small. The second category, called variable costs, are dependent of the amount of produced code and includes for instance the rates of the people involved.
 
+Software is essentially a collection of lines of code that is produced in a certain amount of time. This time is expressed in man-months, making abstraction of the amount of people contributing to it, i.e. 2 man-months are equal to the work of 2 individuals during 1 month. Consequently, duration is a good estimate for the total cost of a software project.
 
+Developing natively for both Android and iOS requires about twice the time that is needed to develop the application for one platform only. This is a consequence of the impossibility to reuse code across platforms (see section \ref{sec:cr}). Developing mobile web applications for Android and iOS with Apache Cordova requires about half of the development time because 100\% of the code can be reused across platforms. The downside of this approach is that about half of the benefits are lost as well. Nevertheless, in terms of cost-effectiveness, both perform equally well. Compared to Cordova, Rhodes applications are estimated to need a little bit more work because it lacks some common but frequently used functionality (like session management). However, the benefits associated with Rhodes are considerably lower than with Cordova. These findings are visualized in \fref{fig:cost-benefit}.
 
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{figs/benefit-cost.pdf}
+        \caption{Visual representation of the cost-benefit analysis.}
+        \label{fig:cost-benefit}
+    \end{center}
+\end{figure}
 
-
-
-
-
-
-
-
-
+Note that adding an additional platform to the native portfolio will increase the development time (and cost) by half, whereas additional platforms can be added at virtually no cost when developing mobile web applications with Cordova. In case a third platform has to be supported, Cordova application will have better value-for-money.
