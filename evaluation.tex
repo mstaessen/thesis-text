@@ -198,9 +198,11 @@ In the portability category (see \tref{tab:portability}), the differences betwee
 
 \section{Evaluate the alternatives}
 
-In the following subsections, all alternatives get evaluated with respect to one criterion at a time. Every subsection provides a description of what is measured and how, what is taken into account for the evaluation and what scale is used and why. For every alternative, the rationale for the judgement or score will be provided as well.
+In the subsections to follow, all alternatives get evaluated with respect to one criterion at a time. In every subsection, a description is given of what exactly is measured and how. The description also outlines what is taken into account for the evaluation, which scale is used and why. For every alternative, a rationale for the judgement or score is provided as well.
 
-In case judgements are used, these judgements are based on the experience of developing the proof-of-concept application. Some criteria discuss features that are not part of the proof-of-concept application. In that case, the information is taken from the documentation. 
+For some criteria, there is no absolute scale available to measure said property. In that case, judgements based on pairwise comparison, as proposed by Saaty \cite{Saaty:1980}, are used to evaluate the alternatives. These judgements arise from the experience of developing the proof-of-concept application. In addition, some criteria deal with features that are not addressed in the proof-of-concept application. In that case, the evaluation is based on the information that is found in the documentation. 
+
+\TODO{Make sure every section clearly mentions these things...}
 
 \subsection{Platform support}
 
@@ -333,22 +335,21 @@ Note that with Cordova's plugin system, it can deliver the same level of integra
             Wi-Fi Direct        & \checkmark     & --         & --         & --         \\
             USB / Accessory     & \checkmark     & \checkmark & --         & --         \\
             \hline
-            Support             & \multicolumn{2}{c}{$18/21$} & $10.5/21$  & $15.5/21$  \\
+            Support             & \multicolumn{2}{c}{Average: $18/21$} & $10.5/21$  & $15.5/21$  \\
             \hline
         \end{tabular}
-        \caption{}
+        \caption{Evaluation of the alternatives with respect to ``access to hardware''.}
         \label{tab:apis}
     \end{center}
 \end{table}
 
 \subsection{Integration with platform-specific services}
-\TODO{Drop this comparison? Not really identifiable from the interviews or literature... and kind of based on nothing :/}
 
-This criterion measures the ability to integrate the application with platform-specific services that might not be available on all platforms. Again, because there is no absolute scale to express this ability, Saaty's fundamental scale is used.
+This criterion measures the ability of an alternative to integrate the application with platform-specific services that might not be available on all platforms, e.g. Passbook. The proof-of-concept application does not contain this kind of integration and consequently this evaluation is based on the documentation. Because there is no absolute scale to quantify this property, the evaluation is also based on judgements.
 
-\paragraph{Android \& iOS} The native SDK's are best suited for this kind of integration. 
+\paragraph{Android \& iOS} Platform-specific services are part of the native SDK's. Therefore, this kind of integration is implemented the easiest in the native applications.
 
-\paragraph{Apache Cordova} There are no API's for this kind of integration in the default Cordova distribution. Nevertheless, one can integrate rather easily with these services through a custom plugin.
+\paragraph{Apache Cordova} There are no API's for this kind of integration in the default distribution but fortunately, Cordova ships with an elaborate plugin-system which can be used to deal with it.
 
 \paragraph{Motorola Rhodes} There are no API's for this integration in Rhodes either. Moreover, Rhodes does not have a plugin system which could make this integration possible. Therefore, it is excluded from this category and not awarded any points.
 
@@ -386,21 +387,21 @@ However, numerous attempts are made to recreate the native look \& feel on top o
 
 \paragraph{Verdict} Despite the efforts of many projects to mock the native look \& feel in web applications, it remains a privilege of Android and iOS. Hence, Android and iOS clearly do better compared to Cordova and Rhodes, as is illustrated in \tref{tab:nlf}.
 
-%\begin{table}[h!]
-%    \begin{center}
-%        \begin{tabular}{lcl}
-%            \hline
-%            \textbf{Native Look \& Feel} & Able to use native UI elements & Priority vector \\
-%            \hline
-%            Android/iOS          & Yes          & $1$        \\
-%            Cordova              & No       & $1$     & $1$   & $0.0909\ldots$        \\
-%            Rhodes               & No       & $1$     & $1$   & $0.0909\ldots$        \\
-%            \hline
-%        \end{tabular}
-%        \caption{Pairwise comparison matrix for the criterion ``Native Look \& Feel''.}
-%        \label{tab:nlf}
-%    \end{center}
-%\end{table}
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{lcl}
+            \hline
+            \textbf{Native Look \& Feel} & Native L\&F & Priority vector \\
+            \hline
+            Android/iOS          & Yes      & $1$  \\
+            Cordova              & No       & $0$  \\
+            Rhodes               & No       & $$   \\
+            \hline
+        \end{tabular}
+        \caption{Evaluation of the alternatives with respect to ``Native look \& feel''.}
+        \label{tab:nlf}
+    \end{center}
+\end{table}
 
 \subsection{UI element capabilities}
 
@@ -452,7 +453,7 @@ The Cordova proof-of-concept application is implemented as a single-page applica
             \multicolumn{2}{c}{Android \& iOS combined: $26/26$} & \multicolumn{2}{c}{HTML5 \& Bootstrap combined: $24/26$}                 \\
             \hline
         \end{tabular}
-        \caption{}
+        \caption{Evaluation of the alternatives with respect to ``UI element capabilities''.}
         \label{tab:uiec}
     \end{center}
 \end{table}
@@ -462,9 +463,7 @@ The Cordova proof-of-concept application is implemented as a single-page applica
 
 The performance criterion measures the responsiveness of the user interface and the application in general. Responsiveness in this case does not mean the ability to reflow UI elements to fit other screen sizes, responsiveness in this case represents the time it takes an application to respond to a trigger, like pushing a button.
 
-Comparing the performance of these alternatives is very hard because their architectures are so different. For instance, measuring page load times is impossible because the Rhodes application is the only application that uses page loads. There is no notion of a page load in native applications and the Cordova application is implemented as a single-page application. 
-
-Fortunately, the analytic hierarchy process can make up for this because it inherently assumes error in human judgement. As long as the consistency ratio is low, the judgements are acceptable.
+Comparing the performance of these alternatives is hard because their architectures are completely different. For web applications, page load times could be a viable metric. However, only the Rhodes application uses page loads. There is no notion of page loads in native applications and the Cordova application is implemented as a single-page application. Hence, no absolute scale is available and the alternatives are evaluated based on judgement. The analytic hierarchy process can deal with inconsistency as long as the consistency ratio is low, i.e equal or below 10\%. In that case, the judgements are accepted.
 
 Every implementation of the proof-of-concept application is tested on four devices:
 \begin{itemize}
@@ -474,13 +473,13 @@ Every implementation of the proof-of-concept application is tested on four devic
     \item \textbf{iPhone 3GS} A smartphone, released in June 2009 and running iOS 6.1.3 on a single core 600\,MHz ARMv6 processor. It has 256\,MB of RAM and a 3.5-inch display with a 320 by 480 pixel resolution (165\,ppi).
 \end{itemize}
 
-\paragraph{Android \& iOS} \TODO{Best}
+\paragraph{Android \& iOS} The native SDK's are the most suited to take advantage of the device capabilities. Therefore, native applications always perform the best, provided they are well-designed.
 
-\paragraph{Apache Cordova} \TODO{average/worse than average}
+\paragraph{Apache Cordova} Cordova wraps web applications. Hence, the performance of its applications greatly depends on the performance of the browser on the device. On older smartphones, the performance of the browser is often seriously lacking. The use of a single-page application solves this issue in a way, but the performance drop is still notable.
 
-\paragraph{Motorola Rhodes} \TODO{Worst}
+\paragraph{Motorola Rhodes} A Rhodes application also relies on the native browser to display its user interface. The difference with Cordova is that Rhodes uses a local ruby web server to serve multi-page applications. The performance of the local web server is absolutely disappointing, resulting in utterly slow page loads (of up to 30 seconds for a single load on the slowest devices and 7 seconds on the fastest device).
 
-\paragraph{Verdict} The final scores are listed in \tref{tab:performance}.
+\paragraph{Verdict} The judgements for this evaluation are listed in \tref{tab:performance}. The consistency ratio is rather high but still acceptable.
 
 \begin{table}[h!]
     \begin{center}
@@ -495,7 +494,7 @@ Every implementation of the proof-of-concept application is tested on four devic
             \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0.0585$, $RI = 0.58$, $CR = 0.10$}\\
             \hline
         \end{tabular}
-        \caption{Pairwise comparison matrix for the criterion ``Performance''.}
+        \caption{Evaluation of the alternatives with respect to ``Performance''.}
         \label{tab:performance}
     \end{center}
 \end{table}
@@ -528,7 +527,7 @@ This criterion expresses the ability to reuse skills from another field of exper
             \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0$, $RI = 0.58$, $CR = 0$}\\
             \hline
         \end{tabular}
-        \caption{Pairwise comparison matrix for the criterion ``Skill reuse''.}
+        \caption{Evaluation of the alternatives with respect to ``Skill reuse''.}
         \label{tab:sr}
     \end{center}
 \end{table}
@@ -560,26 +559,26 @@ This criterion describes the overall quality of the supplied tools. This include
             \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0.0145$, $RI = 0.58$, $CR = 0.025$}\\
             \hline
         \end{tabular}
-        \caption{Pairwise comparison matrix for the criterion ``Tooling''.}
+        \caption{Evaluation of the alternatives with respect to ``Tooling''.}
         \label{tab:tooling}
     \end{center}
 \end{table}
 
 \subsection{Testing}
 
-The testing criterion measures the ability to automate testing and the ability to be used in a continuous integration environment. Again, Saaty's scale is used as there is no absolute scale available to measure this property. This criterion focusses mainly on unit testing and integration testing as these tests are ran the most in a continuous integration environment. Mobile interface testing is rather hard and is not taken into consideration for this criterion.
+This criterion measures the ability to (1) write tests and (2) automate testing in a continuous integration environment. This criterion focusses mainly on unit testing and integration testing as these tests are most common. Mobile interface testing is rather hard and is not taken into account for this criterion. Alternatives are evaluated using judgements because there is no absolute scale on which this property could be quantified. 
 
-\paragraph{Android \& iOS} The programming language for native Android applications is Java and consequently, the well-known JUnit framework can be used for testing. A similar framework is readily available in Xcode for Objective-C.
+Continuous integration is actually not part of the scope for the proof-of-concept application. Nevertheless, this is an important topic in a production environment and therefore it is examined superficially.
 
-\paragraph{Apache Cordova} \TODO{Test Runner Karma (formerly Testacular) + Test Framework Jasmine.}
+\paragraph{Android \& iOS} Android and iOS have built-in support for writing unit tests (1). Android is based on Java and consequently, the well-known JUnit framework can be used for writing tests. For iOS, a similar framework is readily available in Xcode for Objective-C. 
 
-Need some more research on this topic
+For automated testing in a continuous integration environment (2), there are a number of options available. Continuous integration testing for Android can be set up quite easily with Jenkins\footnote{Jenkins is a popular continuous integration server, \url{http://jenkins-ci.org}}, even headless\footnote{On a server without a user interface}. For iOS, there are a number of guides available describing how to set it up. However, a Apple hardware is still required. Other options include a hosted continuous integration service.
 
-\paragraph{Motorola Rhodes} \TODO{SpecRunner}
+\paragraph{Apache Cordova} For JavaScript, the Jasmine testing framework\footnote{\url{http://pivotal.github.io/jasmine/}} can be used to write tests (1). In combination with a test runner like Karma\footnote{\url{http://karma-runner.github.io/0.8/index.html}}, these test can be ran in a continuous integration environment. Better yet, this framework allows to automate testing on the actual mobile devices.
 
-Need some more research on this topic
+\paragraph{Motorola Rhodes} Unit testing is also built-in into Rhodes. However, only few options seem to be available for automating testing in a continuous integration environment.
 
-\paragraph{Verdict} The scores are listed in \tref{tab:testing}.
+\paragraph{Verdict}  The judgements are summarized in \tref{tab:testing}. All alternatives have support for unit testing. In that perspective, they are all equal. Rhodes seems to be less suited for continuous integration when compared to the other alternatives. The other alternatives perform equally because seem to support the same features.
 
 \begin{table}[h!]
     \begin{center}
@@ -587,14 +586,14 @@ Need some more research on this topic
             \hline
             \textbf{Testing} & Android/iOS & Cordova & Rhodes & Priority vector \\
             \hline
-            Android/iOS      & $1$         & $1$     & $1$    & $0.3333\ldots$        \\
-            Cordova          & $1$         & $1$     & $1$    & $0.3333\ldots$        \\
-            Rhodes           & $1$         & $1$     & $1$    & $0.3333\ldots$        \\
+            Android/iOS      & $1$         & $1$     & $3$    & $0.4286$ \\
+            Cordova          & $1$         & $1$     & $3$    & $0.4286$ \\
+            Rhodes           & $1/3$       & $1/3$   & $1$    & $0.1428$ \\
             \hline
             \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0$, $RI = 0.58$, $CR = 0$}\\
             \hline
         \end{tabular}
-        \caption{Pairwise comparison matrix for the criterion ``Testing''.}
+        \caption{Evaluation of the alternatives with respect to ``Testing''.}
         \label{tab:testing}
     \end{center}
 \end{table}
