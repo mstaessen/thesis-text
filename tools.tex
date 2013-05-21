@@ -9,7 +9,7 @@ This chapter provides elaborate descriptions of the evaluated tools and informat
 
 Apache Cordova\footnote{\url{http://cordova.apache.org}} started out as a project called PhoneGap. It was developed by a couple of employees from a Canadian company called Nitobi and was unofficially released at the iPhoneDevCamp gathering in August 2008. In 2011, Adobe acquired said company such that the team could focus solely on the development of PhoneGap. At the same time, Nitobi donated the PhoneGap codebase to the Apache Software Foundation (ASF), where it became an incubating\footnote{In order to become part of the ASF, every project is required to go through an incubating stage.} project. To make sure that the intellectual property would not conflict with trademark ambiguity, the project's name was changed from PhoneGap to Apache Callback. Because the community was dissatisfied with the project's name, it was quickly changed to Apache Cordova. On October 2012, Apache Cordova graduated as a top level project within the Apache Software Foundation. This ensures that it will always remain free and open source under the Apache License 2.0.
 
-Nowadays, PhoneGap is a distribution of Apache Cordova, delivered by Adobe, while development and open source contributions happen in the Apache Cordova project. PhoneGap strategically fits in a collection of software like Adobe PhoneGap Build and Adobe Edge Inspect. 
+Nowadays, PhoneGap is a distribution of Apache Cordova, delivered by Adobe. PhoneGap strategically fits in a collection of software like Adobe PhoneGap Build and Adobe Edge Inspect (see further). The development and maintenance of the cross-platform tool happens in the Apache Cordova project and is driven by an active community in which Adobe is the largest contributor.
 
 \subsection{Supported platforms}
 \label{sec:ac:support}
@@ -29,7 +29,7 @@ Apache Cordova is a cross-platform tool that produces hybrid applications, i.e. 
 \begin{figure}
     \begin{center}
         \includegraphics[width=.8\textwidth]{figs/cordova-architecture.png}
-        \caption{The architecture of Apache Cordova / Adobe PhoneGap applications.}
+        \caption{The architecture of Apache Cordova/Adobe PhoneGap applications.}
         \label{fig:cordova:architecture}
     \end{center}
 \end{figure}
@@ -38,9 +38,7 @@ One of Cordova's goals is to promote the web as a first-class development platfo
 
 \paragraph{Example} The Cordova Storage API is a polyfill for the deprecated but often used Web SQL specification\footnote{\url{http://dev.w3.org/html5/webdatabase/}} and Web Storage specification\footnote{\url{http://dev.w3.org/html5/webstorage/}}. 
 
-\subsubsection{Plugin system}
-
-Within Cordova, every device API is implemented as a plugin. This allows to (1) leave out unused device API's, reducing the size of the compiled application and (2) create your own custom plugin. Every plugin comprises of a piece of JavaScript code and a piece of native code. Calls to the JavaScript API are marshaled and sent to the native counterpart where the request gets unmarshaled and executed. Additionally, a response is be sent back to the caller.
+Cordova has a pluggable architecture, i.e. within Cordova, every device API is implemented as a plugin. This allows to (1) leave out unused device API's, reducing the size of the compiled application and (2) create your own custom plugin. Every plugin comprises of a piece of JavaScript code and a piece of native code. Calls to the JavaScript API are marshaled and sent to the native counterpart where the request gets unmarshaled and executed. Additionally, a response is be sent back to the caller.
 
 A comprehensive list of Cordova plugins is available at \url{https://github.com/phonegap/phonegap-plugins}. However, at the time of writing, there is no package manager like \texttt{npm}\footnote{NPM is the Node Package Manager, \url{http://npmjs.org}} available for Cordova plugins.
 
@@ -101,10 +99,52 @@ The tests are coded with the Jasmine\footnote{\url{http://pivotal.github.io/jasm
 
 \section{Motorola Rhodes}
 
+\subsection{General information \& history}
+
+Rhodes\footnote{\url{http://docs.rhomobile.com}} was developed and released in 2008 by an American company called RhoMobile. Their goal was to enable developers to quickly create native applications for all smartphones. Rhodes applications make use of synchronized local data and take advantage of the device's hardware. With a local synchronization engine, called RhoSync, the emphasis is clearly on data-driven enterprise applications.
+
+In July 2011, Motorola Solutions (the non-mobile, enterprise and government-oriented division, not the division that was acquired by Google) acquired RhoMobile. After the acquisition, Motorola introduced the commercial product RhoElements: a set of specialized features like a barcode scanner, NFC and signature capture. About one year after the acquisition, Motorola removed a lot of the features from the Rhodes framework and included them in RhoElements version 2.
+
+The Rhodes framework is open source and freely available under the MIT license. Based on the statistics of the RhoMobile Google groups page,  community activity has significantly decreased in the last year from 722 monthly posts in June 2012 to 102 monthly posts in April 2013. However, based on the contribution history on GitHub, development activity seems to have increased since January 2013.
+
+\subsection{Supported platforms}
+
+Rhodes currently supports all major platforms, including Android (2.1 and up), iOS (3.0 and up), Windows Phone 8 and BlackBerry (4, 5, 6 and 7).
+
 \subsection{Architecture}
 
-\TODO{Rhodes is an interpreted/hybrid application, uses ruby and HTML(5) for ui but has no support for HTML5 polyfills if browser support is limited, ...}
+Rhodes is a cross-platform tool that creates applications that are both interpreted and hybrid at the same time. A Rhodes application is a mobile web application that runs locally on top of a Ruby web server, i.e. the application code it written in Ruby, the view is written in HTML. The architecture is depicted in \fref{fig:rhodes-architecture}.
 
-\TODO{Elaborate description of Rhodes, including architecture, kind of app, supported platforms, used programming languages, costs, financial backing, community support, official support, ...}
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{figs/rhodes-architecture.png}
+        \caption{The architecture of Rhodes applications}
+        \label{fig:rhodes-architecture}
+    \end{center}
+\end{figure}
 
-\section{Native SDKs?}
+Rhodes also has a plugin system that allows developers to create native extensions for missing functionality. A plugin consists of a shared Ruby interface definition and native implementations for the supported platforms.
+
+\subsection{Related projects}
+
+Rhodes is an open-source framework is part of a collection of software, called RhoMobile Suite, which also contains other software products that fit strategically in this suite. These products are discussed briefly in this section.
+
+\subsubsection{RhoElements}
+
+RhoElements is a commercial product in the RhoMobile Suite and therefore requires a license. It contains a substantial amount of additional functionality that is useful for enterprise applications like NFC, barcode readers, etc. This functionality was removed from Rhodes in version 3.3.3.
+
+\subsubsection{RhoConnect}
+
+RhoConnect is another open-source product in the RhoMobile Suite and serves as a mobile orchestrator. It takes care of data synchronization between backend applications and mobile devices. The libraries for this integration are already available in the Rhodes framework.
+
+\subsubsection{RhoHub}
+
+RhoHub\footnote{\url{https://app.rhohub.com/}} is a cloud platform that developers can use to host and build their applications. Developers can push their code to a private git repository from which the application can be built for Android, iOS, etc.
+
+\subsubsection{RhoStudio}
+
+RhoStudio is an Ruby IDE, based on Eclipse 3.7, and contains a custom plugin for Rhodes and RhoElements application development. It is freely available as part of the RhoMobile Suite.
+
+\subsection{Proof-of-concept application implementation}
+
+The development of the proof-of-concept application was aborted early because the tooling was bugged and the performance of the resulting Rhodes applications was unsatisfying. On an entry-level smartphone, loading a page took 30 seconds and on a high-end smartphone page loads still take 7 seconds. Capgemini deemed this unacceptable and Rhodes was no longer considered a viable alternative.
