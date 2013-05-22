@@ -1,7 +1,7 @@
 \chapter{Evaluation}
 \label{chap:evaluation}
 
-This chapter presents a detailed description of the evaluation of the alternatives, which are the combination of native Android and native iOS, Apache Cordova and Motorola Rhodes. The chapter is structured as outlined in section \ref{sec:evaluation-method}: first, the weights of the criteria are calculated; second, the weights of the alternatives are calculate and last, a cost-benefit analysis is performed.
+This chapter presents a detailed description of the evaluation of the alternatives, which are the combination of native Android and native iOS, Apache Cordova and Motorola Rhodes. The chapter is structured as outlined in section \ref{sec:evaluation-method}: first, the weights of the criteria are calculated. Second, the weights of the alternatives are calculated and last, a cost-benefit analysis is performed.
 
 \section{Weighting the evaluation criteria}
 
@@ -193,12 +193,11 @@ In the portability category (see \tref{tab:portability}), the differences betwee
     \end{center}
 \end{table}
 
-
-
+\TODO{Add a note about statistical insignificance}
 
 \section{Evaluate the alternatives}
 
-In the subsections to follow, all alternatives get evaluated with respect to one criterion at a time. In every subsection, a description is given of what exactly is measured and how. The description also outlines what is taken into account for the evaluation, which scale is used and why. For every alternative, a rationale for the judgement or score is provided as well.
+In the subsections to follow, all alternatives get evaluated with respect to one criterion at a time. Every subsection gives a description of what is measured, how it is measured. Additionally, the description also illustrates what is taken into account for the evaluation, which scale is used and why. For every alternative, a rationale is provided for the judgement or attributed score.
 
 For some criteria, there is no absolute scale available to measure said property. In that case, judgements based on pairwise comparison, as proposed by Saaty \cite{Saaty:1980}, are used to evaluate the alternatives. These judgements arise from the experience of developing the proof-of-concept application. In addition, some criteria deal with features that are not addressed in the proof-of-concept application. In that case, the evaluation is based on the information that is found in the documentation. 
 
@@ -266,15 +265,15 @@ Native development for Android and iOS is treated as a whole. Because of the str
 \subsection{Code reuse}
 \label{sec:cr}
 
-This criterion measures the amount of code that can be reused when migrating to another platform. For this criterion, the amount of portable code is expressed as an estimated percentage of the total amount of application code. Native extensions are not taken into account as they are not part of the application logic. They are considered to be reusable dependency which has to be coded once. 
+This criterion measures the amount of code that can be reused when migrating to another platform. For this criterion, the amount of portable code is expressed as an estimated percentage of the total amount of application code. Native extensions (through pluggable architectures) are not taken into account as they are not part of the application logic. They are in fact reusable software components that can be coded once and used many times afterwards. 
 
 \paragraph{Android \& iOS} As mentioned before, native code for Android and iOS is useless on other platforms but native Android code is also useless on iOS and vice versa. Hence, code reuse on Android and iOS is 0\%.
 
-\paragraph{Apache Cordova} Code reuse is 100\% for Cordova applications because all code is shared across all platforms. Since code of native plugins are not taken into account, this does not affect the score.
+\paragraph{Apache Cordova} Cordova wraps mobile web applications. Hence, all (or 100\%) of the application code can be easily shared across platforms. Cordova has a pluggable architecture but --- as mentioned in the description --- this is not taken into account in this discussion.
 
-Note that a large amount of code can potentially be reused in other (non-mobile) platforms. Be that as it may, it is out of the scope of this evaluation and it is not taken into account either.
+Note that a substantial amount of code (or potentially all code) can be reused on other (non-mobile) platforms. Cordova applications only use client-side programming languages and the API's mostly match existing HTML specifications. Be that as it may, it is out of scope for this evaluation and it is not further taken into account either.
 
-\paragraph{Motorola Rhodes} Code reuse on Rhodes applications is also 100\%. It is not taken into account that Rhodes has no support for custom plugins and that its code is not as widely deployable.
+\paragraph{Motorola Rhodes} The application logic of Rhodes applications can be fully shared across platforms as well. Hence, code reuse is also 100\%. Rhodes also has plugin system but, these are not taken into account. In contrast to Cordova, Rhodes applications are based on the Rhodes MVC framework which makes it hard (or even impossible) to deploy them outside a Rhodes environment.
 
 \paragraph{Verdict} The scores for each alternative are normalized and listed in \tref{tab:cr}. 
 
@@ -296,15 +295,15 @@ Note that a large amount of code can potentially be reused in other (non-mobile)
 
 \subsection{Access to hardware}
 
-This criterion measures the ability to integrate the device's hardware. For this criterion, the availability of device API's (sensor API's, output API's and communication API's) is studied and every alternative is awarded the fraction of device API's it supports. Alternatives can either provide full support (there is a way to access a particular piece of hardware or software on both platforms), partial support (access to this type of hardware is available on one platform only) or no support. Note that most of these API's are not used in the proof-of-concept application. Therefore, this comparison is mostly based on the documentation of the alternatives.
+This criterion measures the ability to integrate the device's hardware. The availability of device API's (sensor API's, output API's and communication API's) is studied and every alternative is awarded the fraction of device API's it supports out-of-the-box. Alternatives can either provide full support (there is a way to access a particular piece of hardware or software on both platforms), partial support (access to this type of hardware is available on one platform only) or no support. Note that most of these API's are not used in the proof-of-concept application. Therefore, this comparison is mostly based on the documentation of the alternatives.
 
 \paragraph{Android \& iOS} Android provides support for all types of sensors but that does not imply that all these sensors are available in a particular device. Apple iDevices have less sensors and as such there is no support for every sensor in iOS.
 
-\paragraph{Apache Cordova} Cordova tries to promote the web as a first-class platform for mobile applications. ``The ultimate purpose of \emph{Cordova} is to cease to exist'' \cite{LeRoux:2012}. When HTML5 will be fully supported on all mobile browsers, Cordova will no longer be needed. Therefore, all Cordova API's (try to) follow the HTML5 specification and do not provide support for all the sensors and communication because they are simply not in the specification.
+\paragraph{Apache Cordova} Cordova tries to promote the web as a first-class platform for mobile applications. ``The ultimate purpose of \emph{Cordova} is to cease to exist'' \cite{LeRoux:2012}. When HTML5 will be fully supported on all mobile browsers, Cordova will no longer be needed. Therefore, Cordova API's mostly match the HTML5 specification and do not provide support for all the sensors and communication because they are simply not in there.
 
 Note that with Cordova's plugin system, it can deliver the same level of integration as native Android and iOS. However, the plugin system is not taken into account here. 
 
-\paragraph{Motorola Rhodes} Rhodes provides a reasonable amount device API's. All of them are available through ruby method calls. As of version 3.3.3, Motorola has removed a lot of API's and included them in their commercial product called RhoMobile Suite, for which additional API's are available.
+\paragraph{Motorola Rhodes} Rhodes has a unified sensors API which can send events from all types of sensors if they are present. However, Rhodes lacks VideoCapture on all platforms and a MediaPlayer on iOS. Also, Motorola removed quite some useful API's from Rhodes and included them in their commercial product, called RhoElements.
 
 \paragraph{Verdict} The studied device API's and the alternative's support for it are listed in \tref{tab:apis}.
 
@@ -324,10 +323,10 @@ Note that with Cordova's plugin system, it can deliver the same level of integra
             Relative Humidity   & \checkmark     & --         & --         & partial    \\
             Temperature         & \checkmark     & --         & --         & partial    \\
             Microphone          & \checkmark     & \checkmark & \checkmark & \checkmark \\
-            Camera              & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            Camera              & \checkmark     & \checkmark & \checkmark & partial \\
             Hardware buttons    & \checkmark     & --         & partial    & partial    \\
             Vibration Motor     & \checkmark     & \checkmark & \checkmark & partial    \\
-            Speaker             & \checkmark     & \checkmark & \checkmark & \checkmark \\
+            Speaker             & \checkmark     & \checkmark & \checkmark & partial \\
             System information  & \checkmark     & \checkmark & \checkmark & \checkmark \\
             File System         & \checkmark     & \checkmark & \checkmark & \checkmark \\
             Contacts            & \checkmark     & \checkmark & \checkmark & \checkmark \\
@@ -336,7 +335,7 @@ Note that with Cordova's plugin system, it can deliver the same level of integra
             Wi-Fi Direct        & \checkmark     & --         & --         & --         \\
             USB / Accessory     & \checkmark     & \checkmark & --         & --         \\
             \hline
-            Support             & \multicolumn{2}{c}{Average: $18/21$} & $10.5/21$  & $15.5/21$  \\
+            Support             & \multicolumn{2}{c}{Average: $18/21$} & $10.5/21$  & $14.5/21$  \\
             \hline
         \end{tabular}
         \caption{Evaluation of the alternatives with respect to ``access to hardware''.}
@@ -346,15 +345,15 @@ Note that with Cordova's plugin system, it can deliver the same level of integra
 
 \subsection{Integration with platform-specific services}
 
-This criterion measures the ability of an alternative to integrate the application with platform-specific services that might not be available on all platforms, e.g. Passbook. The proof-of-concept application does not contain this kind of integration and consequently this evaluation is based on the documentation. Because there is no absolute scale to quantify this property, the evaluation is also based on judgements.
+This criterion measures the ability of an alternative to integrate the application with platform-specific services like push notifications. The proof-of-concept application does not require this kind of integration and thus this evaluation is based on the documentation. Because there is no absolute scale to quantify this property, the evaluation is also based on judgements.
 
 \paragraph{Android \& iOS} Platform-specific services are part of the native SDK's. Therefore, this kind of integration is implemented the easiest in the native applications.
 
-\paragraph{Apache Cordova} There are no API's for this kind of integration in the default distribution but fortunately, Cordova ships with an elaborate plugin-system which can be used to deal with it.
+\paragraph{Apache Cordova} There are no API's for this kind of integration in the default distribution. Fortunately though, Cordova ships with an elaborate plugin-system which can be used to deal with it.
 
-\paragraph{Motorola Rhodes} There are no API's for this integration in Rhodes either. Moreover, Rhodes does not have a plugin system which could make this integration possible. Therefore, it is excluded from this category and not awarded any points.
+\paragraph{Motorola Rhodes} In Rhodes, there are no API's for this integration either. However, Rhodes also has a plugin system which can make this integration possible. 
 
-\paragraph{Verdict} The scores are listed in \tref{tab:pss}. Integrating with platform specific services is clearly more easy with the native development kits.
+\paragraph{Verdict} Integrating with platform-specific services is obviously more easy when programming natively. However, the other alternatives can use their plugin system to provide this integration. Since   plugins can be reused easily, this is only deemed to be a minor disadvantage which is visible in the judgements, listed in \tref{tab:pss}. 
 
 \begin{table}[h!]
     \begin{center}
@@ -362,11 +361,11 @@ This criterion measures the ability of an alternative to integrate the applicati
             \hline
             \textbf{Performance} & Android/iOS & Cordova & Rhodes & Priority vector \\
             \hline
-            Android/iOS          & $1$         & $5$     & excl. & $0.8333\ldots$        \\
-            Cordova              & $1/5$       & $1$     & excl. & $0.1667\ldots$        \\
-            Rhodes               & excl.       & excl.   & excl. & $0$        \\
+            Android/iOS          & $1$         & $3$     & $3$   & $0.6000$        \\
+            Cordova              & $1/3$       & $1$     & $1$   & $0.2000$        \\
+            Rhodes               & $1/3$       & $1$     & $1$   & $0.2000$        \\
             \hline
-            \multicolumn{5}{r}{$\lambda_{max} = 2$, $CI = 0$, $RI = 0$, $CR = 0$}\\
+            \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0$, $RI = 0.58$, $CR = 0$}\\
             \hline
         \end{tabular}
         \caption{Evaluation of the alternatives with respect to ``platform-specific services''}
