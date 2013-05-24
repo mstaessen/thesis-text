@@ -1,3 +1,38 @@
 \chapter{Conclusion}
 \label{chap:conclusion}
 
+This final chapter presents a summary of the work, together with a critical reflection and an overview of potential future improvements. 
+
+\section{Goals}
+\label{sec:goals}
+
+This thesis had two major goals. The first goal was to design a methodology for evaluating and selecting a cross-platform tool for mobile application development. The second goal was to use this methodology to evaluate real cross-platform tools and select the most suited candidate. The methodology that was used is inspired by the generic software package selection, presented by \citet{Jadhav:2011}, and comprises of six highly customizable stages. Each of these stages has been concretized in Chapter \ref{chap:methodology}. 
+
+During the first stage, the selection criteria were gathered. These are the most essential requirements that a cross-platform tools has to meet. The selection criteria were defined by Capgemini and require cross-platform tools to produce native applications for both Android and iOS and for both smartphones and tablets. 
+
+During the second stage, a list of potential candidates was composed from Internet searches and literature. An extensive list of cross-platform tools was found in ``Cross-platform developer tools 2012'', a report by VisionMobile on this subject \cite{VMCPT:2012}. Subsequent Internet searches did not reveal new tools.
+
+During the third stage, this list of potential candidates was filtered using the selection criteria from the first stage and from the resulting list, two cross-platform tools were selected for evaluation. These tools are Apache Cordova and Motorola Rhodes (see Chapter \ref{chap:tools}). The native development kits for both Android and iOS were also included as a baseline for the evaluation. 
+
+During the fourth stage, the evaluation criteria were defined. Three people at Capgemini were interviewed: a developer, a mobile architect and a sales person. From these interviews and literature, eleven evaluation criteria were identified: platform support, toolset reuse, code reuse, access to hardware, integration with platform-specific services, native look \& feel, user interface capabilities, performance, skill reuse, tooling and testing. These criteria are organized in a hierarchy because humans can only process 7 plus or minus 2 pieces of information at the same time.
+
+During the fifth stage, the alternatives were evaluated using these evaluation criteria. For this evaluation, the Analytic Hierarchy Process (AHP) \cite{Saaty:1980} was used. This method assigns weights to both criteria and alternatives based on judgements that originate from pairwise comparisons. In order to formulate a reliable judgement, a proof-of-concept application was implemented with the studied tools. The evaluation is carried out from two perspectives: one from the perspective of a developer, one of a perspective of a mobile architect. Both could have different opinions about cross-platform tool qualities, which could result in a different ranking.
+
+During the sixth and last stage, the candidates that is are most suited were carefully selected. This required a cost-benefit analysis to ascertain that the selected alternative was also cost-effective. For this cost-benefit analysis, development time was used as a cost driver and the scores for the alternatives, obtained from the evaluation, were used as benefits. From this analysis, it was concluded that Apache Cordova is currently equally cost-effective as the native development kits when only targeting Android and iOS. However, if in the future a third platform has to be supported, Cordova will be more cost-effective because the application can be completely reused on the next platform.
+
+\section{Reflection and future work}
+\label{sec:reflection}
+
+The methodology presented in this thesis ends with the selection of a cross-platform tool. However, the usefulness of this tool is never validated. Hence, a seventh, validation stage seems desirable. However, it is not possible to include this step in the timeframe of this thesis because such validation requires that the tool is used in a production environment for quite some time. The prolonged use of a particular tool in a large-scale environment will definitely reveal more benefits and/or issues than a simple proof-of-concept application can in a small-scale and controlled environment. Ergo, this seventh step is of utmost importance after the selection of a cross-platform tool.
+
+Also, the mobile industry is rapidly evolving, which inherently makes cross-platform tools moving targets. The outcome of this study will probably be different in one year from the moment of writing. This makes continuous evaluation of the available tools a necessity and introduces a feedback loop in the evaluation process. New technologies often provide less functionality in the early stages of its life cycle but they can quickly overcome the functionality of the current technologies. New tools can be deemed ineffective at a certain time, but may become more effective than the current tools in the future. Frequent reevaluation is a must.
+
+From the cost-benefit analysis in this study it is concluded that Apache Cordova and the native development kits are currently equally cost-effective. If a company decides to use Cordova for a number of its applications, a new problem rises because Cordova only wraps (mobile) web applications. There is a large number of tools available for (mobile) web development. Working with each of these technologies will create a different experience, both for developers and end-users, which motivates the need for another comparative study, a study that compares tools for (mobile) web development. 
+
+During the evaluation phase, the criteria are weighted using the judgements of only two individuals. The evaluation is based on the judgement of the evaluator. Hence, the result does not represent the animo among developers and architects. The result rather represents the combined judgement of three individuals. In future work, it might be wise to increase the sample size of the questioned people and evaluators in order to obtain a statistically valid result. However, having multiple individuals evaluate the alternatives was simply not an option and only two employees were available for questioning. 
+
+For the evaluation, the Analytic Hierarchy Process is used. One of the strengths of this method is that it is based on pairwise comparison but this could also become a weakness when a large number alternatives needs to be evaluated. This problem can be solved either by using another evaluation technique or by making modifications to the AHP to deal with these numbers, as is suggested in literature.
+
+
+
+
