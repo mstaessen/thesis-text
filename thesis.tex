@@ -36,13 +36,12 @@
 \kulemtmanToC
 
 % If you want to include other LaTeX packages, do it here.
-\usepackage{url}
-
 % Finally the hyperref package is used for pdf files.
 % This can be commented out for printed versions.
 \usepackage[pdfusetitle,colorlinks,plainpages=false]{hyperref}
-
-\usepackage[square,numbers]{natbib}
+\usepackage[backend=biber,style=ieee,natbib=true]{biblatex}
+\addbibresource{Thesis.bib}
+\usepackage{url}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{xfrac}
@@ -136,7 +135,8 @@
 \backmatter
 % The bibliography comes after the appendices.
 % You can replace the standard "abbrv" bibliography style by another one.
-\bibliographystyle{apa}
-\bibliography{Thesis}
+%\bibliographystyle{plainnat}
+%\bibliography{Thesis}
+\printbibliography
 
 \end{document}
