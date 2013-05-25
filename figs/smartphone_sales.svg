@@ -1,261 +1,318 @@
-<?xml version="1.0"?>
-<svg width="960" height="500">
-    <g transform="translate(80,20)" style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-family: sans-serif;">
-        <g class="x axis" transform="translate(0,430)">
-            <g class="tick major" style="opacity: 1;" transform="translate(16.875,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">2007</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(50.625,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q2</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(84.375,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q3</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(118.125,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q4</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(151.875,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">2008</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(185.625,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q2</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(219.375,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q3</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(253.125,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q4</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(286.875,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">2009</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(320.625,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q2</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(354.375,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q3</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(388.125,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q4</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(421.875,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">2010</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(455.625,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q2</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(489.375,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q3</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(523.125,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q4</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(556.875,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">2011</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(590.625,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q2</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(624.375,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q3</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(658.125,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q4</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(691.875,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">2012</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(725.625,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q2</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(759.375,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q3</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(793.125,0)">
-                <line y2="6" x2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text y="9" x="0" dy=".71em" style="text-anchor: middle;">Q4</text>
-            </g>
-            <path class="domain" d="M0,6V0H810V6" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-        </g>
-        <g class="y axis">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,430)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">0</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,371)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">20,000</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,311)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">40,000</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,252)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">60,000</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,192)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">80,000</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,133)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">100,000</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,73)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">120,000</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,14)">
-                <line x2="-6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="-9" y="0" dy=".32em" style="text-anchor: end;">140,000</text>
-            </g>
-            <path class="domain" d="M-6,0H0V430H-6" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-            <text transform="rotate(-90)" y="-80" x="-215" dy=".71em" style="text-anchor: middle;">Sales (thousand units)</text>
-        </g>
-        <g class="y2 axis" transform="translate(810, 0)">
-            <g class="tick major" style="opacity: 1;" transform="translate(0,430)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">0%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,387)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">10%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,344)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">20%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,301)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">30%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,258)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">40%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,215)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">50%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,172)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">60%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,129)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">70%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,86)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">80%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,43)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">90%</text>
-            </g>
-            <g class="tick major" style="opacity: 1;" transform="translate(0,0)">
-                <line x2="6" y2="0" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-                <text x="9" y="0" dy=".32em" style="text-anchor: start;">100%</text>
-            </g>
-            <path class="domain" d="M6,0H0V430H6" style="fill: none; stroke: #000000; shape-rendering: crispedges;"/>
-            <text transform="rotate(-90)" y="70" x="-215" dy="-1em" style="text-anchor: middle;">Smartphone penetration</text>
-        </g>
-        <rect width="24" y="389" height="41" transform="translate(4.875,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="386" height="44" transform="translate(38.625,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="382" height="48" transform="translate(72.375,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="382" height="48" transform="translate(106.125,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="383" height="47" transform="translate(139.875,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="385" height="45" transform="translate(173.625,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="379" height="51" transform="translate(207.375,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="378" height="52" transform="translate(241.125,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="372" height="58" transform="translate(274.875,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="368" height="62" transform="translate(308.625,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="373" height="57" transform="translate(342.375,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="363" height="67" transform="translate(376.125,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="365" height="65" transform="translate(409.875,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="357" height="73" transform="translate(443.625,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="346" height="84" transform="translate(477.375,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="334" height="96" transform="translate(511.125,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="330" height="100" transform="translate(544.875,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="322" height="108" transform="translate(578.625,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="318" height="112" transform="translate(612.375,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="296" height="134" transform="translate(646.125,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="282" height="148" transform="translate(679.875,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="272" height="158" transform="translate(713.625,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="260" height="170" transform="translate(747.375,0)" style="fill: #cccccc;"/>
-        <rect width="24" y="241" height="189" transform="translate(781.125,0)" style="fill: #cccccc;"/>
-        <g class="sale">
-            <path d="M16.875,430C16.875,429.99999999999994,16.875,429.99999999999994,22.5,429.9999999999999C28.125,429.99999999999994,39.375,429.99999999999994,50.625,429.9999999999999C61.875,429.99999999999994,73.125,429.99999999999994,84.375,429.9999999999999C95.625,429.99999999999994,106.875,429.99999999999994,118.125,429.9999999999999C129.375,429.99999999999994,140.625,429.99999999999994,151.875,429.9999999999999C163.125,429.99999999999994,174.375,429.99999999999994,185.625,429.9999999999999C196.875,429.99999999999994,208.125,429.99999999999994,219.375,429.9999999999999C230.625,429.99999999999994,241.875,429.99999999999994,253.125,429.6666666666666C264.375,429.33333333333326,275.625,428.66666666666663,286.875,428.3333333333333C298.125,428,309.375,428,320.625,427.66666666666663C331.875,427.3333333333333,343.125,426.66666666666663,354.375,425C365.625,423.3333333333333,376.875,420.66666666666663,388.125,418.66666666666663C399.375,416.66666666666663,410.625,415.3333333333333,421.875,411.99999999999994C433.125,408.66666666666663,444.375,403.3333333333333,455.625,395.8333333333333C466.875,388.3333333333333,478.125,378.66666666666663,489.375,368.66666666666663C500.625,358.66666666666663,511.875,348.3333333333333,523.125,340.5C534.375,332.66666666666663,545.625,327.3333333333333,556.875,319.5C568.125,311.66666666666663,579.375,301.3333333333333,590.625,289.3333333333333C601.875,277.3333333333333,613.125,263.66666666666663,624.375,249.16666666666666C635.625,234.66666666666666,646.875,219.33333333333331,658.125,209.16666666666666C669.375,199,680.625,194,691.875,182.83333333333334C703.125,171.66666666666666,714.375,154.33333333333331,725.625,133.83333333333331C736.875,113.33333333333333,748.125,89.66666666666666,759.375,66.83333333333333C770.625,44,781.875,22,787.5,11C793.125,0,793.125,0,793.125,0" style="stroke: #1f77b4; fill: none; stroke-width: 2pt;"/>
-        </g>
-        <g class="sale">
-            <path d="M16.875,430C16.875,429.99999999999994,16.875,429.99999999999994,22.5,429.83333333333326C28.125,429.66666666666663,39.375,429.3333333333333,50.625,428.83333333333326C61.875,428.3333333333333,73.125,427.66666666666663,84.375,426.83333333333326C95.625,425.99999999999994,106.875,424.99999999999994,118.125,424.6666666666666C129.375,424.33333333333326,140.625,424.66666666666663,151.875,425.16666666666663C163.125,425.66666666666663,174.375,426.33333333333326,185.625,424.83333333333326C196.875,423.33333333333326,208.125,419.66666666666663,219.375,418.16666666666663C230.625,416.66666666666663,241.875,417.33333333333326,253.125,417.83333333333326C264.375,418.33333333333326,275.625,418.66666666666663,286.875,418C298.125,417.3333333333333,309.375,415.66666666666663,320.625,414C331.875,412.3333333333333,343.125,410.66666666666663,354.375,408.99999999999994C365.625,407.33333333333326,376.875,405.66666666666663,388.125,405C399.375,404.3333333333333,410.625,404.66666666666663,421.875,404.66666666666663C433.125,404.66666666666663,444.375,404.3333333333333,455.625,401.8333333333333C466.875,399.3333333333333,478.125,394.66666666666663,489.375,391C500.625,387.3333333333333,511.875,384.66666666666663,523.125,382.99999999999994C534.375,381.3333333333333,545.625,380.66666666666663,556.875,379C568.125,377.3333333333333,579.375,374.66666666666663,590.625,374.5C601.875,374.3333333333333,613.125,376.66666666666663,624.375,368.8333333333333C635.625,361,646.875,343,658.125,335.16666666666663C669.375,327.3333333333333,680.625,329.66666666666663,691.875,332.8333333333333C703.125,336,714.375,340,725.625,344.66666666666663C736.875,349.3333333333333,748.125,354.66666666666663,759.375,347.5C770.625,340.3333333333333,781.875,320.66666666666663,787.5,310.8333333333333C793.125,301,793.125,301,793.125,301" style="stroke: #aec7e8; fill: none; stroke-width: 2pt;"/>
-        </g>
-        <g class="sale">
-            <path d="M16.875,383C16.875,383,16.875,383,22.5,381.8333333333333C28.125,380.66666666666663,39.375,378.3333333333333,50.625,376C61.875,373.66666666666663,73.125,371.3333333333333,84.375,369C95.625,366.66666666666663,106.875,364.3333333333333,118.125,365.3333333333333C129.375,366.3333333333333,140.625,370.66666666666663,151.875,372.8333333333333C163.125,375,174.375,375,185.625,375.1666666666667C196.875,375.3333333333333,208.125,375.66666666666663,219.375,375.99999999999994C230.625,376.3333333333333,241.875,376.66666666666663,253.125,376.8333333333333C264.375,377,275.625,377,286.875,375.49999999999994C298.125,374,309.375,371,320.625,370.8333333333333C331.875,370.66666666666663,343.125,373.3333333333333,354.375,371.8333333333333C365.625,370.3333333333333,376.875,364.66666666666663,388.125,361.6666666666667C399.375,358.66666666666663,410.625,358.3333333333333,421.875,357.6666666666667C433.125,357,444.375,356,455.625,353.3333333333333C466.875,350.66666666666663,478.125,346.3333333333333,489.375,342.6666666666667C500.625,339,511.875,336,523.125,337C534.375,338,545.625,343,556.875,347.3333333333333C568.125,351.66666666666663,579.375,355.3333333333333,590.625,359.3333333333333C601.875,363.3333333333333,613.125,367.66666666666663,624.375,370.8333333333333C635.625,374,646.875,376,658.125,379.5C669.375,383,680.625,388,691.875,392.16666666666663C703.125,396.3333333333333,714.375,399.66666666666663,725.625,403.66666666666663C736.875,407.66666666666663,748.125,412.3333333333333,759.375,415.49999999999994C770.625,418.66666666666663,781.875,420.3333333333333,787.5,421.16666666666663C793.125,422,793.125,422,793.125,421.99999999999994" style="stroke: #ff7f0e; fill: none; stroke-width: 2pt;"/>
-        </g>
-        <g class="sale">
-            <path d="M16.875,424C16.875,423.99999999999994,16.875,423.99999999999994,22.5,423.83333333333326C28.125,423.66666666666663,39.375,423.3333333333333,50.625,422.83333333333326C61.875,422.3333333333333,73.125,421.66666666666663,84.375,420.83333333333326C95.625,419.99999999999994,106.875,418.99999999999994,118.125,418.33333333333326C129.375,417.66666666666663,140.625,417.3333333333333,151.875,416.49999999999994C163.125,415.66666666666663,174.375,414.3333333333333,185.625,413.66666666666663C196.875,413,208.125,413,219.375,412.16666666666663C230.625,411.3333333333333,241.875,409.66666666666663,253.125,408.8333333333333C264.375,408,275.625,408,286.875,407.8333333333333C298.125,407.66666666666663,309.375,407.3333333333333,320.625,406.8333333333333C331.875,406.3333333333333,343.125,405.66666666666663,354.375,404.3333333333333C365.625,403,376.875,401,388.125,399.8333333333333C399.375,398.66666666666663,410.625,398.3333333333333,421.875,397.66666666666663C433.125,397,444.375,396,455.625,395.16666666666663C466.875,394.3333333333333,478.125,393.66666666666663,489.375,392.16666666666663C500.625,390.66666666666663,511.875,388.3333333333333,523.125,388C534.375,387.66666666666663,545.625,389.33333333333326,556.875,390.33333333333326C568.125,391.33333333333326,579.375,391.66666666666663,590.625,391.8333333333333C601.875,392,613.125,392,624.375,391.83333333333326C635.625,391.66666666666663,646.875,391.33333333333326,658.125,392.66666666666663C669.375,393.99999999999994,680.625,396.99999999999994,691.875,399.4999999999999C703.125,401.99999999999994,714.375,403.99999999999994,725.625,404.4999999999999C736.875,404.99999999999994,748.125,403.99999999999994,759.375,404.33333333333326C770.625,404.66666666666663,781.875,406.3333333333333,787.5,407.16666666666663C793.125,408,793.125,408,793.125,408" style="stroke: #ffbb78; fill: none; stroke-width: 2pt;"/>
-        </g>
-        <g class="sale">
-            <path d="M16.875,421C16.875,420.99999999999994,16.875,420.99999999999994,22.5,420.83333333333326C28.125,420.66666666666663,39.375,420.3333333333333,50.625,419.83333333333326C61.875,419.3333333333333,73.125,418.66666666666663,84.375,418.16666666666663C95.625,417.66666666666663,106.875,417.3333333333333,118.125,417.49999999999994C129.375,417.66666666666663,140.625,418.3333333333333,151.875,418.5C163.125,418.66666666666663,174.375,418.33333333333326,185.625,418.16666666666663C196.875,417.99999999999994,208.125,417.99999999999994,219.375,417.6666666666666C230.625,417.33333333333326,241.875,416.66666666666663,253.125,416.8333333333333C264.375,417,275.625,418,286.875,418.49999999999994C298.125,419,309.375,419,320.625,419.16666666666663C331.875,419.3333333333333,343.125,419.66666666666663,354.375,419.5C365.625,419.3333333333333,376.875,418.66666666666663,388.125,418.49999999999994C399.375,418.33333333333326,410.625,418.66666666666663,421.875,419.16666666666663C433.125,419.66666666666663,444.375,420.33333333333326,455.625,420.99999999999994C466.875,421.66666666666663,478.125,422.3333333333333,489.375,422.16666666666663C500.625,422,511.875,421,523.125,420.8333333333333C534.375,420.66666666666663,545.625,421.3333333333333,556.875,422.16666666666663C568.125,423,579.375,424,590.625,424.49999999999994C601.875,425,613.125,425,624.375,424.49999999999994C635.625,424,646.875,423,658.125,422.49999999999994C669.375,422,680.625,422,691.875,421.33333333333326C703.125,420.66666666666663,714.375,419.33333333333326,725.625,418.66666666666663C736.875,417.99999999999994,748.125,417.99999999999994,759.375,416.9999999999999C770.625,415.99999999999994,781.875,413.99999999999994,787.5,412.9999999999999C793.125,411.99999999999994,793.125,411.99999999999994,793.125,411.9999999999999" style="stroke: #2ca02c; fill: none; stroke-width: 2pt;"/>
-        </g>
-        <g class="sale">
-            <path d="M16.875,430C16.875,429.99999999999994,16.875,429.99999999999994,22.5,429.9999999999999C28.125,429.99999999999994,39.375,429.99999999999994,50.625,429.9999999999999C61.875,429.99999999999994,73.125,429.99999999999994,84.375,429.9999999999999C95.625,429.99999999999994,106.875,429.99999999999994,118.125,429.9999999999999C129.375,429.99999999999994,140.625,429.99999999999994,151.875,429.9999999999999C163.125,429.99999999999994,174.375,429.99999999999994,185.625,429.9999999999999C196.875,429.99999999999994,208.125,429.99999999999994,219.375,429.9999999999999C230.625,429.99999999999994,241.875,429.99999999999994,253.125,429.9999999999999C264.375,429.99999999999994,275.625,429.99999999999994,286.875,429.9999999999999C298.125,429.99999999999994,309.375,429.99999999999994,320.625,429.9999999999999C331.875,429.99999999999994,343.125,429.99999999999994,354.375,429.9999999999999C365.625,429.99999999999994,376.875,429.99999999999994,388.125,429.9999999999999C399.375,429.99999999999994,410.625,429.99999999999994,421.875,429.6666666666666C433.125,429.33333333333326,444.375,428.66666666666663,455.625,428.16666666666663C466.875,427.66666666666663,478.125,427.33333333333326,489.375,426.66666666666663C500.625,425.99999999999994,511.875,424.99999999999994,523.125,424.4999999999999C534.375,423.99999999999994,545.625,423.99999999999994,556.875,423.9999999999999C568.125,423.99999999999994,579.375,423.99999999999994,590.625,423.83333333333326C601.875,423.66666666666663,613.125,423.3333333333333,624.375,422.83333333333326C635.625,422.3333333333333,646.875,421.66666666666663,658.125,420.99999999999994C669.375,420.33333333333326,680.625,419.66666666666663,691.875,419C703.125,418.3333333333333,714.375,417.66666666666663,725.625,417C736.875,416.3333333333333,748.125,415.66666666666663,759.375,416.49999999999994C770.625,417.33333333333326,781.875,419.66666666666663,787.5,420.8333333333333C793.125,422,793.125,422,793.125,421.99999999999994" style="stroke: #98df8a; fill: none; stroke-width: 2pt;"/>
-        </g>
-        <g class="sale">
-            <path d="M16.875,418C16.875,417.99999999999994,16.875,417.99999999999994,22.5,418.1666666666666C28.125,418.33333333333326,39.375,418.66666666666663,50.625,418.8333333333333C61.875,419,73.125,419,84.375,418.99999999999994C95.625,419,106.875,419,118.125,418.83333333333326C129.375,418.66666666666663,140.625,418.33333333333326,151.875,418.49999999999994C163.125,418.66666666666663,174.375,419.3333333333333,185.625,419.49999999999994C196.875,419.66666666666663,208.125,419.3333333333333,219.375,419C230.625,418.66666666666663,241.875,418.33333333333326,253.125,418.66666666666663C264.375,418.99999999999994,275.625,419.99999999999994,286.875,420.83333333333326C298.125,421.66666666666663,309.375,422.3333333333333,320.625,422.49999999999994C331.875,422.66666666666663,343.125,422.3333333333333,354.375,422.3333333333333C365.625,422.3333333333333,376.875,422.66666666666663,388.125,422.8333333333333C399.375,423,410.625,423,421.875,423.16666666666663C433.125,423.3333333333333,444.375,423.66666666666663,455.625,423.83333333333326C466.875,423.99999999999994,478.125,423.99999999999994,489.375,424.33333333333326C500.625,424.66666666666663,511.875,425.3333333333333,523.125,425.66666666666663C534.375,426,545.625,426,556.875,426.16666666666663C568.125,426.3333333333333,579.375,426.66666666666663,590.625,426.83333333333326C601.875,426.99999999999994,613.125,426.99999999999994,624.375,426.9999999999999C635.625,426.99999999999994,646.875,426.99999999999994,658.125,426.83333333333326C669.375,426.66666666666663,680.625,426.3333333333333,691.875,426.33333333333326C703.125,426.3333333333333,714.375,426.66666666666663,725.625,426.99999999999994C736.875,427.33333333333326,748.125,427.66666666666663,759.375,427.8333333333333C770.625,428,781.875,428,787.5,427.99999999999994C793.125,428,793.125,428,793.125,427.99999999999994" style="stroke: #d62728; fill: none; stroke-width: 2pt;"/>
-        </g>
-        <g class="legend" transform="translate(0, 0)">
-            <rect x="1" y="456" width="113.71428571428571" height="18" style="fill: #1f77b4;"/>
-            <text x="57.857142857142854" y="465" dy=".4em" style="text-anchor: middle;">Android</text>
-        </g>
-        <g class="legend" transform="translate(115.71428571428571, 0)">
-            <rect x="1" y="456" width="113.71428571428571" height="18" style="fill: #aec7e8;"/>
-            <text x="57.857142857142854" y="465" dy=".4em" style="text-anchor: middle;">iOS</text>
-        </g>
-        <g class="legend" transform="translate(231.42857142857142, 0)">
-            <rect x="1" y="456" width="113.71428571428571" height="18" style="fill: #ff7f0e;"/>
-            <text x="57.857142857142854" y="465" dy=".4em" style="text-anchor: middle;">Symbian</text>
-        </g>
-        <g class="legend" transform="translate(347.1428571428571, 0)">
-            <rect x="1" y="456" width="113.71428571428571" height="18" style="fill: #ffbb78;"/>
-            <text x="57.857142857142854" y="465" dy=".4em" style="text-anchor: middle;">BlackBerry</text>
-        </g>
-        <g class="legend" transform="translate(462.85714285714283, 0)">
-            <rect x="1" y="456" width="113.71428571428571" height="18" style="fill: #2ca02c;"/>
-            <text x="57.857142857142854" y="465" dy=".4em" style="text-anchor: middle;">Microsoft</text>
-        </g>
-        <g class="legend" transform="translate(578.5714285714286, 0)">
-            <rect x="1" y="456" width="113.71428571428571" height="18" style="fill: #98df8a;"/>
-            <text x="57.857142857142854" y="465" dy=".4em" style="text-anchor: middle;">Bada</text>
-        </g>
-        <g class="legend" transform="translate(694.2857142857142, 0)">
-            <rect x="1" y="456" width="113.71428571428571" height="18" style="fill: #d62728;"/>
-            <text x="57.857142857142854" y="465" dy=".4em" style="text-anchor: middle;">Others</text>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="960px" height="500px" viewBox="0 0 960 500" enable-background="new 0 0 960 500" xml:space="preserve">
+<g transform="translate(80,20)">
+	<g transform="translate(0,430)">
+		<g transform="translate(16.2,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -10.8975 14.0437)" font-family="'Helvetica'" font-size="14">2007</text>
+		</g>
+		<g transform="translate(48.599999999999994,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6632 14.0437)" font-family="'Helvetica'" font-size="14">Q2</text>
+		</g>
+		<g transform="translate(81,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6633 14.0437)" font-family="'Helvetica'" font-size="14">Q3</text>
+		</g>
+		<g transform="translate(113.39999999999999,0)">
+			<line fill="none" stroke="#000000" x1="4.674" y1="-4.897" x2="4.674" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6634 14.0437)" font-family="'Helvetica'" font-size="14">Q4</text>
+		</g>
+		<g transform="translate(145.79999999999998,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -10.8979 14.0437)" font-family="'Helvetica'" font-size="14">2008</text>
+		</g>
+		<g transform="translate(178.2,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6631 14.0437)" font-family="'Helvetica'" font-size="14">Q2</text>
+		</g>
+		<g transform="translate(210.59999999999997,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6632 14.0437)" font-family="'Helvetica'" font-size="14">Q3</text>
+		</g>
+		<g transform="translate(242.99999999999997,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6633 14.0437)" font-family="'Helvetica'" font-size="14">Q4</text>
+		</g>
+		<g transform="translate(275.4,0)">
+			<line fill="none" stroke="#000000" x1="4.674" y1="-4.897" x2="4.674" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -10.8978 14.0437)" font-family="'Helvetica'" font-size="14">2009</text>
+		</g>
+		<g transform="translate(307.79999999999995,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6635 14.0437)" font-family="'Helvetica'" font-size="14">Q2</text>
+		</g>
+		<g transform="translate(340.2,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6631 14.0437)" font-family="'Helvetica'" font-size="14">Q3</text>
+		</g>
+		<g transform="translate(372.59999999999997,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6632 14.0437)" font-family="'Helvetica'" font-size="14">Q4</text>
+		</g>
+		<g transform="translate(404.99999999999994,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -10.8977 14.0437)" font-family="'Helvetica'" font-size="14">2010</text>
+		</g>
+		<g transform="translate(437.4,0)">
+			<line fill="none" stroke="#000000" x1="4.674" y1="-4.897" x2="4.674" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6634 14.0437)" font-family="'Helvetica'" font-size="14">Q2</text>
+		</g>
+		<g transform="translate(469.79999999999995,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.663 14.0437)" font-family="'Helvetica'" font-size="14">Q3</text>
+		</g>
+		<g transform="translate(502.2,0)">
+			<line fill="none" stroke="#000000" x1="4.674" y1="-4.897" x2="4.674" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6627 14.0437)" font-family="'Helvetica'" font-size="14">Q4</text>
+		</g>
+		<g transform="translate(534.6,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -10.381 14.0437)" font-family="'Helvetica'" font-size="14">2011</text>
+		</g>
+		<g transform="translate(567,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6638 14.0437)" font-family="'Helvetica'" font-size="14">Q2</text>
+		</g>
+		<g transform="translate(599.4,0)">
+			<line fill="none" stroke="#000000" x1="4.674" y1="-4.897" x2="4.674" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6635 14.0437)" font-family="'Helvetica'" font-size="14">Q3</text>
+		</g>
+		<g transform="translate(631.8000000000001,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.663 14.0437)" font-family="'Helvetica'" font-size="14">Q4</text>
+		</g>
+		<g transform="translate(664.2,0)">
+			<line fill="none" stroke="#000000" x1="4.674" y1="-4.897" x2="4.674" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -10.897 14.0437)" font-family="'Helvetica'" font-size="14">2012</text>
+		</g>
+		<g transform="translate(696.6,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6632 14.0437)" font-family="'Helvetica'" font-size="14">Q2</text>
+		</g>
+		<g transform="translate(729,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6638 14.0437)" font-family="'Helvetica'" font-size="14">Q3</text>
+		</g>
+		<g transform="translate(761.4,0)">
+			<line fill="none" stroke="#000000" x1="4.674" y1="-4.897" x2="4.674" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -4.6635 14.0437)" font-family="'Helvetica'" font-size="14">Q4</text>
+		</g>
+		<g transform="translate(793.8,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="4.675" y2="1.103"/>
+			<text transform="matrix(1 0 0 1 -10.8974 14.0437)" font-family="'Helvetica'" font-size="14">2013</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M4.675,1.103v-6h810v6"/>
+	</g>
+	<g>
+		<g transform="translate(0,430)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="-1.325" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 -12.1116 -0.4163)" font-family="'Helvetica'" font-size="14">0</text>
+		</g>
+		<g transform="translate(0,376)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="-1.325" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 -47.1458 -0.4163)" font-family="'Helvetica'" font-size="14">20,000</text>
+		</g>
+		<g transform="translate(0,323)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="-1.325" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 -47.1458 -0.4163)" font-family="'Helvetica'" font-size="14">40,000</text>
+		</g>
+		<g transform="translate(0,269)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="-1.325" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 -47.1458 -0.4163)" font-family="'Helvetica'" font-size="14">60,000</text>
+		</g>
+		<g transform="translate(0,215)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="-1.325" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 -47.1458 -0.4163)" font-family="'Helvetica'" font-size="14">80,000</text>
+		</g>
+		<g transform="translate(0,161)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="-1.325" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 -54.9319 -0.4163)" font-family="'Helvetica'" font-size="14">100,000</text>
+		</g>
+		<g transform="translate(0,108)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="-1.325" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 -54.9319 -0.4163)" font-family="'Helvetica'" font-size="14">120,000</text>
+		</g>
+		<g transform="translate(0,54)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="-1.325" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 -54.9319 -0.4163)" font-family="'Helvetica'" font-size="14">140,000</text>
+		</g>
+		<g transform="translate(0,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="-1.325" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 -54.9319 -0.4163)" font-family="'Helvetica'" font-size="14">160,000</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-1.325-4.897h6v430h-6"/>
+		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 -65.3855 279.7556)" font-family="'Helvetica'" font-size="14">Sales (thousand units)</text>
+	</g>
+	<g transform="translate(810, 0)">
+		<g transform="translate(0,430)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,387)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">10%</text>
+		</g>
+		<g transform="translate(0,344)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,301)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">30%</text>
+		</g>
+		<g transform="translate(0,258)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,215)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">50%</text>
+		</g>
+		<g transform="translate(0,172)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,129)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">70%</text>
+		</g>
+		<g transform="translate(0,86)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,43)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">90%</text>
+		</g>
+		<g transform="translate(0,0)">
+			<line fill="none" stroke="#000000" x1="4.675" y1="-4.897" x2="10.675" y2="-4.897"/>
+			<text transform="matrix(1 0 0 1 13.6741 -0.4163)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M10.675-4.897h-6v430h6"/>
+		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 60.6741 285.2107)" font-family="'Helvetica'" font-size="14">Smartphone penetration</text>
+	</g>
+	<rect x="8.875" y="384.103" fill="#CCCCCC" width="24" height="41"/>
+	<rect x="41.275" y="381.103" fill="#CCCCCC" width="24" height="44"/>
+	<rect x="73.675" y="377.103" fill="#CCCCCC" width="24" height="48"/>
+	<rect x="106.074" y="377.103" fill="#CCCCCC" width="24" height="48"/>
+	<rect x="138.475" y="378.103" fill="#CCCCCC" width="24" height="47"/>
+	<rect x="170.875" y="380.103" fill="#CCCCCC" width="24" height="45"/>
+	<rect x="203.275" y="374.103" fill="#CCCCCC" width="24" height="51"/>
+	<rect x="235.675" y="373.103" fill="#CCCCCC" width="24" height="52"/>
+	<rect x="268.074" y="367.103" fill="#CCCCCC" width="24" height="58"/>
+	<rect x="300.475" y="363.103" fill="#CCCCCC" width="24" height="62"/>
+	<rect x="332.875" y="368.103" fill="#CCCCCC" width="23.999" height="57"/>
+	<rect x="365.275" y="358.103" fill="#CCCCCC" width="24" height="67"/>
+	<rect x="397.675" y="360.103" fill="#CCCCCC" width="24" height="65"/>
+	<rect x="430.074" y="352.103" fill="#CCCCCC" width="24" height="73"/>
+	<rect x="462.475" y="341.103" fill="#CCCCCC" width="24" height="84"/>
+	<rect x="494.874" y="329.103" fill="#CCCCCC" width="24" height="96"/>
+	<rect x="527.275" y="325.103" fill="#CCCCCC" width="24" height="100"/>
+	<rect x="559.675" y="317.103" fill="#CCCCCC" width="24" height="108"/>
+	<rect x="592.074" y="313.103" fill="#CCCCCC" width="24" height="112"/>
+	<rect x="624.475" y="291.103" fill="#CCCCCC" width="24" height="134"/>
+	<rect x="656.874" y="277.103" fill="#CCCCCC" width="24" height="148"/>
+	<rect x="689.275" y="267.103" fill="#CCCCCC" width="24" height="158"/>
+	<rect x="721.675" y="255.103" fill="#CCCCCC" width="24" height="170"/>
+	<rect x="754.074" y="236.103" fill="#CCCCCC" width="24" height="189"/>
+	<rect x="786.475" y="213.103" fill="#CCCCCC" width="24" height="212"/>
+	<g>
+		<path fill="none" stroke="#1F77B4" stroke-width="2" d="M20.875,425.103c0,0,0,0,5.399,0c5.4,0,16.2,0,27,0s21.601,0,32.4,0
+			s21.6,0,32.399,0c10.801,0,21.601,0,32.4,0s21.6,0,32.4,0c10.8,0,21.6,0,32.399,0s21.601,0,32.4-0.333s21.6-1,32.399-1.333
+			c10.801-0.334,21.601-0.334,32.4-0.667s21.6-1,32.4-2.5c10.8-1.5,21.6-3.833,32.399-5.5s21.6-2.667,32.4-5.667
+			c10.8-3,21.6-8,32.399-14.833s21.601-15.5,32.4-24.5s21.6-18.333,32.399-25.5c10.801-7.167,21.601-12.167,32.4-19.333
+			c10.8-7.167,21.6-16.5,32.4-27.334c10.8-10.833,21.6-23.166,32.399-36.166s21.601-26.667,32.4-35.834
+			c10.8-9.166,21.6-13.833,32.399-24c10.801-10.166,21.601-25.833,32.4-44.333s21.6-39.833,32.4-60.5
+			c10.8-20.667,21.6-40.667,32.399-55.833c10.8-15.167,21.601-25.5,27-30.667c5.4-5.167,5.4-5.167,5.4-5.167"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#AEC7E8" stroke-width="2" d="M20.875,425.103c0,0,0,0,5.399-0.166c5.4-0.167,16.2-0.5,27-1
+			s21.601-1.167,32.4-1.834c10.8-0.666,21.6-1.333,32.399-1.666c10.801-0.334,21.601-0.334,32.4,0.166s21.6,1.5,32.4,0.167
+			c10.8-1.333,21.6-5,32.399-6.5s21.601-0.833,32.4-0.333s21.6,0.833,32.399,0.333c10.801-0.5,21.601-1.833,32.4-3.333
+			s21.6-3.167,32.4-4.667c10.8-1.5,21.6-2.833,32.399-3.333s21.6-0.167,32.4-0.167c10.8,0,21.6-0.333,32.399-2.667
+			c10.8-2.333,21.601-6.666,32.4-10c10.8-3.333,21.6-5.666,32.399-7.166c10.801-1.5,21.601-2.167,32.4-3.834
+			c10.8-1.666,21.6-4.333,32.4-4.5c10.8-0.166,21.6,2.167,32.399-4.833s21.601-23.333,32.4-30.5s21.6-5.167,32.399-2.333
+			c10.801,2.833,21.601,6.5,32.4,10.833s21.6,9.333,32.4,2.833c10.8-6.5,21.6-24.5,32.399-31.166c10.8-6.667,21.601-2,27,0.333
+			c5.4,2.333,5.4,2.333,5.4,2.333"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#FF7F0E" stroke-width="2" d="M20.875,382.103c0,0,0,0,5.399-1c5.4-1,16.2-3,27-5s21.601-4,32.4-6.166
+			c10.8-2.167,21.6-4.5,32.399-3.5c10.801,1,21.601,5.333,32.4,7.5c10.8,2.166,21.6,2.166,32.4,2.166c10.8,0,21.6,0,32.399,0.167
+			s21.601,0.5,32.4,0.667c10.8,0.166,21.6,0.166,32.399-1.167c10.801-1.333,21.601-4,32.4-4.167c10.8-0.166,21.6,2.167,32.4,0.834
+			c10.8-1.334,21.6-6.334,32.399-9c10.8-2.667,21.6-3,32.4-3.667c10.8-0.667,21.6-1.667,32.399-4s21.601-6,32.4-9.333
+			c10.8-3.334,21.6-6.334,32.399-5.5c10.801,0.833,21.601,5.5,32.4,9.5s21.6,7.333,32.4,11c10.8,3.666,21.6,7.666,32.399,10.5
+			c10.8,2.833,21.601,4.5,32.4,7.5s21.6,7.333,32.399,11.166c10.801,3.834,21.601,7.167,32.4,10.834
+			c10.8,3.666,21.6,7.666,32.4,10.5c10.8,2.833,21.6,4.5,32.399,5.833s21.601,2.333,27,2.833c5.4,0.5,5.4,0.5,5.4,0.5"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#FFBB78" stroke-width="2" d="M20.875,419.103c0,0,0,0,5.399-0.166c5.4-0.167,16.2-0.5,27-1
+			s21.601-1.167,32.4-1.834c10.8-0.666,21.6-1.333,32.399-1.833c10.801-0.5,21.601-0.833,32.4-1.5s21.6-1.667,32.4-2.333
+			c10.8-0.667,21.6-1,32.399-1.834c10.8-0.833,21.601-2.166,32.4-2.833s21.6-0.667,32.399-0.833c10.801-0.167,21.601-0.5,32.4-1
+			s21.6-1.167,32.4-2.334c10.8-1.166,21.6-2.833,32.399-3.833s21.6-1.333,32.4-1.833c10.8-0.5,21.6-1.167,32.399-2
+			c10.8-0.834,21.601-1.834,32.4-3.334s21.6-3.5,32.399-3.666c10.801-0.167,21.601,1.5,32.4,2.5s21.6,1.333,32.4,1.5
+			c10.8,0.166,21.6,0.166,32.399,0c10.8-0.167,21.601-0.5,32.4,0.666c10.8,1.167,21.6,3.834,32.399,6.167
+			c10.801,2.333,21.601,4.333,32.4,4.833s21.6-0.5,32.4-0.333c10.8,0.167,21.6,1.5,32.399,2.667c10.8,1.166,21.601,2.166,27,2.666
+			c5.4,0.5,5.4,0.5,5.4,0.5"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#2CA02C" stroke-width="2" d="M20.875,417.103c0,0,0,0,5.399-0.166c5.4-0.167,16.2-0.5,27-1
+			s21.601-1.167,32.4-1.667s21.6-0.833,32.399-0.667c10.801,0.167,21.601,0.834,32.4,1.167s21.6,0.333,32.4,0.167
+			c10.8-0.167,21.6-0.5,32.399-1s21.601-1.167,32.4-1c10.8,0.166,21.6,1.166,32.399,1.666c10.801,0.5,21.601,0.5,32.4,0.667
+			s21.6,0.5,32.4,0.333c10.8-0.166,21.6-0.833,32.399-1c10.8-0.166,21.6,0.167,32.4,0.667c10.8,0.5,21.6,1.167,32.399,1.833
+			c10.8,0.667,21.601,1.334,32.4,1.167s21.6-1.167,32.399-1.333c10.801-0.167,21.601,0.5,32.4,1.166
+			c10.8,0.667,21.6,1.334,32.4,1.667c10.8,0.333,21.6,0.333,32.399,0s21.601-1,32.4-1.333c10.8-0.334,21.6-0.334,32.399-1
+			c10.801-0.667,21.601-2,32.4-2.667s21.6-0.667,32.4-1.667c10.8-1,21.6-3,32.399-3.833s21.601-0.5,27-0.333
+			c5.4,0.166,5.4,0.166,5.4,0.166"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#98DF8A" stroke-width="2" d="M20.875,425.103c0,0,0,0,5.399,0c5.4,0,16.2,0,27,0s21.601,0,32.4,0
+			s21.6,0,32.399,0c10.801,0,21.601,0,32.4,0s21.6,0,32.4,0c10.8,0,21.6,0,32.399,0s21.601,0,32.4,0s21.6,0,32.399,0
+			c10.801,0,21.601,0,32.4,0s21.6,0,32.4,0c10.8,0,21.6,0,32.399,0s21.6,0,32.4-0.333c10.8-0.333,21.6-1,32.399-1.333
+			c10.8-0.334,21.601-0.334,32.4-0.834s21.6-1.5,32.399-2c10.801-0.5,21.601-0.5,32.4-0.666c10.8-0.167,21.6-0.5,32.4-0.834
+			c10.8-0.333,21.6-0.666,32.399-1c10.8-0.333,21.601-0.666,32.4-1.166s21.6-1.167,32.399-1.667c10.801-0.5,21.601-0.833,32.4-1.5
+			s21.6-1.667,32.4-1c10.8,0.667,21.6,3,32.399,4.667c10.8,1.666,21.601,2.666,27,3.166c5.4,0.5,5.4,0.5,5.4,0.5"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#D62728" stroke-width="2" d="M20.875,414.103c0,0,0,0,5.399,0.167c5.4,0.167,16.2,0.5,27,0.667
+			c10.8,0.166,21.601,0.166,32.4,0.166s21.6,0,32.399-0.166c10.801-0.167,21.601-0.5,32.4-0.334c10.8,0.167,21.6,0.834,32.4,1
+			c10.8,0.167,21.6-0.166,32.399-0.5c10.8-0.333,21.601-0.666,32.4-0.333s21.6,1.333,32.399,2.167
+			c10.801,0.833,21.601,1.5,32.4,1.666c10.8,0.167,21.6-0.166,32.4-0.333c10.8-0.167,21.6-0.167,32.399,0s21.6,0.5,32.4,0.833
+			c10.8,0.334,21.6,0.667,32.399,0.834c10.8,0.166,21.601,0.166,32.4,0.333s21.6,0.5,32.399,0.667
+			c10.801,0.166,21.601,0.166,32.4,0.333s21.6,0.5,32.4,0.667c10.8,0.166,21.6,0.166,32.399,0.166s21.601,0,32.4,0
+			s21.6,0,32.399,0.167c10.801,0.167,21.601,0.5,32.4,0.667c10.8,0.166,21.6,0.166,32.4,0.166c10.8,0,21.6,0,32.399,0s21.601,0,27,0
+			c5.4,0,5.4,0,5.4,0"/>
+	</g>
+	<g transform="translate(0, 0)">
+		<rect x="5.675" y="451.103" fill="#1F77B4" width="113.714" height="18"/>
+		<text transform="matrix(1 0 0 1 38.4041 465.7039)" font-family="'Helvetica'" font-size="14">Android</text>
+	</g>
+	<g transform="translate(115.71428571428571, 0)">
+		<rect x="5.675" y="451.103" fill="#AEC7E8" width="113.715" height="18"/>
+		<text transform="matrix(1 0 0 1 50.8626 465.7039)" font-family="'Helvetica'" font-size="14">iOS</text>
+	</g>
+	<g transform="translate(231.42857142857142, 0)">
+		<rect x="5.675" y="451.103" fill="#FF7F0E" width="113.714" height="18"/>
+		<text transform="matrix(1 0 0 1 35.2972 465.7039)" font-family="'Helvetica'" font-size="14">Symbian</text>
+	</g>
+	<g transform="translate(347.1428571428571, 0)">
+		<rect x="5.675" y="451.103" fill="#FFBB78" width="113.714" height="18"/>
+		<text transform="matrix(1 0 0 1 28.6904 465.7039)" font-family="'Helvetica'" font-size="14">BlackBerry</text>
+	</g>
+	<g transform="translate(462.85714285714283, 0)">
+		<rect x="5.674" y="451.103" fill="#2CA02C" width="113.715" height="18"/>
+		<text transform="matrix(1 0 0 1 34.1392 465.7039)" font-family="'Helvetica'" font-size="14">Microsoft</text>
+	</g>
+	<g transform="translate(578.5714285714286, 0)">
+		<rect x="5.675" y="451.103" fill="#98DF8A" width="113.714" height="18"/>
+		<text transform="matrix(1 0 0 1 46.1837 465.7039)" font-family="'Helvetica'" font-size="14">Bada</text>
+	</g>
+	<g transform="translate(694.2857142857142, 0)">
+		<rect x="5.674" y="451.103" fill="#D62728" width="113.715" height="18"/>
+		<text transform="matrix(1 0 0 1 41.5251 465.7039)" font-family="'Helvetica'" font-size="14">Others</text>
+	</g>
+</g>
 </svg>

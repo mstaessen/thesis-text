@@ -3,31 +3,23 @@
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
-    var margin = {top: 20, right: 50 + 20, bottom: 30 + 20, left: 60 + 20};
-	var totalWidth = 960;
-	var totalHeight = 500;
+    var margin = {top: 20, right: 20, bottom: 30 + 20, left: 60 + 20};
+	var totalWidth = 480;
+	var totalHeight = 400;
     var width = totalWidth - margin.left - margin.right;
     var height = totalHeight - margin.top - margin.bottom;
 
-    var x = d3.scale.ordinal().rangeBands([0, width], 1, 0.5);
+    var x = d3.time.scale().range([0, width]);
     var y = d3.scale.linear().rangeRound([height, 0]);
-    var y2 = d3.scale.linear().rangeRound([height, 0]);
     var color = d3.scale.category20();
     var bar = d3.scale.ordinal().range(["#999"]);
 
-    var xAxis = d3.svg.axis().scale(x).orient("bottom").tickFormat(function(input) {
-        if (input.match(/Q1/)) {
-            return "20" + input.substring(0, 2);
-        } else {
-            return input.substring(2);
-        }
-    });
+    var xAxis = d3.svg.axis().scale(x).orient("bottom");
     var yAxis = d3.svg.axis().scale(y).orient("left");
-    var y2Axis = d3.svg.axis().scale(y2).orient("right").tickFormat(d3.format(".0%"));
 
     var line = d3.svg.line()
             .interpolate("basis")
-            .x(function(d) { return x(d.quarter); })
+            .x(function(d) { return x(d.year); })
             .y(function(d) { return y(d.sale); });
 
     var svg = d3.select("body").append("svg")
@@ -36,29 +28,24 @@
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv("smartphone_sales.csv", function(error, data) {
+    d3.csv("tablet_sales.csv", function(error, data) {
         var platforms = d3.keys(data[0]).filter(function(key) {
-            return key !== "Quarter" && key !== "Smartphones" && key !== "Total";
+            return key !== "Year";
         });
+        data.forEach(function (d) { d.year = new Date(d.Year, 0, 1, 0, 0, 0, 0); });
+
         color.domain(platforms);
-        bar.domain(["Smartphone penetration"]);
 
         var sales = color.domain().map(function(name) {
             return {
                 name: name,
                 values: data.map(function(d) {
-                    return {quarter: d.Quarter, sale: +d[name]};
+                    return {year: d.year, sale: +d[name]};
                 })
             };
         });
-        var penetration = data.map(function(d) {
-            return {
-                quarter: d.Quarter,
-                penetration: d["Smartphones"] / d["Total"]
-            };
-        });
 
-        x.domain(data.map(function(d) { return d.Quarter; }));
+        x.domain(d3.extent(data, function(d) { return d.year; })).nice();
         y.domain([
             d3.min(sales, function(c) { return d3.min(c.values, function(v) { return v.sale; }); }),
             d3.max(sales, function(c) { return d3.max(c.values, function(v) { return v.sale; }); })
@@ -76,37 +63,9 @@
             .attr("transform", "rotate(-90)")
             .attr("y", -margin.left)
             .attr("x", -height / 2)
-            .attr("dy", ".71em")
+            .attr("dy", "1em")
             .style("text-anchor", "middle")
             .text("Sales (thousand units)");
-
-        svg.append("g")
-            .attr("class", "y2 axis")
-            .attr("transform", "translate(" + width + ", 0)")
-            .call(y2Axis)
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", margin.right)
-            .attr("x", -height / 2)
-            .attr("dy", "-1em")
-            .style("text-anchor", "middle")
-            .text("Smartphone penetration");
-
-        svg.selectAll("rect")
-            .data(penetration)
-            .enter().append("rect")
-            .attr("width", 24)
-            .attr("y", function (d) {
-                return y2(d.penetration);
-            })
-            .attr("height", function (d) {
-                return y2(1 - d.penetration);
-            })
-            .attr("transform", function(d) {
-                var dx = x(d.quarter) - 12;
-                return "translate(" + dx + ",0)";
-            })
-            .style("fill", "#ccc");
 
         var sale = svg.selectAll(".sale")
             .data(sales)
@@ -117,13 +76,13 @@
             .attr("d", function(d) { return line(d.values); })
             .style("stroke", function(d) { return color(d.name); });
 
-        var labelsPerRow = 7;
+        var labelsPerRow = 5;
         var legend = svg.selectAll(".legend")
             .data(platforms.slice())
             .enter().append("g")
             .attr("class", "legend")
             .attr("transform", function(d, i) {
-                var x = (i % labelsPerRow) * (width / labelsPerRow);
+                var x = (i % labelsPerRow) * (totalWidth / labelsPerRow) - margin.left;
                 var y = Math.floor(i / labelsPerRow) * 20;
                 return "translate(" + x + ", " + y + ")";
             });
@@ -131,12 +90,12 @@
         legend.append("rect")
             .attr("x", 1)
             .attr("y", margin.top + height + 6)
-            .attr("width", width / labelsPerRow - 2)
+            .attr("width", totalWidth / labelsPerRow - 2)
             .attr("height", 18)
             .style("fill", color);
 
         legend.append("text")
-            .attr("x", width / labelsPerRow / 2)
+            .attr("x", totalWidth / labelsPerRow / 2)
             .attr("y", margin.top + height + 6 + 9)
             .attr("dy", ".4em")
             .style("text-anchor", "middle")

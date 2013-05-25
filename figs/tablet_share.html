@@ -7,21 +7,17 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-    var margin = {top: 20, right: 0, bottom: 30 + 20, left: 50},
-            width = 960 - margin.left - margin.right,
-            height = 400 - margin.top - margin.bottom;
+    var margin = {top: 20, right: 0, bottom: 30 + 20, left: 50};
+    var totalWidth = 480;
+    var totalHeight = 400;
+    var width = totalWidth - margin.left - margin.right;
+    var height = totalHeight - margin.top - margin.bottom;
 
-    var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
+    var x = d3.scale.ordinal().rangeRoundBands([0, width], .5);
     var y = d3.scale.linear().rangeRound([height, 0]);
     var color = d3.scale.category20();
 
-    var xAxis = d3.svg.axis().scale(x).orient("bottom").tickFormat(function(input) {
-        if (input.match(/Q1/)) {
-            return "20" + input.substring(0, 2);
-        } else {
-            return input.substring(2);
-        }
-    });
+    var xAxis = d3.svg.axis().scale(x).orient("bottom");
     var yAxis = d3.svg.axis().scale(y).orient("left").tickFormat(d3.format(".0%"));
 
     var svg = d3.select("body").append("svg")
@@ -30,9 +26,9 @@
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv("smartphone_sales.csv", function(error, data) {
+    d3.csv("tablet_sales.csv", function(error, data) {
         var platforms = d3.keys(data[0]).filter(function(key) {
-            return key !== "Quarter" && key !== "Smartphones" && key !== "Total";
+            return key !== "Year";
         });
         color.domain(platforms);
 
@@ -42,7 +38,7 @@
             d.ages.forEach(function(d) { d.y0 /= y0; d.y1 /= y0; });
         });
 
-        x.domain(data.map(function(d) { return d.Quarter; }));
+        x.domain(data.map(function(d) { return d.Year; }));
 
         svg.append("g")
                 .attr("class", "x axis")
@@ -57,7 +53,7 @@
                 .data(data)
                 .enter().append("g")
                 .attr("class", "quarter")
-                .attr("transform", function(d) { return "translate(" + x(d.Quarter) + ",0)"; });
+                .attr("transform", function(d) { return "translate(" + x(d.Year) + ",0)"; });
 
         quarter.selectAll("rect")
                 .data(function(d) { return d.ages; })
@@ -67,13 +63,13 @@
                 .attr("height", function(d) { return y(d.y0) - y(d.y1); })
                 .style("fill", function(d) { return color(d.name); });
 
-        var labelsPerRow = 7;
+        var labelsPerRow = 5;
         var legend = svg.selectAll(".legend")
                 .data(platforms.slice())
                 .enter().append("g")
                 .attr("class", "legend")
                 .attr("transform", function(d, i) {
-                    var x = (i % labelsPerRow) * (width / labelsPerRow);
+                    var x = (i % labelsPerRow) * (totalWidth / labelsPerRow) - margin.left;
                     var y = Math.floor(i / labelsPerRow) * 20;
                     return "translate(" + x + ", " + y + ")";
                 });
@@ -81,12 +77,12 @@
         legend.append("rect")
                 .attr("x", 1)
                 .attr("y", margin.top + height + 6)
-                .attr("width", width / labelsPerRow - 2)
+                .attr("width", totalWidth / labelsPerRow - 2)
                 .attr("height", 18)
                 .style("fill", color);
 
         legend.append("text")
-                .attr("x", width / labelsPerRow / 2)
+                .attr("x", totalWidth / labelsPerRow / 2)
                 .attr("y", margin.top + height + 6 + 9)
                 .attr("dy", ".4em")
                 .style("text-anchor", "middle")
