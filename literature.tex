@@ -302,14 +302,16 @@ Instead of translating instructions at runtime, one could translate instructions
 
 \begin{table}[h!]
     \begin{center}
-        \begin{tabular}{l|c|c|c|c|c}
-                             & Native      & Web                   & Hybrid      & Interpreted & Cross Compiled\\
+        \begin{tabular}{lccccc}
             \hline
-            Performance      & high        & low                   & rather low  & average     & high          \\
-            Platform Access  & \checkmark  & $\times$ / \checkmark & \checkmark  & \checkmark  & \checkmark    \\
-            Look \& Feel     & native      & non-native            & non-native  & native      & native        \\
-            Distribution     & marketplace & URL                   & marketplace & marketplace & marketplace   \\
-            Development cost & high        & rather low            & average     & average     & average       \\
+                            & Native      & Web         & Hybrid      & Interpreted & Cross Compiled\\
+            \hline
+            Performance     & high        & low         & rather low  & average     & high          \\
+            Hardware access & \checkmark  & partial     & \checkmark  & \checkmark  & \checkmark    \\
+            Look \& Feel    & native      & non-native  & non-native  & native      & native        \\
+            Distribution    & marketplace & URL         & marketplace & marketplace & marketplace   \\
+            Cost            & high        & rather low  & average     & average     & average       \\
+            \hline
         \end{tabular}
 		\caption{
 			Summary of cross platform mobile application development strategies.
