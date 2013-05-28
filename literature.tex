@@ -126,91 +126,100 @@ To conclude this section, the discussed architectures are compared side by side.
 \section{Software evaluation methodology}
 \label{sec:sw-selection}
 
-Based on their literature review \cite{Jadhav:2009}, the authors have proposed a generic, six-stage methodology for the selection of software packages \cite{Jadhav:2011}.
+One of the goals of this thesis is to design a methodology for evaluating and selecting cross-platform tools. Based on their literature review \cite{Jadhav:2009}, \citet{Jadhav:2011} propose a generic software selection methodology. This methodology comprises of six steps:
 
 \begin{enumerate}
-    \item \textbf{Define selection criteria.} In the first stage, the evaluator defines the essential requirements for the software. If a certain software package does not meet a selection criterion, it is not a considered to be a suitable candidate and it should not be considered for further evaluation. 
-    \item \textbf{Identify potential candidates.} During the next step, the evaluator searches for potential candidates. This step will result in a list of potential candidates.
-    \item \textbf{List selected alternatives.} In this step, the evaluator will use the requirements from stagdate 1 to filter the list obtained from the previous stage. 
-    \item \textbf{Define evaluation criteria.} In this stage, the evaluator has to define the evaluation criteria, arrange them in a hierarchy and define the value scales for each criterion. 
-    \item \textbf{Evaluate selected alternatives.} During this phase, the evaluator will make a detailed comparison of the alternatives using the criteria obtained from the previous stage. A methodology like AHP can be used in this stage.
-    \item \textbf{Select the most suitable alternative.} In this final step, all alternatives are ranked using the comparison results from the previous stage. Now, the best alternative can be chosen from the list of candidates. In general, a number of software packages will be taken into consideration and a selection will be made after additional steps (like for instance a cost-benefit analysis and/or contract negotiations with the vendor). 
+    \item \textbf{Define selection criteria.} In the first stage, the selection criteria are defined. These are the functional and non-functional requirements that a software package has to meet.
+    \item \textbf{Identify potential candidates.} During the second stage, a list of potential candidates is composed. During this search, any package that could be used to solve the targeted problem is considered a potential candidate. 
+    \item \textbf{List selected alternatives.} In the third step, the selection criteria from the first stage are used to filter the list of potential candidates from the second stage: if a candidate does not satisfy the selection criteria, it is not considered for further evaluation.
+    \item \textbf{Define evaluation criteria.} In the fourth stage, the evaluation criteria are defined. These are criteria that will be used to score a particular software package. These criteria should be arranged in a tree and every leaf node should be well-defined and measurable basic attribute.
+    \item \textbf{Evaluate selected alternatives.} During the fifth phase, the software packages are evaluated. First, weights are assigned to the evaluation criteria from the fourth stage. Second, the software packages are rated with respect to the evaluation criteria. Third, an aggregated score is calculated for each software package.
+    \item \textbf{Select the most suitable alternative.} In the final stage, all alternatives are ranked in order of decreasing aggregated score (which was calculated in the previous stage). The most suited software package will rank highest. However, selection is always human-dependable: additional cost-benefit analysis could be performed to identify the package with the best value, contract negotiations can influence the decision, etc. 
 \end{enumerate}
 
-In the original paper \cite{Jadhav:2009}, the authors also suggest to include an additional evaluation stage after the selected packages has been implemented and integrated. During that stage, one should verify that the selected package does indeed meet the requirements.
+In their first paper, \citet{Jadhav:2009} also suggest to include a validation stage to confirm that the selected package is indeed the most suited. 
 
-
-\section{Multi-Criteria Decision Making (MCDM)}
+\section{Multicriteria decision making (MCDM)}
 \label{sec:mcdm}
 
-Finding the right software package is often a daunting task. In order to suit the end-user's needs, the software should meet a large number of -- sometimes conflicting -- requirements and will result in making important trade-offs. Because of the these characteristics, software selection can be modeled as a Multiple-Criteria Decision Making (MCDM) problem \cite{Jadhav:2009, Jadhav:2011}.
+The generic software selection methodology of \citet{Jadhav:2011} does not impose a particular technique for evaluating software packages. However, the last three stages of this methodology can be recognized as a multi-criteria decision making (MCDM) problem, for which a number of techniques are available. Multi-criteria decision making refers to making decisions in the presence of multiple --- often conflicting --- criteria. 
 
-There are two categories of MCDM problems: Multiple-Attribute Decision Making (MADM) problems and Multi-Objective Decision Making (MODM) problems. The first category involves sorting and ranking of a limited number of available alternatives, based on a number of decision criteria. In the latter category, there are no alternatives specified beforehand and the number of alternatives is effectively infinite \cite{Kahraman:2008}. 
+There are two types of MCDM problems: in multi-attribute decision making (MADM) problems, the decision maker tries to \emph{identify} the ``best'' alternative from a \emph{finite} set of alternatives with respect to multiple criteria or \emph{attributes}. In multi-objective decision making (MODM) problems, the decision maker tries to \emph{design} the ``best'' alternative from an \emph{infinite} set of possibilities with respect to multiple \emph{objectives} \cite{Kahraman:2008}. The software selection process clearly belongs to the category of MADM problems because the goal is to find the best alternative within a finite set of alternatives \cite{Jadhav:2009, Jadhav:2011}. 
 
-The software selection process belongs to the category of MADM problems. Their goal is to find the best alternative in a set of alternatives and at the same to time create a ranking of all these available alternatives \TODO{\cite{}}. % TODO: Reference!
+There are numerous approaches to solve MADM problems. In the next subsections, a collection of approaches that are successfully applied in literature will be discussed. Every subsection will present a (high-level) description of the method and its strengths and weaknesses. Subsequently, every method is applied to a simple, running example.
 
-There are a plethora of solution methods for the MADM problem. The following subsections will describe the most frequently used methods in literature, together with their advantages and disadvantages. 
+The running example is as follows. Ethan has just graduated and has received three job offers. Every job is evaluated with respect to four criteria: the starting salary, distance to work (in km), degree of interest and career opportunities. Job 1 is an interesting position at a local start-up but it pays less. A large multinational offers job 2, which has a high reward and great career opportunities but is also further away from home. Job 3 is far away from home but combines great career opportunities with a good salary and interesting work. Note that the first two criteria are quantitative criteria, i.e. they can easily be mapped on a number. The last two criteria are qualitative criteria, i.e. they give a description but there is no straightforward mapping on a number. 
 
-% TODO: discuss cost vs benefit
-\TODO{General remark for all methods: Separate costs from benefits, allowing to make a cost-benefit analysis afterwards. }
+\subsection{Scoring models}
 
-\subsection{Arbitrary scoring models} 
-% TODO RFC: Is this a good naming?
-\TODO{Question: Is this an appropriate name?}
+The first approach to solving MCDM problems is a collection of methods that have one thing in common: every alternative is assigned an arbitrary score with respect to one criterion and the scores for all criteria are aggregated into one final score. The final scores are then used to rank the alternatives.
 
-There are a number of arbitrary scoring models but they all have one thing in common: for each criterion, the values are translated to a numerical score. In some cases, this score can be derived from the value of the criterion itself (e.g. speed, age, cost, \ldots). In other cases, a mapping is provided (e.g. in order to obtain a score $s$, at least features $f_1$, $f_2$ and $f_3$ should be supported).
-
-Different methods are available to select potential candidates using these scores \cite{Kahraman:2008}:
+Different methods are available to calculate the final score of a candidate \cite{Kahraman:2008}:
 
 \begin{itemize}
-    \item When the ``dominance'' method is used, one alternative should clearly outperforms the other alternatives for at least one criterion. 
-    \item When the ``maximin'' method is used, the final score of each alternative is equal to the lowest score of all criteria for this alternative.
-    \item When the ``maximax'' method is used, the final score of each alternative is equal to the highest score of all criteria for this alternative.
-    \item When the ``conjunctive'' method is used, an alternative should exceed certain thresholds for \emph{all} criteria.
-    \item When the ``disjunctive'' method is used, an alternative should exceed certain thresholds for \emph{at least one} criterion. 
+    \item The ``dominance'' method can be used when one alternative  clearly outperforms the other alternatives with respect to at least one criterion and performs equally well with respect to the other criteria. 
+    \item The ``maximin'' method calculates the total score of an alternative as the lowest score of all criteria scores of this alternative.
+    \item The ``maximax'' method calculates the final score of an alternative as the highest score of all criteria scores of this alternative.
+    \item With the ``conjunctive'' method, an alternative should exceed certain thresholds for \emph{all} criteria.
+    \item With the ``disjunctive'' method, an alternative should exceed certain thresholds for \emph{at least one} criterion. 
+    \item The ``additive weighting'' method calculates the total score of an alternative as the weighted \emph{sum} of the criteria scores and criteria weights.
+    \item The ``weighted product'' method calculates the total score of an alternative as the weighted \emph{product} of the criteria scores and criteria weights.
 \end{itemize}
 
-Additionally, the importance of the criteria can be accounted for by assigning weights. The final score can be calculated as the weighted sum, weighted product or weighted average.
+The strength of these methods is that they are the easy to use. The weaknesses are that it (1) is hard to assign scores to qualitative criteria and definitely when there are many alternatives because humans can only deal with 7, plus or minus 2 pieces of information simultaneously and (2) different scales get mixed up \cite{Jadhav:2009, Miller:1956}. These weaknesses will become clear in the example.
 
-The strength of these methods is that they are the most easy to use. However,  scores and weights are assigned arbitrarily and might get tough when there are a lot of criteria. Also, not all criteria are suitable for conversion into a numerical scale \cite{Jadhav:2009}.
+\paragraph{Example}
+
+Assume that Ethan has assigned weights to the four criteria in an arbitrary fashion and that he has also assigned scores to every alternative. Because this method requires a numerical value for each criterion, Ethan has created a value scale for ``interest'' and ``opportunities'': 0 represents satisfiable, 1 represents good and 2 represents excellent. Also, the distance property has been inverted such that a shorter distance is rewarded with a higher score. He has naively used the additive weighting method to aggregate the scores. The weights, scores, and resulting total scores are listed in \tref{tab:sm1}.
+
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{lrrrrr}
+            \hline
+            Alternative & Salary & Distance (km) & Interest & Opportunities & Total Score \\
+            \hline
+            Job 1       & 2000   & 1/5           & 2        & 0             & 400.62       \\
+            Job 2       & 2800   & 1/30          & 0        & 2             & 560.80       \\
+            Job 3       & 2600   & 1/60          & 1        & 1             & 520.70      \\
+            \hline
+            Weight      & 20\%   & 10\%          & 30\%     & 40\%          &             \\
+            \hline
+        \end{tabular}
+        \caption{Naive demonstration of the additive weighting method.}
+        \label{tab:sm1}
+    \end{center}
+\end{table}
+
+From this first and naive attempt, Ethan would be inclined to choose the second job offer over the third one, and the third offer over the first one. However, there are a number of issues with this approach. The scores have different orders of magnitude, which affects the scaling. This can be solved by normalizing the scores, i.e. dividing each score by the sum of scores for a particular criterion. The new, normalized scores are listed in \tref{tab:sm2}.
+
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{lrrrrr}
+            \hline
+            Alternative & Salary & Distance (km) & Interest & Opportunities & Total Score \\
+            \hline
+            Job 1       & 0.27   & 0.80          & 0.67     & 0             & 0.33        \\
+            Job 2       & 0.38   & 0.13          & 0        & 0.67          & 0.36        \\
+            Job 3       & 0.35   & 0.07          & 0.33     & 0.33          & 0.31        \\
+            \hline
+            Weight      & 20\%   & 10\%          & 30\%     & 40\%          &             \\
+            \hline
+        \end{tabular}
+        \caption{Improved version of the additive weighting method.}
+        \label{tab:sm1}
+    \end{center}
+\end{table}
+
+In the second attempt, the ranking of the alternatives has changed. This is caused by normalizing the scores before weighting. One problem remains unsolved though: the value scale for interest and opportunity criteria does not capture the distance between two successive values. The used scale is an ordinal scale, i.e. the elements of the scale have a well-defined order but the distance between elements is undefined. Scoring models are not suited to convert qualitative criteria into numbers.
 
 \subsection{Analytic Hierarchy Process (AHP)}
 \label{sec:ahp}
 
-The Analytic Hierarchy Process (AHP) is ``a multi-criteria decision making approach in which factors are arranged in a hierarchic structure'' \cite{Saaty:1990}. It is developed by Thomas L. Saaty and is based on pairwise comparisons of both criteria and alternatives. 
+The second method is the Analytic Hierarchy Process (AHP) \cite{Saaty:1980}. This method, developed by Thomas L. Saaty, is widely used in multi-attribute decision making. The method can be used with both qualitative and quantitative criteria and calculates priorities (or weights) from pairwise comparison matrices by using the eigenvalue problem. 
 
-The strengths of the AHP are (1) that it enables decision makers to structure a problem into a hierarchy, (2) that it provides a powerful tool for handling both quantitative and qualitative multi-criteria decision making problems and (3) that this system can deal with inconsistency \cite{Jadhav:2009}. 
+The analytic hierarchy process consists of two stages. During the first stage, the factors that are important for the decision are organized into ``a hierarchic structure descending from an overall goal to criteria, subcriteria and alternatives in successive levels'' \cite{Saaty:1990}. Organizing the factors in such a structure helps the decision maker in getting an overview of the potentially complex relationships and also helps to assess the relative importance of the issues in each level. Structuring information in a tree is also backed by experiments of psychologist George Miller. He found that people can only deal with a few facts simultaneously; more precisely seven, plus or minus two \cite{Miller:1956}. 
 
-The weaknesses of AHP are (1) that it is a time consuming method due to the large number of pair-wise comparisons and (2) that it is susceptible to rank-reversal, i.e. the ranking may change  when new alternatives are added.
-
-The analytic hierarchy process consists of three stages. In the first stage, the factors that are important for the decision are organized into ``a hierarchic structure descending from an overall goal to criteria, subcriteria and alternatives in successive levels'' \cite{Saaty:1990}. Organizing the factors in such structure helps the decision maker in getting an overview of the potentially complex relationships and also helps to assess the relative importance of the issues in each level. 
-
-Structuring information in a tree is also backed by experiments of psychologist George Miller. He found that people can only deal with a few facts simultaneously; more precisely, seven plus or minus two \cite{Miller:1956}. 
-
-In the second stage, the analytic hierarchy process establishes a ranking of the alternatives. This ranking is based on (imprecise) judgements, resulting from pairwise comparison. 
-
-Consider $n$ alternatives $A_1, A_2, \ldots, A_n$ and a property $X$ that can be accurately measured for every alternative. The value of property $X$ is given by $w_i$ for alternative $A_i$. For instance, consider $n$ stones with weights $w_i$, measured in grams.
-
-The relative difference between all alternatives with respect to property $X$ can now be summarized in a matrix
-\begin{gather}
-    A = %
-    \begin{bmatrix}
-        w_1/w_1 & w_1/w_2 & \ldots & w_1/w_n \\
-        w_2/w_1 & w_2/w_2 & \ldots & w_2/w_n \\
-        \vdots  & \vdots  &        & \vdots  \\
-        w_n/w_1 & w_n/w_2 & \ldots & w_n/w_n    
-    \end{bmatrix}.
-\end{gather}
-
-Note that:
-\begin{itemize}
-    \item $A$ is reciprocal, i.e. $a_{ij} = 1 / a_{ji}$
-    \item elements on the diagonal are equal to one. This is easy to understand because there cannot be any difference between two identical objects.
-\end{itemize}
-
-If any row of $A$ were to be multiplied by a vector containing all values $(w_1, w_2, \ldots, w_n)^T$, the result would be a row of identical entries $(w_i, w_i, \ldots, w_i)$. 
-
-In reality though, the values $w_i$ are unknown and the ratios $a_{ij} = w_i/w_j$ cannot be calculated. However, an expert could estimate these ratios. The authors have developed a fundamental scale (see \tref{tab:ahp-scale}), which can be used to rate the difference between alternatives \cite{Saaty:1990}.
+During the second stage, both criteria and alternatives are compared in pairs. Every pairwise comparison results in a number that expresses the relation between two criteria or alternatives. \citet{Saaty:1990} proposes a fundamental scale (listed in \tref{tab:ahp-scale}) for expressing these relations. The results of the pairwise comparisons are combined in matrices and the analytic hierarchy process then establishes a ranking of the alternatives by calculating the principal right eigenvector of these comparison matrices. The next paragraphs will present an intuitive justification of the method.
 
 \begin{table}
     \begin{center}
@@ -221,7 +230,7 @@ In reality though, the values $w_i$ are unknown and the ratios $a_{ij} = w_i/w_j
             1 & Equal importance & Two activities contribute equally to the objective \\
             3 & Weak importance of one over another & Experience and judgement slightly favour one activity over another \\
             5 & Essential or strong importance & Experience and judgement strongly favour one activity over another \\
-            7 & Very strong or demonstrated importannce & An activity is favoured very strongly over another; its dominance is  demonstrated in practice \\
+            7 & Very strong or demonstrated importance & An activity is favoured very strongly over another; its dominance is  demonstrated in practice \\
             9 & Absolute importance & The evidence favouring one activity over another is of the highest possible order of affirmation \\
             2, 4, 6, 8 & Intermediate values between adjacent scale values & When compromise is needed \\
             Reciprocals of above nonzero & \multicolumn{2}{p{10cm}}{If activity $i$ has one of the above nonzero numbers assigned with activity $j$, then $j$ has the reciprocal value when compared with $i$. This is a reasonable assumption.} \\
@@ -233,54 +242,179 @@ In reality though, the values $w_i$ are unknown and the ratios $a_{ij} = w_i/w_j
     \end{center}
 \end{table}
 
-No human is perfect though and nor will be the estimates. The matrix $A' = \left[a'_{ij}\right]$ with estimated ratios will therefore be a small perturbation of $A$. 
+Consider $n$ alternatives $A_1, A_2, \ldots, A_n$ and a quantitative criterion $X$, i.e. $X$ can be expressed with an exact number. The value of a certain alternative $A_i$ with respect to criterion $X$ is given by $w_i$. For instance, $A_i$ could be $n$ stones and $X$ could be their weight, measured in grams. The ratios between any two alternatives (with respect to property $X$) can now be summarized in a matrix
+\begin{gather*}
+    A = %
+    \begin{bmatrix}
+        w_1/w_1 & w_1/w_2 & \ldots & w_1/w_n \\
+        w_2/w_1 & w_2/w_2 & \ldots & w_2/w_n \\
+        \vdots  & \vdots  &        & \vdots  \\
+        w_n/w_1 & w_n/w_2 & \ldots & w_n/w_n    
+    \end{bmatrix}.
+\end{gather*}
 
-As a result, the aforementioned multiplication would not yield a  row of identical values but instead it would yield a row of differing values, scattered around $w_i$ (because of the errors in judgement). Consequently, it seems reasonable to represent $w_i$ by the average of these values.
-\begin{gather}
-    w_i = \frac{1}{n} \sum_{j=1}^{n} a'_{ij}w_j \quad i = 1, 2, \ldots, n
-\end{gather}
+Note that (1) $A$ is reciprocal, i.e. $a_{ij} = 1 / a_{ji}$ and (2) the elements on the diagonal are ones. This is easy to understand because there cannot be any difference between two identical objects.
 
-This system of equations can be solved for $w = (w_1, w_2, \ldots, w_n)^T$ if $n$ is allowed to change. The problem now reads
-\begin{gather}
-    w_i = \frac{1}{\lambda_{max}} \sum_{j=1}^{n} a'_{ij}w_j \quad i = 1, 2, \ldots, n
-\end{gather}
-which is equivalent to the eigenvalue problem $Aw = \lambda_{max} v$ and its solution is unique to within a multiplicative constant. Small perturbations of $a_{ij}$ could generally lead to large perturbations of $\lambda_{max}$ and $w$ but it can be shown that this is not the case for reciprocal matrices \cite[p.~192~--~197]{Saaty:1980}. 
+If any row of $A$ were to be multiplied by a vector $\vec{w} = (w_1, w_2, \ldots, w_n)^T$, the multiplication would yield a row of identical entries $w_i, w_i, \ldots, w_i$. This is only true in the case of perfect information. In most multi-criteria decision making problems, information is incomplete, incorrect or it simply cannot be represented by numbers (because the criterion describes a qualitative property) and the exact ratios cannot be calculated. In that case, the ratios $a_{ij} = w_i/w_j$ can be estimated by an expert, who is allowed to make (small) errors in judgement. These estimates $a'_{ij}$ make up a new matrix $A'$. Then, the result of the aforementioned multiplication is a row of statistically scattered values around the actual value $w_i$. Therefore, it seems reasonable to represent $w_i$ by the average of these values:
+\begin{gather*}
+    w'_i = \frac{1}{n} \sum_{j=1}^{n} a'_{ij} w'_j \quad i = 1, 2, \ldots, n
+\end{gather*}
 
-The eigenvector $w$ is normalized by dividing its entries by their sum to obtain the \emph{priority vector}, containing appropriate weights or scores for all alternatives. 
+This resulting system can be solved for $\vec{w'} = (w'_1, w'_2, \ldots, w'_n)^T$ if $n$ is allowed to change. The problem then reads:
+\begin{gather*}
+    w'_i = \frac{1}{\lambda_{max}} \sum_{j=1}^{n} a'_{ij} w'_j \quad i = 1, 2, \ldots, n
+\end{gather*}
+which is equivalent to the eigenvalue problem $A' \vec{w'} = \lambda_{max} \vec{w'}$. The eigenvector $\vec{w'}$, which is unique up to within a multiplicative constant, has to be normalized by dividing its entries by their sum to obtain a \emph{priority vector}, i.e. a vector of appropriate weights or scores for the considered alternatives. 
 
-Since this method is based on human judgement, which inherently contains errors, there needs to be a way to measure the amount of error in the result. 
-
-Reconsider $A$. This is a positive, reciprocal matrix and is also consistent, i.e. all entries satisfy the condition
-\begin{gather}
+The eigenvalue problem has a number of interesting properties. Reconsider $A$. This is a positive, reciprocal matrix and it is also consistent, i.e. all entries satisfy the condition
+\begin{gather*}
     a_{jk} = \frac{a_{ik}}{a_{ij}} = \frac{w_i}{w_k} \times \frac{w_j}{w_i} \quad i, j, k = 1, \ldots, n.
-\end{gather}
-That is, all $n$ alternatives form a chain.
+\end{gather*}
+In other words, the alternatives form a chain which also represents their ranking. Because of this property, all rows of $A$ are linearly dependent and consequently, $A$ has rank one. This also implies that all eigenvalues are zero, except one. In every matrix, the sum of eigenvalues is equal to the sum of elements on the diagonal (also known as the trace of a matrix). Hence, $tr(A) = n$, the order of $A$.
 
-The trace of a matrix, the sum of the elements on the main diagonal, is equal to the sum of its eigenvalues. Because all rows of $A$ are linearly dependent, $A$ has rank one. Consequently, all eigenvalues except one are zero. Hence, $tr(A) = n$, the order of $A$, is the largest or pricipal eigenvalue of $A$.
+In the presence of small inconsistencies (where $A$ is approximated by $A'$), $\vec{w'}$ is a good estimate of $\vec{w}$ as long as $A'$ is reciprocal because it can be shown that small perturbations of $a_{ij}$ do not lead to large perturbations of $\lambda_{max}$ and $\vec{w'}$ \cite{Saaty:1980}. However, the amount of inconsistency should be measurable in order to decide whether it is small or not. It turns out that the amount of inconsistency is proportional to the difference between the expected eigenvalue $n$ and the actual eigenvalue $\lambda_{max}$.
 
-The amount of inconsistency, resulting from human judgement, can therefore be represented by $\lambda_{max} - n$, which measures the deviation of the judgements from the consistent approximation \cite{Saaty:1990}. 
+\citet{Saaty:1980} defines a number, called the \emph{consistency index}, $CI = (\lambda_{max} - n) / (n - 1)$, which measures the amount of inconsistency in a given judgement matrix. This consistency index is then compared to the average consistency index of a large number of random reciprocal matrices of the same order, called the \emph{random index} (RI). These random indices can be found in \tref{tab:ri}. If the \emph{consistency ratio} $CR = CI / RI$ is $0.1$ or less, the estimate $\vec{w'}$ is accepted. Otherwise, new judgements should be collected in order to improve consistency.
 
-The authors define a \emph{consistency index}, $C.I. = (\lambda_{max} - n) / (n - 1)$. This consistency index is compared to the average consistency index of a large number of random reciprocal matrices of the same order, called the \emph{random index (R.I.)}, listed in \tref{tab:ri}. When the \emph{consistency ratio (C.R.)}, the ratio $C.I. / R.I.$, is 10\% or less, the estimate $w$ is considered acceptable. Otherwise, new judgements should be collected in order to improve consistency.
-
-\begin{table}[h!]
-\begin{center}
-    \begin{tabular}{l*{9}{|c}}
-        n & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
-        \hline
-        RI & 0 & 0 & 0.58 & 0.90 & 1.12 & 1.24 & 1.32 & 1.41 & 1.45
-    \end{tabular}
-    \caption{Random indices (R.I.) for reciprocal matrices of order 1 to 9}
-    \label{tab:ri}
-\end{center}
+\begin{table}
+    \begin{center}
+        \begin{tabular}{l*{9}{|c}}
+            n & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
+            \hline
+            RI & 0 & 0 & 0.58 & 0.90 & 1.12 & 1.24 & 1.32 & 1.41 & 1.45
+        \end{tabular}
+        \caption{Random indices (RI) for reciprocal matrices of order 1 to 9}
+        \label{tab:ri}
+    \end{center}
 \end{table}
 
+The strengths of the AHP are that it (1) enables decision makers to structure a problem into a hierarchy, (2) provides a powerful approach for handling both quantitative and qualitative criteria and (3) can deal with inconsistencies. The weaknesses of AHP are that it (1) is a time-consuming method due to the large number of pairwise comparisons and (2) is susceptible to rank-reversal, i.e. the ranking may change when new alternatives are added \cite{Jadhav:2009}.
+
 \paragraph{Example}
-\TODO{Add example?}
+
+In this example, Ethan uses the AHP method to assist him in choosing a job offer. The goal, which is the root node of the hierarchy, is obviously to select a job offer. The four criteria (salary, distance to work, interest and career opportunities) are children of the root node and the alternatives are children of the criterion nodes. \fref{fig:ahp-hierarchy} illustrates the hierarchy.
+
+\begin{figure}
+    \begin{center}
+        \begin{pspicture}(0, 0)(12, 4)
+            \psnode(6, 4){G}{Goal}
+            \psnode(2.4, 2){C1}{Salary}
+            \psnode(4.8, 2){C2}{Distance}
+            \psnode(7.2, 2){C3}{Interest}
+            \psnode(9.6, 2){C4}{Opportunities}
+            \psnode(3, 0){O1}{Offer 1}
+            \psnode(6, 0){O2}{Offer 2}
+            \psnode(9, 0){O3}{Offer 3}
+            
+            \ncline[nodesep=3pt]{G}{C1}
+            \ncline[nodesep=3pt]{G}{C2}
+            \ncline[nodesep=3pt]{G}{C3}
+            \ncline[nodesep=3pt]{G}{C4}
+            
+            \ncline[nodesep=3pt]{O1}{C1}
+            \ncline[nodesep=3pt]{O1}{C2}
+            \ncline[nodesep=3pt]{O1}{C3}
+            \ncline[nodesep=3pt]{O1}{C4}
+            
+            \ncline[nodesep=3pt]{O2}{C1}
+            \ncline[nodesep=3pt]{O2}{C2}
+            \ncline[nodesep=3pt]{O2}{C3}
+            \ncline[nodesep=3pt]{O2}{C4}
+            
+            \ncline[nodesep=3pt]{O3}{C1}
+            \ncline[nodesep=3pt]{O3}{C2}
+            \ncline[nodesep=3pt]{O3}{C3}
+            \ncline[nodesep=3pt]{O3}{C4}
+        \end{pspicture}
+        \caption{The decision hierarchy of the running example.}
+        \label{fig:ahp-hierarchy}
+    \end{center}    
+\end{figure}
+
+First, Ethan has to decide upon the relative importance of every combination of two criteria. The comparison matrix is a 4-by-4 matrix but the diagonal carries only ones and only half of the remaining judgements is needed because the matrix must be reciprocal. Hence, 6 pairwise comparisons have to be made. Ethan uses Saaty's fundamental scale (see \tref{tab:ahp-scale}) to rate the criteria. For instance, Ethan is convinced that the salary is more important than the distance, which is illustrated in \tref{tab:ahp-criteria} together with the other scores. The consistency ratio is less than 0.1
+
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{lccccr}
+            \hline
+                          & Salary          & Distance & Interest        & Opportunities   & Priority vector \\
+            \hline
+            Salary        & $1$             & $5$      & $\lsfrac{1}{3}$ & $\lsfrac{1}{3}$ & $0.1525$        \\
+            Distance      & $\lsfrac{1}{5}$ & $1$      & $\lsfrac{1}{7}$ & $\lsfrac{1}{7}$ & $0.0450$        \\
+            Interest      & $3$             & $7$      & $1$             & $\lsfrac{1}{3}$ & $0.2919$        \\        
+            Opportunities & $3$             & $7$      & $3$             & $1$             & $0.5106$        \\    
+            \hline
+            \multicolumn{6}{r}{$\lambda_{max} = 4.2281$, $CI = 0.0760$, $CR=0.08$}                           \\
+            \hline
+        \end{tabular}
+        \caption{Comparison of criteria}
+        \label{tab:ahp-criteria}
+    \end{center}
+\end{table}
+
+Second, Ethan has to score the alternatives in a similar fashion with respect to the criteria. The first two criteria are quantitative criteria and these numbers are used to form the ratios. In this case, the comparison matrix is both reciprocal and consistent. Consequently, the consistency ratio is zero. The last two criteria are qualitative criteria and are scored using Saaty's scale. The judgements and resulting priority vectors are listed in \tref{tab:ahp-alternatives}.
+
+
+\begin{table}[h]
+    \begin{tabular}{lcccr}
+        \hline
+        \textbf{Salary} & J1                    & J2                    & J3                    & Priority \\
+        \hline
+        J1              & $1$                   & $\lsfrac{2000}{2800}$ & $\lsfrac{2000}{2600}$ & $0.2703$ \\
+        J2              & $\lsfrac{2800}{2000}$ & $1$                   & $\lsfrac{2800}{2600}$ & $0.3784$ \\
+        J3              & $\lsfrac{2600}{2000}$ & $\lsfrac{2600}{2800}$ & $1$                   & $0.3513$ \\        
+        \hline
+        \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0$}                                                  \\
+        \hline
+    \end{tabular}
+    \hfill
+    \begin{tabular}{lcccr}
+        \hline
+        \textbf{Distance} & J1               & J2                & J3                & Priority \\
+        \hline
+        J1                & $1$              & $\lsfrac{30}{5}$  & $\lsfrac{60}{5}$  & $0.8000$ \\
+        J2                & $\lsfrac{5}{30}$ & $1$               & $\lsfrac{60}{30}$ & $0.1333$ \\
+        J3                & $\lsfrac{5}{60}$ & $\lsfrac{30}{60}$ & $1$               & $0.0667$ \\        
+        \hline
+        \multicolumn{5}{r}{$\lambda_{max} = 3$, $CI = 0$}                                       \\
+        \hline
+    \end{tabular}
+    \\\vspace{1em}\\
+    \begin{tabular}{lcccr}
+        \hline
+        \textbf{Interest} & J1              & J2    & J3              & Priority    \\
+        \hline
+        J1                & $1$             & $7$   & $3$             & $0.6694$    \\
+        J2                & $\lsfrac{1}{7}$ & $1$   & $\lsfrac{1}{3}$ & $0.0880$    \\
+        J3                & $\lsfrac{1}{3}$ & $3$   & $1$             & $0.2426$    \\        
+        \hline
+        \multicolumn{5}{r}{$\lambda_{max} = 3.0070$, $CI = 0.0035$, $CR = 0.006$}   \\
+        \hline
+    \end{tabular}
+    \hfill
+    \begin{tabular}{lcccr}
+        \hline
+        \textbf{Opportunities} & J1  & J2              & J3              & Priority \\
+        \hline
+        J1                     & $1$ & $\lsfrac{1}{7}$ & $\lsfrac{1}{5}$ & $0.0668$ \\
+        J2                     & $7$ & $1$             & $5$             & $0.7147$ \\
+        J3                     & $5$ & $\lsfrac{1}{5}$ & $1$             & $0.2185$ \\        
+        \hline
+        \multicolumn{5}{r}{$\lambda_{max} = 3.1827$, $CI = 0.0914$, $CR = 0.16$}    \\
+        \hline
+    \end{tabular}
+    \caption{Comparison of job offers with respect to the four criteria}
+    \label{tab:ahp-alternatives}
+\end{table}
+
+Finally, all scores are combined into a total score $a_i$ by calculating
+\begin{gather*}
+    a_i = \sum_{i = 1}^{4} c_i w_i
+\end{gather*}
+where $c_i$ is the priority of a particular criterion and $w_i$ is the priority of the alternative with respect to this criterion. The vector of total scores is then $(0.3067, 0.4543, 0.2389)^T$.
 
 \subsection{Fuzzy MCDM}
 \label{sec:fuzzy}
-
-\TODO{Write section}
 
 Fuzzy logic was introduced in the mid `60s by Zadeh and was later applied to MCDM problems in the late `70s. Fuzzy logic allows to reason with imprecisely specified criteria like very high performance, low performance, etc. In classical approaches like those described above imprecision is dealt with first. When using the fuzzy approach, these imprecisions are only dealt with in the end, and only if necessary.
 
