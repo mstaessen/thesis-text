@@ -416,27 +416,69 @@ where $c_i$ is the priority of a particular criterion and $w_i$ is the priority 
 \subsection{Fuzzy MCDM}
 \label{sec:fuzzy}
 
-Fuzzy logic was introduced in the mid `60s by Zadeh and was later applied to MCDM problems in the late `70s. Fuzzy logic allows to reason with imprecisely specified criteria like very high performance, low performance, etc. In classical approaches like those described above imprecision is dealt with first. When using the fuzzy approach, these imprecisions are only dealt with in the end, and only if necessary.
+In 1965, \citet{Zadeh:1965} introduced the concept of fuzzy sets. Five years later, \citet{Bellman:1970} applied this concept to multi-criteria decision making problems, which allows decision makers to express constraints like ``the cost of $A$ should be substantially lower than $\alpha$''.
 
-Fuzzy MCDM is based on three concepts \cite{FuzzySetApproach}:
+The approach is based on the observation that ``most real world decision making processes take place in an environment in which the goals, the constraints and consequences of possible actions are not known precisely'' \cite{Bellman:1970}. Usually, this imprecision is associated with randomness, which is fundamentally different from fuzziness. Fuzziness is a type of imprecision that is associated with fuzzy sets. ``A fuzzy set is a class of objects in which there is no sharp boundary between those objects that belong to the class and those that do not'' \cite{Bellman:1970}. The set of blue objects is an example of a fuzzy set. More formally, if $X = \left\{x\right\}$ denotes a set of alternatives, then the fuzzy set $A$ in $X$
+\begin{gather*}
+    A = \left\{\left(x, \mu_A\left(x\right)\right)\right\}, \quad x \in X
+\end{gather*}
+is a set of ordered pairs where $\mu_A\left(x\right)$ is called the membership degree of $x$ in $A$. $\mu_A : X \rightarrow M$ is a function from a space $X$ to a membership space $M$ where $M = [0, 1]$ \cite{Bellman:1970}.
 
-\begin{enumerate}
-    \item The set of alternatives is a \emph{fuzzy set}, i.e. the alternatives aren't precisely defined. The decision will thus be taken in a \emph{fuzzy environment}. 
-    \item The decision is based on an aggregation of fuzzy preferences among alternatives.
-    \item The decision is based on an evaluation of alternatives using a linguistic description.
-\end{enumerate}
+A decision process is typically comprised of three ingredients: a set of alternatives, a set of constraints and a performance function that indicates the gain (or loss) associated with each alternative. In a fuzzy environment, the goals and/or constraints make up classes of alternatives that do not have crisp boundaries. A fuzzy decision is then an intersection of the given goals and constraints. More formally, if $X = \left\{x\right\}$ is a given set of alternatives, then a (fuzzy) goal $G$ is given by a fuzzy set $G$ in $X$. The membership function $\mu_G\left(x\right)$ indicates to which degree a particular alternative $x$ satisfies the goal $G$. Such a function Similarly, a (fuzzy) constraint $C$ is given by a fuzzy set $C$ in $X$ and the degree to which a certain alternative $x$ satisfies the constraint $C$ is given by $\mu_C\left(x\right)$.
 
-More concrete, let $A = \{a_1, \ldots, a_n\}$ be a finite set of given alternatives and let there be $m$ imprecisely defined criteria. Every alternative satisfies a criterion to a certain degree or does not satisfy it at all. In other words, for each criterion $G_j, j = 1, \ldots, m$ there is a set $G_j \subset A$ containing the alternatives satisfying the criterion and the degree in which an alternative $a_i$ fulfills $G_j$ is expressed by the membership degree $G_j(a_i)$.
+The decision is then an intersection of the goal and the constraint:
+\begin{gather*}
+    D = G \cap C
+\end{gather*}
+where $D$ is a fuzzy set, resulting from the intersection of $G$ and $C$. Correspondingly, the membership function $\mu_D\left(x\right) = \mu_G\left(x\right) \wedge \mu_C\left(x\right)$ is a function of the membership functions of $G$ and $C$. In case of intersection, $\mu_D\left(x\right) = min\left(\mu_G\left(x\right), \mu_C\left(x\right)\right)$.
+ 
+More generally, a multi-criteria decision making problem can have $n$ goals $G_1, \ldots, G_n$ and $m$ constraints $C_1, \ldots, C_m$ and the resulting decision is the intersection of goals and constraints:
+\begin{gather*}
+    D = G_1 \cap \ldots G_n \cap C_1 \cap \ldots \cap C_n
+\end{gather*}
+In fact, other interpretations of ``intersection'' can be used as well. The decision is then called a ``confluence'' of goals and constraints.
 
-In order to decide the MCDM problem, constraints must be defined for each criterion. These constraints are specified as fuzzy sets as well meaning that a constraint $C_j$ is associated with a set $C_j \subset A$ containing the alternatives fulfilling $C_j$ in a certain degree. Again, a membership degree $C_j(a_i)$ is given.
+The strengths of the fuzzy MCDM approach are that (1) linguistic terms can be used for evaluation and (2) improves decision making in the presence of vagueness and ambiguity. The weakness of the approach is that it does not specified how the membership functions should be defined.
 
-Consequently, there are two fuzzy sets for every $j, j = 1, \ldots, m$, namely $G_j$ and $C_j$. The decision can now be obtained by composition and is given by the fuzzy set 
-\begin{equation}
-    D = (G_1 \alpha C_1) \beta \ldots \beta (G_m \alpha C_m)
-\end{equation}
-where $\alpha$ and $\beta$ are suitable fuzzy set operations. The alternative $a_k$ with the highest membership degree $D(a_k)$ is the best alternative.
+\paragraph{Example} The running example has one goal and four criteria. These can be translated into four goals (great salary, nice driving distance, great job content, great career opportunities) and four constraints (affordable salary, satisfiable distance to work, satisfiable job content, satisfiable job opportunities). That is, every criterion defines both a goal and a constraint. Next, the membership functions should be defined. However, it is not specified how to define these functions. For the sake of simplicity, this example this example will only discuss two membership functions of one criterion. Assume that Ethan thinks that the tipping point for an affordable salary is 1900 euro. The membership function could then be defined as:
+\begin{gather*}
+    \mu_{\text{Affordable Salary}}\left(x\right) = \frac{1}{1 + 1.05^{1900 - x}}
+\end{gather*}
+Similarly, the tipping point for a great salary is 2800 euro but is also spread out over a larger range:
+\begin{gather*}
+    \mu_{\text{Great Salary}}\left(x\right) = \frac{1}{1 + 1.005^{2800 - x}}
+\end{gather*}
+Both functions are visualized in \fref{fig:fuzzy}. The membership degree of the decision can now be calculated as the minimum of these two functions:
+\begin{align*}
+    \mu_{D}\left(2000\right) & = 0.00035 \\
+    \mu_{D}\left(2800\right) & = 0.5     \\
+    \mu_{D}\left(2600\right) & = 0.12025 
+\end{align*}
+
+\begin{figure}[h]
+    \begin{center}
+        \psset{lly=-0.5cm}
+        \begin{psgraph}[Dx=100, Dy=0.2, Ox=1800](1800,0)(3000,1){10cm}{5cm}
+            \psplot[linecolor=blue,linewidth=1pt,algebraic=true,plotpoints=2000]{1800}{3000}{1/(1+1.05^(1900 - x))}
+            \psplot[linecolor=red,linewidth=1pt,algebraic=true,plotpoints=2000]{1800}{3000}{1/(1+1.01^(2800 - x))}
+        \end{psgraph}
+        \caption{Visualization of $\mu_{\text{Affordable Salary}}$ (blue) and $\mu_{\text{Great Salary}}$ (red)}
+        \label{fig:fuzzy}
+    \end{center}
+\end{figure}
+
+ 
+ 
 
 
-\TODO{Add an example: For example, when buying a house these criteria could be \emph{nice neighbourhood}, \emph{great parking facilities}, \emph{reasonable price}, etc.}
+
+
+
+
+
+
+
+
+
 
 
