@@ -10,10 +10,10 @@ Building cross-platform solutions starts at the architectural level. This sectio
 \begin{itemize}
     \item The \emph{mobile device} is the piece of hardware that runs the actual application. This is the place where the architectures will differ the most.
     \item The \emph{backend} is a service, provided by one or more servers that store all the application data. This could be a web service, ERP software like SAP, a CRM system like Salesforce, etc. or it could be a combination of such services.
-    \item The \emph{mobile hub} or\emph{mobile orchestrator} is a server that acts as a mediator between the mobile device and the backend. It is put in place for multiple reasons: it exposes a uniform interface to the mobile device (and hides external API changes), prevents distributed denial-of-service (DDoS) attacks from the large number of mobile devices connecting to the backend, can cache information to reduce the load on the backend, can inject services like advertising into the application, etc.
+    \item The \emph{mobile hub} or \emph{mobile orchestrator} is a server that acts as a mediator between the mobile device and the backend. It serves many purposes: it exposes a uniform interface to the mobile device (and hides external API changes), prevents distributed denial-of-service (DDoS) attacks from the large number of mobile devices connecting to the backend, can cache information to reduce the load on the backend, can inject services like advertising into the application, etc.
 \end{itemize}
 
-The architecture of the native application is discussed first and is used as a reference architecture. For each of these architecture, a number of aspects will be highlighted: performance, look \& feel, platform access, programming languages, development cost and distribution.
+The architecture of the native application is discussed first and is used as a reference architecture. For each of these architecture, a number of aspects will be highlighted: performance, look \& feel, platform access, programming languages and distribution. %, development cost
 
 \subsection{Native application}
 
@@ -31,11 +31,11 @@ Native applications are developed with the supplied software development kit (SD
 
 The SDK also provides a large number of user interface elements that developers can use to create a rich user interface that is consistent with the look \& feel of the platform. This is called native look \& feel. Native apps are typically distributed through an online marketplace like the App Store for iOS applications or Google Play for Android applications. 
 
-The development cost of native applications is high because developers need to be familiar with multiple SDKs and the application has to be developed separately for every platform that has to be supported.
+%The development cost of native applications is high because developers need to be familiar with multiple SDKs and the application has to be developed separately for every platform that has to be supported.
 
 \subsection{Mobile web application}
 
-Mobile web applications are websites that are optimized for mobile browsers. Since every platform comes with a browser, this is the easiest way to get an application running on all platforms. An overview of this architecture is depicted in \fref{fig:web}. Mobile web applications are built with HTML (content), JavaScript (behaviour) and CSS (styling, are viewed in the browser and are distributed on the Internet with a URL but they cannot be installed on the device. A workarounds using Web Clips \cite{Safari:webclips} is available on iOS and on Android, bookmarks can be placed on the home screen. 
+Mobile web applications are websites that are optimized for mobile browsers. Since every platform comes with a browser, this is the easiest way to get an application running on all platforms. An overview of this architecture is depicted in \fref{fig:web}. Mobile web applications are built with HTML (content), JavaScript (behaviour) and CSS (styling), are viewed in the browser and are distributed on the Internet with a URL but they cannot be installed on the device. A workarounds using Web Clips \cite{Safari:webclips} is available on iOS and on Android, bookmarks can be placed on the home screen of the device. 
 
 \begin{figure}[h]
     \begin{center}
@@ -45,15 +45,17 @@ Mobile web applications are websites that are optimized for mobile browsers. Sin
     \end{center}
 \end{figure}
 
-Mobile web applications are not nearly as powerful as native applications because the web is currently not a first-class platform. Many mobile web browsers lack support for particular HTML5 features. These defects are listed on websites like ``Can I use...''\footnote{\url{http://caniuse.com}} and ``Mobile HTML5''\footnote{\url{http://mobilehtml5.org}}. Developers should constantly check whether a certain feature is available. In some cases, the missing feature can be \emph{polyfilled}. This term polyfill is inspired by the famous wall filler ``Polyfilla'' and is used for additional pieces of code that provide the missing HTML5 functionality. However, no polyfill can provide access to the underpinning hardware. Most mobile web applications also require an internet connection because the application is not cached in the browser. 
+Mobile web applications are not nearly as powerful as native applications. First, the application is not stored on the device and requires an active internet connection which is not always available. Second, the performance of the mobile browser is often disappointing. Third, mobile web application cannot make use of the many unique features of mobile devices as the APIs are missing.
+
+A new HTML specification, called HTML5 is here to tackle these issues. It enables mobile web applications to access certain device features and allows applications to be cached entirely on the device. However, the web is currently not a first-class platform and many mobile web browsers lack support for several HTML5 features. These defects are listed on websites like ``Can I use...''\footnote{\url{http://caniuse.com}} and ``Mobile HTML5''\footnote{\url{http://mobilehtml5.org}}. Developers should constantly check whether a certain feature is available or not. In some cases, the missing feature can be \emph{polyfilled}. This term polyfill is inspired by the famous wall filler ``Polyfilla'' and is used for additional pieces of code that provide the missing HTML5 functionality. However, no polyfill can provide access to the underpinning hardware. 
 
 Mobile web applications cannot make use of the native user interface elements. Because of this limitation, it is hard to provide a native look \& feel. There are a number of project that try to mimic the native user interface elements with HTML templates and custom styles. However, the styling is quite complex and additional behaviour is added to animate these elements, which is disadvantageous for the performance. On the other hand, some people believe that the web is a platform of its own because it satisfies the ``one size that fits all'' philosophy. Therefore, it is entitled to its own look \& feel \cite{Mahemoff:2011}.
 
-The development cost of mobile web applications is low because it does not require additional skills (web development is often already in the skill portfolio) and the application has to be developed only once and can serve all platforms. 
+%The development cost of mobile web applications is low because it does not require additional skills (web development is often already in the skill portfolio) and the application has to be developed only once and can serve all platforms. 
 
 \subsection{Hybrid application}
 
-A Hybrid application is the combination of a native application and a mobile web application. The actual application is a mobile web application that is embedded in a native application and made visible through a WebView\footnote{A WebView is a native user interface element that displays web content inside applications.}. The native shell offers a JavaScript bridge to the web application, allowing the web application to access to the system. Because hybrid applications and wrapped in a native shell, they can be distributed through (official) marketplaces. The architecture is visualized in \fref{fig:hybrid}.
+A Hybrid application is the combination of a native application and a mobile web application. The actual application is a mobile web application that is embedded in a native application and made visible through a WebView\footnote{A WebView is a native user interface element that displays web content inside applications.}. The native shell offers a JavaScript bridge to the web application, allowing the web application to access to the system. Because hybrid applications are wrapped in a native shell, they can be distributed through (official) marketplaces. The architecture is visualized in \fref{fig:hybrid}.
 
 \begin{figure}[h]
     \begin{center}
@@ -63,9 +65,9 @@ A Hybrid application is the combination of a native application and a mobile web
     \end{center}
 \end{figure}
 
-Because of the nature of the application, the performance is be similar to web applications. Unlike mobile web applications, hybrid applications are more flexible because they allow better integration with the device through the JavaScript bridge. This way, missing features can be implemented natively and accessed through said bridge. Another consequence of its nature is that hybrid applications do not use the native user interface elements and cannot provide the native look \& feel. 
+Due to the nature of the application, the performance is similar to web applications. Unlike mobile web applications, hybrid applications are more flexible because they allow better integration with the device through the JavaScript bridge. This way, missing features can be implemented natively and accessed through said bridge. Another consequence of its nature is that hybrid applications do not use the native user interface elements and cannot provide the native look \& feel. 
 
-The development cost of hybrid applications is similar to that of mobile web applications because wrapping web applications does not require any knowledge of the native SDK's. 
+%The development cost of hybrid applications is similar to that of mobile web applications because wrapping web applications does not require any knowledge of the native SDK's. 
 
 \subsection{Interpreted application}
 
@@ -81,11 +83,11 @@ Interpreted or runtime applications try to solve the platform differences by int
 
 The performance of an interpreted application strongly depends on the interpreter itself and the interpreted programming language. In general, the performance is better than the performance of web applications but it is not as good as the performance of native applications. Because of the nature of interpreted applications, the native user interface elements can be used to provide a native look \& feel.
 
-The development cost of interpreted applications is a higher than the cost of mobile web applications but lower than the cost of native applications. Developers need to be familiar with the SDK of the cross-platform tool but the application has to be developed only once and can be run on all supported platforms.
+%The development cost of interpreted applications is a higher than the cost of mobile web applications but lower than the cost of native applications. Developers need to be familiar with the SDK of the cross-platform tool but the application has to be developed only once and can be run on all supported platforms.
 
 \subsection{Cross-compiled application}
 
-In contrast to interpreted applications, instructions of cross-compiled are translated at compile time. The resulting application is not noticeably different from a native application because no runtime has to be included. This architecture is presented in \fref{fig:crosscompiled}. 
+In contrast to interpreted applications, the application logic of cross-compiled is translated into native code at compile time. The resulting application is not noticeably different from a native application because no runtime has to be included. This architecture is presented in \fref{fig:crosscompiled}. 
 
 \begin{figure}[h]
     \begin{center}
@@ -95,13 +97,13 @@ In contrast to interpreted applications, instructions of cross-compiled are tran
     \end{center}
 \end{figure} 
 
-Because the application only exists of machine code, the performance of cross-compiled applications is nearly identical to the performance of native applications. Cross-compiled applications can make use of the native user interface elements and consequently provide the native look \&feel. However, this sometimes requires custom bindings for each platform, increasing the amount of code that has to be written. 
+Because the application is only composed of machine code, the performance of cross-compiled applications is nearly identical to the performance of native applications. Cross-compiled applications can make use of the native user interface elements and consequently provide the native look \& feel. However, this sometimes requires custom bindings for each platform, increasing the amount of code that has to be written. 
 
-The development costs of cross-compiled applications is similar to the costs of interpreted applications. Developers still need to be familiar with the SDK of the cross-platform tool but the application has to be developed only once and can be run on all supported platforms. Also, not all code can be reused in cross-compiled applications, which raises the development costs a little more.
+%The development costs of cross-compiled applications is similar to the costs of interpreted applications. Developers still need to be familiar with the SDK of the cross-platform tool but the application has to be developed only once and can be run on all supported platforms. Also, not all code can be reused in cross-compiled applications, which raises the development costs a little more.
 
 \subsection*{Comparison of mobile architectures}
 
-To conclude this section, the discussed architectures are compared side by side. The results are shown in \tref{tab:architectures}. Every architecture has both strengths and weaknesses. Therefore, the architecture must be chosen carefully, taking the client's wishes into account. 
+Finally, the discussed architectures are compared side by side and the results are shown in \tref{tab:architectures}. Every architecture has both strengths and weaknesses. Therefore, the architecture must be chosen carefully, taking the client's wishes into account. 
 
 \begin{table}[h]
     \begin{center}
@@ -113,7 +115,7 @@ To conclude this section, the discussed architectures are compared side by side.
             Hardware access & \checkmark  & partial     & \checkmark  & \checkmark  & \checkmark    \\
             Look \& Feel    & native      & non-native  & non-native  & native      & native        \\
             Distribution    & store       & URL         & store       & store       & store         \\
-            Cost            & high        & low         & low         & moderate    & moderate      \\
+            %Cost            & high        & low         & low         & moderate    & moderate      \\
             \hline
         \end{tabular}
 		\caption{
@@ -466,19 +468,3 @@ Both functions are visualized in \fref{fig:fuzzy}. The membership degree of the 
         \label{fig:fuzzy}
     \end{center}
 \end{figure}
-
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
