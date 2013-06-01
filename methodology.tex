@@ -1,7 +1,7 @@
 \chapter{Methodology}
 \label{chap:methodology}
 
-This chapter describes the methodology used to compare and rank the studied cross-platform tools. The methodology follows the suggested 6-step approach presented in \cite{Jadhav:2011} (see chapter \ref{sec:sw-selection}). The six steps are:
+This chapter presents the methodology that is used to evaluate and select cross-platform tools. The methodology is inspired by the generic software selection methodology of \citet{Jadhav:2011}  (see Section \ref{sec:sw-selection}). This methodology, which comprises of six generic stages.
 
 \begin{enumerate}
     \item Define selection criteria
@@ -12,33 +12,28 @@ This chapter describes the methodology used to compare and rank the studied cros
     \item Select the most suitable alternative
 \end{enumerate}
 
-Every step will be further expanded in the following sections.
+The following section will elaborate on each of these stages.
 
 \section{Define selection criteria}
 \label{sec:selection-criteria}
 
-In this first step, the selection criteria for the tool are recorded. These requirements will be used later (in step 3) to filter a list of potential candidates. 
+In the first stage, the selection criteria are defined. \citet{Jadhav:2011} define these as the functional and non-functional requirements that a software package has to meet and they will be used in the third stage to filter a list of potential candidates. 
 
-As the research presented in this thesis is conducted on behalf of CapGemini, the selection criteria are determined by their consultants and were recorded during the kick-off meeting on October 15, 2012. In order to qualify as a viable cross-platform tools, it has to meet the following requirements:
+As the research presented in this thesis is conducted on behalf of CapGemini, the selection criteria are determined by their consultants and were obtained during the initial meeting. In order to qualify as a viable cross-platform tool, it has to meet the following requirements:
 
 \begin{itemize}
-    \item \textbf{It \emph{must} produce ``native'' Android \emph{and} iOS applications.} CapGemini focusses mainly on Android and iOS because their clients mainly focus on these platforms. Support for other platforms is desirable but not not a necessity.
-    \item \textbf{It \emph{must} be able to produce \emph{both} tablet and smartphone applications, preferably from the same codebase.} Some clients want tablet applications, some clients want smartphone apps, some clients want both.
-\end{itemize}
-
-This list of essential requirements is extended with additional requirements. These are not essential as they can be circumvented in some way though they will generally result in higher productivity.
-    
-\begin{itemize}    
-    \item \textbf{It \emph{should} be usable to create enterprise applications with.} CapGemini specializes in the development of data-driven enterprise applications. Such applications usually contain a lot of forms and don't require high performance graphics (like for instance in 3D games). Even though it is possible to develop an enterprise application on top of a 3D engine, it will probably not result in good productivity.
-    \item \textbf{It \emph{should} have a certain degree of maturity} Ideally, the tool should be maintained for as long applications are created with it (and maintained). 
-    \item \textbf{It \emph{should} have good support, provided by either the vendor or by the community.} In case of a problem, there should be a way to get support.
+    \item \textbf{The tool \emph{must} produce ``native'' Android \emph{and} iOS applications.} CapGemini focusses mainly on Android and iOS because their clients want to support these platforms. Support for other platforms is desirable but not necessary.
+    \item \textbf{The tool \emph{must} be able to produce \emph{both} tablet and smartphone applications, preferably from the same codebase.} Depending on the type of application, clients want tablet applications, smartphone applications, or both.
+    \item \textbf{The tool \emph{should} be capable of creating enterprise applications.} CapGemini specializes in the development of data-driven enterprise applications. Such applications usually contain a lot of forms and do not require high performance graphics in contrast to 3D games. Even though it is possible to develop an enterprise application on top of a powerful 3D engine, doing so will generally result in lower productivity.
+    \item \textbf{The tool \emph{should} have a certain degree of maturity.} If an application is going to be developed (and maintained) with the tool, it should not constantly change its API or have an uncertain future. 
+    \item \textbf{The \emph{should} provide good support, either by its vendor or by the community.} It is unacceptable for a software project to be delayed because of unresolvable issues. For this kind of problem, the company that is developing the software would like to fall back on an active community or on commercial support offered by the vendor.
 \end{itemize}
 
 \section{Identify potential candidates}
 
-In this stage, the evaluator tries to identify as much potential candidates as possible. These candidates do not necessarily have to meet the requirements from the previous stage as this is merely a discovery phase. The result of this stage will be a list of potential candidates.
+In this stage, the evaluator tries to identify as many potential candidates as possible and the result is a list of potential candidates. These candidates do not necessarily have to meet the requirements from the previous stage as this is merely a discovery phase.
 
-Discovery of cross-platform tools has already been done extensively by VisionMobile. The latest cross-platform tools report \cite{VMCPT:2012} contains a list of 100 cross-platform tools they tracked as part of their research. Because additional internet searches did not reveal new tools, this list is used as output of this stage.
+Discovery of cross-platform tools has already been done extensively by VisionMobile\footnote{VisionMobile is an ecosystems analyst firm in the telecom industry, \url{http://www.visionmobile.com}} \cite{VMCPT:2012} and \mbox{research2guidance}\footnote{research2guidance is a German research and consultancy firm, specialized in the mobile industry \url{http://www.research2guidance.com}}. VisionMobile has investigated the use of cross-platform tools with more than 2400 developers. Their report contains a list of 100 cross-platform tools that they tracked as part of their research. The research of \mbox{research2guidance} is still ongoing but their questionnaire includes a list of 114 cross-platform tools. Because subsequent Internet searches did not reveal any other tools, the combination of both lists is used as output for this stage. The complete list is available as an appendix (Appendix \ref{app:tools}).
 
 \section{List selected alternatives}
 

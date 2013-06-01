@@ -50,6 +50,8 @@
 \usepackage{pst-node}
 \usepackage{pst-tree}
 \usepackage{pst-plot}
+\usepackage{pdfpages}
+\usepackage{longtable}
 
 % Paragraph definition
 \setlength{\parindent}{0pt}
@@ -62,6 +64,7 @@
 \renewcommand{\vec}[1]{\mathbf{#1}}
 \newcommand{\html}[1]{{\small \texttt{#1}}}
 \newcommand{\lsfrac}[2]{{\large \sfrac{#1}{#2}}}
+\newcommand{\tick}{\checkmark}
 
 \begin{document}
 
@@ -128,17 +131,14 @@
 
 \appendix
 
+\chapter{Scientific Paper}
+%\includepdf{../thesis-paper/paper.pdf}
+\chapter{Poster}
+%\includepdf{../thesis-poster/poster.pdf}
+\include{appendix-tools}
 \include{appendix-poc}
 
-%\include{app-A}
-% ... and so on until
-%\include{app-n}
-
 \backmatter
-% The bibliography comes after the appendices.
-% You can replace the standard "abbrv" bibliography style by another one.
-%\bibliographystyle{plainnat}
-%\bibliography{Thesis}
 \printbibliography
 
 \end{document}
