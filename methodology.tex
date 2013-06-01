@@ -33,257 +33,223 @@ As the research presented in this thesis is conducted on behalf of CapGemini, th
 
 In this stage, the evaluator tries to identify as many potential candidates as possible and the result is a list of potential candidates. These candidates do not necessarily have to meet the requirements from the previous stage as this is merely a discovery phase.
 
-Discovery of cross-platform tools has already been done extensively by VisionMobile\footnote{VisionMobile is an ecosystems analyst firm in the telecom industry, \url{http://www.visionmobile.com}} \cite{VMCPT:2012} and \mbox{research2guidance}\footnote{research2guidance is a German research and consultancy firm, specialized in the mobile industry \url{http://www.research2guidance.com}}. VisionMobile has investigated the use of cross-platform tools with more than 2400 developers. Their report contains a list of 100 cross-platform tools that they tracked as part of their research. The research of \mbox{research2guidance} is still ongoing but their questionnaire includes a list of 114 cross-platform tools. Because subsequent Internet searches did not reveal any other tools, the combination of both lists is used as output for this stage. The complete list is available as an appendix (Appendix \ref{app:tools}).
+Discovery of cross-platform tools has already been done extensively by VisionMobile\footnote{VisionMobile is an ecosystems analyst firm in the telecom industry, \url{http://www.visionmobile.com}} \cite{VMCPT:2012} and \mbox{research2guidance}\footnote{research2guidance is a German research and consultancy firm, specialized in the mobile industry \url{http://www.research2guidance.com}}. VisionMobile has investigated the use of cross-platform tools with more than 2400 developers across 91 countries. Their report contains a list of 100 cross-platform tools that they tracked as part of their research. The research of \mbox{research2guidance} is still ongoing but their questionnaire includes a list of 114 cross-platform tools. Because subsequent Internet searches did not reveal any other tools, the combination of both lists is used as output for this stage. The complete list is available as an appendix (Appendix \ref{app:tools}).
 
 \section{List selected alternatives}
 
-In this phase, the candidates obtained from the previous stage are filtered with the selection criteria from the first stage. The result of this stage is a list of alternatives worth investigating.
-
-The list of tools from the previous stage contains a plethora of tools. Using the requirements from stage 1, a large number of tools can be left out:
+The candidates obtained from the previous stage are filtered with the selection criteria obtained in first stage. The result of this stage is a list of alternatives worth investigating. The list of tools from the previous stage contains a plethora of tools, including tools that do not meet the selection criteria. Using these, a large number of tools can be omitted.
 
 \begin{itemize}
-    \item tools that do not produce native applications for Android and iOS;
-    \item tools that do not produce tablet and smartphone applications;
-    \item special-purpose tools that are not well suited for the intended use, e.g. specialized 3D engines;
-    \item tools with an uncertain future, e.g. Flash-based systems or cutting-edge tools;
-    \item tools that do not offer good support. 
+    \item Tools that do not produce native applications for Android and iOS, e.g. jQuery Mobile, Sencha Touch, Kendo UI, etc.
+    \item Tools that do not produce tablet and smartphone applications, e.g. Magmito, CrossMob, etc.
+    \item Special-purpose tools that are not well suited for the intended use, e.g. specialized 3D engines like Corona, Marmelade, Unity, Unreal, etc.
+    \item Tools with an uncertain future, e.g. Flash-based systems or cutting-edge tools;
+    \item Tools that lack an active community or do not offer commercial support, e.g. AppEasy, AppsGeyser, etc. 
 \end{itemize}
 
-From 100 potential candidates, 7 tools listed in \tref{table:tools} were selected.
+From the remaining tools, 7 tools (see \tref{tab:tools}) are prioritized because of their popularity and focus (enterprise applications).
 
 \begin{table}[h!]
     \begin{center}
         \begin{tabular}{lcc}
             \hline
-            Name & Architecture & Type \\
+            Name                  & Architecture            & Type        \\
             \hline 
-            Apache Cordova & Hybrid & Open Source \\
-            Appcelerator Titanium & Interpreted & Open Source \\
-            Motorola Rhodes & Interpreted & Open Source \\
-            Trigger.io & Hybrid & Commercial \\
-            MoSync & Cross-Compiled + Hybrid & Open Source \\
-            Kony & Hybrid & Commercial \\
-            Xamarin & Cross-compiled & Commercial \\
+            Apache Cordova        & Hybrid                  & Open Source \\
+            Appcelerator Titanium & Interpreted             & Open Source \\
+            Motorola Rhodes       & Interpreted             & Open Source \\
+            Trigger.io            & Hybrid                  & Commercial  \\
+            MoSync                & Cross-Compiled + Hybrid & Open Source \\
+            Kony                  & Hybrid                  & Commercial  \\
+            Xamarin               & Cross-compiled          & Commercial  \\
             \hline
         \end{tabular}
-        \caption{The remaining tools after application of the selection criteria.}
-        \label{table:tools}
+        \caption{The prioritized tools after applying the selection criteria.}
+        \label{tab:tools}
     \end{center}
 \end{table}
 
-This thesis will compare two of these tools with each other and  with the native development kits for both Android and iOS. The selected tools are Apache Cordova (formerly known as PhoneGap) and Motorola Rhodes. 
-
-Apache Cordova was chosen because of its popularity among developers and Motorola Rhodes was chosen because it focusses on enterprise applications. 
-
-Appcelerator Titanium and Xamarin were not selected because they are evaluated by another student with the same research topic. 
-
-Trigger.io was not selected because it was too similar to Apache Cordova at first sight: same architecture, same languages, \ldots
-
-\TODO{From what I read now, I should have selected MoSync, why didn't I? Don't really have a reason for it except maybe that I didn't research it quite well. Was also not prioritized by CapGemini but might have been my influence...}
-
-Kony --- even though apparently using the the same architecture as Apache Cordova --- targets enterprise applications, which made it a very good rival for Motorola Rhodes. However, there was no free trial available for Kony, which resulted in the selection of Motorola Rhodes.
-
-Apache Cordova and Motorola Rhodes are discussed in more detail in chapter \ref{chap:tools}.
+This thesis will evaluate two of these tools, together with the native development kits for both Android and iOS. In agreement with Capgemini, two tools are selected: Apache Cordova (also known as PhoneGap) and Motorola Rhodes, which are described in detail in Chapter \ref{chap:tools}. Apache Cordova is selected because of its popularity and Motorola Rhodes has a strong focus on enterprise applications. Kony also focusses on enterprise applications but has no free trial. Trigger.io is not selected because it is too similar to Apache Cordova, which is the preferred one. MoSync is least prioritized and therefore not selected. The remaining two, Appcelerator Titanium and Xamarin are evaluated by another student with the same research topic. 
 
 \section{Define evaluation criteria}
 
-This is probably the most important of all stages. Setting up good grounds for comparison is paramount. The criteria are therefore carefully extracted from interviews with CapGemini employees and literature.
+This stage is probably one of the most important of all stages. Setting up good grounds for comparison is paramount. The evaluation criteria are extracted from interviews with CapGemini employees and literature review.
 
-\subsection{Interviews with Capgemini employees}
+\subsection{Interviews}
 \label{sec:interviews}
 
-A finished application is the result of a cooperation of different people with various roles. Every person experiences mobile application development in another way. In order to gain a better understanding of these experiences, three interviews with CapGemini employees were planned: one interview with a developer, one interview with a mobile architect and one interview with a sales representative. 
-
-The goal of these interviews is to reveal important criteria that should be considered during the evaluation of the cross-platform tools. The following sections present a summary of these interviews.
+A finished application is the result of a cooperation between many people with various roles. Every person experiences mobile application development in a different way. In order to gain a better understanding of these experiences, three interviews are conducted with CapGemini employees. The goal of these interviews is to reveal important factors that should be considered during the evaluation of the cross-platform tools. A developer does the actual programming and can illustrate the current state of practice in (mobile) application development. A mobile architect is involved in the complete lifecycle of an application and can highlight some typical issues that are encountered frequently. A salesman negotiates the contracts with clients and can represent the average client. The following sections summarize the outcomes of the conducted interviews.
 
 \subsubsection{Developer}
 
-Developers are responsible for the development of the application. They can provide valuable insights into the typical technical issues that are encountered when developing a mobile application.
+Developers are in charge of the actual programming of applications. They can provide valuable insight into the development environment, the current state or practice and other typical technical issues that are encountered when developing a mobile application.
 
 \paragraph{Development environment}
 
-One of the relevant topics for application developers is the development environment since they will spend most of their time in it. Typically, the development environment is built on top of a Windows operating system and the Eclipse\footnote{\url{http://eclipse.org}} IDE. This IDE is preferred because it is fast, efficient and highly customizable, which are desirable qualities for a good IDE. Also, most of the documentation is explicitly written for Eclipse. 
+One of the relevant topics for application developers is the development environment since they will spend most of their time using it. The default development environment is built on top of a Windows operating system and the Eclipse\footnote{\url{http://eclipse.org}} IDE. This IDE is preferred because it is fast, efficient, highly customizable, and most of the documentation assumes an Eclipse environment.
 
-\paragraph{Development cycle}
+\paragraph{Current state of practice}
 
-Development happens locally and changes are deployed in an \emph{unstable}  environment. When features are ready to be tested, they are promoted and pushed to a \emph{staging} environment, where they will be tested by for instance a number of end users. When the features are tested and ready to ship, a new production release is planned. In case mobile devices are involved, the application is tested on the device as much as possible.
-
-The code is also checked overnight on a continuous integration server, which runs all unit tests together with a number of other useful tools like FindBugs\footnote{FindBugs uses static analysis to find common bugs, \url{http://findbugs.sourceforge.net}.}. Every morning, a detailed report of the state of the code is generated.
-
-\paragraph{Requirements for cross-platform tools}
-
-The requirements for cross-platform tools are that it (1) should work properly, (2) should not be too complex, (3) has at least decent performance (preferred over ease of use) and (4) that it is customizable graphically. Most clients have specific styling requirements.
+Development happens locally and changes are deployed in an \emph{unstable}  environment. When features are ready to be tested, they are promoted and pushed to a \emph{staging} environment, where they will be tested by for instance a number of end users. When the features are tested and ready to ship, a new production release is planned. In case mobile devices are involved, the application is tested on the device as much as possible. Every night, all unit tests and a number of statical code analysis tools are run on a so-called continuous integration server. A detailed report of the test run is available in the morning.
 
 \paragraph{Attitude towards new languages and tools} 
 
-Learning new tools and languages is not considered problematic as long as it is worth investing in and/or requested by clients. Typically, one or more developers familiarize themselves with the tool/language and teach the other developers during a training session. Also, Capgemini has good partnerships to fall back on in case of a problem. 
+Learning new tools and languages is not considered problematic as long as it is worth investing in (because it can increase productivity or is requested by clients). Typically, one or more developers familiarize themselves with the tool/language and then teach the other developers during a training session. In case of technical problems (bugs, architectural issues), Capgemini can --- most of the time --- fall back on its good partnerships to solve the issue. 
+
+\paragraph{Requirements for cross-platform tools}
+
+For a developer, a cross-platform tool should (1) work properly, (2) not be too complex, (3) have at least decent performance (preferred over ease of use), and (4) be   graphically customizable because most clients have specific styling requirements.
 
 \subsubsection{Mobile architect}
 
-The architect is responsible for the overall design of the application and makes the important decisions regarding used technology. Therefore, this person is best suited to describe the typical application structure and the trade-offs that have to be made constantly.
+The architect is responsible for the overall design of the application and makes the important decisions regarding used technology. Therefore, this person is best suited to describe the typical application structure and the trade-offs that have to be considered.
 
 \paragraph{Focal points in mobile architectures} 
 
-Mobile architectures consist mainly of two major components: a front-end component and a back-end component. On the side of the front-end (the mobile application), the most important factor is the degree of integration with the device.
+Mobile architectures consist mainly of two major components: a front-end (the mobile application itself) and a back-end (servers and services providing the data for the application). At the back-end side, the most important factor is the communication with other services that the application needs to integrate with. An additional server, called the \emph{mobile orchestrator} or \emph{mobile hub}, will handle this integration and expose it in a single interface to the mobile application. This protects the back-end from the increased number of requests and allows for caching and other integrations like targeted advertisement campaigns.
 
-On the side of the back-end, the most important factors are the services the application needs to integrate with. An additional server, called the \emph{mobile orchestrator} or \emph{mobile hub}, will handle this integration and expose it in a single interface to the mobile application. This protects the back-end from the increased number of requests and allows for caching and other integrations like targeted advertisement campaigns.
+At the front-end side, the most important factors are the degree of integration with the device and the user interface. Users are accustomed to the native look \& feel and wish to see new applications with similar styling. For mobile web applications, stylesheet that mimics the native look \& feel of the device are preferred. The requirement for native look \& feel makes it hard to write applications that have a single codebase, even though this is desirable. 
 
 \paragraph{Requirements for cross-platform tools}
 
 There are a number of requirements for cross-platform tools:
 \begin{itemize}
-    \item \textbf{Adoption} How many developers are using this tool? The number of users is mostly a good measure for the quality of the tool. A large user base is also beneficial when facing problems because it is more likely to get answers.
-    \item \textbf{Future proof} Will the tool survive? Is there enough financial backing or community effort? It is not very wise to start a project that relies on a tool that has an unclear future. 
+    \item \textbf{Adoption} The number of users is often a good indication of the quality of the tool. Popular tools generally have an active community where users help each other with solving technical difficulties.
+    \item \textbf{Maturity} A tool should have some maturity and it should have a bright future. It would not be very wise to start a project that relies on a tool that constantly changes or has an undetermined future. 
     \item \textbf{Documentation} Good documentation is priceless as it can save numerous hours of digging through code. 
-    \item \textbf{Support} In case of a problem, is there an official channel to open a ticket? This could be either paid support or good community support. Either way, it should solve the problem. Delay due to unsolvable problems is unacceptable.
-    \item \textbf{Customizability} Clients have specific requirements with regard to user interfaces and the tool should make this possible. Also, can the tool be expanded with plugins? A plugin architecture can contribute substantially to the customizability of the tool.
-    \item \textbf{Supported devices} Which devices and runtimes does the tool support? In a B2B\footnote{Business-to-business, or commerce between businesses} context, devices are mostly controlled by an organization and the tool does not need to support many devices. In a B2C\footnote{Business-to-consumer, or commerce between a business and consumers} context on the other hand, the organization cannot control the devices and consequently, the tool should support a lot more devices. Does the tool cover most or all of the used devices in this case?
-    \item \textbf{Performance} The benefits of cross-platform development must justify the costs in terms of performance. If it took virtually no time to develop the application but it is slow, the application is useless. 
-    \item \textbf{Tools} Does this cross-platform tool allow to reuse the development tools that are already in use? Most people are more productive with the tools they are familiar with.
+    \item \textbf{Support} Customers want their applications to be delivered in time and they are willing to pay extra for vendor support as a means of insurance. In case of technical issues, Capgemini can contact the vendor to solve the problem. 
+    \item \textbf{Customizability} Clients have specific requirements with regard to user interfaces and the tool should make them feasible. Plugin architectures can also contribute substantially to the customizability of the tool.
+    \item \textbf{Supported devices} The tool should support a sufficient number of devices. In a B2B\footnote{Business-to-business, or commerce between businesses} context, devices are often controlled by the organization and the tool will not need to support many devices. In a B2C\footnote{Business-to-consumer, or commerce between a business and consumers} context, the devices are not managed by the organization and consequently, the tool needs to support a lot more devices.
+    \item \textbf{Performance} It is believed that there is a trade-off between productivity, portability and performance. This is acceptable as long as the productivity and portability gains justify the performance loss. 
+    \item \textbf{Tools} Most developers are more productive with the tools they are familiar with. 
 \end{itemize}
 
-\paragraph{Usability} 
+\subsubsection{Salesman}
 
-Usability is a big concern when developing cross-platform. Users are accustomed to the native look \& feel and wish to see new applications with similar styling. Even HTML5 applications are designed to mimic the native look \& feel of the device. It is therefore hard to write applications with a single code base, even though this is desirable. Only when the application has a custom user interface that is in no way related to the native look \& feel of the devices, the user interface can be reused across devices.
-
-\subsubsection{Sales representative}
-
-The sales representative records the client's requirements and sells the application. The salesman is therefore capable to describe the typical client requirements.
+The salesman is responsible for gathering the client's requirements and sells the application when it is finished. Therefore, the salesman is capable of representing the customers and describing their typical requirements.
 
 \paragraph{Application types}
 
-Roughly speaking, there are two types of applications: consumer applications and business critical applications. The first type of application often involves a lot of marketing and branding, which is not Capgemini's core business. For this kind of applications, businesses usually consult a marketing agency that makes this kind of (rather short-lived) mobile applications.
+Roughly speaking, there are two types of applications: consumer applications and business critical applications. The first type of application often involves a lot of marketing and branding, which is not Capgemini's core business. For this kind of applications, businesses usually consult marketing agencies that make this kind of applications with a rather short life span.
 
-Capgemini focusses on the second type of application. These applications mostly handle data and do not rely on device specific hardware like for instance GPS or NFC\footnote{Near Field Communication, a wireless technology based on RFID}. However, clients are becoming aware of these device features and are starting to request this kind of device integration. 
+Capgemini focusses on the second type of applications. These applications mostly handle data and do not rely on device specific hardware like the GPS or accelerometer. However, clients are becoming aware of these device features and are starting to request this kind of device integration. 
 
 \paragraph{Customer requirements} 
 
-When clients come to Capgemini with a problem that they would like to solve with a mobile application, they typically do not have special technical requirements. These requirements are most often formulated in other terms. One example is the choice for native versus cross-platform. It could happen that the client has not yet decided on which devices to use or that the client does not want to create a lock-in situation by choosing for a single vendor. In that case, the application clearly has to work cross-platform. Clients could also wish to use NFC technology, which rules out iOS as a platform. When there is no compelling reason to choose for either of both, Capgemini can help the client to make an appropriate decision. Performance is almost never a primary requirement. Perhaps this is implicitly assumed?
+When clients come to Capgemini with a problem that they would like to solve with a mobile application, they typically do not have special technical requirements. These requirements are most often formulated in other terms. One example is the choice for native versus cross-platform. It could happen that the client has not yet decided on which devices to use or that the client does not want to create a lock-in situation by choosing for a single vendor. In that case, the application clearly has to work cross-platform. Clients could also wish to use NFC\footnote{Near Field Communication, a wireless technology based on RFID} technology, which rules out iOS as a platform. When there is no compelling reason to choose one or the other, Capgemini can help the client to make an appropriate decision. Performance is almost never a primary requirement.
 
-\subsubsection*{Summary of interviews}
+\subsection{Literature review}
 
-\TODO{List of criteria resulting from interviews again?}
+The criteria extracted from the interviews are complemented with criteria from literature. As mentioned in the literature study, only criteria that are used for evaluating benefits are selected here. By separating costs and benefits, a reliable cost-benefit analysis can be made in the end. The evaluation criteria from literature originate from reports by VisionMobile \cite{VMCPT:2012} and Gartner \cite{Gartner:CPT:2011}.
 
-\subsection{Literature}
-
-The criteria extracted from the interviews are complemented with criteria from literature. As mentioned before in the literature study, only criteria that are used for evaluating benefits are selected here. By separating costs and benefits, a reliable cost-benefit analysis can be made in the end. The evaluation criteria from literature originate from reports by VisionMobile and Gartner.
-
-VisionMobile\footnote{VisionMobile is an ecosystems analyst firm, \url{http://www.visionmobile.com/}.} has conducted a worldwide survey about cross-platform tools. They received answers from over 2400 developers across 91 countries. The survey includes a question about the key reasons to select a particular tool and also includes a question about the key reasons to drop a cross-platform tool. The top 10 for both questions is summarized in \tref{tab:select} and \tref{tab:drop}.
+VisionMobile has conducted a worldwide survey about cross-platform tools. The survey includes the key reasons for both selecting and dropping a particular cross-platform tool. The top 10 reasons for both are summarized in \tref{tab:select} and \tref{tab:drop}.
 
 \begin{table}[h]
     \begin{center}
-        \begin{tabular}{clr}
+        \begin{tabular}{lr}
             \hline
-            Rank & Key reason to select tool & Share \\
+            Key reason to select tool                & Share \\
             \hline
-            1  & It supports the platforms I am targeting & 61\% \\
-            2  & Allows me to use my existing skills & 43\% \\
-            3  & Low cost or free & 40\% \\
-            4  & Rapid development process & 33\% \\
-            5  & Easy learning curve & 23\% \\
-            6  & Rich UI capabilities & 19\% \\
-            7  & Access to device or hardware APIs & 10\% \\
-            8  & High Performance / low runtime overhead & 9\% \\
-            9  & Well suited for games development & 8\% \\
-            10 & Good vendor support and services & 8\% \\
+            It supports the platforms I am targeting & 61\%  \\
+            Allows me to use my existing skills      & 43\%  \\
+            Low cost or free                         & 40\%  \\
+            Rapid development process                & 33\%  \\
+            Easy learning curve                      & 23\%  \\
+            Rich UI capabilities                     & 19\%  \\
+            Access to device or hardware APIs        & 10\%  \\
+            High Performance / low runtime overhead  & 9\%   \\
+            Well suited for games development        & 8\%   \\
+            Good vendor support and services         & 8\%   \\
             \hline
         \end{tabular}
-        \caption{Top 10 reasons to select a particular cross-platform tool. Respondents could enter their top 3 and only the response for the tools that are selected by 50+ developers are counted, which is 1512 responses \cite{VMCPT:2012}.}
+        \caption{Top 10 reasons for selecting a particular cross-platform tool. Respondents could enter their top 3 and only the responses for the tools that are selected by 50+ developers are counted, which is 1512 responses \cite{VMCPT:2012}.}
         \label{tab:select}
     \end{center}
 \end{table}
 
 \begin{table}[h]
     \begin{center}
-        \begin{tabular}{clr}
+        \begin{tabular}{lr}
             \hline
-            Rank & Key reason to drop tool & Share \\
+            Key reason to drop tool                            & Share \\
             \hline
-            1  & Low performance / high runtime overhead & 29\% \\
-            2  & Does not support the platforms I am targeting & 25\% \\
-            3  & Steep learning curve & 24\% \\
-            4  & Restricted UI capabilities & 22\% \\
-            5  & Does not let me use my existing development skills & 22\% \\
-            6  & High costs & 22\% \\
-            7  & Slow development process & 21\% \\
-            8  & Challenges with debugging & 18\% \\
-            9  & Access to device or hardware APIs & 17\% \\
-            10 & Uncertainty of vendor future or platform roadmap & 14\% \\
+            Low performance / high runtime overhead            & 29\%  \\
+            Does not support the platforms I am targeting      & 25\%  \\
+            Steep learning curve                               & 24\%  \\
+            Restricted UI capabilities                         & 22\%  \\
+            Does not let me use my existing development skills & 22\%  \\
+            High costs                                         & 22\%  \\
+            Slow development process                           & 21\%  \\
+            Challenges with debugging                          & 18\%  \\
+            Access to device or hardware APIs                  & 17\%  \\
+            Uncertainty of vendor future or platform roadmap   & 14\%  \\
             \hline
         \end{tabular}
-        \caption{Top 10 reasons to drop a particular cross-platform tool. Respondents could enter their top 3 and only the responses for the tools that were dropped by 50+ developers are counted, which is 1109 responses \cite{VMCPT:2012}.}
+        \caption{Top 10 reasons for dropping a particular cross-platform tool. Respondents could enter their top 3 and only the responses for the tools that were dropped by 50+ developers are counted, which is 1109 responses \cite{VMCPT:2012}.}
         \label{tab:drop}
     \end{center}
 \end{table}
 
-It is clear from \tref{tab:select} and \tref{tab:drop} that the key reasons for selecting a certain tool are more or less the same for dropping a tool. Common themes are (1) Platform support, (2) skill reuse, (3) development cost, (4) productivity or development time, (5) learning curve, (6) user interface capabilities, (7) device APIs and (8) performance. Non-common themes are (9) game development suitability, (10) vendor support, (11) tooling and testing and (12) concerns about the future of the tool.
+It is clear from \tref{tab:select} and \tref{tab:drop} that the key reasons for selecting a certain tool are more or less the same for dropping a tool. Common themes are (1) Platform support, (2) skill reuse, (3) development cost, (4) productivity or development time, (5) learning curve, (6) user interface capabilities, (7) access to hardware and (8) performance. Non-common themes are (9) game development suitability, (10) vendor support, (11) tooling and testing and (12) concerns about the future of the tool.
 
-From this list, (3), (4), (5) and (9) are omitted: (3) is clearly a cost, (4) is also a cost, albeit less clearly. However, developers need to be paid and consequently, development time is a cost. Capgemini does not develop games, which rules out (9). The interviews also revealed that typically somebody specializes in a certain tool or language and subsequently trains other developers and in case somebody gets stuck, there is almost always somebody to provide the necessary support. This should improve the learning curve and therefore eliminates (5) as an issue \TODO{Is this valid argumentation? :/}. 
+From this list, (3), (4) and (9) are omitted because (3) and (4) are related to costs and (9) does not apply for Capgemini. Skill reuse (2) and learning curve (5) are merged because they are related to each other: if skills can be reused, the learning curve will be reduced and vice versa.  
 
-Gartner has also done similar research in 2011 \cite{Gartner:CPT:2011}. The report of this research is not freely available but the criteria they identified are more or less clear from the table of contents. The criteria mostly overlap with the criteria from VisionMobile but also add (13) toolset reuse and (14) code reuse and organize them in three categories: portability, native experience and development experience.
+Gartner has also done similar research in 2011 \cite{Gartner:CPT:2011}. The report adds (13) toolset reuse and (14) code reuse as additional criteria and the criteria are organized in three categories: portability, native experience and development experience.
 
-\subsubsection*{Summary of literature}
+\subsection{Evaluation criteria}
 
-\TODO{List the criteria from literature once more?}
-
-\subsection*{Summary of evaluation criteria}
-
-The identified criteria from the interviews and literature are combined into a single hierarchy of evaluation criteria. The criteria are organized in three categories, similar to the Gartner report.
-
-\TODO{I think I need to explain more why exactly these criteria are selected... After all, they are based on literature and interviews and I should point that out better...}
+The evaluation criteria, identified from the interviews and literature review, are combined into a single hierarchy, which comprises of three top-level categories.
 
 \begin{itemize}
     \item \textbf{Portability} describes the ability to reuse certain assets of a project when migrating to another platform.
     \begin{itemize}
-        \item \textbf{Toolset reuse} describes the reuse of development platforms like IDE's, operating systems, etc.
-        \item \textbf{Code reuse} expresses the amount of code that can be reused across platforms
-        \item \textbf{Platform support} describes the number of platforms that are supported by the cross-platform tool. For this criterion, only platforms other than Android and iOS are relevant as support for Android and iOS is a selection criterion.
+        \item \textbf{Toolset reuse} describes the reuse of development tools like IDE's, operating systems, etc. This criterion is extracted from Gartner \cite{Gartner:CPT:2011}.
+        \item \textbf{Code reuse} expresses the amount of code that can be reused across platforms. This criterion is also extracted from Gartner \cite{Gartner:CPT:2011}.
+        \item \textbf{Platform support} describes the number of platforms that are supported by the cross-platform tool. For this criterion, only platforms other than Android and iOS are relevant as support for Android and iOS is a selection criterion. Both literature \cite{Gartner:CPT:2011, VMCPT:2012} and interviews mention this criterion.
     \end{itemize}
-    \item \textbf{Application Experience} describes the experience of the finished product: integration with the device, user interface and performance.
+    \item \textbf{Application Experience} describes the experience of the finished product: integration with the device, user interface and performance. 
     \begin{itemize}
-        \item \textbf{Native Integration} describes the integration with native services.
+        \item \textbf{Native Integration} describes the integration with the platform.
         \begin{itemize}
-            \item \textbf{Access to hardware} describes the quality and extensiveness of device APIs. 
-            \item \textbf{Platform-specific services} describes integration with platform-specific services like for instance Passbook\footnote{Passbook is an iOS application to gather electronic tickets in one place.}.
+            \item \textbf{Access to hardware} describes the quality and extensiveness of device APIs. This criterion can be found in both literature and interviews.
+            \item \textbf{Platform-specific services} describes integration with platform-specific services like push notifications. Cross-platform tools could follow a ``least common denominator'' approach in which only common functionality is offered and flexibility is sacrificed. This criterion is coming from Gartner's report \cite{Gartner:CPT:2011}.
         \end{itemize}
-        \item \textbf{UI capabilities} describes the ability to create a rich user interface.
+        \item \textbf{UI capabilities} describes the ability to create a rich user interface. 
         \begin{itemize}
-            \item \textbf{Native Look \& Feel} describes whether native user interface elements can be used.  
-            \item \textbf{UI element capabilities} describes the capabilities of user interface elements.
+            \item \textbf{Native Look \& Feel} describes whether native user interface elements can be used. This criterion is mentioned in the interviews and in the Gartner report \cite{Gartner:CPT:2011}. 
+            \item \textbf{UI element capabilities} describes the capabilities of user interface elements. This criterion originates from literature \cite{Gartner:CPT:2011, VMCPT:2012} and interviews.
         \end{itemize}
-        \item \textbf{Performance} describes the overall performance of the application, like the snappiness of the user interface.
+        \item \textbf{Performance} describes the overall performance of the application, like the snappiness of the user interface. It is referenced in both literature \cite{Gartner:CPT:2011, VMCPT:2012} and interviews.
     \end{itemize}
     \item \textbf{Productivity} is a measure for the ease of development.
     \begin{itemize}
-        \item \textbf{Skill reuse} describes the ability to reuse existing skills.
-        \item \textbf{Tooling} describes the quality of the development environment.
-        \item \textbf{Testing} describes the quality of software testing tools.
+        \item \textbf{Skill reuse} describes the ability to reuse existing skills, which will reduce the learning curve. This criterion is found in literature \cite{Gartner:CPT:2011, VMCPT:2012} and interviews.
+        \item \textbf{Tooling} focusses on the quality of the development environment and is mentioned in literature \cite{Gartner:CPT:2011} and interviews.
+        \item \textbf{Testing} measures the quality of software testing tools and originates from the interview with the developer.
     \end{itemize}
 \end{itemize}
 
 \section{Evaluate selected alternatives}
 
-In this stage, the actual evaluation of the selected tools takes place. The evaluation is based on the AHP method, described in section \ref{sec:ahp}. Therefore, all alternatives are compared in pairs with respect to the criteria recorded in the previous stage. In order to gain the experience that is needed to formulate accurate judgements, every tool is used to create a proof of concept application, or parts thereof.
-
-The proof of concept application is described in section \ref{sec:poc}, the evaluation method is described in section \ref{sec:evaluation-method}. The actual evaluation of the tools is described in chapter \ref{chap:evaluation}.
+In this stage, the actual evaluation of the selected tools takes place. The quality of the tools is estimated from hands-on experience with each of the discussed tools. The tools are used to develop a simple proof-of-concept application which is described in Section \ref{sec:poc}. How the experience is then used to evaluate the tools is further described in Section \ref{sec:evaluation-method}. The actual evaluation is presented in Chapter \ref{chap:evaluation}.
 
 \subsection{Proof-of-Concept application}
 \label{sec:poc}
 
-The proof-of-concept application is a rather small but typical enterprise application. It is not typical in the sense that it ``looks'' like the average application. Instead, it is rather typical in the sense that is contains the most requested features. This helps to ensure that the selected tools are thoroughly tested with regard to these essential features. This section describes these features in detail. The requirements documentation is available in Appendix \ref{app:poc}.
+The proof-of-concept application is, a rather small, typical enterprise application that contains the most requested features. This helps to ensure that the selected tools are thoroughly tested with regard to these essential features. 
 
 \subsubsection{Context \& scenario}
 
-Employees of certain companies occasionally have to make costs for which they would like to be reimbursed. The process for this reimbursement typically involves keeping books, filling out forms and a lot of waiting while a superior deals with the request. Needless to say, there is a great potential for a mobile application here.
+Employees of certain companies occasionally have to make costs for which they would like to be reimbursed. The process for this reimbursement typically involves keeping books, filling out forms and a lot of waiting while a superior deals with the request. A mobile app can significantly reduce the processing time of these refunds.
 
 The application is designed to do just that. Employees can group a number of invoices into one request, provide evidence for the costs in the form of pictures, sign the document on a phone or tablet and send it to the backend. From there, the request is forwarded to a qualified person that will review the request and deal with it. 
 
-\subsubsection{Typical functional elements}
+\subsubsection{Typical enterprise application elements}
 
-The proof-of-concept application includes a number of features that are typically required in any application.
+The proof-of-concept application includes a number of features that are typically required in any business application. The requirements documentation is available in Appendix \ref{app:poc}.
 
 \begin{itemize}
-    \item \textbf{UI elements} Most applications are useless without a user interface. This application incorporates a number of frequently used UI elements.
+    \item \textbf{User interface elements} This application incorporates a number of frequently used UI elements.
     \begin{itemize}
         \item \textbf{Form elements} Virtually all input is captured with ``forms''. The form elements should support read-write and read-only mode. This application uses different types of form elements to represent different kinds of data. 
         \begin{itemize}
@@ -301,8 +267,8 @@ The proof-of-concept application includes a number of features that are typicall
     \end{itemize}
     \item \textbf{UI modes} The application must support multiple screen modes.
     \begin{itemize}
-        \item \textbf{Tablet UI} The display mode used on tablets. The layout typically consists of a narrow column on the left and a wide column on the right (also known as the master--detail interface).
-        \item \textbf{Phone UI} The display mode used on smartphones. Nearly the same layout but shows less detail master and detail views are decoupled in separate views.
+        \item \textbf{Tablet UI} Tablets can make better use of their screen real estate. Therefore, their layout often consists of a narrow column on the left and a wide column on the right (this is also known as the master-detail interface).
+        \item \textbf{Phone UI} Smartphones have smaller screens. Hence, the master and detail views are decoupled in separate views and connected through navigation.
     \end{itemize}
     \item \textbf{Serialization} In order to communicate with the backend,  data must be serialized using various formats. This application makes use of XML, JSON and plaintext.
     \item \textbf{Input validation} To make sure that the data that is entered is consistent and valid, some validation needs to be done on the device (and on the server).
@@ -311,28 +277,37 @@ The proof-of-concept application includes a number of features that are typicall
         \item \textbf{Custom validation} There might be some restrictions on some fields that are dependent on other selections in a form. For this kind of consistency checks, custom validation is essential.
     \end{itemize}
     \item \textbf{Sorting} Data-driven apps display a lot of data. It is easier for the end user if the data can be sorted in the right way. 
-    \item \textbf{Offline mode} The application should still work when the device is offline.
+    \item \textbf{Offline mode} The application should still work when the device does not have an active internet connection.
     \item \textbf{Local Storage} The application needs to be able to store some data that is either persistent or cached.
     \item \textbf{Session management} Business applications are typically bound to a user account. Hence, session management on the client side is also required.
 \end{itemize}
 
-Most of these commonly requested features can be built on top of other features but that requires extra work. A tool is more interesting if it includes this functionality out of the box. Part of the evaluation is to investigate the ability to use these functions.
+Note that in most cases, specific non-existing functionality can be implemented on top of other existing functionality. However, this requires extra work and a cross-platform tool is more interesting if it provides all the functionality readily out of the box.
 
 \subsection{Evaluation methodology}
 \label{sec:evaluation-method}
 
-The Analytic Hierarchy Process is used to evaluate the alternatives. First, a weight is assigned to every criterion. This weight is the normalized principal right eigenvector\footnote{In AHP, the length of a vector $\vec{v}$ is given by the sum of its entries, not by the Euclidian distance between $\vec{0}$ and $\vec{v}$.} of the pairwise comparison matrix containing the criteria in a single category. The weight of each criterion is multiplied by the weight of its parent. 
+For the actual evaluation, the analytic hierarchy process (AHP) \cite{Saaty:1980} (see Section \ref{sec:ahp}) is used. This method assigns weights to criteria and alternatives based on eigenvector calculations. This method is selected for multiple reasons:
+\begin{itemize}
+    \item The evaluation is entirely based on relative, pairwise comparison instead which is something that humans are good at.
+    \item It can deal with both quantitative and qualitative criteria. Most of the evaluation criteria are qualitative criteria which would have to be quantified when using scoring models. Unlike AHP, scoring models do not provide a mechanism for detecting inconsistencies when doing so.
+    \item It is unclear from literature how membership functions are defined in fuzzy MCDM.
+    \item AHP has been successfully applied multiple times \cite{Jadhav:2009, Jadhav:2011}
+\end{itemize}
 
-Second, a weight is assigned to every combination of alternatives and criteria. All alternatives are compared in pairs with respect to a single criterion and the results are combined in a pairwise comparison of which the principal right eigenvector can be calculated. Again, the weights are given by the normalized eigenvector.
-
-Last, the total weight of every alternative is calculated to obtain a ranking of the alternatives. In case of $n$ alternatives and $m$ criteria, the total weight of an alternative $A_j$ is calculated as
+The evaluation has two key ingredients: the evaluation criteria and the cross-platform tools or alternatives. The total score of each alternative is calculated in three steps. First, a weight is assigned to every criterion. Second, a weight is also assigned to every alternatives with respect to a particular criterion. In order to do so, the criteria (and alternatives) are compared in pairs. The results of these comparisons are combined in a matrix from which the weights can be calculated using. Last, these weights are combined to calculate the total score of each alternative. If there are $n$ alternatives and $m$ criteria, the total score of an alternative $A_j$ is calculated as
 \begin{gather}
     a_j = \sum_{i = 0}^{m} c_i w_i \quad j = 1, \ldots, n
 \end{gather}
-where $c_i$ is the weight of the criterion $C_i$ and $w_i$ is the weight of alternative $A_j$ with respect to criterion $C_i$. The alternative with the highest weight is ``the winner''. However, the winning alternative may have the most benefits but it could also carry the highest costs. To make sure that the costs are justified, an additional cost-benefit analysis is performed.
-
-Because this is the most important part of this thesis and to long to fit in here, the evaluation is discussed in detail in chapter \ref{chap:evaluation}.
+where $c_i$ is the weight of a criterion $C_i$ and $w_i$ is the weight an alternative $A_j$ with respect to criterion $C_i$. The total scores can then be used to rank the alternatives. The actual evaluation of the cross-platform tools is presented in Chapter \ref{chap:evaluation}. 
 
 \section{Select the most suitable alternative}
 
-The final step of the software selection process is the selection itself. The decision maker chooses the best-suited alternative based on the results from the evaluation. Since the goal of this thesis is to find the best alternative for cross-platform development, this step is discussed in the conclusion (see chapter \ref{chap:conclusion}).
+The final step of the software selection process is the selection itself. The final scores of the alternatives, obtained in the evaluation stage make up a ranking. However, having the best total score does not imply that an alternative is the most cost-effective. In the fourth stage, criteria related to costs were deliberately left out. Separating costs and benefits enables the decision maker to perform a cost-benefit analysis. This analysis might reveal that other alternatives are more cost-effective while still having acceptable benefits.
+
+
+
+
+
+
+
