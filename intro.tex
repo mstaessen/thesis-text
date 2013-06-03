@@ -8,26 +8,19 @@ The mobile industry is without a doubt one of the most vibrant industries at the
 Mobile phones have been around since the nineties but ever since the (nearly simultaneous) introduction of the iPhone 3G and the HTC Dream in 2008, smartphones are taking over from traditional cell phones or feature phones. A feature phone (sometimes also called a dumb phone) is a low-end mobile phone, providing only basic telephony and texting capabilities. Smartphones on the other hand are high-end devices that combine the functionality of mobile phones with the functionality of a portable computer. These devices have advanced computing power and often include multiple connectivity options (cellular, Wi-Fi, Bluetooth, NFC, etc.), sensors (GPS, compass, accelerometer, etc.), applications, etc. In the last five years, smartphone sales have grown tremendously. According to quarterly studies by Gartner\footnote{Gartner is an American research and advisory firm, specialized in information technology, \url{http://www.gartner.com}.} \citeGartner, smartphone sales have grown 544\% since the second quarter of 2008 (see \fref{fig:smartphone-sales}). Smartphones are becoming ubiquitous and in some regions like the United States, smartphone penetration\footnote{this is the ratio between smartphones and all mobile phones} has already reached more than 50\% \cite{Nielsen:2012}. 
 
 \begin{figure}[h]
-    \begin{center}
-        \includegraphics[width=\textwidth]{figs/smartphone_sales.pdf}
-        	\caption{
-        	    Evolution of worldwide smartphone sales by operating system (lines) and smartphone penetration (bars). Source: Gartner \citeGartner
-        	}
-        	\label{fig:smartphone-sales}
-    \end{center}
+    \centering
+    \includegraphics[width=\textwidth]{figs/smartphone_sales.pdf}
+    	\caption{Evolution of worldwide smartphone sales by operating system (lines) and smartphone penetration (bars). Source: Gartner \citeGartner}
+    	\label{fig:smartphone-sales}
 \end{figure}
 
 Each of these smartphones comes with a mobile operating system which allows owners to run third-party software, typically called applications or apps for short, on their device. These application play an important role as they drive the network effects associated with a certain platform. Applications create additional value for a platform, which attracts new users. Whenever a platform attracts more users, it becomes even more valuable. This vicious circle is called a network effect. Network effects make it hard for new platforms to gain traction which is visible in \fref{fig:smartphone-sales} and \fref{fig:smartphone-share}. Android and iOS are currently dominant (and continue growing) while other platforms are either in decline (like Symbian and Blackberry, formerly RIM) or have a hard time getting traction (like Windows Phone, the successor of Windows Mobile, which already existed before Android and iOS).
 
 \begin{figure}[h]
-    \begin{center}
-        \includegraphics[width=\textwidth]{figs/smartphone_share.pdf}
-        \caption{
-            Evolution of worldwide smartphone market share by operating system.\newline 
-            Source: Gartner \citeGartner
-        	}
-        \label{fig:smartphone-share}
-    \end{center}
+    \centering
+    \includegraphics[width=\textwidth]{figs/smartphone_share.pdf}
+    \caption{Evolution of worldwide smartphone market share by operating system.\newline Source: Gartner \citeGartner}
+    \label{fig:smartphone-share}
 \end{figure}
 
 However, there is no single major platform. In addition, the IDC\footnote{International Data Corporation is another American research, analysis and advisory firm, specializing in information technology, telecommunications and consumer technology, \url{http://www.idc.com}.} predicts that Windows Phone will gain a significant market share by 2016 and that 90\% of the worldwide smartphone market will then be covered by Android, iOS and Windows Phone \cite{IDC:phone}. Hence, it is reasonable to assume that there will always be more than one major platform.
@@ -36,15 +29,13 @@ The second type of mobile devices are tablet computers or tablets. In their curr
 
 As with smartphones, tablets gained a lot of popularity since the launch of the iPad and Android tablets. According to other studies by both Gartner \citep{Gartner:11tab,Gartner:12tab} and the IDC \citep{IDC:tablet}, tablets will continue to gain popularity and sales will be mainly driven by iPads and Android tablets (see \fref{fig:tablet}). Even though these studies disagree on which operating system will be used in most devices, they both predict there will be three major platforms: iOS, Android and Windows. 
 
-\begin{figure}[h!]
-    \begin{center}
-        \TODO{Merge graphs into one image, this is UGLY!}
-        \includegraphics[width=0.49\textwidth]{figs/tablet_sales.pdf}
-        \includegraphics[width=0.49\textwidth]{figs/tablet_share.pdf}
-        \caption{Prediction of worldwide tablet sales and market share.\newline Source: Gartner \citeGartnerTab
-        }
-        \label{fig:tablet}
-    \end{center}
+\begin{figure}[h]
+    \centering
+    \TODO{Merge graphs into one image, this is UGLY!}
+    \includegraphics[width=0.49\textwidth]{figs/tablet_sales.pdf}
+    \includegraphics[width=0.49\textwidth]{figs/tablet_share.pdf}
+    \caption{Prediction of worldwide tablet sales and market share.\newline Source: Gartner \citeGartnerTab}
+    \label{fig:tablet}
 \end{figure}
 
 \section{The problem of fragmentation}
@@ -58,11 +49,10 @@ The nature of a platform strongly influences the fragmentation issues within sai
 Mobile device manufacturers are eager to modify the Android operating system to differentiate their product from their competitors. As such, they create their own Android flavour, i.e. a distribution of Android with a custom user interface (like HTC Sense, Samsung TouchWiz, etc.), custom software, additional market places, etc. However, reapplying these modifications for every new release of Android is cumbersome and costly which is why device manufacturers do not often provide updates for their devices. This has led to the notorious Android runtime fragmentation, which is depicted in \fref{fig:android_runtimes}. The adoption rate for new versions is low and is caused by the nature of Android. Developers have to support multiple versions, which is tedious. 
 
 \begin{figure}[h]
-    \begin{center}
-        \includegraphics[width=\textwidth]{figs/android_runtimes.pdf}
-        \caption{Historical Android runtime fragmentation. The data for this graph was aggregated from \cite{Android:Versions} using the Internet Archive (\url{http://archive.org}).}
-        \label{fig:android_runtimes}
-    \end{center}
+    \centering
+    \includegraphics[width=\textwidth]{figs/android_runtimes.pdf}
+    \caption{Historical Android runtime fragmentation. The data for this graph was aggregated from \cite{Android:Versions} using the Internet Archive (\url{http://archive.org}).}
+    \label{fig:android_runtimes}
 \end{figure}
 
 Unlike Google, Apple does not publicize runtime statistics but developers \cite{Smith:2013} and online advertisers \cite{Chitika:2013} can confirm fast adoption rates for iOS. On iOS, developers can make use of new functionality much faster. However, as Apple starts to drop support for some of its devices that are still in use (like for instance the original iPad and the iPod third generation), it introduces runtime fragmentation. Because of this, iOS developers will have to support the latest two versions of iOS.
@@ -87,4 +77,4 @@ Cross-Platform Tools try to solve three major problems \cite{VMCPT:2012}:
 
 \section{Goals}
 
-It is clear that there is a large demand for cross-platform solutions and that there are a lot of benefits associated with the use of cross-platform tools. Therefore, this thesis will try to identify a suitable cross-platform tool for mobile application development. This is a two-step process. First, a methodology will be defined for evaluating and selecting cross-platform tools. Second, this methodology will be used to evaluate two cross-platform tools (Apache Cordova and Motorola Rhodes) and the native SDK's in a business environment, provided by Capgemini\footnote{Capgemini is a multinational IT consulting firm, \url{http://www.capgemini.com}.}. From this evaluation, the best-suited alternative will be selected. 
+It is clear that there is a large demand for cross-platform solutions and that there are a lot of benefits associated with the use of cross-platform tools. Therefore, this thesis will try to identify a suitable cross-platform tool for mobile application development. This is a two-step process. First, a methodology will be defined for evaluating and selecting cross-platform tools. Second, this methodology will be used to evaluate two cross-platform tools (Apache Cordova and Motorola Rhodes) and the native SDK's in a business environment, provided by Capgemini\footnote{Capgemini is a multinational IT consulting company, \url{http://www.capgemini.com}.}. From this evaluation, the best-suited alternative will be selected. 
