@@ -3,40 +3,88 @@
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
-    var margin = {top: 20, right: 20, bottom: 30 + 20, left: 60 + 20};
-	var totalWidth = 480;
-	var totalHeight = 400;
-    var width = totalWidth - margin.left - margin.right;
-    var height = totalHeight - margin.top - margin.bottom;
+    var graphWidth = 480;
+    var graphHeight = 370;
+    var legendHeight = 30;
 
-    var x = d3.time.scale().range([0, width]);
-    var y = d3.scale.linear().rangeRound([height, 0]);
+    var totalWidth = 2 * graphWidth;
+    var totalHeight = graphHeight + legendHeight;
+
+    var sales = {
+        margin: {}
+    }
+    sales.margin.left   = 70;
+    sales.margin.right  = 20 + graphWidth;
+    sales.margin.top    = 20;
+    sales.margin.bottom = legendHeight + 20;
+    sales.width         = totalWidth - sales.margin.left - sales.margin.right;
+    sales.height        = totalHeight - sales.margin.top - sales.margin.bottom;
+
+    var shares = {
+        margin: {}
+    }
+    shares.margin.left   = graphWidth + 50;
+    shares.margin.right  = 20;
+    shares.margin.top    = 20;
+    shares.margin.bottom = legendHeight + 20;
+    shares.width         = totalWidth - shares.margin.left - shares.margin.right;
+    shares.height        = totalHeight - shares.margin.top - shares.margin.bottom;
+
+    var legend = {
+        margin: {}
+    };
+    legend.maxColumns    = 5;
+    legend.margin.left   = 20;
+    legend.margin.right  = 20
+    legend.margin.top    = graphHeight + 5;
+    legend.margin.bottom = 5;
+    legend.width         = totalWidth - legend.margin.left - legend.margin.right;
+    legend.height        = totalHeight - legend.margin.top - legend.margin.bottom;
+
+
+    sales.x     = d3.time.scale().range([0, sales.width]);
+    sales.y     = d3.scale.linear().rangeRound([sales.height, 0]);
+    sales.xAxis = d3.svg.axis().scale(sales.x).orient("bottom");
+    sales.yAxis = d3.svg.axis().scale(sales.y).orient("left");
+
+    shares.x     = d3.scale.ordinal().rangeRoundBands([0, shares.width], .5);
+    shares.y     = d3.scale.linear().rangeRound([shares.height, 0]);
+    shares.xAxis = d3.svg.axis().scale(shares.x).orient("bottom");
+    shares.yAxis = d3.svg.axis().scale(shares.y).orient("left").tickFormat(d3.format(".0%"));
+
     var color = d3.scale.category20();
     var bar = d3.scale.ordinal().range(["#999"]);
-
-    var xAxis = d3.svg.axis().scale(x).orient("bottom");
-    var yAxis = d3.svg.axis().scale(y).orient("left");
-
     var line = d3.svg.line()
             .interpolate("basis")
-            .x(function(d) { return x(d.year); })
-            .y(function(d) { return y(d.sale); });
+            .x(function(d) { return sales.x(d.year); })
+            .y(function(d) { return sales.y(d.sale); });
 
     var svg = d3.select("body").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            .attr("width", totalWidth)
+            .attr("height", totalHeight);
 
     d3.csv("tablet_sales.csv", function(error, data) {
-        var platforms = d3.keys(data[0]).filter(function(key) {
-            return key !== "Year";
-        });
-        data.forEach(function (d) { d.year = new Date(d.Year, 0, 1, 0, 0, 0, 0); });
+        var salesGroup = svg.append("g")
+                .attr("transform", "translate(" + sales.margin.left + "," + sales.margin.top + ")")
+                .attr("class", "sales");
+        var sharesGroup = svg.append("g")
+                .attr("transform", "translate(" + shares.margin.left + "," + shares.margin.top + ")")
+                .attr("class", "shares");
+        var legendGroup = svg.append("g")
+                .attr("transform", "translate(" + legend.margin.left + "," + legend.margin.top + ")")
+                .attr("class", "legend");
 
+        var platforms = d3.keys(data[0]).filter(function(key) { return key !== "Year"; });
         color.domain(platforms);
 
-        var sales = color.domain().map(function(name) {
+        data.forEach(function (d) {
+            var y0 = 0;
+            d.ages = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
+            d.ages.forEach(function(d) { d.y0 /= y0; d.y1 /= y0; });
+            d.year = new Date(d.Year, 0, 1, 0, 0, 0, 0);
+        });
+
+        var salesData = color.domain().map(function(name) {
             return {
                 name: name,
                 values: data.map(function(d) {
@@ -45,59 +93,95 @@
             };
         });
 
-        x.domain(d3.extent(data, function(d) { return d.year; })).nice();
-        y.domain([
-            d3.min(sales, function(c) { return d3.min(c.values, function(v) { return v.sale; }); }),
-            d3.max(sales, function(c) { return d3.max(c.values, function(v) { return v.sale; }); })
+        // Sales Graph
+        sales.x.domain(d3.extent(data, function(d) { return d.year; })).nice();
+        sales.y.domain([
+            d3.min(salesData, function(c) { return d3.min(c.values, function(v) { return v.sale; }); }),
+            d3.max(salesData, function(c) { return d3.max(c.values, function(v) { return v.sale; }); })
         ]).nice();
 
-        svg.append("g")
+        // x-axis
+        salesGroup.append("g")
             .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
+            .attr("transform", "translate(0," + sales.height + ")")
+            .call(sales.xAxis);
 
-        svg.append("g")
+        // y-axis
+        salesGroup.append("g")
             .attr("class", "y axis")
-            .call(yAxis)
+            .call(sales.yAxis)
             .append("text")
             .attr("transform", "rotate(-90)")
-            .attr("y", -margin.left)
-            .attr("x", -height / 2)
-            .attr("dy", "1em")
-            .style("text-anchor", "middle")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
             .text("Sales (thousand units)");
-
-        var sale = svg.selectAll(".sale")
-            .data(sales)
-            .enter().append("g")
-            .attr("class", "sale");
-
-        sale.append("path")
+        // graph
+        salesGroup.append("g")
+            .attr("class", "graph")
+            .selectAll(".sale")
+            .data(salesData)
+            .enter()
+            .append("path")
+            .attr("class", "sale")
             .attr("d", function(d) { return line(d.values); })
             .style("stroke", function(d) { return color(d.name); });
 
-        var labelsPerRow = 5;
-        var legend = svg.selectAll(".legend")
+        // Shares Graph
+        shares.x.domain(data.map(function(d) { return d.Year; }));
+        sharesGroup
+                .append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + shares.height + ")")
+                .call(shares.xAxis);
+        sharesGroup
+                .append("g")
+                .attr("class", "y axis")
+                .call(shares.yAxis);
+        sharesGroup
+                .append("g")
+                .attr("class", "graph")
+                .selectAll(".quarter")
+                .data(data)
+                .enter()
+                .append("g")
+                .attr("class", "quarter")
+                .attr("transform", function(d) { return "translate(" + shares.x(d.Year) + ",0)"; })
+                .selectAll("rect")
+                .data(function(d) { return d.ages; })
+                .enter().append("rect")
+                .attr("width", shares.x.rangeBand())
+                .attr("y", function(d) { return shares.y(d.y1); })
+                .attr("height", function(d) { return shares.y(d.y0) - shares.y(d.y1); })
+                .style("fill", function(d) { return color(d.name); });
+
+
+        var columns = Math.min(legend.maxColumns, platforms.length);
+        var rows = Math.ceil(platforms.length / columns);
+        var labelHeight = legend.height / rows;
+        var labelWidth = legend.width / columns;
+        var label = legendGroup.selectAll(".label")
             .data(platforms.slice())
-            .enter().append("g")
-            .attr("class", "legend")
+            .enter()
+            .append("g")
+            .attr("class", "label")
             .attr("transform", function(d, i) {
-                var x = (i % labelsPerRow) * (totalWidth / labelsPerRow) - margin.left;
-                var y = Math.floor(i / labelsPerRow) * 20;
+                var x = (i % columns) * (legend.width / columns);
+                var y = Math.floor(i / columns) * labelHeight;
                 return "translate(" + x + ", " + y + ")";
             });
-
-        legend.append("rect")
+        label
+            .append("rect")
             .attr("x", 1)
-            .attr("y", margin.top + height + 6)
-            .attr("width", totalWidth / labelsPerRow - 2)
-            .attr("height", 18)
+            .attr("y", 1)
+            .attr("width", labelWidth - 2)
+            .attr("height", labelHeight - 2)
             .style("fill", color);
-
-        legend.append("text")
-            .attr("x", totalWidth / labelsPerRow / 2)
-            .attr("y", margin.top + height + 6 + 9)
-            .attr("dy", ".4em")
+        label
+            .append("text")
+            .attr("x", labelWidth / 2)
+            .attr("y", labelHeight / 2)
+            .attr("dy", ".35em")
             .style("text-anchor", "middle")
             .text(function(d) {
                 return d;
@@ -108,7 +192,7 @@
             .style("fill", "none")
             .style("stroke", "#000")
             .style("shape-rendering", "crispEdges");
-        svg.selectAll(".sale path")
+        svg.selectAll("path.sale")
             .style("fill", "none")
             .style("stroke-width", "2pt");
     });

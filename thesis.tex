@@ -2,7 +2,7 @@
 \setup{
 	title={A comparative study of cross-platform tools for mobile application development},
   	author={Michiel~Staessen},
-  	assessor={ir.\ Gonzalo~Parra \and prof.\,dr.\ Danny~Hughes},
+  	assessor={ir.\ Gonzalo~Parra \and prof.\,dr.\,ir.\ Danny~Hughes},
   	promotor={prof.\,dr.\,ir.\ Erik~Duval},
   	assistant={ir.\ Gonzalo~Parra}
 }
@@ -134,11 +134,19 @@
 \appendix
 
 \chapter{Scientific Paper}
-%\includepdf{../thesis-paper/paper.pdf}
+\includepdf[pages=-]{../thesis-paper/paper.pdf}
+
 \chapter{Poster}
 %\includepdf{../thesis-poster/poster.pdf}
+
 \include{appendix-tools}
-\include{appendix-poc}
+
+\chapter{Requirements documentation of the proof-of-concept application}
+\label{app:poc}
+\includepdf[pages=-,fitpaper=true]{app/expense_app_mockups.pdf}
+
+\include{appendix-questionnaire}
+
 \include{appendix-source}
 
 

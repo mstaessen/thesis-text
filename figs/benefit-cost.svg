@@ -9,37 +9,33 @@
 			<line fill="none" stroke="#000000" x1="-0.158" y1="-4.221" x2="-0.158" y2="1.779"/>
 			<text transform="matrix(1 0 0 1 -11.7209 16.1394)" font-family="'Helvetica'" font-size="16">0%</text>
 		</g>
-		<g transform="translate(55,0)">
-			<line fill="none" stroke="#000000" x1="-0.158" y1="-4.221" x2="-0.158" y2="1.779"/>
-			<text transform="matrix(1 0 0 1 -16.1702 16.1394)" font-family="'Helvetica'" font-size="16">10%</text>
+		<g transform="translate(62.857142857142854,0)">
+			<line fill="none" stroke="#000000" x1="-0.159" y1="-4.221" x2="-0.159" y2="1.779"/>
+			<text transform="matrix(1 0 0 1 -16.1704 16.1394)" font-family="'Helvetica'" font-size="16">10%</text>
 		</g>
-		<g transform="translate(110,0)">
+		<g transform="translate(125.71428571428571,0)">
 			<line fill="none" stroke="#000000" x1="-0.158" y1="-4.221" x2="-0.158" y2="1.779"/>
-			<text transform="matrix(1 0 0 1 -16.1702 16.1394)" font-family="'Helvetica'" font-size="16">20%</text>
+			<text transform="matrix(1 0 0 1 -16.1701 16.1394)" font-family="'Helvetica'" font-size="16">20%</text>
 		</g>
-		<g transform="translate(165,0)">
+		<g transform="translate(188.57142857142853,0)">
 			<line fill="none" stroke="#000000" x1="-0.158" y1="-4.221" x2="-0.158" y2="1.779"/>
-			<text transform="matrix(1 0 0 1 -16.1702 16.1394)" font-family="'Helvetica'" font-size="16">30%</text>
+			<text transform="matrix(1 0 0 1 -16.1703 16.1394)" font-family="'Helvetica'" font-size="16">30%</text>
 		</g>
-		<g transform="translate(220,0)">
+		<g transform="translate(251.42857142857142,0)">
 			<line fill="none" stroke="#000000" x1="-0.158" y1="-4.221" x2="-0.158" y2="1.779"/>
-			<text transform="matrix(1 0 0 1 -16.1702 16.1394)" font-family="'Helvetica'" font-size="16">40%</text>
+			<text transform="matrix(1 0 0 1 -16.1705 16.1394)" font-family="'Helvetica'" font-size="16">40%</text>
 		</g>
-		<g transform="translate(275,0)">
+		<g transform="translate(314.2857142857142,0)">
+			<line fill="none" stroke="#000000" x1="-0.159" y1="-4.221" x2="-0.159" y2="1.779"/>
+			<text transform="matrix(1 0 0 1 -16.1702 16.1394)" font-family="'Helvetica'" font-size="16">50%</text>
+		</g>
+		<g transform="translate(377.14285714285705,0)">
 			<line fill="none" stroke="#000000" x1="-0.158" y1="-4.221" x2="-0.158" y2="1.779"/>
-			<text transform="matrix(1 0 0 1 -16.1697 16.1394)" font-family="'Helvetica'" font-size="16">50%</text>
+			<text transform="matrix(1 0 0 1 -16.1699 16.1394)" font-family="'Helvetica'" font-size="16">60%</text>
 		</g>
-		<g transform="translate(330,0)">
-			<line fill="none" stroke="#000000" x1="-0.158" y1="-4.221" x2="-0.158" y2="1.779"/>
-			<text transform="matrix(1 0 0 1 -16.1697 16.1394)" font-family="'Helvetica'" font-size="16">60%</text>
-		</g>
-		<g transform="translate(385,0)">
+		<g transform="translate(439.9999999999999,0)">
 			<line fill="none" stroke="#000000" x1="-0.158" y1="-4.221" x2="-0.158" y2="1.779"/>
 			<text transform="matrix(1 0 0 1 -16.1697 16.1394)" font-family="'Helvetica'" font-size="16">70%</text>
-		</g>
-		<g transform="translate(440,0)">
-			<line fill="none" stroke="#000000" x1="-0.158" y1="-4.221" x2="-0.158" y2="1.779"/>
-			<text transform="matrix(1 0 0 1 -16.1697 16.1394)" font-family="'Helvetica'" font-size="16">80%</text>
 		</g>
 		<path fill="none" stroke="#000000" d="M-0.158,1.779v-6h440v6"/>
 		<text transform="matrix(1 0 0 1 296.0686 -10.2209)" font-family="'Helvetica'" font-size="16">Benefit (AHP Score)</text>
@@ -104,17 +100,17 @@
 		<path fill="none" stroke="#000000" d="M-6.158-4.22h6v350h-6"/>
 		<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 17.2014 179.865)" font-family="'Helvetica'" font-size="16">Cost (development hours)</text>
 	</g>
-	<g transform="translate(334.4,40.38461538461536)">
-		<circle fill="#1F77B4" cx="-0.159" cy="-4.22" r="50"/>
-		<text transform="matrix(1 0 0 1 -43.2914 1.3798)" font-family="'Helvetica'" font-size="16">Android/iOS</text>
+	<g transform="translate(363.94285714285706,40.38461538461536)">
+		<circle fill="#1F77B4" cx="-0.158" cy="-4.22" r="50"/>
+		<text transform="matrix(1 0 0 1 -43.2913 1.3798)" font-family="'Helvetica'" font-size="16">Android/iOS</text>
 	</g>
-	<g transform="translate(148.72,188.46153846153845)">
+	<g transform="translate(176.06285714285713,188.46153846153845)">
 		<circle fill="#FF7F0E" cx="-0.158" cy="-4.22" r="50"/>
-		<text transform="matrix(1 0 0 1 -30.3965 1.38)" font-family="'Helvetica'" font-size="16">Cordova</text>
+		<text transform="matrix(1 0 0 1 -30.3966 1.38)" font-family="'Helvetica'" font-size="16">Cordova</text>
 	</g>
-	<g transform="translate(66.82499999999999,161.53846153846152)">
+	<g transform="translate(88.50285714285714,161.53846153846152)">
 		<circle fill="#2CA02C" cx="-0.158" cy="-4.22" r="50"/>
-		<text transform="matrix(1 0 0 1 -27.7325 1.3793)" font-family="'Helvetica'" font-size="16">Rhodes</text>
+		<text transform="matrix(1 0 0 1 -27.7326 1.3793)" font-family="'Helvetica'" font-size="16">Rhodes</text>
 	</g>
 </g>
 </svg>
