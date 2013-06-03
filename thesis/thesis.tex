@@ -40,7 +40,7 @@
 % This can be commented out for printed versions.
 \usepackage[pdfusetitle,colorlinks,plainpages=false]{hyperref}
 \usepackage[backend=biber,style=ieee,natbib=true]{biblatex}
-\addbibresource{Thesis.bib}
+\addbibresource{references.bib}
 \usepackage{csquotes}
 \usepackage{url}
 \usepackage{amsmath}
@@ -134,16 +134,16 @@
 \appendix
 
 \chapter{Scientific Paper}
-\includepdf[pages=-]{../thesis-paper/paper.pdf}
+\includepdf[pages=-]{../paper/paper.pdf}
 
 \chapter{Poster}
-%\includepdf{../thesis-poster/poster.pdf}
+\includepdf{../poster/poster.pdf}
 
 \include{appendix-tools}
 
 \chapter{Requirements documentation of the proof-of-concept application}
 \label{app:poc}
-\includepdf[pages=-,fitpaper=true]{app/expense_app_mockups.pdf}
+\includepdf[pages=-,fitpaper=true]{../resources/expense_app_mockups.pdf}
 
 \include{appendix-questionnaire}
 

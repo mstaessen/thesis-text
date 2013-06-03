@@ -1,6 +1,3 @@
-.texpadtmp/*
+thesis/.texpadtmp/*
 .project
-*.bib
-!Thesis.bib
-
-figs/.idea/*
+.idea/*
