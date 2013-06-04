@@ -1,4 +1,4 @@
-\documentclass[master=cws,masteroption=se,english,oneside,a4paper]{kulemt}
+\documentclass[master=cws,masteroption=se,english,a4paper]{kulemt}
 \setup{
 	title={A comparative study of cross-platform tools for mobile application development},
   	author={Michiel~Staessen},
@@ -13,7 +13,7 @@
 	translatedtitle="Een vergelijkende studie van cross-platform tools voor het ontwikkelen van mobiele applicaties",
 	udc=681.3,
 	shortabstract={
-		Developing mobile applications (or apps) that support multiple platforms is an expensive and time consuming process. Therefore, many companies are seeking refuge in cross-platform tools (CPT's) for the development of their apps. In cooperation with CapGemini, this thesis presents a comparison of two such cross-platform tools: Apache Cordova and Motorola Rhodes. Both tools are compared with each other and with native development. The comparison is based on a proof-of-concept application which should work on both smartphones and tablets with respect to both iOS and Android.
+		Developing mobile applications (or apps for short) that support multiple platforms is an expensive and time consuming process. Therefore, many companies are seeking refuge in cross-platform tools (CPT's) for the development of their apps. In cooperation with CapGemini, this thesis presents a comparison of two such cross-platform tools: Apache Cordova or Adobe PhoneGap and Motorola Rhodes. Both tools are compared with each other and with the native development toolkits. The comparison is based on a proof-of-concept application which should work on both smartphones and tablets with respect to both iOS and Android.
 	}
 }
 
@@ -59,8 +59,6 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.3ex plus 0.3ex minus 0.3ex}
 
-\newcommand{\TODO}[1]{\textcolor{red}{TODO: #1}}
-
 \newcommand{\citeGartner}{\cite{Gartner:08Q2, Gartner:08Q3, Gartner:08Q4, Gartner:10Q1, Gartner:10Q2, Gartner:10Q3, Gartner:10Q4, Gartner:11Q1, Gartner:11Q2, Gartner:11Q3, Gartner:11Q4, Gartner:12Q1, Gartner:12Q2, Gartner:12Q3, Gartner:12Q4, Gartner:13Q1}}
 \newcommand{\citeGartnerTab}{\cite{Gartner:11tab,Gartner:12tab}}
 \renewcommand{\vec}[1]{\mathbf{#1}}
@@ -70,15 +68,24 @@
 
 \begin{document}
 
-\chapter*{Voorwoord}
-
-
+\begin{preface}
+    Wow, it's done. It really is... I did it! But I could not have done it without the help and support of some people that I would like to thank explicitly.
+    
+    First and foremost, I would like to thank my promotor, professor \mbox{Erik~Duval}, for giving me the opportunity to write this dissertation. I would also like to thank my mentor, \mbox{Gonzalo Parra}, with whom I got a meeting almost every week to discuss the progress of this thesis. Thank you for your guidance and support, it was really helpful. Our contacts at Capgemini, \mbox{Jan~Verhulst} and \mbox{Jannik~Persoons}, also deserve a lot of gratitude for providing the subject and context. To my thesis colleagues, \mbox{Bert~Outtier}, \mbox{Sander~Van~Loock}, \mbox{Tim~Ameye}, and other people in the department, I would like to say thank you for sharing and giving feedback.
+    
+    A big thanks goes out to my family as well, and my parents in particular. Thank you for your support, for having faith, and for sponsoring my education. It really means a lot to me. Thank you, brother and sister, for showing interest in my work and thank you, Freek, for your feedback after reading my drafts and for borrowing me your old iPhone.
+    
+    And last --- but definitely not least --- I would also like to thank my loving girlfriend, \mbox{Charlotte~D'Haenens}. It has been a tough year for both of us but you were always there to support me, to read my drafts, to cook delicious meals even when it was my turn, \ldots\  You are truly amazing, and I love you for that!
+\end{preface}
 
 \tableofcontents*
 
 \begin{abstract}
-    The \texttt{abstract} environment contains a more extensive overview of
-    the work. But it should be limited to one page.
+    Developing mobile applications (or apps) that support multiple platforms is an expensive and time consuming process. Therefore, many companies are seeking refuge in cross-platform tools (CPT's) for the development of their apps. 
+    
+    This thesis presents a methodology for evaluating and selecting cross-platform tools (CPT's) in a business environment and also presents the results after applying this methodology to the native development toolkits and two cross-platform tools: Apache Cordova or Adobe PhoneGap and Motorola Rhodes. 
+    
+    The methodology is based on a generic software selection framework and comprises of six steps. The evaluation is partly based on documentation and partly based on the implementation of a proof-of-concept application in a business context. The tools are evaluated using the analytic hierarchy process. The relative importance of the evaluation criteria are defined by Capgemini employees (a developer and an architect). The results of the evaluation reveal that, at this moment, Apache Cordova and the native development toolkits have a similar ratio of costs and benefits. However, if a third platform has to be supported some time, Cordova applications will have a better benefit-cost ratio, provided that some benefits of native development can be dropped. 
 \end{abstract}
 
 % A list of figures and tables is optional
@@ -88,30 +95,33 @@
 % If you only have a few figures and tables you can use the following instead
 %\listoffiguresandtables
 
-% The list of symbols is also optional.
-% This list must be created manually, e.g., as follows:
-%\chapter{List of Abbreviations and Symbols}
-%\section*{Abbreviations}
-%\begin{flushleft}
-%  \renewcommand{\arraystretch}{1.1}
-%  \begin{tabularx}{\textwidth}{@{}p{12mm}X@{}}
-%    PoC   & Proof of Concept \\
-%    CPT   & Cross-Platform Tool \\
-%    PSNR  & Peak Signal-to-Noise ratio \\
-%  \end{tabularx}
-%\end{flushleft}
-%\section*{Symbols}
-%\begin{flushleft}
-%  \renewcommand{\arraystretch}{1.1}
-%  \begin{tabularx}{\textwidth}{@{}p{12mm}X@{}}
-%    42    & ``The Answer to the Ultimate Question of Life, the Universe,
-%            and Everything'' according to \cite{h2g2} \\
-%    $c$   & Speed of light \\
-%    $E$   & Energy \\
-%    $m$   & Mass \\
-%    $\pi$ & The number pi \\
-%  \end{tabularx}
-%\end{flushleft}
+\chapter{List of Abbreviations}
+\begin{flushleft}
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabularx}{\textwidth}{@{}p{12mm}X@{}}
+    ADB & Android Debug Bridge \\
+    AHP & Analytic Hierarchy Process \\
+    AJAX & Asynchronous JavaScript And XML \\
+    API & Application Programming Interface \\
+    ASF & Apache Software Foundation \\
+    B2B & Business-to-Business \\
+    B2C & Business-to-Consumer \\
+    CPT   & Cross-Platform Tool \\
+    CRM & Customer Relationship Management \\
+    CSS & Cascading StyleSheets \\
+    DDoS & Distributed Denial of Service \\
+    DOM & Document Object Model \\
+    ERP & Enterprise Resource Planning \\
+    GPS & Global Positioning System \\
+    HTML & HyperText Markup Language \\
+    IDE & Integrated Development Environment \\
+    L\&F & Look \& Feel \\
+    MCDM & Multi-Criteria Decision Making \\
+    MVC & Model-View-Controller \\
+    NFC & Near Field Communication \\
+    SDK & Software Development Kit
+  \end{tabularx}
+\end{flushleft}
 
 % Now comes the main text
 \mainmatter

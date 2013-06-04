@@ -1,0 +1,23 @@
+key,value,criterion
+Developer,  0.0065, Platform support
+Architect,  0.0096, Platform support
+Developer,  0.0327, Toolset reuse
+Architect,  0.0654, Toolset reuse
+Developer,  0.0327, Code reuse
+Architect,  0.0297, Code reuse
+Developer,  0.0772, Access to hardware
+Architect,  0.0733, Access to hardware
+Developer,  0.0155, Platform-specific services
+Architect,  0.2198, Platform-specific services
+Developer,  0.0155, Native Look & Feel
+Architect,  0.1174, Native Look & Feel
+Developer,  0.0772, UI el. capabilities
+Architect,  0.0235, UI el. capabilities
+Developer,  0.4636, Performance
+Architect,  0.2031, Performance
+Developer,  0.1196, Skill reuse
+Architect,  0.0522, Skill reuse
+Developer,  0.1196, Tooling
+Architect,  0.1810, Tooling
+Developer,  0.0398, Testing
+Architect,  0.0251, Testing

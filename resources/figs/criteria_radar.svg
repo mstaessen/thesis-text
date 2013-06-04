@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="500px" height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+<g transform="translate(250,250)">
+	<g transform="rotate(0)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-3.806" y1="-1.298" x2="-9.806" y2="-1.298"/>
+			<text transform="matrix(1 0 0 1 -33.0408 3.1824)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-3.806" y1="-1.298" x2="-9.806" y2="-1.298"/>
+			<text transform="matrix(1 0 0 1 -40.8269 3.1824)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-3.806" y1="-1.298" x2="-9.806" y2="-1.298"/>
+			<text transform="matrix(1 0 0 1 -40.8269 3.1824)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-3.806" y1="-1.298" x2="-9.806" y2="-1.298"/>
+			<text transform="matrix(1 0 0 1 -40.8269 3.1824)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-3.806" y1="-1.298" x2="-9.806" y2="-1.298"/>
+			<text transform="matrix(1 0 0 1 -40.8269 3.1824)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-3.806" y1="-1.298" x2="-9.806" y2="-1.298"/>
+			<text transform="matrix(1 0 0 1 -48.613 3.1824)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-9.806-241.298h6v160h-6"/>
+		<text transform="matrix(6.123234e-17 1 -1 6.123234e-17 3.1936 -241.2981)" font-family="'Helvetica'" font-size="14">Platform support</text>
+	</g>
+	<g transform="rotate(32.72727272727273)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-3.903" y1="0.966" x2="-9.904" y2="0.966"/>
+			<text transform="matrix(1 0 0 1 -33.1373 5.4462)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-3.903" y1="0.966" x2="-9.904" y2="0.966"/>
+			<text transform="matrix(1 0 0 1 -40.9239 5.4462)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-3.905" y1="0.966" x2="-9.904" y2="0.966"/>
+			<text transform="matrix(1 0 0 1 -40.9236 5.4463)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-3.904" y1="0.966" x2="-9.903" y2="0.966"/>
+			<text transform="matrix(1 0 0 1 -40.924 5.4468)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-3.904" y1="0.966" x2="-9.904" y2="0.966"/>
+			<text transform="matrix(1 0 0 1 -40.9242 5.446)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-3.904" y1="0.966" x2="-9.903" y2="0.966"/>
+			<text transform="matrix(1 0 0 1 -48.7095 5.4463)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-9.903-239.034l6,0.001l0,160l-6.001,0"/>
+		<text transform="matrix(-1.192093e-07 1 -1 -1.192093e-07 3.0962 -239.0339)" font-family="'Helvetica'" font-size="14">Toolset reuse</text>
+	</g>
+	<g transform="rotate(65.45454545454545)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-2.762" y1="2.922" x2="-8.762" y2="2.924"/>
+			<text transform="matrix(1 0 0 1 -31.9958 7.4037)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-2.762" y1="2.923" x2="-8.762" y2="2.923"/>
+			<text transform="matrix(1 0 0 1 -39.7824 7.4042)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-2.762" y1="2.924" x2="-8.762" y2="2.924"/>
+			<text transform="matrix(1 0 0 1 -39.7816 7.4033)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-2.761" y1="2.923" x2="-8.761" y2="2.923"/>
+			<text transform="matrix(1 0 0 1 -39.7826 7.4037)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-2.762" y1="2.924" x2="-8.762" y2="2.923"/>
+			<text transform="matrix(1 0 0 1 -39.7826 7.4047)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-2.761" y1="2.923" x2="-8.762" y2="2.924"/>
+			<text transform="matrix(1 0 0 1 -47.5684 7.4034)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-8.762-237.076l6.001-0.001l0,160l-6,0.002"/>
+		<text transform="matrix(5.960464e-08 1 -1 5.960464e-08 4.2378 -237.075)" font-family="'Helvetica'" font-size="14">Code reuse</text>
+	</g>
+	<g transform="rotate(98.18181818181817)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-0.743" y1="3.952" x2="-6.743" y2="3.953"/>
+			<text transform="matrix(1 0 0 1 -29.9767 8.4329)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-0.743" y1="3.953" x2="-6.743" y2="3.951"/>
+			<text transform="matrix(1 0 0 1 -37.7628 8.434)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-0.743" y1="3.951" x2="-6.743" y2="3.952"/>
+			<text transform="matrix(1 0 0 1 -37.7634 8.4326)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-0.743" y1="3.952" x2="-6.743" y2="3.952"/>
+			<text transform="matrix(1 0 0 1 -37.7632 8.433)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-0.743" y1="3.952" x2="-6.743" y2="3.953"/>
+			<text transform="matrix(1 0 0 1 -37.763 8.4334)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-0.742" y1="3.953" x2="-6.743" y2="3.953"/>
+			<text transform="matrix(1 0 0 1 -45.5493 8.4326)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-6.743-236.047l6,0l0,160l-6,0"/>
+		<text transform="matrix(2.533197e-07 1 -1 2.533197e-07 6.2564 -236.0483)" font-family="'Helvetica'" font-size="14">Access to hardware</text>
+	</g>
+	<g transform="rotate(130.9090909090909)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="1.512" y1="3.726" x2="-4.488" y2="3.727"/>
+			<text transform="matrix(1 0 0 1 -27.722 8.206)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="1.511" y1="3.726" x2="-4.489" y2="3.726"/>
+			<text transform="matrix(1 0 0 1 -35.5078 8.2078)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="1.512" y1="3.726" x2="-4.489" y2="3.726"/>
+			<text transform="matrix(1 0 0 1 -35.5078 8.2084)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="1.512" y1="3.727" x2="-4.488" y2="3.726"/>
+			<text transform="matrix(1 0 0 1 -35.5077 8.2062)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="1.513" y1="3.727" x2="-4.488" y2="3.727"/>
+			<text transform="matrix(1 0 0 1 -35.5078 8.2068)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="1.513" y1="3.727" x2="-4.487" y2="3.727"/>
+			<text transform="matrix(1 0 0 1 -43.2949 8.2071)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-4.487-236.273l6,0.001L1.512-76.274l-6,0.002"/>
+		<text transform="matrix(-2.980232e-08 1 -1 -2.980232e-08 8.5132 -236.2732)" font-family="'Helvetica'" font-size="14">Platform-specific services</text>
+	</g>
+	<g transform="rotate(163.63636363636365)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="3.286" y1="2.317" x2="-2.713" y2="2.318"/>
+			<text transform="matrix(1 0 0 1 -25.9463 6.7973)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="3.286" y1="2.317" x2="-2.713" y2="2.317"/>
+			<text transform="matrix(1 0 0 1 -33.7346 6.7971)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="3.286" y1="2.317" x2="-2.713" y2="2.317"/>
+			<text transform="matrix(1 0 0 1 -33.735 6.7977)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="3.286" y1="2.317" x2="-2.713" y2="2.318"/>
+			<text transform="matrix(1 0 0 1 -33.7329 6.7969)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="3.285" y1="2.317" x2="-2.714" y2="2.317"/>
+			<text transform="matrix(1 0 0 1 -33.7333 6.7975)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="3.287" y1="2.317" x2="-2.714" y2="2.317"/>
+			<text transform="matrix(1 0 0 1 -41.5197 6.7978)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-2.714-237.683l6.001,0l-0.001,160l-5.999,0"/>
+		<text transform="matrix(4.768372e-07 1 -1 4.768372e-07 10.2867 -237.6837)" font-family="'Helvetica'" font-size="14">Native Look &amp; Feel</text>
+	</g>
+	<g transform="rotate(196.36363636363635)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="4.018" y1="0.173" x2="-1.982" y2="0.173"/>
+			<text transform="matrix(1 0 0 1 -25.2174 4.6522)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="4.018" y1="0.172" x2="-1.983" y2="0.173"/>
+			<text transform="matrix(1 0 0 1 -33.0036 4.6511)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="4.017" y1="0.172" x2="-1.983" y2="0.173"/>
+			<text transform="matrix(1 0 0 1 -33.0032 4.6517)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="4.017" y1="0.173" x2="-1.982" y2="0.173"/>
+			<text transform="matrix(1 0 0 1 -33.0028 4.6523)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="4.018" y1="0.172" x2="-1.982" y2="0.172"/>
+			<text transform="matrix(1 0 0 1 -33.0024 4.6528)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="4.018" y1="0.172" x2="-1.982" y2="0.173"/>
+			<text transform="matrix(1 0 0 1 -40.7887 4.6517)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-1.982-239.827l6-0.001l0,160.001l-6,0"/>
+		<text transform="matrix(-4.768372e-07 1 -1 -4.768372e-07 11.0182 -239.8275)" font-family="'Helvetica'" font-size="14">UI el. capabilities</text>
+	</g>
+	<g transform="rotate(229.0909090909091)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="3.473" y1="-2.027" x2="-2.527" y2="-2.027"/>
+			<text transform="matrix(1 0 0 1 -25.7629 2.4515)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="3.473" y1="-2.027" x2="-2.527" y2="-2.026"/>
+			<text transform="matrix(1 0 0 1 -33.5488 2.4514)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="3.473" y1="-2.027" x2="-2.527" y2="-2.027"/>
+			<text transform="matrix(1 0 0 1 -33.5472 2.4533)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="3.473" y1="-2.026" x2="-2.527" y2="-2.026"/>
+			<text transform="matrix(1 0 0 1 -33.5483 2.4522)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="3.473" y1="-2.027" x2="-2.527" y2="-2.026"/>
+			<text transform="matrix(1 0 0 1 -33.5464 2.4538)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="3.473" y1="-2.026" x2="-2.526" y2="-2.027"/>
+			<text transform="matrix(1 0 0 1 -41.3326 2.454)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-2.526-242.027l5.999,0l0,160l-5.999,0"/>
+		<text transform="matrix(2.980232e-08 1 -1 2.980232e-08 10.4735 -242.0273)" font-family="'Helvetica'" font-size="14">Performance</text>
+	</g>
+	<g transform="rotate(261.8181818181818)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="1.826" y1="-3.582" x2="-4.174" y2="-3.583"/>
+			<text transform="matrix(1 0 0 1 -27.4099 0.8967)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="1.826" y1="-3.583" x2="-4.174" y2="-3.583"/>
+			<text transform="matrix(1 0 0 1 -35.1968 0.8964)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="1.827" y1="-3.582" x2="-4.174" y2="-3.583"/>
+			<text transform="matrix(1 0 0 1 -35.1935 0.8968)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="1.826" y1="-3.583" x2="-4.174" y2="-3.582"/>
+			<text transform="matrix(1 0 0 1 -35.1942 0.8972)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="1.826" y1="-3.583" x2="-4.174" y2="-3.583"/>
+			<text transform="matrix(1 0 0 1 -35.1948 0.897)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="1.826" y1="-3.583" x2="-4.174" y2="-3.583"/>
+			<text transform="matrix(1 0 0 1 -42.9817 0.8967)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-4.174-243.583l6-0.001l0,160.001l-5.999,0"/>
+		<text transform="matrix(-1.192093e-07 1 -1 -1.192093e-07 8.8258 -243.5831)" font-family="'Helvetica'" font-size="14">Skill reuse</text>
+	</g>
+	<g transform="rotate(294.54545454545456)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-0.4" y1="-4.001" x2="-6.401" y2="-4.002"/>
+			<text transform="matrix(1 0 0 1 -29.6351 0.4789)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-0.401" y1="-4.001" x2="-6.401" y2="-4.001"/>
+			<text transform="matrix(1 0 0 1 -37.4211 0.4787)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-0.401" y1="-4.001" x2="-6.401" y2="-4.001"/>
+			<text transform="matrix(1 0 0 1 -37.4214 0.4787)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-0.401" y1="-4.001" x2="-6.4" y2="-4.001"/>
+			<text transform="matrix(1 0 0 1 -37.4218 0.4787)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-0.401" y1="-4.002" x2="-6.401" y2="-4.001"/>
+			<text transform="matrix(1 0 0 1 -37.4221 0.4786)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-0.401" y1="-4.001" x2="-6.401" y2="-4.001"/>
+			<text transform="matrix(1 0 0 1 -45.2082 0.4785)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-6.401-244.001l6,0.001l0,160l-6-0.001"/>
+		<text transform="matrix(2.086163e-07 1 -1 2.086163e-07 6.5988 -244.0014)" font-family="'Helvetica'" font-size="14">Tooling</text>
+	</g>
+	<g transform="rotate(327.2727272727273)">
+		<g transform="translate(0,-80)">
+			<line fill="none" stroke="#000000" x1="-2.501" y1="-3.15" x2="-8.5" y2="-3.15"/>
+			<text transform="matrix(1 0 0 1 -31.7349 1.3309)" font-family="'Helvetica'" font-size="14">0%</text>
+		</g>
+		<g transform="translate(0,-112)">
+			<line fill="none" stroke="#000000" x1="-2.5" y1="-3.149" x2="-8.5" y2="-3.15"/>
+			<text transform="matrix(1 0 0 1 -39.521 1.3311)" font-family="'Helvetica'" font-size="14">20%</text>
+		</g>
+		<g transform="translate(0,-144)">
+			<line fill="none" stroke="#000000" x1="-2.5" y1="-3.15" x2="-8.501" y2="-3.15"/>
+			<text transform="matrix(1 0 0 1 -39.5211 1.3307)" font-family="'Helvetica'" font-size="14">40%</text>
+		</g>
+		<g transform="translate(0,-176)">
+			<line fill="none" stroke="#000000" x1="-2.501" y1="-3.15" x2="-8.5" y2="-3.149"/>
+			<text transform="matrix(1 0 0 1 -39.5212 1.3303)" font-family="'Helvetica'" font-size="14">60%</text>
+		</g>
+		<g transform="translate(0,-208)">
+			<line fill="none" stroke="#000000" x1="-2.5" y1="-3.149" x2="-8.5" y2="-3.149"/>
+			<text transform="matrix(1 0 0 1 -39.5215 1.3303)" font-family="'Helvetica'" font-size="14">80%</text>
+		</g>
+		<g transform="translate(0,-240)">
+			<line fill="none" stroke="#000000" x1="-2.5" y1="-3.149" x2="-8.5" y2="-3.15"/>
+			<text transform="matrix(1 0 0 1 -47.3077 1.3305)" font-family="'Helvetica'" font-size="14">100%</text>
+		</g>
+		<path fill="none" stroke="#000000" d="M-8.5-243.15l6,0.001l0,160l-5.999,0"/>
+		<text transform="matrix(-2.980232e-08 1 -1 -2.980232e-08 4.4994 -243.1489)" font-family="'Helvetica'" font-size="14">Testing</text>
+	</g>
+	<path fill="#1F77B4" fill-opacity="0.15" stroke="#1F77B4" stroke-width="1.5" d="M-3.806-83.378L45.102-77.4l33.381,38.522
+		l21.35,52.481L60.403,54.34L20.129,80.221l-53.434,18.944l-143.078,49.076l55.509-132.707l9.484-65.964l57.447-28.883
+		L-3.806-83.378z"/>
+	<path fill="#FF7F0E" fill-opacity="0.15" stroke="#FF7F0E" stroke-width="1.5" d="M-3.806-84.369l54.566-1.835l26.85,47.726
+		l20.986,51.904l11.215,83.726l-80.494,14.357l-57.78-28.831l-84.921,10.975l13.858-81.188l-29.737-71.057L-51.4-75.355
+		L-3.806-84.369z"/>
+	<g transform="translate(-250,-250)">
+		<rect x="181.194" y="228.702" fill="#1F77B4" width="130" height="18"/>
+		<text transform="matrix(1 0 0 1 214.2868 243.3027)" font-family="'Helvetica'" font-size="14">Developer</text>
+	</g>
+	<g transform="translate(-250,-230)">
+		<rect x="181.194" y="228.702" fill="#FF7F0E" width="130" height="18"/>
+		<text transform="matrix(1 0 0 1 218.9626 243.3027)" font-family="'Helvetica'" font-size="14">Architect</text>
+	</g>
+</g>
+</svg>

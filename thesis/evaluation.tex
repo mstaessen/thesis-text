@@ -6,7 +6,7 @@ This chapter presents the evaluation of the selected alternatives, which are the
 \section{Weighting the evaluation criteria}
 \label{sec:ev:crit}
 
-The weights for the evaluation criteria are calculated from judgements given by a developer and a mobile architect at Capgemini (the same people that gave the interviews in \ref{sec:interviews}). The judgements are collected from a questionnaire containing all necessary pairwise comparisons (see Appendix \ref{app:questionnaire}). The developer and the architect do no necessarily share the same opinions about the evaluation criteria. Therefore, this evaluation covers these two perspectives separately as they could have a different ranking of the alternatives. 
+The weights for the evaluation criteria are calculated from judgements given by a developer and a mobile architect at Capgemini (the same people that gave the interviews in \ref{sec:interviews}). The judgements are collected from a questionnaire containing all necessary pairwise comparisons (see Appendix \ref{app:questionnaire}). Because a different weight distribution could result in a different ranking of the alternatives, the evaluation covers these two perspectives separately. 
 
 The weights (elements of the priority vector) are calculated as follows. The children of every non-leaf node in the evaluation criteria tree (visualized in \fref{fig:criteriatree}), are compared in pairs. For instance, the root node has three children, resulting in three pairwise comparisons: portability vs. application experience, application experience vs. productivity, and productivity vs. portability. The relative importance of two criteria is scored using Saaty's fundamental scale \cite{Saaty:1980, Saaty:1990} (see \tref{tab:ahp-scale}). For instance, if the architect strongly favours productivity over portability, a $5$ is written in the comparison matrix for the element productivity vs. portability (see \tref{tab:l1}). From this matrix, the principal right eigenvector is calculated and normalized\footnote{In AHP, a vector is normalized by dividing its elements by their sum.}. The consistency index is calculated from the eigenvector. More information about AHP can be found in Section \ref{sec:ahp}. Finally, the actual weight of every node is calculated as the product of all nodes that make up the path from the root node to that particular node.  
 
@@ -240,11 +240,9 @@ In the subsections to follow, all alternatives are evaluated with respect to one
 
 For some criteria, there is no absolute scale available to measure that specific property. In that case, judgements based on pairwise comparison, as proposed by Saaty \cite{Saaty:1980}, are used in order to evaluate the alternatives. These judgements arise from the experience of developing the proof-of-concept application. In addition, some criteria deal with features that are not addressed in the proof-of-concept application. In that case, the evaluation is based on the information found in the documentation of the different tools. 
 
-\TODO{Make sure every section clearly mentions these things...}
-
 \subsection{Platform support}
 
-As mentioned in Section \ref{sec:selection-criteria}, support for Android and iOS is a selection criterion. Hence, this criterion only covers additional platforms, in addition to Android and iOS. To reflect the value of each platform, every alternative is awarded the additional market share it can serve. In the end, these scores are normalized (the sum of scores is equal to 1). The market share numbers are taken from research by Gartner \citeGartner (see \fref{fig:smartphone-share}).
+As mentioned in Section \ref{sec:selection-criteria}, support for Android and iOS is a selection criterion. Hence, this criterion only covers additional platforms in addition to Android and iOS. To reflect the value of each platform, every alternative is awarded the additional market share it can serve. In the end, these scores are normalized (the sum of scores is equal to 1). The market share numbers are taken from research by Gartner \citeGartner (see \fref{fig:smartphone-share}).
 
 \paragraph{Android \& iOS} Native code for Android and iOS is useless on other platforms. Hence, the combination of Android and iOS cannot contribute to reaching additional market share.
 
@@ -330,7 +328,7 @@ The native code for Android and iOS cannot be reused across platforms whereas al
 
 \subsection{Access to hardware}
 
-This criterion measures the ability to integrate with the device's hardware. The availability of device API's (sensor API's, output API's, and communication API's) of every alternative is compared side by side. An alternative can either provide full support, partial support or no support at all. If an additional plugin system is present, the alternative could provide the same levels of support through a plugin. Note that most of these API's are not used in the proof-of-concept application. Therefore, this comparison is mostly based on the documentation of the alternatives.
+This criterion measures the ability to integrate with the device's hardware. The availability of device API's (sensor API's, output API's, and communication API's) of every alternative is compared side by side. An alternative can either provide full support, partial support or no support at all. If an additional plugin system is present, the alternative could provide the same levels of support through a plugin. Most of these API's are not used in the proof-of-concept application. Therefore, this comparison is mostly based on the documentation of the alternatives. Based on this evaluation, the alternatives are judged using Saaty's scale (see \tref{tab:ahp-scale}).
 
 \paragraph{Android \& iOS} Android provides full access to the device but that does not imply that all these device features are available on a particular device. Apple's iDevices have less device features but provide full support for those that are present.
 
@@ -399,7 +397,7 @@ From \tref{tab:apis}, it is clear that all device features can be integrated wit
 
 \subsection{Integration with platform-specific services}
 
-This criterion measures the ability to integrate with platform-specific services, like push notifications. The proof-of-concept application does not require this kind of integration and thus this evaluation is based on the documentation. Because there is no absolute scale to quantify this property, the evaluation is also based on judgements.
+This criterion measures the ability to integrate with platform-specific services, like push notifications and cloud services. The proof-of-concept application does not require this kind of integration and thus this evaluation is based on the documentation. Because there is no absolute scale to quantify this property, the evaluation is also based on judgement, expressed using Saaty's scale (see \tref{tab:ahp-scale}).
 
 \paragraph{Android \& iOS} Platform-specific services are part of the native SDK's. Therefore, this kind of integration is easily implemented in native applications.
 
@@ -459,7 +457,7 @@ This criterion measures an alternative's potential to present a rich user interf
 
 \paragraph{Apache Cordova} Cordova applications are mobile web applications that are wrapped in a single webview. Hence, only HTML5 can be used to create the user interface. An application could be comprised of multiple pages or it could be comprised of a single page, in which case it is called  a single-page application. The former approach requires page reloads, which feels unnatural in a mobile app (compared to native apps) whereas the latter approach can make the hybrid app behave more like a native app. 
 
-The Cordova proof-of-concept application is implemented as a single-page application with AngularJS\footnote{\url{http://angularjs.org}}. This framework drastically improves productivity by reducing the required lines of code through declarative programming and bidirectional bindings between view and model. 
+The Cordova proof-of-concept application is implemented as a single-page application with AngularJS. This framework drastically improves productivity by reducing the required lines of code through declarative programming and bidirectional bindings between view and model. 
 
 \paragraph{Motorola Rhodes} Rhodes also relies on HTML for its user interface. In contrast to Cordova, Rhodes is actually a complete web server with an MVC framework on top. Every request is handled locally by a controller action and the result is served in a webview. Developers can still choose to create single-page applications but device integration has to be realized through AJAX\footnote{Asynchronous JavaScript and XML} calls, which requires extra work. The proof-of-concept application is implemented as a multi-page application because this is the default way to develop applications with Rhodes.
 
@@ -547,11 +545,11 @@ The judgements for this evaluation are listed in \tref{tab:performance}. The con
 
 \subsection{Skill reuse}
 
-This criterion expresses the ability to reuse skills from another field of expertise to develop mobile applications. This allows for better resource management. For this criterion, it is assumed that the organization has got experience with Java and web development (because these are the areas of expertise at Capgemini). 
+This criterion expresses the ability to reuse skills from another field of expertise to develop mobile applications. This allows for better resource management. For this criterion, it is assumed that the organization has got experience with Java and web development (because these are two areas of expertise that are present at Capgemini). 
 
 \paragraph{Android \& iOS} For organizations that already have expertise with Java development, the entry barrier for adding Android to the portfolio is rather low, since Android is based on Java. Adding iOS from that perspective is less straightforward, because Objective-C is a new programming language.
 
-\paragraph{Apache Cordova} In order to develop Cordova applications, one needs to know the web. Since the web already belongs to the organization's expertise, this skill can be reused quite easily but developers will probably have to invest in their JavaScript skills. When custom plugins are needed, the scenario of native Android and iOS holds.
+\paragraph{Apache Cordova} In order to develop Cordova applications, one needs to be familiar with web development. Since web development already belongs to the organization's expertise, this skill can be reused quite easily. When custom plugins are needed, the scenario of native Android and iOS holds.
 
 \paragraph{Motorola Rhodes} For Rhodes applications, organizations can reuse their skills for creating the user interface. However, the application logic entirely written in Ruby, which is a new programming language for the organization.
 
@@ -636,15 +634,15 @@ The judgements are summarized in \tref{tab:testing}. All alternatives have suppo
 
 \section{Global verdict}
 
-The weights of all alternatives with respect to the evaluation criteria is illustrated in \fref{fig:radar}. Now that the weights of both the criteria and alternatives are given, the total weight $a_j$ of every alternative $A_j$ is calculated as
+The weights of all alternatives with respect to the evaluation criteria are illustrated in \fref{fig:radar}. These weights are now combined with the weights of the evaluation criteria, creating a total weight $a_j$ for every alternative $A_j$:
 \begin{gather*}
     a_j = \sum_{i = 0}^{m} c_i w_i \quad j = 1, \ldots, n
 \end{gather*}
-where $c_i$ is the weight of the criterion $C_i$ and $w_i$ is the weight of alternative $A_j$ with respect to criterion $C_i$. The total weights are calculated for both the architect and developer and are listed in \tref{tab:total:architect} and \tref{tab:total:developer} respectively. 
+where $c_i$ is the weight of a criterion $C_i$ and $w_i$ is the weight of an alternative $A_j$ with respect to that criterion $C_i$. The total weights are calculated for both the architect and developer and are listed in \tref{tab:total:architect} and \tref{tab:total:developer} respectively. 
 
 \begin{figure}
     \centering
-    %\includegraphics[width=0.7\textwidth]{figs/radar.pdf}
+    \includegraphics[width=0.7\textwidth]{../resources/figs/priority_radar.pdf}
     \caption{A radar graph, visualizing the weights of all alternatives}
     \label{fig:radar}
 \end{figure}
@@ -721,4 +719,4 @@ Developing natively for both Android and iOS requires about twice the time that 
     \label{fig:cost-benefit}
 \end{figure}
 
-It is important to mention that adding an additional platform to the native portfolio will increase the development time (and cost) by half, whereas additional platforms can be added at virtually no cost when developing mobile web applications with Cordova. In case a third platform has to be supported, Cordova application will have better value-for-money.
+It is important to mention that adding an additional platform to the native portfolio will increase the development time (and cost) by half, whereas additional platforms can be added at virtually no cost when developing mobile web applications with Cordova. In that case, Cordova applications will have better value-for-money when a third platform has to be supported.

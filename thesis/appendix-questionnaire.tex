@@ -1,0 +1,130 @@
+\chapter{Evaluation criteria questionnaire}
+\label{app:questionnaire}
+
+\newcommand{\ahpscale}{%
+    \begin{figure*}[h!]
+        \centering
+        \begin{pspicture}(8,1)
+            \cnode*(0,1){4pt}{A}
+            \cnode*(1,1){4pt}{B}
+            \cnode*(2,1){4pt}{C}
+            \cnode*(3,1){4pt}{D}
+            \cnode*(4,1){4pt}{E}
+            \cnode*(5,1){4pt}{F}
+            \cnode*(6,1){4pt}{G}
+            \cnode*(7,1){4pt}{H}
+            \cnode*(8,1){4pt}{I}
+            \ncline{A}{I}
+            \rput(0,0){\rnode{AL}{\parbox{3cm}{\centering extremely less\\important than}}}
+            \rput(4,0){\rnode{EL}{\parbox{3cm}{\centering equally\\important as}}}
+            \rput(8,0){\rnode{IL}{\parbox{3cm}{\centering extremely more\\important than}}}
+        \end{pspicture}
+    \end{figure*}
+}
+
+We intend to measure the relative importance of different aspects of native mobile application development using cross-platform tools. We want to know your opinion about how important some aspects are compared to others. For this purpose, we only consider cross-platform tools that output native Android and iOS applications.
+
+We will ask questions about different aspects from 3 main categories:
+
+\begin{itemize}
+    \item Portability: including platform support, toolset reuse, and code reuse.
+    \begin{itemize}
+        \item Platform support: support for other platforms besides Android and iOS. 
+        \item Toolset reuse: possibility to use existing development tools like Eclipse, Visual Studio, \ldots for the development of mobile applications. 
+        \item Code reuse: percentage of codebase that can be reused on each platform using the cross-platform tool.
+    \end{itemize}
+    \item Application experience: comprised of native integration, UI capabilities, and performance of the application. 
+    \begin{itemize}
+        \item Native integration: support for the native platform API's, access to the hardware of the device and service integration (notifications, cloud, \ldots). 
+        \item UI capabilities: capability to create an app with the native look and feel and the UI elements included with the framework.
+        \item Performance
+    \end{itemize}
+    \item Productivity: includes aspects like skill reuse, tooling, and testing. 
+    \begin{itemize}
+        \item Skill reuse:
+        \item Tooling: incorporates all the aspects about the development tools shipped with the framework.
+        \item Tooling: incorporates all the aspects about the automated testing capabilities shipped with the framework.
+    \end{itemize}
+\end{itemize}
+
+This survey will take approximately 5 to 10 minutes to complete.
+
+\section{Personal Information}
+
+\begin{enumerate}
+    \item What is your current position?
+\end{enumerate}
+
+\section{Top-level evaluation criteria}
+
+\begin{enumerate}
+    \item I think portability is \ldots\ application experience
+    \ahpscale
+    
+    \item I think application experience is \ldots\ productivity
+    \ahpscale
+    
+    \item I think productivity is \ldots\ portability
+    \ahpscale
+\end{enumerate}
+
+\section{Portability}
+
+\begin{enumerate}
+    \item I think toolset reuse is \ldots\ code reuse
+    \ahpscale
+    
+    \item I think code reuse is \ldots\ platform support (other than iOS and Android)
+    \ahpscale
+    
+    \item I think platform support (other than iOS and Android) is \ldots\ toolset reuse
+    \ahpscale
+\end{enumerate}
+
+\newpage
+\section{Application experience}
+
+\begin{enumerate}
+    \item I think native integration is \ldots\ UI capabilities
+    \ahpscale
+    
+    \item I think UI capabilities are \ldots\ performance
+    \ahpscale
+    
+    \item I think performance is \ldots\ native integration
+    \ahpscale
+\end{enumerate}
+
+\section{Native integration}
+
+\begin{enumerate}
+    \item I think access to hardware is \ldots\ platform-specific service integration
+    \ahpscale
+\end{enumerate}
+
+\section{User interface capabilities}
+
+\begin{enumerate}
+    \item I think native look \& feel is \ldots\ UI element capabilities
+    \ahpscale
+\end{enumerate}
+
+\newpage
+\section{Productivity}
+
+\begin{enumerate}
+    \item I think skill reuse is \ldots\ tooling
+    \ahpscale
+    
+    \item I think tooling is \ldots\ testing
+    \ahpscale
+    
+    \item I think testing is \ldots\ skill reuse
+    \ahpscale
+\end{enumerate}
+
+\section{Remarks}
+
+In case you have comments, please list them here.
+
+

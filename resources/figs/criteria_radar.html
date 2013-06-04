@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+    var width = 500;
+    var height = 500;
+    var outerRadius = height / 2 - 10;
+    var innerRadius = 80;
+
+    var angle = d3.scale.ordinal().rangeBands([0, 2 * Math.PI]);
+    var radius = d3.scale.linear().range([innerRadius, outerRadius]);
+    var z = d3.scale.category10();
+
+    var axis = d3.svg.axis()
+            .scale(radius.copy().range([-innerRadius, -outerRadius]))
+            .orient("left")
+            .tickFormat(d3.format(".0%"))
+            .ticks(5);
+
+    var nest = d3.nest()
+            .key(function (d) {
+                return d.key;
+            });
+
+    var line = d3.svg.line.radial()
+            .interpolate("linear-closed")
+            .angle(function (d) {
+                return angle(d.criterion);
+            })
+            .radius(function (d) {
+                return radius(d.value);
+            });
+
+    var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+
+    d3.csv("criteria_radar.csv", function (data) {
+        var criteria = d3.set();
+
+        data.forEach(function (d) {
+            criteria.add(d.criterion);
+            d.value = +d.value;
+        });
+
+        radius.domain(d3.extent(data, function (d) { return d.value; })).nice();
+
+        var layers = nest.entries(data);
+
+        // Extend the domain slightly to match the range of [0, 2π].
+        angle.domain(criteria.values());
+
+        svg.selectAll(".axis")
+                .data(criteria.values())
+                .enter().append("g")
+                .attr("class", "axis")
+                .attr("transform", function (d) {
+                    return "rotate(" + angle(d) * 180 / Math.PI + ")";
+                })
+                .call(axis)
+                .append("text")
+                .attr("y", -outerRadius)
+                .attr("dy", "-0.5em")
+                .attr("text-anchor", "begin")
+                .attr("transform", "rotate(90 0," + (-outerRadius) + ")")
+                .text(function (d) {
+                    return d;
+                });
+
+        svg.selectAll(".layer")
+                .data(layers)
+                .enter().append("path")
+                .attr("class", "layer")
+                .attr("d", function (d) {
+                    return line(d.values);
+                })
+                .style("stroke", function (d) {
+                    return z(d.key);
+                })
+                .style("fill", function (d) {
+                    return z(d.key);
+                });
+
+        var legend = svg.selectAll(".legend")
+                .data(layers.slice())
+                .enter().append("g")
+                .attr("class", "legend")
+                .attr("transform", function(d, i) {
+                    var x = -width / 2;
+                    var y = -height / 2 + i * 20
+                    return "translate(" + x + "," + y + ")";
+                });
+
+        legend.append("rect")
+                .attr("x", width / 2 - 65)
+                .attr("y", height / 2 - layers.length * 20 / 2)
+                .attr("width", 130)
+                .attr("height", 18)
+                .style("fill", function(d) {
+                    return z(d.key);
+                });
+
+        legend.append("text")
+                .attr("x", width / 2)
+                .attr("y", height / 2 - layers.length * 20 / 2 + 9)
+                .attr("dy", ".4em")
+                .style("text-anchor", "middle")
+                .text(function(d) {
+                    return d.key;
+                });
+
+        svg.style("font", "14px sans-serif");
+        svg.selectAll(".axis line, .axis path")
+                .style("fill", "none")
+                .style("stroke", "#000");
+        svg.selectAll("path.layer")
+                .style("stroke-width", "1.5pt")
+                .style("fill-opacity", "15%");
+    });
+</script>
