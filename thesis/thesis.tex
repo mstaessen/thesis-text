@@ -1,4 +1,4 @@
-\documentclass[master=cws,masteroption=se,english,a4paper]{kulemt}
+\documentclass[master=cws,masteroption=se,english,a4paper,oneside]{kulemt}
 \setup{
 	title={A comparative study of cross-platform tools for mobile application development},
   	author={Michiel~Staessen},
@@ -144,15 +144,18 @@
 \appendix
 
 \chapter{Scientific Paper}
+\cleardoublepage
 \includepdf[pages=-]{../paper/paper.pdf}
 
 \chapter{Poster}
+\cleardoublepage
 \includepdf{../poster/poster.pdf}
 
 \include{appendix-tools}
 
 \chapter{Requirements documentation of the proof-of-concept application}
 \label{app:poc}
+\cleardoublepage
 \includepdf[pages=-,fitpaper=true]{../resources/expense_app_mockups.pdf}
 
 \include{appendix-questionnaire}
