@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>#thesis12</title>
+    <meta name="description" content="A comparative study of cross-platform tools for mobile application development">
+    <meta name="author" content="Michiel Staessen">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="components/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="components/reveal.js/css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="components/reveal.js/css/print/pdf.css" media="print">
+
+    <style type="text/css">
+        .fragmentation .reveal .state-background {
+            background: url('img/devices2.png') center;
+            background-size: 100%;
+        }
+        .tools .reveal .state-background {
+            background: url('img/tools.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: 100%;
+        }
+
+        h2.bg.light {
+            background-color: rgba(255,255,255,0.8);
+            line-height: 1.5em;
+        }
+        h2.bg.dark {
+            background-color: rgba(0,0,0,0.25);
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section id="title">
+            <h1>#thesis12</h1>
+            <h3>A comparative study of cross-platform tools for mobile application development</h3>
+            <p>
+                <small>Michiel Staessen (<a href="https://twitter.com/mstaessen">@mstaessen</a>)</small>
+            </p>
+        </section>
+
+        <section id="contents">
+            <h2>Contents</h2>
+            <ol>
+                <li>Introduction &amp; Goals</li>
+                <li>Methodology &amp; Results</li>
+                <li>Future</li>
+            </ol>
+            <aside class="notes"></aside>
+        </section>
+
+        <section id="introduction">
+            <h1>Introduction</h1>
+        </section>
+
+        <section>
+            <section id="smartphones">
+                <h2>Increasing smartphone sales</h2>
+                <p>
+                    <img src="img/smartphone_sales.svg" alt="smartphone sales"/>
+                </p>
+            </section>
+
+            <section id="tablets">
+                <h2>Increasing tablet sales</h2>
+                <p>
+                    <img src="img/tablet_sales.svg" alt="tablet sales"/>
+                </p>
+            </section>
+        </section>
+
+
+        <section id="fragmentation" data-state="fragmentation">
+            <h2 class="bg dark">Fragmentation</h2>
+            <p>
+
+            </p>
+        </section>
+
+
+        <section id="cpt">
+            <h2>Cross-Platform Tools</h2>
+            <p>
+                Lower <em>entry</em> and <em>exit</em> barriers by
+            </p>
+            <ul>
+                <li>dealing with fragmentation</li>
+                <li>providing easy access to new platforms</li>
+                <li>dealing with development inefficiency</li>
+            </ul>
+        </section>
+
+        <section data-state="tools" id="tools">
+            <h2 class="bg dark">Which One?</h2>
+        </section>
+
+        <section id="goals">
+            <h2>Goals</h2>
+            <ol>
+                <li>Develop a methodology to evaluate and select CPT's</li>
+                <li>Use the methodology to evaluate some CPT's</li>
+            </ol>
+        </section>
+
+        <section id="methodology">
+            <h2>Methodology</h2>
+            <p>
+                Generic software selection methodology [<a href="">Jadhav &amp; Sonar</a>]
+            </p>
+            <blockquote>
+                <ol>
+                    <li>Define selection criteria</li>
+                    <li>Identify potential candidates</li>
+                    <li>List selected alternatives</li>
+                    <li>Define evaluation criteria</li>
+                    <li>Evaluate selected alternatives</li>
+                    <li>Select the best-suited alternative(s)</li>
+                </ol>
+            </blockquote>
+        </section>
+
+        <section id="selection-criteria">
+            <section>
+                <h2>Define selection criteria</h2>
+
+            </section>
+
+            <section>
+                <h2>Defined selection criteria</h2>
+
+
+            </section>
+        </section>
+
+        <section id="identify-candidates">
+            <section>
+                <h2>Identify potential candidates</h2>
+
+            </section>
+
+            <section>
+                <h2>Identified candidates</h2>
+
+            </section>
+        </section>
+
+        <section id="list-alternatives">
+            <section>
+                <h2>List selected alternatives</h2>
+
+            </section>
+
+            <section>
+                <h2>Selected alternatives</h2>
+
+            </section>
+        </section>
+
+        <section id="evaluation-criteria">
+            <h2>Define evaluation criteria</h2>
+        </section>
+
+        <section id="evaluation">
+            <h2>Evaluate selected alternatives</h2>
+        </section>
+
+        <section id="select">
+            <h2>Select the best-suited alternative(s)</h2>
+        </section>
+
+        <section id="demo">
+            <h1>Demo</h1>
+        </section>
+
+        <section id="questions">
+            <h1>Questions?</h1>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+
+        </section>
+    </div>
+</div>
+
+<script src="components/reveal.js/lib/js/head.min.js"></script>
+<script src="components/reveal.js/js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'components/reveal.js/lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'components/reveal.js/plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'components/reveal.js/plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'components/reveal.js/plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+            // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+</script>
+</body>
+</html>
