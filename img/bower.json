@@ -1,0 +1,7 @@
+{
+  "name": "img",
+  "version": "0.0.0",
+  "dependencies": {
+    "packery": "~1.0.6"
+  }
+}

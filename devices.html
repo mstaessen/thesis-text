@@ -1,0 +1,343 @@
+<html>
+<head>
+	<title></title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        (function($){
+            $.fn.shuffle = function() {
+
+                var allElems = this.get(),
+                        getRandom = function(max) {
+                            return Math.floor(Math.random() * max);
+                        },
+                        shuffled = $.map(allElems, function(){
+                            var random = getRandom(allElems.length),
+                                    randEl = $(allElems[random]).clone(true)[0];
+                            allElems.splice(random, 1);
+                            return randEl;
+                        });
+
+                this.each(function(i){
+                    $(this).replaceWith($(shuffled[i]));
+                });
+
+                return $(shuffled);
+
+            };
+
+        })(jQuery);
+    </script>
+</head>
+<body class="js-packery">
+<img class="item" src="img/devices/acer-iconia-b1-810.jpg" />
+<img class="item" src="img/devices/acer-iconia-b1-a71-new.jpg" />
+<img class="item" src="img/devices/acer-iconia-tab-a100.jpg" />
+<img class="item" src="img/devices/acer-iconia-tab-a200.jpg" />
+<img class="item" src="img/devices/acer-iconia-tab-a210.jpg" />
+<img class="item" src="img/devices/acer-iconia-tab-a510-new.jpg" />
+<img class="item" src="img/devices/acer-iconia-tab-a510.jpg" />
+<img class="item" src="img/devices/acer-iconia-tab-a700.jpg" />
+<img class="item" src="img/devices/alcatel-ot-evo-7-hd-new.jpg" />
+<img class="item" src="img/devices/alcatel-ot-evo-7.jpg" />
+<img class="item" src="img/devices/alcatel-ot-idol-ultra.jpg" />
+<img class="item" src="img/devices/alcatel-ot-t10.jpg" />
+<img class="item" src="img/devices/alcatel-ot-tab-7-hd-new.jpg" />
+<img class="item" src="img/devices/alcatel-ot-tab-7.jpg" />
+<img class="item" src="img/devices/amazon-kindle-fire-hd-89.jpg" />
+<img class="item" src="img/devices/amazon-kindle-fire-hd.jpg" />
+<img class="item" src="img/devices/amazon-kindle-fire.jpg" />
+<img class="item" src="img/devices/apple-ipad-3-new.jpg" />
+<img class="item" src="img/devices/apple-ipad-mini-final.jpg" />
+<img class="item" src="img/devices/apple-ipad-original.jpg" />
+<img class="item" src="img/devices/apple-ipad2-new.jpg" />
+<img class="item" src="img/devices/apple-iphone-3gs-ofic.jpg" />
+<img class="item" src="img/devices/apple-iphone-4-ofic-final.jpg" />
+<img class="item" src="img/devices/apple-iphone-4s-new.jpg" />
+<img class="item" src="img/devices/apple-iphone-5-ofic.jpg" />
+<img class="item" src="img/devices/asus-eee-pad-memo.jpg" />
+<img class="item" src="img/devices/asus-eee-pad-transformer-prime.jpg" />
+<img class="item" src="img/devices/asus-fonepad-new.jpg" />
+<img class="item" src="img/devices/asus-google-nexus-7-new.jpg" />
+<img class="item" src="img/devices/asus-memo-pad-me172v.jpg" />
+<img class="item" src="img/devices/asus-memo-pad-smart-10.jpg" />
+<img class="item" src="img/devices/asus-transformer-infinity.jpg" />
+<img class="item" src="img/devices/asus-transformer-pad-300.jpg" />
+<img class="item" src="img/devices/Asus-Transformer-Prime-TF700T.jpg" />
+<img class="item" src="img/devices/asus-vivotab-rt.jpg" />
+<img class="item" src="img/devices/bb-curve-8520.jpg" />
+<img class="item" src="img/devices/bb-torch-9810-new.jpg" />
+<img class="item" src="img/devices/blackberry-bold-9790.jpg" />
+<img class="item" src="img/devices/blackberry-bold-touch-9900.jpg" />
+<img class="item" src="img/devices/blackberry-curve-9220-ofic.jpg" />
+<img class="item" src="img/devices/blackberry-curve-9320.jpg" />
+<img class="item" src="img/devices/blackberry-q10.jpg" />
+<img class="item" src="img/devices/blackberry-z10-ofic.jpg" />
+<img class="item" src="img/devices/blu-tb-7-lite.jpg" />
+<img class="item" src="img/devices/blu-tb-7-plus.jpg" />
+<img class="item" src="img/devices/blu-touch-book-70.jpg" />
+<img class="item" src="img/devices/celkon-ct2.jpg" />
+<img class="item" src="img/devices/celkon-ct9.jpg" />
+<img class="item" src="img/devices/dell-streak-7.jpg" />
+<img class="item" src="img/devices/dell-streak-10-pro.jpg" />
+<img class="item" src="img/devices/dell-xps-10.jpg" />
+<img class="item" src="img/devices/hp-slate-7-new.jpg" />
+<img class="item" src="img/devices/htc-8s.jpg" />
+<img class="item" src="img/devices/htc-8x.jpg" />
+<img class="item" src="img/devices/htc-amaze-4g-new.jpg" />
+<img class="item" src="img/devices/htc-bitterfly.jpg" />
+<img class="item" src="img/devices/htc-bravo.jpg" />
+<img class="item" src="img/devices/htc-desire-600.jpg" />
+<img class="item" src="img/devices/htc-desire-c1.jpg" />
+<img class="item" src="img/devices/htc-desire-hd-new.jpg" />
+<img class="item" src="img/devices/htc-desire-sv.jpg" />
+<img class="item" src="img/devices/htc-desire-v.jpg" />
+<img class="item" src="img/devices/htc-desire-x-ofic.jpg" />
+<img class="item" src="img/devices/htc-droid-dna-new.jpg" />
+<img class="item" src="img/devices/htc-first.jpg" />
+<img class="item" src="img/devices/htc-flyer.jpg" />
+<img class="item" src="img/devices/htc-jetstream.jpg" />
+<img class="item" src="img/devices/htc-one-m7-new1.jpg" />
+<img class="item" src="img/devices/htc-one-s-new.jpg" />
+<img class="item" src="img/devices/htc-one-sv.jpg" />
+<img class="item" src="img/devices/htc-one-v.jpg" />
+<img class="item" src="img/devices/htc-one-x-global.jpg" />
+<img class="item" src="img/devices/htc-one-x-plus-ofic.jpg" />
+<img class="item" src="img/devices/htc-one-xl-global.jpg" />
+<img class="item" src="img/devices/htc-sensation-xe.jpg" />
+<img class="item" src="img/devices/htc-wildfire-s-ofic1.jpg" />
+<img class="item" src="img/devices/huawei_mediapad10_fhd.jpg" />
+<img class="item" src="img/devices/huawei-ascend-g510-u8951.jpg" />
+<img class="item" src="img/devices/huawei-ascend-mate-new.jpg" />
+<img class="item" src="img/devices/huawei-ascend-p1-new.jpg" />
+<img class="item" src="img/devices/huawei-ascend-p2.jpg" />
+<img class="item" src="img/devices/huawei-ascend-y300.jpg" />
+<img class="item" src="img/devices/huawei-ideos-s7-slim.jpg" />
+<img class="item" src="img/devices/huawei-mediapad-7-lite.jpg" />
+<img class="item" src="img/devices/Huawei-MediaPad-101-Link.jpg" />
+<img class="item" src="img/devices/Huawei-MediaPad.jpg" />
+<img class="item" src="img/devices/huawei-s7.jpg" />
+<img class="item" src="img/devices/karbonn-a30.jpg" />
+<img class="item" src="img/devices/karbonn-s5-titanium.jpg" />
+<img class="item" src="img/devices/karbonn-st7.jpg" />
+<img class="item" src="img/devices/karbonn-st8.jpg" />
+<img class="item" src="img/devices/karbonn-st10.jpg" />
+<img class="item" src="img/devices/karbonn-st72.jpg" />
+<img class="item" src="img/devices/Lenovo-IdeaPad-A1.jpg" />
+<img class="item" src="img/devices/Lenovo-IdeaPad-Tablet-K1.jpg" />
+<img class="item" src="img/devices/lenovo-ideaphone-k860.jpg" />
+<img class="item" src="img/devices/lenovo-ideatab-a1000.jpg" />
+<img class="item" src="img/devices/lenovo-ideatab-a2107.jpg" />
+<img class="item" src="img/devices/lenovo-ideatab-a3000.jpg" />
+<img class="item" src="img/devices/lenovo-ideatab-s6000.jpg" />
+<img class="item" src="img/devices/lenovo-k900-new.jpg" />
+<img class="item" src="img/devices/lenovo-lephone-s880.jpg" />
+<img class="item" src="img/devices/lenovo-s920.jpg" />
+<img class="item" src="img/devices/LG-E400-Optimus-L3.jpg" />
+<img class="item" src="img/devices/lg-f7.jpg" />
+<img class="item" src="img/devices/lg-nexus-4-new.jpg" />
+<img class="item" src="img/devices/lg-optimus-3d-p920.jpg" />
+<img class="item" src="img/devices/lg-optimus-4g-hd-ofic.jpg" />
+<img class="item" src="img/devices/lg-optimus-g-e973-black.jpg" />
+<img class="item" src="img/devices/lg-optimus-l5-new.jpg" />
+<img class="item" src="img/devices/lg-optimus-l7-ii.jpg" />
+<img class="item" src="img/devices/lg-optimus-l7-p700-new.jpg" />
+<img class="item" src="img/devices/lg-optimus-l9-p769-t-mobile.jpg" />
+<img class="item" src="img/devices/lg-optimus-l9.jpg" />
+<img class="item" src="img/devices/micromax-a72.jpg" />
+<img class="item" src="img/devices/micromax-a110.jpg" />
+<img class="item" src="img/devices/Micromax-A110Q-Canvas-2-Plus.jpg" />
+<img class="item" src="img/devices/micromax-a111.jpg" />
+<img class="item" src="img/devices/micromax-a115-canvas-3d.jpg" />
+<img class="item" src="img/devices/micromax-a116-canvas-hd.jpg" />
+<img class="item" src="img/devices/micromax-funbook-alfa.jpg" />
+<img class="item" src="img/devices/micromax-funbook-p300.jpg" />
+<img class="item" src="img/devices/micromax-funbook-pro.jpg" />
+<img class="item" src="img/devices/micromax-p360.jpg" />
+<img class="item" src="img/devices/micromax-p362.jpg" />
+<img class="item" src="img/devices/micromax-p560.jpg" />
+<img class="item" src="img/devices/micromax-p600.jpg" />
+<img class="item" src="img/devices/microsoft-surface.jpg" />
+<img class="item" src="img/devices/motorla-razr-europe.jpg" />
+<img class="item" src="img/devices/motorla-razr-hd.jpg" />
+<img class="item" src="img/devices/motorola-droid-razr-maxx-hd.jpg" />
+<img class="item" src="img/devices/motorola-droid-razr.jpg" />
+<img class="item" src="img/devices/motorola-droid-xyboard-8.2.jpg" />
+<img class="item" src="img/devices/motorola-droid-xyboard-10.1.jpg" />
+<img class="item" src="img/devices/motorola-razr-d3.jpg" />
+<img class="item" src="img/devices/motorola-razr-i.jpg" />
+<img class="item" src="img/devices/motorola-xoom-2-media-edition-3g-mz608.jpg" />
+<img class="item" src="img/devices/motorola-xoom-2-media-edition.jpg" />
+<img class="item" src="img/devices/motorola-xoom-2.jpg" />
+<img class="item" src="img/devices/motorola-xoom-media-edition-mz505.jpg" />
+<img class="item" src="img/devices/nokia-206.jpg" />
+<img class="item" src="img/devices/nokia-301.jpg" />
+<img class="item" src="img/devices/nokia-800-ofic.jpg" />
+<img class="item" src="img/devices/nokia-808-pureview.jpg" />
+<img class="item" src="img/devices/nokia-asha-210-1.jpg" />
+<img class="item" src="img/devices/nokia-asha-302-ofic.jpg" />
+<img class="item" src="img/devices/nokia-asha-305.jpg" />
+<img class="item" src="img/devices/nokia-asha-311.jpg" />
+<img class="item" src="img/devices/nokia-lumia-510.jpg" />
+<img class="item" src="img/devices/nokia-lumia-520.jpg" />
+<img class="item" src="img/devices/nokia-lumia-610.jpg" />
+<img class="item" src="img/devices/nokia-lumia-620.jpg" />
+<img class="item" src="img/devices/nokia-lumia-710.jpg" />
+<img class="item" src="img/devices/nokia-lumia-720.jpg" />
+<img class="item" src="img/devices/nokia-lumia-810.jpg" />
+<img class="item" src="img/devices/nokia-lumia-820.jpg" />
+<img class="item" src="img/devices/nokia-lumia-920.jpg" />
+<img class="item" src="img/devices/nokia-lumia-925-new.jpg" />
+<img class="item" src="img/devices/nokia-lumia-928-black.jpg" />
+<img class="item" src="img/devices/nokia-n8-silver.jpg" />
+<img class="item" src="img/devices/Nokia-N9-00-cyan.jpg" />
+<img class="item" src="img/devices/pantech-element.jpg" />
+<img class="item" src="img/devices/pantech-vega-no-6.jpg" />
+<img class="item" src="img/devices/samsung-ativ-s-new.jpg" />
+<img class="item" src="img/devices/samsung-ativ-tab.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-ace-2.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-ace-duos-gsm.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-ace-plus.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-beam-2012.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-camera-new.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-chat-gt-b5330.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-express.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-frame.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-grand-gt-i9080.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-mega-5-8.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-mega-6-3.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-mini-2-s6500-ofic.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-mini-s5570.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-mini-s5830-ofic.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-nexus-new.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-note-80-n5100.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-note-80-n5110.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-note-101-lte-n8020.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-note-101-n8000.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-note-ii-n7100-new.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-note.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-pocket.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-s-4-i9500-black-mist.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-s-advance.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-s-duos-s7562.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-s-ii-plus-i9105p-ofic.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-s-ii-real-ofic.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-s-iii-att.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-s-iii-mini-i8190.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-s.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-star-s5280.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-2-101.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-2-sch-i705.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-2.jpg" />
+<img class="item" src="img/devices/Samsung-Galaxy-Tab-7.7-LTE-i815.jpg" />
+<img class="item" src="img/devices/Samsung-GALAXY-Tab-8.9-4g.jpg" />
+<img class="item" src="img/devices/Samsung-GALAXY-Tab-8.9.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-10.1-p7100.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-10.1-verison.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-89-lte.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-cdma.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-ofic.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-plus-p6200.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-plus-p6210.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-win-i8552.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-xcover-2.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-y-duos.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-y-s5360.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-young-ss.jpg" />
+<img class="item" src="img/devices/samsung-google-nexus-10-new.jpg" />
+<img class="item" src="img/devices/samsung-i9300-galaxy-s-iii-ofic.jpg" />
+<img class="item" src="img/devices/samsung-p1010-galaxy-tab-wi-fi.jpg" />
+<img class="item" src="img/devices/samsung-p6800-galaxy-tab-7-7.jpg" />
+<img class="item" src="img/devices/samsung-p6810-galaxy-tab-77.jpg" />
+<img class="item" src="img/devices/se-xperia-x10-new.jpg" />
+<img class="item" src="img/devices/sony-tablet-p.jpg" />
+<img class="item" src="img/devices/sony-tablet-s.jpg" />
+<img class="item" src="img/devices/sony-xperia_sp.jpg" />
+<img class="item" src="img/devices/sony-xperia-acro-s.jpg" />
+<img class="item" src="img/devices/sony-xperia-e-dual.jpg" />
+<img class="item" src="img/devices/sony-xperia-e.jpg" />
+<img class="item" src="img/devices/sony-xperia-go.jpg" />
+<img class="item" src="img/devices/sony-xperia-ion-hspa.jpg" />
+<img class="item" src="img/devices/sony-xperia-j.jpg" />
+<img class="item" src="img/devices/sony-xperia-l-new.jpg" />
+<img class="item" src="img/devices/sony-xperia-miro.jpg" />
+<img class="item" src="img/devices/sony-xperia-neo-l.jpg" />
+<img class="item" src="img/devices/sony-xperia-p-ofic.jpg" />
+<img class="item" src="img/devices/sony-xperia-s-ofic.jpg" />
+<img class="item" src="img/devices/sony-xperia-sola.jpg" />
+<img class="item" src="img/devices/sony-xperia-t.jpg" />
+<img class="item" src="img/devices/sony-xperia-tablet-s-ofic.jpg" />
+<img class="item" src="img/devices/sony-xperia-tablet-z-new.jpg" />
+<img class="item" src="img/devices/sony-xperia-tipo.jpg" />
+<img class="item" src="img/devices/sony-xperia-tl.jpg" />
+<img class="item" src="img/devices/sony-xperia-tx.jpg" />
+<img class="item" src="img/devices/sony-xperia-u-ofic.jpg" />
+<img class="item" src="img/devices/sony-xperia-v.jpg" />
+<img class="item" src="img/devices/sony-xperia-z.jpg" />
+<img class="item" src="img/devices/sony-xperia-zl.jpg" />
+<img class="item" src="img/devices/sonyericsson-xperia-arc-s.jpg" />
+<img class="item" src="img/devices/spice-mi-725.jpg" />
+<img class="item" src="img/devices/spice-mi-1010.jpg" />
+<img class="item" src="img/devices/spice-mi720.jpg" />
+<img class="item" src="img/devices/toshiba-excite-10-AT305.jpg" />
+<img class="item" src="img/devices/toshiba-excite-10-se.jpg" />
+<img class="item" src="img/devices/toshiba-excite-77-AT275.jpg" />
+<img class="item" src="img/devices/toshiba-excite-at200.jpg" />
+<img class="item" src="img/devices/vodafone-smart-tab-7.jpg" />
+<img class="item" src="img/devices/vodafone-smart-tab-10-ii.jpg" />
+<img class="item" src="img/devices/vodafone-smart-tab-ii.jpg" />
+<img class="item" src="img/devices/vodafone-smart-tab.jpg" />
+<img class="item" src="img/devices/zte-light-tab-2-v9a-ofic.jpg" />
+<img class="item" src="img/devices/zte-optik.jpg" />
+<img class="item" src="img/devices/zte-v9.jpg" />
+<img class="item" src="img/devices/samsung-galaxy-tab-10.1.jpg" />
+<img class="item" src="img/devices/blackberry-bold.jpg" />
+<img class="item" src="img/devices/nokia-5800-xpressmusic.jpg" />
+<img class="item" src="img/devices/apple-iphone3g.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/htc-sensation-new.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/samsung-i9001-galaxy-s-plus.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/se-w8.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/samsung-galaxy-tab-10.1.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/htc-sensation-new.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/Acer-IconiaTab-A500-Tablet-new.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/htc-flyer.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/samsung-galaxy-s-wifi5.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/samsung-galaxy-tab-10.1.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/t-mobile-g1.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/samsung-gravity-smart.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/asus-transformer.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/huawei-ideos-x3.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/htc-raider-4g.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/samsung-galaxy-s-ii-skyrocket-hd-new.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/motorola-xoom.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/lg-thrill-4g.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/micromax-a70.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/Acer-IconiaTab-A500-Tablet-new.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/htc-evo-3d.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/acer-iconia-tab-a100.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/samsung-nexus-s-i9020a.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/samsung-exhibit-4g.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/motorola-xoom.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/lg-optimus-pad.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/toshiba-thrive.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/samsung-galaxy-tab-8.9-p7310.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/lg-phoenix.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/t-mobile-g-slate-3d.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/motorola-triumph-new.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/lg-optimus-big-lu6800-white.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/spice-mi310.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/motorola-xoom.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/huawei-ideos-s7-slim.jpg" />
+<img class="item" src="http://cdn2.gsmarena.com/vv/thumb/blu-magic.jpg" />
+
+
+    <script type="text/javascript">
+        $('.item').shuffle();
+    </script>
+	<script src="components/packery/packery.js"></script>
+</body>
+</html>
