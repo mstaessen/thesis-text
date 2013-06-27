@@ -3,3 +3,5 @@ paper/.texpadtmp/*
 .project
 .idea/*
 
+
+/presentation/.idea/

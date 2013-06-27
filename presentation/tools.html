@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title></title>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+    <script src="components/packery/packery.js"></script>
+    <script>
+        (function($){
+            $.fn.shuffle = function() {
+
+                var allElems = this.get(),
+                        getRandom = function(max) {
+                            return Math.floor(Math.random() * max);
+                        },
+                        shuffled = $.map(allElems, function(){
+                            var random = getRandom(allElems.length),
+                                    randEl = $(allElems[random]).clone(true)[0];
+                            allElems.splice(random, 1);
+                            return randEl;
+                        });
+
+                this.each(function(i){
+                    $(this).replaceWith($(shuffled[i]));
+                });
+                return $(shuffled);
+            };
+
+        })(jQuery);
+    </script>
+    <style type="text/css">
+        img.item {
+            max-width: 256px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img class="item" src="img/tools/verivo.jpg" />
+        <img class="item" src="img/tools/marmelade.png" />
+        <img class="item" src="img/tools/appcelerator.png" />
+        <img class="item" src="img/tools/igenapps.png" />
+        <img class="item" src="img/tools/stackmob.png" />
+        <img class="item" src="img/tools/nme.png" />
+        <img class="item" src="img/tools/jquery-mobile.png" />
+        <img class="item" src="img/tools/enyo.png" />
+        <img class="item" src="img/tools/unity.png" />
+        <img class="item" src="img/tools/iBuildApp.png" />
+        <img class="item" src="img/tools/xamarin.png" />
+        <img class="item" src="img/tools/LiveCode.png" />
+        <img class="item" src="img/tools/qt.png" />
+        <img class="item" src="img/tools/flex.png" />
+        <img class="item" src="img/tools/dojo.png" />
+        <img class="item" src="img/tools/cordova.png" />
+        <img class="item" src="img/tools/mosync.png" />
+        <img class="item" src="img/tools/triggercorp.png" />
+        <img class="item" src="img/tools/sio2engine.png" />
+        <img class="item" src="img/tools/kony.jpg" />
+        <img class="item" src="img/tools/KendoUI.png" />
+        <img class="item" src="img/tools/corona.png" />
+        <img class="item" src="img/tools/gideros.png" />
+        <img class="item" src="img/tools/flexycore.png" />
+        <img class="item" src="img/tools/expanz.png" />
+        <img class="item" src="img/tools/firemonkey.jpg" />
+        <img class="item" src="img/tools/appcloud.png" />
+    </div>
+    
+    <script type="text/javascript">
+        //$('img.item').shuffle();
+        var $container = $('#container');
+        $container.packery();
+        var $itemElems = $($container.packery('getItemElements'));
+        $itemElems.draggable();
+        $container.packery('bindUIDraggableEvents', $itemElems);
+    </script>
+</body>
+</html>

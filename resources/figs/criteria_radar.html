@@ -12,12 +12,6 @@
     var radius = d3.scale.linear().range([innerRadius, outerRadius]);
     var z = d3.scale.category10();
 
-    var axis = d3.svg.axis()
-            .scale(radius.copy().range([-innerRadius, -outerRadius]))
-            .orient("left")
-            .tickFormat(d3.format(".0%"))
-            .ticks(5);
-
     var nest = d3.nest()
             .key(function (d) {
                 return d.key;
@@ -38,7 +32,6 @@
             .append("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-
     d3.csv("criteria_radar.csv", function (data) {
         var criteria = d3.set();
 
@@ -51,7 +44,7 @@
 
         var layers = nest.entries(data);
 
-        // Extend the domain slightly to match the range of [0, 2π].
+        // Extend the domain slightly to match the range of 0, 2*PI
         angle.domain(criteria.values());
 
         svg.selectAll(".axis")
@@ -61,7 +54,7 @@
                 .attr("transform", function (d) {
                     return "rotate(" + angle(d) * 180 / Math.PI + ")";
                 })
-                .call(axis)
+                .call(d3.svg.axis().scale(radius.copy().range([-innerRadius, -outerRadius])).orient("left").tickFormat(d3.format(".0%")).ticks(5))
                 .append("text")
                 .attr("y", -outerRadius)
                 .attr("dy", "-0.5em")
